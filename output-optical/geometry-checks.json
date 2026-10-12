@@ -1,0 +1,223 @@
+{
+  "passed": true,
+  "camera": {
+    "width": 384,
+    "height": 576,
+    "fov": 24,
+    "roll_deg": 14,
+    "spin": 0.9,
+    "rout": 500
+  },
+  "steps": [
+    0.006,
+    0.003
+  ],
+  "angles": {
+    "85.0": {
+      "passed": true,
+      "criteria": {
+        "finite_geometry_and_spectrum": true,
+        "all_rays_resolved": true,
+        "emitting_radius_inside_disk": true,
+        "emission_angle_in_physical_range": true,
+        "positive_frequency_shift": true,
+        "mask_refinement_below_0_2_percent": true,
+        "radius_refinement_p99_below_0_1_percent": true,
+        "frequency_refinement_p99_below_0_1_percent": true,
+        "integrated_spectral_rgb_refinement_below_0_2_percent": true,
+        "potential_constraint_below_1e_5": true,
+        "at_least_one_higher_order_disk_image": true,
+        "zero_radiance_for_non_emitting_pixels": true
+      },
+      "emitting_fraction": 0.9627233434606481,
+      "shadow_fraction": 0.03669795283564815,
+      "mask_disagreement_fraction": 0.0,
+      "crossing_layer_disagreement_fraction": 0.0,
+      "radius_relative_error": {
+        "p99": 0.0,
+        "max": 1.1912523481072847e-07
+      },
+      "frequency_shift_relative_error": {
+        "p99": 0.0,
+        "max": 1.0821563350135253e-07
+      },
+      "mu_absolute_error": {
+        "p99": 0.0,
+        "max": 5.960464477539063e-08
+      },
+      "integrated_visible_rgb_relative_error": [
+        3.0803966659481364e-11,
+        3.12617548679252e-11,
+        3.113194059344227e-11
+      ],
+      "potential_constraint_max": {
+        "step_0_006": 2.631423738594481e-08,
+        "step_0_003": 3.056084803659705e-09
+      },
+      "radius_rg_range": [
+        2.322078227996826,
+        352.369384765625
+      ],
+      "frequency_shift_range": [
+        0.16894368827342987,
+        1.5460162162780762
+      ],
+      "emission_mu_range": [
+        0.002893374301493168,
+        0.9996783137321472
+      ],
+      "effective_temperature_k_range": [
+        1662.2582924160083,
+        32438.28781020757
+      ],
+      "observed_color_temperature_k_range": [
+        365.4812766237883,
+        50238.59893997026
+      ],
+      "visible_crossing_layers": {
+        "0": 212721,
+        "1": 199,
+        "2": 18,
+        "3": 1
+      }
+    },
+    "86.5": {
+      "passed": true,
+      "criteria": {
+        "finite_geometry_and_spectrum": true,
+        "all_rays_resolved": true,
+        "emitting_radius_inside_disk": true,
+        "emission_angle_in_physical_range": true,
+        "positive_frequency_shift": true,
+        "mask_refinement_below_0_2_percent": true,
+        "radius_refinement_p99_below_0_1_percent": true,
+        "frequency_refinement_p99_below_0_1_percent": true,
+        "integrated_spectral_rgb_refinement_below_0_2_percent": true,
+        "potential_constraint_below_1e_5": true,
+        "at_least_one_higher_order_disk_image": true,
+        "zero_radiance_for_non_emitting_pixels": true
+      },
+      "emitting_fraction": 0.9625379774305556,
+      "shadow_fraction": 0.03686975549768518,
+      "mask_disagreement_fraction": 0.0,
+      "crossing_layer_disagreement_fraction": 0.0,
+      "radius_relative_error": {
+        "p99": 0.0,
+        "max": 1.1710354682051574e-07
+      },
+      "frequency_shift_relative_error": {
+        "p99": 0.0,
+        "max": 7.92120868772821e-08
+      },
+      "mu_absolute_error": {
+        "p99": 0.0,
+        "max": 5.960464477539063e-08
+      },
+      "integrated_visible_rgb_relative_error": [
+        3.01968065719582e-11,
+        3.13272385222434e-11,
+        3.300162186548891e-11
+      ],
+      "potential_constraint_max": {
+        "step_0_006": 2.202850285053285e-08,
+        "step_0_003": 3.274212122660934e-09
+      },
+      "radius_rg_range": [
+        2.321085214614868,
+        333.0989074707031
+      ],
+      "frequency_shift_range": [
+        0.16744455695152283,
+        1.5665417909622192
+      ],
+      "emission_mu_range": [
+        0.0024387803860008717,
+        0.9998747110366821
+      ],
+      "effective_temperature_k_range": [
+        859.5346901094566,
+        32438.28755251244
+      ],
+      "observed_color_temperature_k_range": [
+        347.47354742347983,
+        50460.914430106
+      ],
+      "visible_crossing_layers": {
+        "0": 212683,
+        "1": 192,
+        "2": 22,
+        "3": 1
+      }
+    },
+    "88.0": {
+      "passed": true,
+      "criteria": {
+        "finite_geometry_and_spectrum": true,
+        "all_rays_resolved": true,
+        "emitting_radius_inside_disk": true,
+        "emission_angle_in_physical_range": true,
+        "positive_frequency_shift": true,
+        "mask_refinement_below_0_2_percent": true,
+        "radius_refinement_p99_below_0_1_percent": true,
+        "frequency_refinement_p99_below_0_1_percent": true,
+        "integrated_spectral_rgb_refinement_below_0_2_percent": true,
+        "potential_constraint_below_1e_5": true,
+        "at_least_one_higher_order_disk_image": true,
+        "zero_radiance_for_non_emitting_pixels": true
+      },
+      "emitting_fraction": 0.9622124565972222,
+      "shadow_fraction": 0.03708676938657408,
+      "mask_disagreement_fraction": 0.0,
+      "crossing_layer_disagreement_fraction": 0.0,
+      "radius_relative_error": {
+        "p99": 0.0,
+        "max": 1.1848210677299409e-07
+      },
+      "frequency_shift_relative_error": {
+        "p99": 0.0,
+        "max": 1.0508149963489432e-07
+      },
+      "mu_absolute_error": {
+        "p99": 0.0,
+        "max": 5.960464477539063e-08
+      },
+      "integrated_visible_rgb_relative_error": [
+        2.408460795954916e-11,
+        2.309168632274472e-11,
+        2.0725440889182362e-11
+      ],
+      "potential_constraint_max": {
+        "step_0_006": 2.4363855921441502e-08,
+        "step_0_003": 3.0143750244215147e-09
+      },
+      "radius_rg_range": [
+        2.3210296630859375,
+        499.81158447265625
+      ],
+      "frequency_shift_range": [
+        0.16474151611328125,
+        1.5880602598190308
+      ],
+      "emission_mu_range": [
+        0.0006875601247884333,
+        0.9999849200248718
+      ],
+      "effective_temperature_k_range": [
+        732.0176996923547,
+        32438.28767743946
+      ],
+      "observed_color_temperature_k_range": [
+        120.59370566907512,
+        50548.6695701498
+      ],
+      "visible_crossing_layers": {
+        "0": 207973,
+        "1": 4834,
+        "2": 19
+      }
+    }
+  },
+  "precision_note": "The kernel integrates in float64 but returns r, g and mu in float32. Zero refinement differences mean agreement at float32 output precision, not exact continuum solutions.",
+  "scope": "Integrator refinement at fixed 384x576 pixels; not a detector-resolution or physical-model convergence test.",
+  "elapsed_seconds": 4.5473305829946185
+}

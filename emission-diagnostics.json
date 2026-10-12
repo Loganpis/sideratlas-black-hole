@@ -1,0 +1,48 @@
+{
+  "parameters": {
+    "mass_solar": 100000000.0,
+    "eddington_ratio": 0.1,
+    "spin_a_star": 0.0,
+    "mass_kg": 1.988409870698051e+38,
+    "rg_m": 147662503805.01248,
+    "tg_s": 492.5490947641267,
+    "isco_rg": 6.0,
+    "horizon_rg": 2.0,
+    "efficiency_binding_energy": 0.057190958417936644,
+    "eddington_luminosity_w": 1.2570651798467909e+39,
+    "accretion_rate_kg_s": 2.445620219543168e+22,
+    "flux_normalization_w_m2": 1.2032929186436474e+16,
+    "spectrum": "isotropic Planck blackbody; color correction f_col=1",
+    "eddington_ratio_definition": "eta*Mdot*c^2/L_Edd; does not correct for photon capture"
+  },
+  "page_thorne_integral_max_relative_error": 1.9862462119490942e-08,
+  "flux_peak_radius_rg": 9.55095,
+  "flux_peak_shape": 0.00011458947324171412,
+  "flux_peak_w_m2": 1378847017028.6033,
+  "temperature_peak_k": 70222.46766797506,
+  "stefan_boltzmann_integral_relative_error": 1.2724555631393741e-08,
+  "planck_liouville_relative_error": 2.8199664825478976e-14,
+  "cie_lookup_max_relative_error_2000_to_500000k": 0.00024264652315730828,
+  "rgb_at_peak_temperature": [
+    376243120.84996563,
+    539325538.4819336,
+    1171101530.074683
+  ],
+  "spectrum": {
+    "cie_source": "https://cie.co.at/datatable/cie-1931-colour-matching-functions-2-degree-observer",
+    "cie_doi": "10.25039/CIE.DS.xvudnb9b",
+    "cie_md5": "17cca777db64b17170f06f67ce9d3ab7",
+    "cie_wavelength_nm": [
+      360,
+      830
+    ],
+    "spectral_step_nm": 1,
+    "lookup_bins": 4096,
+    "lookup_temperature_k": [
+      100.0,
+      1000000.0
+    ],
+    "radiance_units": "CIE-weighted W m^-2 sr^-1; no per-pixel normalization",
+    "display_matrix": "ICC sRGB interpretation, section 7"
+  }
+}

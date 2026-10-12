@@ -1,0 +1,37 @@
+NO.001 — THE BLACK HOLE
+@sideratlas
+
+Bends light into multiple images of its disk
+Approaching gas appears brighter
+Gravity redshifts light and delays its arrival
+Inner orbits shear bright structures faster
+
+An original calculation inspired by NASA's 2019 visualization, with a non-rotating black hole — Schwarzschild / a* = 0
+No NASA footage or code is used
+
+WHAT IS CALCULATED
+Schwarzschild light paths, gravitational/Doppler shifts, multiple disk images, foreground occultation and relative photon travel times
+Mean brightness follows Page–Thorne; observed total-light intensity is I_obs = g⁴ I_em
+
+WHAT IS ASSUMED
+An opaque, razor-thin disk from 6 to 28 r_g, with identical modeled emission on both faces
+The view makes a full 360° revolution above and below the disk: a virtual scan with chosen timing, not a physical camera orbit
+Moving streaks are a kinematic brightness model, not magnetic turbulence; their mean preserves the radial flux
+No physical mass or accretion rate is assigned
+
+Orange is an illustrative BRIGHTNESS palette, not true visible color
+The 8-second loop represents 800 GM/c³; periodic source births close the loop without changing orbital speeds
+Gas evolves forward throughout; real turbulence need not repeat
+Disk thickness, fluid evolution, magnetic fields, a corona and returning radiation are omitted
+
+SOURCES & ROLES
+Page & Thorne 1974 — mean flux, doi:10.1086/152990
+Luminet 1979 — thin-disk imaging, A&A 75,228
+Müller & Frauendiener 2012 — Schwarzschild rendering, arXiv:1206.4259
+James et al. 2015 — lensing/transfer background, arXiv:1502.03808
+Bozza 2002 — baseline strong-deflection checks, arXiv:gr-qc/0208075
+Gralla & Lupsasca 2020 — geodesic background, arXiv:1910.12881
+Schnittman & Bertschinger 2004 — sheared hot-spot precedent, arXiv:astro-ph/0309458
+Cárdenas-Avendaño et al. 2023 — variable emission/retarded time, arXiv:2211.07469
+NASA Goddard / Jeremy Schnittman 2019 — visual reference: https://svs.gsfc.nasa.gov/13326/
+ICC — sRGB display encoding

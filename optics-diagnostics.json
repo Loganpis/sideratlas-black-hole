@@ -1,0 +1,27 @@
+{
+  "limb_angular_flux_normalization": 1.0000000025,
+  "color_correction_bolometric_relative_error": 6.661338147750939e-16,
+  "tone_curve_chromaticity_max_error": 3.3306690738754696e-16,
+  "Airy_first_null_J1_absolute_error": 2.42861286636753e-17,
+  "PSF_kernel_sum": 1.0,
+  "PSF_impulse_flux_absolute_error": 1.509903313490213e-14,
+  "PSF_linearity_absolute_error": 1.0526559048297782e-15,
+  "camera": {
+    "aperture_m": 4.0,
+    "wavelength_nm": 550.0,
+    "observer_distance_rg": 1000000.0,
+    "support_first_nulls": 24,
+    "kernel_subsamples": 3,
+    "first_null_pixels": 1.0062276602948663,
+    "model": "unobstructed circular pupil; monochromatic Airy PSF applied to linear RGB",
+    "limitation": "550nm reference wavelength applied equally to RGB; not full polychromatic camera",
+    "boundary": "zero-padded linear convolution; flux beyond cropped image is discarded",
+    "kernel": "pixel-integrated finite support, renormalized to unit sum",
+    "astrophysical_effect": false,
+    "kernel_size_pixels": [
+      51,
+      51
+    ]
+  },
+  "passed": true
+}

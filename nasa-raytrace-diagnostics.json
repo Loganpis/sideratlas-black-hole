@@ -1,0 +1,158 @@
+{
+  "passed": true,
+  "flat_space_q_max_relative_error": 5.8802674729463433e-08,
+  "flat_space_delay_max_absolute_error_tg": 6.378865165856951e-06,
+  "finite_segment_direct_elapsed_tg": 52.47770065838702,
+  "finite_segment_regularized_elapsed_tg": 52.47769825324854,
+  "finite_segment_elapsed_relative_error": 4.583162849236544e-08,
+  "weak_field_delay_error_over_impact": 0.0002486121514241677,
+  "baseline_geometry_bitwise_identical": true,
+  "delay_reflection_symmetric": true,
+  "invalid_delay_is_zero": true,
+  "refinement_delay_p99_absolute_error_tg": 0.000981634482741356,
+  "refinement_delay_max_absolute_error_tg": 0.017511367797851562,
+  "refinement_max_keplerian_phase_error_rad": 0.00036164812627248466,
+  "delay_range_tg": [
+    -33.15114212036133,
+    40.4713249206543
+  ],
+  "visible_first_hit_layers": {
+    "0": 5312,
+    "1": 476,
+    "2": 2,
+    "3": 0
+  },
+  "production_scene": {
+    "scene": {
+      "width": 324,
+      "height": 300,
+      "fov": 60,
+      "roll_deg": 0,
+      "rin": 6,
+      "rout": 28,
+      "layers": 4,
+      "radial_samples": 8192,
+      "angle_step": 0.002
+    },
+    "lookup_refinement": [
+      {
+        "inclination_deg": 82.0,
+        "mask_disagreement_fraction": 0.0,
+        "radius_p99_relative_error": 9.5367431640625e-07,
+        "delay_p99_absolute_error_tg": 0.000217437744140625,
+        "delay_max_absolute_error_tg": 0.01638031005859375,
+        "max_keplerian_phase_error_rad": 0.00015314837219193578,
+        "delay_range_tg": [
+          -32.12385177612305,
+          50.04441452026367
+        ],
+        "visible_first_hit_layers": {
+          "0": 15760,
+          "1": 2208,
+          "2": 18,
+          "3": 0
+        }
+      },
+      {
+        "inclination_deg": 83.5,
+        "mask_disagreement_fraction": 0.0,
+        "radius_p99_relative_error": 9.5367431640625e-07,
+        "delay_p99_absolute_error_tg": 0.0002155303955078125,
+        "delay_max_absolute_error_tg": 0.015750885009765625,
+        "max_keplerian_phase_error_rad": 0.00011139156413264573,
+        "delay_range_tg": [
+          -31.92626190185547,
+          49.751312255859375
+        ],
+        "visible_first_hit_layers": {
+          "0": 13882,
+          "1": 2532,
+          "2": 22,
+          "3": 0
+        }
+      },
+      {
+        "inclination_deg": 85.0,
+        "mask_disagreement_fraction": 0.0,
+        "radius_p99_relative_error": 1.0728836059570312e-06,
+        "delay_p99_absolute_error_tg": 0.0002269744873046875,
+        "delay_max_absolute_error_tg": 0.005096435546875,
+        "max_keplerian_phase_error_rad": 5.8772206102730706e-05,
+        "delay_range_tg": [
+          -31.557392120361328,
+          43.01263427734375
+        ],
+        "visible_first_hit_layers": {
+          "0": 11944,
+          "1": 2902,
+          "2": 24,
+          "3": 0
+        }
+      }
+    ],
+    "full_resolution_smoke_test": {
+      "detector_width": 2160,
+      "detector_height": 2000,
+      "delivery_width": 1080,
+      "delivery_height": 1000,
+      "supersampling": 2,
+      "views": [
+        {
+          "inclination_deg": 82.0,
+          "finite_maps": true,
+          "delay_reflection_symmetric": true,
+          "invalid_delay_is_zero": true,
+          "hits_within_disk": true,
+          "visible_first_hit_layers": {
+            "0": 700064,
+            "1": 97856,
+            "2": 758,
+            "3": 32
+          },
+          "delay_range_tg": [
+            -32.69405746459961,
+            67.55052947998047
+          ]
+        },
+        {
+          "inclination_deg": 83.5,
+          "finite_maps": true,
+          "delay_reflection_symmetric": true,
+          "invalid_delay_is_zero": true,
+          "hits_within_disk": true,
+          "visible_first_hit_layers": {
+            "0": 616630,
+            "1": 112766,
+            "2": 920,
+            "3": 36
+          },
+          "delay_range_tg": [
+            -32.79540252685547,
+            64.06500244140625
+          ]
+        },
+        {
+          "inclination_deg": 85.0,
+          "finite_maps": true,
+          "delay_reflection_symmetric": true,
+          "invalid_delay_is_zero": true,
+          "hits_within_disk": true,
+          "visible_first_hit_layers": {
+            "0": 531074,
+            "1": 129238,
+            "2": 1076,
+            "3": 42
+          },
+          "delay_range_tg": [
+            -32.9072380065918,
+            66.953125
+          ]
+        }
+      ],
+      "elapsed_seconds": 5.447645457999897
+    },
+    "interpretation": "maximum phase errors refer to local Keplerian motion, Omega=r^(-3/2); these tests do not resolve every higher-order image or validate gas dynamics"
+  },
+  "scope": "tests of this idealized geodesic-delay model, not validation of an accretion flow",
+  "elapsed_seconds": 22.43015508299868
+}

@@ -1,0 +1,30 @@
+NO.001 — THE BLACK HOLE
+GRAVITY TYPE · @atlastro
+
+It bends light into several images of its disk. Its spin drags spacetime. Its gravity and orbiting gas shift the spectrum; the approaching side brightens. Its opaque foreground disk hides some farther images.
+
+Its visible color comes from calculated thermal spectra, approximate atmosphere corrections, relativistic transfer and CIE human-color matching. These colors describe this model. The dark center is not its horizon's direct outline.
+
+Kerr spin a*=0.9; 10¹⁰ solar masses; ηṀc²/L_Edd=0.05; thin disk 2.321–500 GM/c². This 8-second loop scans 85°–88° views of a steady disk, not evolving gas.
+
+Iν,obs = Υ(μ) f_col⁻⁴ Bν(ν, g f_col T_eff).
+
+New optics: 48 visible wavelengths, each diffracted before CIE color integration. The hypothetical 10 m circular aperture spreads red light more than blue. This camera effect is separate from gravitational lensing. The ideal-optics companion removes diffraction. Both share fixed exposure and a screen-contrast curve. Finite disk thickness, turbulence and jets are omitted; this is not GRMHD.
+
+All studies and standards used, by role:
+• Gralla & Lupsasca (2020): Kerr light paths. arXiv:1910.12881
+• Page & Thorne (1974): disk flux. DOI:10.1086/152990
+• Bardeen, Press & Teukolsky (1972): orbits/ISCO. DOI:10.1086/151796
+• Li et al. (2005): limb/thermal transfer. arXiv:astro-ph/0411583
+• Done et al. (2012): spectral hardening. arXiv:1107.5429
+• Luminet (1979): appearance/baseline. A&A 75,228
+• Müller & Frauendiener (2012): Schwarzschild baseline. arXiv:1206.4259
+• James et al. (2015): appearance/transfer. arXiv:1502.03808
+• Bozza (2002): baseline validation. arXiv:gr-qc/0208075
+• Airy (1835): diffraction. TCaPS 5,283
+• CIE (2019): color data. DOI:10.25039/CIE.DS.xvudnb9b
+• ICC: sRGB specification.
+
+Full references and reproducible code accompany the film.
+
+#BlackHole #Astrophysics #GeneralRelativity

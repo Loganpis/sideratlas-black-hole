@@ -1,0 +1,350 @@
+{
+  "passed": true,
+  "scene": {
+    "width": 432,
+    "height": 360,
+    "fov": 72,
+    "roll_deg": 0,
+    "rin": 6,
+    "rout": 28,
+    "layers": 4,
+    "radial_samples": 8192,
+    "angle_step": 0.002
+  },
+  "checks": {
+    "baseline_above_disk_bitwise_0": true,
+    "baseline_above_disk_bitwise_30": true,
+    "baseline_above_disk_bitwise_68": true,
+    "baseline_above_disk_bitwise_83": true,
+    "baseline_above_disk_bitwise_89": true,
+    "finite_and_positive_transfer_83": true,
+    "disk_bounds_and_invalid_values_83": true,
+    "left_right_geometric_symmetry_83": true,
+    "finite_and_positive_transfer_0": true,
+    "disk_bounds_and_invalid_values_0": true,
+    "left_right_geometric_symmetry_0": true,
+    "finite_and_positive_transfer_-7": true,
+    "disk_bounds_and_invalid_values_-7": true,
+    "left_right_geometric_symmetry_-7": true,
+    "finite_and_positive_transfer_-89.999999": true,
+    "disk_bounds_and_invalid_values_-89.999999": true,
+    "left_right_geometric_symmetry_-89.999999": true,
+    "finite_and_positive_transfer_-90": true,
+    "disk_bounds_and_invalid_values_-90": true,
+    "left_right_geometric_symmetry_-90": true,
+    "finite_and_positive_transfer_-90.000001": true,
+    "disk_bounds_and_invalid_values_-90.000001": true,
+    "left_right_geometric_symmetry_-90.000001": true,
+    "finite_and_positive_transfer_-97": true,
+    "disk_bounds_and_invalid_values_-97": true,
+    "left_right_geometric_symmetry_-97": true,
+    "finite_and_positive_transfer_-180": true,
+    "disk_bounds_and_invalid_values_-180": true,
+    "left_right_geometric_symmetry_-180": true,
+    "finite_and_positive_transfer_-269.999999": true,
+    "disk_bounds_and_invalid_values_-269.999999": true,
+    "left_right_geometric_symmetry_-269.999999": true,
+    "finite_and_positive_transfer_-270": true,
+    "disk_bounds_and_invalid_values_-270": true,
+    "left_right_geometric_symmetry_-270": true,
+    "finite_and_positive_transfer_-270.000001": true,
+    "disk_bounds_and_invalid_values_-270.000001": true,
+    "left_right_geometric_symmetry_-270.000001": true,
+    "finite_and_positive_transfer_-277": true,
+    "disk_bounds_and_invalid_values_-277": true,
+    "left_right_geometric_symmetry_-277": true,
+    "finite_and_positive_transfer_90": true,
+    "disk_bounds_and_invalid_values_90": true,
+    "left_right_geometric_symmetry_90": true,
+    "finite_and_positive_transfer_180": true,
+    "disk_bounds_and_invalid_values_180": true,
+    "left_right_geometric_symmetry_180": true,
+    "finite_and_positive_transfer_270": true,
+    "disk_bounds_and_invalid_values_270": true,
+    "left_right_geometric_symmetry_270": true,
+    "finite_and_positive_transfer_443": true,
+    "disk_bounds_and_invalid_values_443": true,
+    "left_right_geometric_symmetry_443": true,
+    "antipodal_radius_delay_mask_bitwise": true,
+    "antipodal_doppler_reflection_bitwise": true,
+    "antipodal_emission_azimuth_reverses": true,
+    "full_revolution_identity_-277": true,
+    "full_revolution_identity_443": true,
+    "polar_frequency_shift_0": true,
+    "polar_quarter_turn_geometry_0": true,
+    "polar_frequency_shift_-180": true,
+    "polar_quarter_turn_geometry_-180": true,
+    "edge_limit_-90_-1e-06": true,
+    "edge_limit_-90_1e-06": true,
+    "edge_limit_-270_-1e-06": true,
+    "edge_limit_-270_1e-06": true,
+    "coplanar_first_outer_rim_-90": true,
+    "central_radial_delay_-90": true,
+    "coplanar_first_outer_rim_90": true,
+    "central_radial_delay_90": true
+  },
+  "views": [
+    {
+      "angle_deg": 83.0,
+      "disk_pixels": 20898,
+      "first_hit_layers": {
+        "0": 17888,
+        "1": 2984,
+        "2": 26,
+        "3": 0
+      },
+      "delay_range_tg": [
+        -31.570438385009766,
+        64.0616226196289
+      ]
+    },
+    {
+      "angle_deg": 0.0,
+      "disk_pixels": 90176,
+      "first_hit_layers": {
+        "0": 89560,
+        "1": 600,
+        "2": 16,
+        "3": 0
+      },
+      "delay_range_tg": [
+        -4.747162818908691,
+        46.77831268310547
+      ]
+    },
+    {
+      "angle_deg": -7.0,
+      "disk_pixels": 89582,
+      "first_hit_layers": {
+        "0": 88974,
+        "1": 592,
+        "2": 16,
+        "3": 0
+      },
+      "delay_range_tg": [
+        -8.247880935668945,
+        56.17346954345703
+      ]
+    },
+    {
+      "angle_deg": -89.999999,
+      "disk_pixels": 11956,
+      "first_hit_layers": {
+        "0": 5928,
+        "1": 5978,
+        "2": 50,
+        "3": 0
+      },
+      "delay_range_tg": [
+        10.093220710754395,
+        48.15969467163086
+      ]
+    },
+    {
+      "angle_deg": -90.0,
+      "disk_pixels": 11956,
+      "first_hit_layers": {
+        "0": 11856,
+        "1": 100,
+        "2": 0,
+        "3": 0
+      },
+      "delay_range_tg": [
+        10.093223571777344,
+        48.15969467163086
+      ]
+    },
+    {
+      "angle_deg": -90.000001,
+      "disk_pixels": 11956,
+      "first_hit_layers": {
+        "0": 5928,
+        "1": 5978,
+        "2": 50,
+        "3": 0
+      },
+      "delay_range_tg": [
+        10.093220710754395,
+        48.15969467163086
+      ]
+    },
+    {
+      "angle_deg": -97.0,
+      "disk_pixels": 20898,
+      "first_hit_layers": {
+        "0": 17888,
+        "1": 2984,
+        "2": 26,
+        "3": 0
+      },
+      "delay_range_tg": [
+        -31.570438385009766,
+        64.0616226196289
+      ]
+    },
+    {
+      "angle_deg": -180.0,
+      "disk_pixels": 90176,
+      "first_hit_layers": {
+        "0": 89560,
+        "1": 600,
+        "2": 16,
+        "3": 0
+      },
+      "delay_range_tg": [
+        -4.747162818908691,
+        46.77831268310547
+      ]
+    },
+    {
+      "angle_deg": -269.999999,
+      "disk_pixels": 11956,
+      "first_hit_layers": {
+        "0": 5928,
+        "1": 5978,
+        "2": 50,
+        "3": 0
+      },
+      "delay_range_tg": [
+        10.093220710754395,
+        48.15969467163086
+      ]
+    },
+    {
+      "angle_deg": -270.0,
+      "disk_pixels": 11956,
+      "first_hit_layers": {
+        "0": 11856,
+        "1": 100,
+        "2": 0,
+        "3": 0
+      },
+      "delay_range_tg": [
+        10.093223571777344,
+        48.15969467163086
+      ]
+    },
+    {
+      "angle_deg": -270.000001,
+      "disk_pixels": 11956,
+      "first_hit_layers": {
+        "0": 5928,
+        "1": 5978,
+        "2": 50,
+        "3": 0
+      },
+      "delay_range_tg": [
+        10.093220710754395,
+        48.15969467163086
+      ]
+    },
+    {
+      "angle_deg": -277.0,
+      "disk_pixels": 20898,
+      "first_hit_layers": {
+        "0": 17888,
+        "1": 2984,
+        "2": 26,
+        "3": 0
+      },
+      "delay_range_tg": [
+        -31.570438385009766,
+        64.0616226196289
+      ]
+    },
+    {
+      "angle_deg": 90.0,
+      "disk_pixels": 11956,
+      "first_hit_layers": {
+        "0": 11856,
+        "1": 100,
+        "2": 0,
+        "3": 0
+      },
+      "delay_range_tg": [
+        10.093223571777344,
+        48.15969467163086
+      ]
+    },
+    {
+      "angle_deg": 180.0,
+      "disk_pixels": 90176,
+      "first_hit_layers": {
+        "0": 89560,
+        "1": 600,
+        "2": 16,
+        "3": 0
+      },
+      "delay_range_tg": [
+        -4.747162818908691,
+        46.77831268310547
+      ]
+    },
+    {
+      "angle_deg": 270.0,
+      "disk_pixels": 11956,
+      "first_hit_layers": {
+        "0": 11856,
+        "1": 100,
+        "2": 0,
+        "3": 0
+      },
+      "delay_range_tg": [
+        10.093223571777344,
+        48.15969467163086
+      ]
+    },
+    {
+      "angle_deg": 443.0,
+      "disk_pixels": 20898,
+      "first_hit_layers": {
+        "0": 17888,
+        "1": 2984,
+        "2": 26,
+        "3": 0
+      },
+      "delay_range_tg": [
+        -31.570438385009766,
+        64.0616226196289
+      ]
+    }
+  ],
+  "source_sha256": {
+    "nasa_raytrace.py": "136960b3d0038a4762a585844fa9e39c2bb9cb942a7df550812d3fe6c8604390",
+    "raytrace.py": "653c187d66dbe3694e716e7b663e172dd559ebbf7817f8d6cc4c33806f4615eb",
+    "verify_full_orbit_geometry.py": "a7c4477b82509e3eb63060dde80cecaa98698bee65d4b86072140e4610f6386c"
+  },
+  "disk_plane_limits": [
+    {
+      "edge_angle_deg": -90.0,
+      "offset_deg": -1e-06,
+      "mask_disagreement_fraction": 0.0,
+      "max_radius_difference_rg": 0.000156402587890625,
+      "max_delay_difference_tg": 0.0001850128173828125
+    },
+    {
+      "edge_angle_deg": -90.0,
+      "offset_deg": 1e-06,
+      "mask_disagreement_fraction": 0.0,
+      "max_radius_difference_rg": 0.000156402587890625,
+      "max_delay_difference_tg": 0.0001850128173828125
+    },
+    {
+      "edge_angle_deg": -270.0,
+      "offset_deg": -1e-06,
+      "mask_disagreement_fraction": 0.0,
+      "max_radius_difference_rg": 0.000156402587890625,
+      "max_delay_difference_tg": 0.0001850128173828125
+    },
+    {
+      "edge_angle_deg": -270.0,
+      "offset_deg": 1e-06,
+      "mask_disagreement_fraction": 0.0,
+      "max_radius_difference_rg": 0.000156402587890625,
+      "max_delay_difference_tg": 0.0001850128173828125
+    }
+  ],
+  "edge_treatment": "Infinitesimally thin opaque disk. At the disk plane, noncoplanar rays first intersect at psi=pi; lensed rings persist. Exactly coplanar rays first enter the outer rim. This is a mathematical thin-surface limit, not a finite-height flow.",
+  "scope": "Geometry and travel-time regression/symmetry checks; not a fluid-model validation or a reproduction of unpublished NASA parameters.",
+  "elapsed_seconds": 6.901067583996337
+}

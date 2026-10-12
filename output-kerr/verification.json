@@ -1,0 +1,585 @@
+{
+  "preflight_only": false,
+  "videos": {
+    "camera": {
+      "file": "output-kerr/atlastro-kerr-truecolor-reel.mp4",
+      "size_bytes": 990847,
+      "stream": {
+        "codec_name": "h264",
+        "profile": "High",
+        "width": 1080,
+        "height": 1920,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "nb_frames": "240",
+        "duration": "8.000000",
+        "start_time": "0.000000",
+        "color_space": "bt709",
+        "color_transfer": "iec61966-2-1",
+        "color_primaries": "bt709"
+      },
+      "checks": [
+        {
+          "name": "1080x1920_reel",
+          "passed": true
+        },
+        {
+          "name": "h264_yuv420p",
+          "passed": true
+        },
+        {
+          "name": "30_fps",
+          "passed": true
+        },
+        {
+          "name": "240_declared_frames",
+          "passed": true
+        },
+        {
+          "name": "eight_second_duration",
+          "passed": true
+        },
+        {
+          "name": "zero_start_time",
+          "passed": true
+        },
+        {
+          "name": "no_audio_stream",
+          "passed": true
+        },
+        {
+          "name": "specified_color_tags",
+          "passed": true
+        },
+        {
+          "name": "fast_start",
+          "passed": true
+        },
+        {
+          "name": "all_240_frames_decode",
+          "passed": true
+        },
+        {
+          "name": "loop_seam_with_codec_tolerance",
+          "passed": true
+        }
+      ],
+      "mp4_atom_offsets": {
+        "ftyp": 0,
+        "moov": 32,
+        "free": 1765,
+        "mdat": 1773
+      },
+      "decode": {
+        "decoded_frames": 240,
+        "decoder_errors": "",
+        "difference_units": "mean absolute difference, RGB code values on a 0\u2013255 scale",
+        "all_transition_mae": {
+          "minimum": 0.006823881172839506,
+          "median": 0.14032101980452674,
+          "maximum": 0.3539448302469136
+        },
+        "first_three_transition_mae": [
+          0.055727880658436216,
+          0.019362139917695472,
+          0.014156700102880658
+        ],
+        "last_three_transition_mae": [
+          0.02876511059670782,
+          0.017035429526748972,
+          0.006823881172839506
+        ],
+        "seam_mae": 0.23658227237654322,
+        "hero_region_y": [
+          380,
+          1210
+        ],
+        "hero_first_three_transition_mae": [
+          0.09738100550349546,
+          0.038251524616986464,
+          0.029463409192324853
+        ],
+        "hero_last_three_transition_mae": [
+          0.06406068719321731,
+          0.03824371560315335,
+          0.015532128514056226
+        ],
+        "hero_seam_mae": 0.3701647330060985,
+        "codec_mae_allowance": 2.0,
+        "seam_limit_from_endpoint_transitions": 2.055727880658436,
+        "hero_seam_limit_from_endpoint_transitions": 2.0973810055034954,
+        "seam_consistent_with_nearby_transitions": true,
+        "seam_check_scope": "A perceptual discontinuity screen with codec tolerance; exact periodicity is checked separately on uncompressed renderer frames."
+      },
+      "passed": true
+    },
+    "ideal": {
+      "file": "output-kerr/atlastro-kerr-ideal-optics-reel.mp4",
+      "size_bytes": 1006529,
+      "stream": {
+        "codec_name": "h264",
+        "profile": "High",
+        "width": 1080,
+        "height": 1920,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "nb_frames": "240",
+        "duration": "8.000000",
+        "start_time": "0.000000",
+        "color_space": "bt709",
+        "color_transfer": "iec61966-2-1",
+        "color_primaries": "bt709"
+      },
+      "checks": [
+        {
+          "name": "1080x1920_reel",
+          "passed": true
+        },
+        {
+          "name": "h264_yuv420p",
+          "passed": true
+        },
+        {
+          "name": "30_fps",
+          "passed": true
+        },
+        {
+          "name": "240_declared_frames",
+          "passed": true
+        },
+        {
+          "name": "eight_second_duration",
+          "passed": true
+        },
+        {
+          "name": "zero_start_time",
+          "passed": true
+        },
+        {
+          "name": "no_audio_stream",
+          "passed": true
+        },
+        {
+          "name": "specified_color_tags",
+          "passed": true
+        },
+        {
+          "name": "fast_start",
+          "passed": true
+        },
+        {
+          "name": "all_240_frames_decode",
+          "passed": true
+        },
+        {
+          "name": "loop_seam_with_codec_tolerance",
+          "passed": true
+        }
+      ],
+      "mp4_atom_offsets": {
+        "ftyp": 0,
+        "moov": 32,
+        "free": 1765,
+        "mdat": 1773
+      },
+      "decode": {
+        "decoded_frames": 240,
+        "decoder_errors": "",
+        "difference_units": "mean absolute difference, RGB code values on a 0\u2013255 scale",
+        "all_transition_mae": {
+          "minimum": 0.005206082818930041,
+          "median": 0.13796794624485598,
+          "maximum": 0.35060249485596706
+        },
+        "first_three_transition_mae": [
+          0.05915927211934156,
+          0.016079443158436214,
+          0.014630915637860082
+        ],
+        "last_three_transition_mae": [
+          0.026888342335390947,
+          0.021582915380658436,
+          0.005206082818930041
+        ],
+        "seam_mae": 0.2314642811213992,
+        "hero_region_y": [
+          380,
+          1210
+        ],
+        "hero_first_three_transition_mae": [
+          0.10527294362635728,
+          0.031990554811839954,
+          0.031128588427785216
+        ],
+        "hero_last_three_transition_mae": [
+          0.05898743120630671,
+          0.04828313253012048,
+          0.011661460657444594
+        ],
+        "hero_seam_mae": 0.35657444593187565,
+        "codec_mae_allowance": 2.0,
+        "seam_limit_from_endpoint_transitions": 2.0591592721193415,
+        "hero_seam_limit_from_endpoint_transitions": 2.1052729436263573,
+        "seam_consistent_with_nearby_transitions": true,
+        "seam_check_scope": "A perceptual discontinuity screen with codec tolerance; exact periodicity is checked separately on uncompressed renderer frames."
+      },
+      "passed": true
+    }
+  },
+  "errors": [],
+  "physics": {
+    "raytrace": {
+      "passed": true,
+      "isco_spin0": 6.0,
+      "isco_spin09": 2.320883041761887,
+      "schwarzschild_mask_disagreement": 0.0,
+      "schwarzschild_radius_p99_relative_error": 5.273395800031722e-07,
+      "schwarzschild_g_p99_relative_error": 1.1695860990812434e-07,
+      "kerr_refinement_mask_disagreement": 0.0,
+      "kerr_refinement_radius_p99_relative_error": 0.0,
+      "kerr_refinement_g_p99_relative_error": 0.0,
+      "kerr_refinement_integrated_test_flux_relative_error": 0.0,
+      "potential_constraint_max_relative_residual": 1.6299418177053163e-08,
+      "kerr_capture_mask_disagreement_with_quartic_roots": 0.0,
+      "high_inclination_refinement_checks": {
+        "80": {
+          "mask_disagreement": 0.0,
+          "radius_p99_relative_error": 0.0,
+          "integrated_test_flux_relative_error": 0.0,
+          "maximum_potential_constraint_residual": 2.479529777267578e-08,
+          "mu_max": 0.9998489022254944,
+          "highest_visible_disk_crossing": 3
+        },
+        "84": {
+          "mask_disagreement": 0.0,
+          "radius_p99_relative_error": 0.0,
+          "integrated_test_flux_relative_error": 0.0,
+          "maximum_potential_constraint_residual": 2.816360200617368e-08,
+          "mu_max": 0.9997195601463318,
+          "highest_visible_disk_crossing": 2
+        }
+      },
+      "emission_mu_range": [
+        0.08164043724536896,
+        0.9997104406356812
+      ],
+      "visible_layers": {
+        "0": 79534,
+        "1": 52,
+        "2": 4,
+        "3": 1
+      },
+      "coarse_metadata": {
+        "model": "Kerr null geodesics; first opaque prograde circular thin-disk intersection",
+        "spin": 0.9,
+        "width": 256,
+        "height": 320,
+        "fov_horizontal_rg": 30,
+        "fov_vertical_rg": 37.5,
+        "roll_deg": 21,
+        "rin_rg": 2.320883041761887,
+        "rout_rg": 500,
+        "scaled_mino_step": 0.006,
+        "maximum_scaled_mino_parameter": 62.83185307179586,
+        "integrator": "RK4 with cubic-Hermite equatorial intersections",
+        "observer": "static at infinity",
+        "threads": 8,
+        "azimuth_and_travel_time": "not required by stationary axisymmetric emission; not integrated",
+        "last_trace_seconds": 0.11865916599344928,
+        "last_inclination_deg": 72,
+        "last_constraint_residual_max": 1.6299418177053163e-08
+      },
+      "elapsed_seconds": 5.839010041003348
+    },
+    "kerr_emission": {
+      "passed": true,
+      "schwarzschild_closed_form_max_relative_error": 4.727701252704719e-08,
+      "doubling_grid_max_relative_error": 3.7200084790356414e-08,
+      "independent_linear_quadrature_max_relative_error": 3.979334761705644e-08,
+      "dE_equals_Omega_dL_max_relative_error": 6.794564910705958e-14,
+      "flux_to_leading_newtonian_ratio_at_1e8_rg": 0.9997038039550185,
+      "flux_peak_radius_rg": 3.4419158480837657,
+      "effective_temperature_peak_k": 121987.52539098998,
+      "emission": {
+        "parameters": {
+          "mass_solar": 100000000.0,
+          "eddington_ratio": 0.1,
+          "spin_a_star": 0.9,
+          "mass_kg": 1.988409870698051e+38,
+          "rg_m": 147662503805.01248,
+          "tg_s": 492.5490947641267,
+          "isco_rg": 2.320883041761887,
+          "horizon_rg": 1.4358898943540672,
+          "efficiency_binding_energy": 0.1557529919944639,
+          "eddington_luminosity_w": 1.2570651798467909e+39,
+          "accretion_rate_kg_s": 8.980075598607432e+21,
+          "flux_normalization_w_m2": 2945581735692222.5,
+          "eddington_ratio_definition": "eta*Mdot*c^2/L_Edd; no photon capture correction",
+          "spectrum": "local Planck base; renderer may apply a separately documented atmosphere",
+          "inner_boundary": "stress-free ISCO; no emission inside the ISCO"
+        },
+        "solution": "Page--Thorne 1974, Eqs. 11b, 12, 15",
+        "integral_grid_samples": 65537,
+        "integral_maximum_radius_rg": 100000000.0,
+        "quadrature": "cumulative trapezoid; analytic orbital derivatives",
+        "lookup": "log flux versus log distance from ISCO",
+        "omissions": [
+          "returning-radiation heating",
+          "ISCO stress",
+          "finite thickness",
+          "disk-atmosphere solution",
+          "plunging emission",
+          "corona",
+          "GRMHD evolution"
+        ]
+      }
+    },
+    "planck_and_colorimetry": {
+      "parameters": {
+        "mass_solar": 100000000.0,
+        "eddington_ratio": 0.1,
+        "spin_a_star": 0.0,
+        "mass_kg": 1.988409870698051e+38,
+        "rg_m": 147662503805.01248,
+        "tg_s": 492.5490947641267,
+        "isco_rg": 6.0,
+        "horizon_rg": 2.0,
+        "efficiency_binding_energy": 0.057190958417936644,
+        "eddington_luminosity_w": 1.2570651798467909e+39,
+        "accretion_rate_kg_s": 2.445620219543168e+22,
+        "flux_normalization_w_m2": 1.2032929186436474e+16,
+        "spectrum": "isotropic Planck blackbody; color correction f_col=1",
+        "eddington_ratio_definition": "eta*Mdot*c^2/L_Edd; does not correct for photon capture"
+      },
+      "page_thorne_integral_max_relative_error": 1.9862462119490942e-08,
+      "flux_peak_radius_rg": 9.55095,
+      "flux_peak_shape": 0.00011458947324171412,
+      "flux_peak_w_m2": 1378847017028.6033,
+      "temperature_peak_k": 70222.46766797506,
+      "stefan_boltzmann_integral_relative_error": 1.2724555631393741e-08,
+      "planck_liouville_relative_error": 2.8199664825478976e-14,
+      "cie_lookup_max_relative_error_2000_to_500000k": 0.00024264652315730828,
+      "rgb_at_peak_temperature": [
+        376243120.84996563,
+        539325538.4819336,
+        1171101530.074683
+      ],
+      "spectrum": {
+        "cie_source": "https://cie.co.at/datatable/cie-1931-colour-matching-functions-2-degree-observer",
+        "cie_doi": "10.25039/CIE.DS.xvudnb9b",
+        "cie_md5": "17cca777db64b17170f06f67ce9d3ab7",
+        "cie_wavelength_nm": [
+          360,
+          830
+        ],
+        "spectral_step_nm": 1,
+        "lookup_bins": 4096,
+        "lookup_temperature_k": [
+          100.0,
+          1000000.0
+        ],
+        "radiance_units": "CIE-weighted W m^-2 sr^-1; no per-pixel normalization",
+        "display_matrix": "ICC sRGB interpretation, section 7"
+      }
+    },
+    "atmosphere_and_optics": {
+      "limb_angular_flux_normalization": 1.0000000025,
+      "color_correction_bolometric_relative_error": 6.661338147750939e-16,
+      "tone_curve_chromaticity_max_error": 3.3306690738754696e-16,
+      "Airy_first_null_J1_absolute_error": 2.42861286636753e-17,
+      "PSF_kernel_sum": 1.0,
+      "PSF_impulse_flux_absolute_error": 1.509903313490213e-14,
+      "PSF_linearity_absolute_error": 1.0526559048297782e-15,
+      "camera": {
+        "aperture_m": 4.0,
+        "wavelength_nm": 550.0,
+        "observer_distance_rg": 1000000.0,
+        "support_first_nulls": 24,
+        "kernel_subsamples": 3,
+        "first_null_pixels": 1.0062276602948663,
+        "model": "unobstructed circular pupil; monochromatic Airy PSF applied to linear RGB",
+        "limitation": "550nm reference wavelength applied equally to RGB; not full polychromatic camera",
+        "boundary": "zero-padded linear convolution; flux beyond cropped image is discarded",
+        "kernel": "pixel-integrated finite support, renormalized to unit sum",
+        "astrophysical_effect": false,
+        "kernel_size_pixels": [
+          51,
+          51
+        ]
+      },
+      "passed": true
+    },
+    "passed": true
+  },
+  "selected_model": {
+    "parameters": {
+      "mass_solar": 10000000000.0,
+      "eddington_ratio": 0.05,
+      "spin_a_star": 0.9,
+      "mass_kg": 1.988409870698051e+40,
+      "rg_m": 14766250380501.25,
+      "tg_s": 49254.90947641268,
+      "isco_rg": 2.320883041761887,
+      "horizon_rg": 1.4358898943540672,
+      "efficiency_binding_energy": 0.1557529919944639,
+      "eddington_luminosity_w": 1.257065179846791e+41,
+      "accretion_rate_kg_s": 4.490037799303716e+23,
+      "flux_normalization_w_m2": 14727908678461.113,
+      "eddington_ratio_definition": "eta*Mdot*c^2/L_Edd; no photon capture correction",
+      "spectrum": "local Planck base; renderer may apply a separately documented atmosphere",
+      "inner_boundary": "stress-free ISCO; no emission inside the ISCO"
+    },
+    "checks": [
+      {
+        "name": "actual_mass_and_accretion_normalization",
+        "passed": true,
+        "expected_flux_ratio_to_module_default": 0.005,
+        "maximum_relative_error": 2.220446049250313e-16
+      },
+      {
+        "name": "upper_inclination_has_no_unresolved_rays",
+        "passed": true
+      },
+      {
+        "name": "fluid_emission_angles_are_physical",
+        "passed": true
+      },
+      {
+        "name": "no_emission_inside_isco",
+        "passed": true
+      },
+      {
+        "name": "spectral_color_transform_is_finite",
+        "passed": true
+      },
+      {
+        "name": "upper_inclination_constraint_residual",
+        "passed": true,
+        "maximum_relative_residual": 2.5408176269628975e-08
+      }
+    ],
+    "selected_model_peak_effective_temperature_k": 32438.28778826873,
+    "selected_model_peak_color_correction": 1.0661739510795285,
+    "sampled_srgb_out_of_gamut_fraction": 0.00024217041674679657,
+    "gamut_scope": "CIE-to-sRGB can yield negative primaries for cool out-of-gamut colors. The renderer clips those primaries in its documented display transform.",
+    "frequency_shift_range": [
+      0.1696440577507019,
+      1.5580463409423828
+    ],
+    "observed_color_temperature_range_k": [
+      237.23948225779878,
+      50396.734924844015
+    ],
+    "scope": "Chosen M=10^10 solar masses, normalization eta*Mdot*c^2/L_Edd=0.05, a*=0.9; demo defaults are not substituted.",
+    "passed": true
+  },
+  "periodicity": {
+    "animation": {
+      "frames": 240,
+      "fps": 30,
+      "duration_seconds": 8,
+      "inclination_min_deg": 80.0,
+      "inclination_max_deg": 86.0,
+      "maximum_mirrored_phase_angle_error_deg": 1.4210854715202004e-14,
+      "phase_zero_deg": 86.0,
+      "phase_one_deg": 86.0
+    },
+    "checks": [
+      {
+        "name": "camera_phase_is_periodic",
+        "passed": true
+      },
+      {
+        "name": "inclination_scan_is_80_to_86_degrees",
+        "passed": true
+      },
+      {
+        "name": "camera_uncompressed_phase_zero_equals_phase_one",
+        "passed": true,
+        "dimensions": [
+          270,
+          480
+        ]
+      },
+      {
+        "name": "ideal_uncompressed_phase_zero_equals_phase_one",
+        "passed": true,
+        "dimensions": [
+          270,
+          480
+        ]
+      }
+    ],
+    "scope": "Exact rendered frame equality at 270x480; full-precision camera phases checked for all 240 frames. MP4 decoding is checked separately.",
+    "passed": true
+  },
+  "render_metadata": {
+    "file": "output-kerr/render-metadata.json",
+    "checks": [
+      {
+        "name": "rendered_model_parameters",
+        "passed": true,
+        "mass_solar": 10000000000.0,
+        "eddington_ratio": 0.05,
+        "spin_a_star": 0.9
+      },
+      {
+        "name": "raytracer_spin_and_disk_boundaries_match",
+        "passed": true,
+        "rin_rg": 2.320883041761887,
+        "rout_rg": 500
+      },
+      {
+        "name": "reel_and_sampling_configuration",
+        "passed": true
+      },
+      {
+        "name": "raytracer_matches_detector_subpixels",
+        "passed": true
+      },
+      {
+        "name": "fixed_declared_display_exposure",
+        "passed": true
+      },
+      {
+        "name": "camera_configuration_is_explicit",
+        "passed": true
+      },
+      {
+        "name": "all_121_independently_traced_views_recorded",
+        "passed": true,
+        "count": 121,
+        "maximum_expected_angle_error_deg": 0.0
+      },
+      {
+        "name": "every_view_has_small_potential_constraint_residual",
+        "passed": true,
+        "maximum_relative_residual": 2.994236599820731e-08
+      },
+      {
+        "name": "recorded_temperatures_use_selected_mass_and_accretion_rate",
+        "passed": true,
+        "independently_calculated_peak_k": 32438.28778826873,
+        "recorded_peak_temperature_range_k": [
+          32438.28775647075,
+          32438.287855811523
+        ]
+      },
+      {
+        "name": "all_views_contain_higher_order_disk_images",
+        "passed": true
+      },
+      {
+        "name": "radiance_is_finite_and_positive",
+        "passed": true
+      }
+    ],
+    "unresolved_ray_guard": "KerrTracer.trace raises before returning any map with an unresolved or nonfinite trajectory. Completed frame records therefore passed that guard; full per-ray maps are not saved.",
+    "atmosphere_declared": "Done2012 color correction, flux-normalized Li2005 limb law; approximate diluted Planck spectrum",
+    "passed": true
+  },
+  "passed": true,
+  "elapsed_seconds": 11.598241832994972
+}

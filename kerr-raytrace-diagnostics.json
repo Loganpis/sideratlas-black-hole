@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "isco_spin0": 6.0,
+  "isco_spin09": 2.320883041761887,
+  "schwarzschild_mask_disagreement": 0.0,
+  "schwarzschild_radius_p99_relative_error": 5.273395800031722e-07,
+  "schwarzschild_g_p99_relative_error": 1.1695860990812434e-07,
+  "kerr_refinement_mask_disagreement": 0.0,
+  "kerr_refinement_radius_p99_relative_error": 0.0,
+  "kerr_refinement_g_p99_relative_error": 0.0,
+  "kerr_refinement_integrated_test_flux_relative_error": 0.0,
+  "potential_constraint_max_relative_residual": 1.6299418177053163e-08,
+  "kerr_capture_mask_disagreement_with_quartic_roots": 0.0,
+  "high_inclination_refinement_checks": {
+    "80": {
+      "mask_disagreement": 0.0,
+      "radius_p99_relative_error": 0.0,
+      "integrated_test_flux_relative_error": 0.0,
+      "maximum_potential_constraint_residual": 2.479529777267578e-08,
+      "mu_max": 0.9998489022254944,
+      "highest_visible_disk_crossing": 3
+    },
+    "84": {
+      "mask_disagreement": 0.0,
+      "radius_p99_relative_error": 0.0,
+      "integrated_test_flux_relative_error": 0.0,
+      "maximum_potential_constraint_residual": 2.816360200617368e-08,
+      "mu_max": 0.9997195601463318,
+      "highest_visible_disk_crossing": 2
+    }
+  },
+  "emission_mu_range": [
+    0.08164043724536896,
+    0.9997104406356812
+  ],
+  "visible_layers": {
+    "0": 79534,
+    "1": 52,
+    "2": 4,
+    "3": 1
+  },
+  "coarse_metadata": {
+    "model": "Kerr null geodesics; first opaque prograde circular thin-disk intersection",
+    "spin": 0.9,
+    "width": 256,
+    "height": 320,
+    "fov_horizontal_rg": 30,
+    "fov_vertical_rg": 37.5,
+    "roll_deg": 21,
+    "rin_rg": 2.320883041761887,
+    "rout_rg": 500,
+    "scaled_mino_step": 0.006,
+    "maximum_scaled_mino_parameter": 62.83185307179586,
+    "integrator": "RK4 with cubic-Hermite equatorial intersections",
+    "observer": "static at infinity",
+    "threads": 8,
+    "azimuth_and_travel_time": "not required by stationary axisymmetric emission; not integrated",
+    "last_trace_seconds": 0.1262791670014849,
+    "last_inclination_deg": 72,
+    "last_constraint_residual_max": 1.6299418177053163e-08
+  },
+  "elapsed_seconds": 5.813938041013898
+}

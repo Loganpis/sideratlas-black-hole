@@ -1,0 +1,351 @@
+{
+  "scope": "Verify the current Kerr\u2013Newman renderer, saved numerical diagnostics and final files.\n\nThese checks measure numerical consistency of the specified idealized model,\nnot physical validation of a turbulent flow or agreement with NASA's movie.\n",
+  "preflight_only": true,
+  "verifier_sha256": "a13e10900b45c87f5551442d64e799725b12e7531d3a8a6160a252732ddf9abb",
+  "videos": {},
+  "numerical_reports": {
+    "scope": "Saved numerical diagnostics with every recorded source hash checked against the current files",
+    "reports": {
+      "kn-orbit-trace-diagnostics.json": {
+        "sha256": "5287c4cf8bb5828c89d5edad1630f638fb550f98e9ea802dd3ba17c27c49dbc8",
+        "checks": 62,
+        "source_matches": {
+          "kn_orbit_trace.py": true,
+          "kn_orbit_trace.cpp": true,
+          "kn_orbits.py": true,
+          "verify_kn_trace.py": true
+        }
+      },
+      "kn-orbit-emission-diagnostics.json": {
+        "sha256": "c5887d92a3102de127237abfd50073b681a9ddc81f262db559b0b42dff2aa81a",
+        "checks": 69,
+        "source_matches": {
+          "kn_orbits.py": true,
+          "kn_orbit_emission.py": true,
+          "verify_kn_orbit_emission.py": true,
+          "kerr_orbit_emission.py": true,
+          "kerr_emission.py": true,
+          "nasa_emission.py": true,
+          "emission.py": true
+        }
+      }
+    },
+    "checks": [
+      {
+        "name": "kn-orbit-trace-diagnostics.json_passed_with_current_sources",
+        "passed": true
+      },
+      {
+        "name": "kn-orbit-emission-diagnostics.json_passed_with_current_sources",
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "display": {
+    "scope": "Current KN renderer display functions; color is illustrative brightness",
+    "checks": [
+      {
+        "name": "black_exact",
+        "passed": true
+      },
+      {
+        "name": "palette_luminance_monotonic",
+        "passed": true
+      },
+      {
+        "name": "fixed_display_curve_monotonic_bounded",
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "actual_renderer": {
+    "scope": "Fresh checks with current rendering code at 270x480 and 2x sampling",
+    "geometry": {
+      "model": "Kerr-Newman null geodesics; first opaque prograde circular thin-disk intersection",
+      "spin": 0.9,
+      "charge_q": 0.4,
+      "charge_definition": "q=Q/(M sqrt(4 pi epsilon_0 G)); geometrized Q/M",
+      "disk_matter": "neutral test matter; no Lorentz force or plasma response",
+      "spin_definition": "a*=cJ/(GM^2)",
+      "spin_alignment": "black-hole angular momentum and disk angular momentum both +z; prograde",
+      "width": 540,
+      "height": 450,
+      "fov_horizontal_rg": 72.0,
+      "fov_vertical_rg": 60.0,
+      "roll_deg": 0,
+      "rin_rg": 1.577504566512094,
+      "rout_rg": 28.0,
+      "outer_horizon_rg": 1.1732050807568875,
+      "scaled_mino_step": 0.012,
+      "maximum_scaled_mino_parameter": 62.832,
+      "integrator": "double-precision RK4; Hermite equatorial root followed by partial RK4 event step",
+      "observer": "static at infinity",
+      "threads": 8,
+      "camera_angle_convention": "signed degrees about disk x axis; n=(0,-sin(theta),cos(theta))",
+      "camera_screen_basis": "e_x=(1,0,0); e_y=(0,cos(theta),sin(theta)); continuous through both poles",
+      "disk_plane_crossing": "observer-at-infinity crossing excluded; coplanar rays first enter outer rim",
+      "delay_units": "t_g=GM/c^3",
+      "delay_definition": "elapsed coordinate propagation time minus one common observer Kerr-Newman r*; q-r*(hit)",
+      "invalid_delay_value": 0,
+      "emission_time_rule": "t_em=t_obs-delay_tg; one common additive origin",
+      "azimuth": "pole-regular angular vector plus backward Kerr-Newman radial frame-dragging integral",
+      "disk_surfaces": "same prescribed isotropic surface emission on both faces"
+    },
+    "emission": {
+      "spin_a_star": 0.9,
+      "charge_q": 0.4,
+      "outer_radius_rg": 28.0,
+      "loop_period_tg": 800.0,
+      "contrast": 1.6,
+      "seed": 13326,
+      "radial_bands": 64,
+      "radial_log_half_width": 0.04,
+      "azimuthal_kappa": 2.5,
+      "lifetime_orbits": 1.5,
+      "maximum_lifetime_loop_fraction": 0.8,
+      "mean_overlapping_births": 2.0,
+      "model": "original kinematic source, not NASA software or GRMHD",
+      "intensity": "relative bolometric comoving surface intensity",
+      "radial_profile": "general Page-Thorne conservation integral with neutral Kerr-Newman circular orbits; zero ISCO stress; peak=1",
+      "radial_peak_rg": 2.2008687199235943,
+      "unscaled_radial_peak": 0.01806537327602981,
+      "angular_velocity_tg_inverse": "Omega(r)=sqrt(r-q^2)/(r^2+a*sqrt(r-q^2)), never quantized",
+      "radial_weight": "exp[-2 x^2/(1-x^2)], |x|<1; x=ln(r/r_j)/half_width",
+      "radial_e_folding_fraction_approx": 0.023094010767585032,
+      "angular_weight": "exp[kappa*cos(phi-phi_j-Omega(r)*age)]/I0(kappa)",
+      "lifetime_envelope": "sin(pi*age/lifetime)^4 on 0<age<lifetime; zero outside",
+      "lifetime_tg_range": [
+        28.181570689512697,
+        640.0
+      ],
+      "birth_count": 1060,
+      "normalization": "exact azimuthal mean equals Page-Thorne at each emission time and radius",
+      "loop_assumption": "periodically repeated finite-lived source births; not repeating gas orbits",
+      "retarded_time": "evaluate at t_em=t_obs-delay for each ray",
+      "not_modeled": [
+        "disk magnetohydrodynamics or MRI",
+        "fluid dynamics",
+        "disk thickness",
+        "radial inflow",
+        "plunging-region emission",
+        "thermal spectra",
+        "polarization",
+        "corona",
+        "returning radiation",
+        "charged-particle Lorentz forces",
+        "plasma currents",
+        "charge neutralization or evolution",
+        "disk backreaction"
+      ],
+      "sources": [
+        {
+          "doi": "10.1086/152990",
+          "role": "mean thin-disk flux"
+        },
+        {
+          "doi": "10.1086/383180",
+          "role": "orbiting/sheared inhomogeneities as a kinematic model"
+        },
+        {
+          "doi": "10.1103/PhysRevD.107.043030",
+          "role": "variable equatorial source, retarded time, orbital scales; not its stochastic solver"
+        },
+        {
+          "arxiv": "1303.6250",
+          "role": "neutral Kerr-Newman circular orbits and metric"
+        },
+        {
+          "arxiv": "gr-qc/0504025",
+          "role": "neutral specific energy and angular momentum, Eqs.19-20"
+        },
+        {
+          "arxiv": "1706.05466",
+          "role": "independent published neutral ISCO equation benchmark, not the root solver"
+        }
+      ],
+      "inner_radius_rg": 1.577504566512094,
+      "spin_alignment": "aligned / prograde",
+      "spin_definition": "a*=Jc/(G M^2); chosen model parameter, not a measurement",
+      "orbital_direction": "positive Boyer-Lindquist azimuth",
+      "charge_definition": "q=Q/(M*sqrt(4*pi*epsilon_0*G)); chosen theoretical parameter",
+      "emitter_specific_charge": 0.0,
+      "matter_assumption": "neutral test-matter disk in a fixed charged geometry; no Lorentz force or plasma dynamics",
+      "radial_quadrature": "cumulative trapezoid with analytic circular-orbit derivatives",
+      "radial_quadrature_samples": 65537,
+      "radial_lookup": "log flux versus log(r-rISCO); quadratic unresolved edge limit",
+      "dimensional_normalization": "none; mass, accretion rate, temperature and spectrum unspecified",
+      "surface_emission": "two identical opaque, isotropically emitting faces",
+      "flux_equation": "F proportional to -Omega'/(r*(E-Omega*L)^2) integral_ISCO^r (E-Omega*L)*L' dr"
+    },
+    "checks": [
+      {
+        "name": "spin_and_inner_boundary",
+        "passed": true
+      },
+      {
+        "name": "source_periodic_at_unwrapped_retarded_times",
+        "passed": true,
+        "maximum_error": 6.591949208711867e-17
+      },
+      {
+        "name": "light_arrival_delays_affect_evolving_source",
+        "passed": true,
+        "rms_difference": 0.041481141846312984
+      },
+      {
+        "name": "color_uncompressed_loop_endpoints_match",
+        "passed": true
+      },
+      {
+        "name": "mono_uncompressed_loop_endpoints_match",
+        "passed": true
+      },
+      {
+        "name": "phase_0_finite_positive_physics",
+        "passed": true,
+        "angle_deg": 83.0,
+        "hit_count": 36625,
+        "largest_constraint_residual": 3.748079002584122e-09
+      },
+      {
+        "name": "phase_0.125_finite_positive_physics",
+        "passed": true,
+        "angle_deg": 38.0,
+        "hit_count": 120015,
+        "largest_constraint_residual": 7.016857764225517e-10
+      },
+      {
+        "name": "phase_0.25_finite_positive_physics",
+        "passed": true,
+        "angle_deg": -7.0,
+        "hit_count": 146450,
+        "largest_constraint_residual": 8.524264649287536e-11
+      },
+      {
+        "name": "phase_0.375_finite_positive_physics",
+        "passed": true,
+        "angle_deg": -52.0,
+        "hit_count": 97657,
+        "largest_constraint_residual": 1.342002789843193e-09
+      },
+      {
+        "name": "phase_0.5_finite_positive_physics",
+        "passed": true,
+        "angle_deg": -97.0,
+        "hit_count": 36625,
+        "largest_constraint_residual": 3.748078669748421e-09
+      },
+      {
+        "name": "phase_0.625_finite_positive_physics",
+        "passed": true,
+        "angle_deg": -142.0,
+        "hit_count": 120015,
+        "largest_constraint_residual": 7.016861598063121e-10
+      },
+      {
+        "name": "phase_0.75_finite_positive_physics",
+        "passed": true,
+        "angle_deg": -187.0,
+        "hit_count": 146450,
+        "largest_constraint_residual": 8.524264649287536e-11
+      },
+      {
+        "name": "phase_0.875_finite_positive_physics",
+        "passed": true,
+        "angle_deg": -232.0,
+        "hit_count": 97657,
+        "largest_constraint_residual": 1.342002789843193e-09
+      },
+      {
+        "name": "phase_0.230556_finite_positive_physics",
+        "passed": true,
+        "angle_deg": 0.0,
+        "hit_count": 147404,
+        "largest_constraint_residual": 8.415782106599133e-11
+      },
+      {
+        "name": "phase_0.730556_finite_positive_physics",
+        "passed": true,
+        "angle_deg": -180.0,
+        "hit_count": 147404,
+        "largest_constraint_residual": 8.415782106599133e-11
+      },
+      {
+        "name": "north_pole_shift_matches_circular_orbit_time_dilation",
+        "passed": true,
+        "max_absolute_error": 4.214835336302514e-08
+      },
+      {
+        "name": "north_axisymmetric_geometry",
+        "passed": true
+      },
+      {
+        "name": "south_pole_shift_matches_circular_orbit_time_dilation",
+        "passed": true,
+        "max_absolute_error": 4.214835336302514e-08
+      },
+      {
+        "name": "south_axisymmetric_geometry",
+        "passed": true
+      },
+      {
+        "name": "identical_disk_faces_have_same_smooth_pole_image",
+        "passed": true
+      },
+      {
+        "name": "antipodal_retarded_radiance_matches_fresh_trace_0",
+        "passed": true,
+        "maximum_absolute_error": 9.5367431640625e-07
+      },
+      {
+        "name": "antipodal_retarded_radiance_matches_fresh_trace_0.125",
+        "passed": true,
+        "maximum_absolute_error": 5.960464477539063e-08
+      },
+      {
+        "name": "antipodal_retarded_radiance_matches_fresh_trace_0.230556",
+        "passed": true,
+        "maximum_absolute_error": 1.4901161193847656e-08
+      },
+      {
+        "name": "approaching_side_brighter",
+        "passed": true,
+        "left_right_ratio": 10.783483363060338
+      },
+      {
+        "name": "opposite_view_reverses_side_asymmetry",
+        "passed": true
+      },
+      {
+        "name": "higher_order_disk_images_present",
+        "passed": true,
+        "orders": {
+          "0": 31047,
+          "1": 5575,
+          "2": 3
+        }
+      },
+      {
+        "name": "spin_breaks_side_view_left_right_geometric_symmetry",
+        "passed": true
+      },
+      {
+        "name": "exact_plane_-90_finite",
+        "passed": true
+      },
+      {
+        "name": "exact_plane_-270_finite",
+        "passed": true
+      },
+      {
+        "name": "full_orbit_maps_return",
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "passed": true,
+  "elapsed_seconds": 9.589310708994162
+}

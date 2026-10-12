@@ -1,0 +1,175 @@
+{
+  "pixel_sample_4_vs_6_orders": [
+    {
+      "layers": 4,
+      "inclination_deg": 50,
+      "visible_pixels": 439038,
+      "bolometric_sum": 6.918006738719194e+16,
+      "layer_counts": {
+        "0": 436447,
+        "1": 2485,
+        "2": 102,
+        "3": 4
+      },
+      "extra_orders_fraction": 0.0
+    },
+    {
+      "layers": 4,
+      "inclination_deg": 66,
+      "visible_pixels": 392577,
+      "bolometric_sum": 5.785852858077005e+16,
+      "layer_counts": {
+        "0": 390831,
+        "1": 1662,
+        "2": 81,
+        "3": 3
+      },
+      "extra_orders_fraction": 0.0
+    },
+    {
+      "layers": 4,
+      "inclination_deg": 82,
+      "visible_pixels": 241427,
+      "bolometric_sum": 3.4199214566694784e+16,
+      "layer_counts": {
+        "0": 209763,
+        "1": 31619,
+        "2": 44,
+        "3": 1
+      },
+      "extra_orders_fraction": 0.0
+    },
+    {
+      "layers": 6,
+      "inclination_deg": 50,
+      "visible_pixels": 439038,
+      "bolometric_sum": 6.918006716253142e+16,
+      "layer_counts": {
+        "0": 436447,
+        "1": 2485,
+        "2": 102,
+        "3": 4,
+        "4": 0,
+        "5": 0
+      },
+      "extra_orders_fraction": 0.0
+    },
+    {
+      "layers": 6,
+      "inclination_deg": 66,
+      "visible_pixels": 392577,
+      "bolometric_sum": 5.785852750930584e+16,
+      "layer_counts": {
+        "0": 390831,
+        "1": 1662,
+        "2": 81,
+        "3": 3,
+        "4": 0,
+        "5": 0
+      },
+      "extra_orders_fraction": 0.0
+    },
+    {
+      "layers": 6,
+      "inclination_deg": 82,
+      "visible_pixels": 241428,
+      "bolometric_sum": 3.419925674637133e+16,
+      "layer_counts": {
+        "0": 209763,
+        "1": 31619,
+        "2": 44,
+        "3": 1,
+        "4": 1,
+        "5": 0
+      },
+      "extra_orders_fraction": 1.3229385593742245e-06
+    }
+  ],
+  "subpixel_extra_image_orders": [
+    {
+      "inclination_deg": 50,
+      "maximum_extra_order_width_rg": 9.274044477436405e-05,
+      "maximum_extra_order_width_pixels_at_1080_fov32": 0.0031299900111347867,
+      "extra_orders_bolometric_impact_area_integral": 77710731.09084713,
+      "extra_order_flux_fraction_of_full_fov_image": 3.949140255417563e-07
+    },
+    {
+      "inclination_deg": 66,
+      "maximum_extra_order_width_rg": 9.274044477436405e-05,
+      "maximum_extra_order_width_pixels_at_1080_fov32": 0.0031299900111347867,
+      "extra_orders_bolometric_impact_area_integral": 53042809.49835748,
+      "extra_order_flux_fraction_of_full_fov_image": 3.2230101891087727e-07
+    },
+    {
+      "inclination_deg": 82,
+      "maximum_extra_order_width_rg": 8.866013392783145e-05,
+      "maximum_extra_order_width_pixels_at_1080_fov32": 0.0029922795200643115,
+      "extra_orders_bolometric_impact_area_integral": 28788003.138929352,
+      "extra_order_flux_fraction_of_full_fov_image": 2.9593610501763e-07
+    }
+  ],
+  "strong_deflection_check": {
+    "b_rg": [
+      5.196142422706632,
+      5.196162422706632,
+      5.196252422706632,
+      5.197152422706632
+    ],
+    "escape_angle_rad": [
+      null,
+      15.902215859138071,
+      13.599702596211422,
+      11.297724961571314
+    ],
+    "supercritical_logarithmic_asymptote_rad": [
+      15.902206511844788,
+      13.599621418815216,
+      11.297036325818505
+    ],
+    "absolute_error_rad": [
+      9.347293282502278e-06,
+      8.117739620594477e-05,
+      0.0006886357528088638
+    ],
+    "reference": "Bozza (2002), Physical Review D 66, 103001, Eq. (50), doi:10.1103/PhysRevD.66.103001; https://arxiv.org/abs/gr-qc/0208075",
+    "formula": "total_escape_angle = -ln(b/b_critical - 1) + ln[216(7-4sqrt(3))] + O(delta*ln(delta)); the tested asymptote is not an exact identity."
+  },
+  "critical_orbit_interpolation": [
+    {
+      "inclination_deg": 50,
+      "critical_annulus_range_rg": [
+        5.096152422706632,
+        5.296152422706632
+      ],
+      "radius_common_hit_p99_relative_error": 6.959524037997156e-05,
+      "radius_common_hit_max_relative_error": 0.00017688422489681166,
+      "absolute_bolometric_impact_integral_error": 2065158.310309583,
+      "absolute_error_fraction_of_full_fov_bolometric_image": 1.0494818029082043e-08
+    },
+    {
+      "inclination_deg": 66,
+      "critical_annulus_range_rg": [
+        5.096152422706632,
+        5.296152422706632
+      ],
+      "radius_common_hit_p99_relative_error": 5.534416756415135e-05,
+      "radius_common_hit_max_relative_error": 0.00017722602305803026,
+      "absolute_bolometric_impact_integral_error": 1566105.7540960517,
+      "absolute_error_fraction_of_full_fov_bolometric_image": 9.516039686453175e-09
+    },
+    {
+      "inclination_deg": 82,
+      "critical_annulus_range_rg": [
+        5.096152422706632,
+        5.296152422706632
+      ],
+      "radius_common_hit_p99_relative_error": 4.612418225802273e-05,
+      "radius_common_hit_max_relative_error": 0.0001779742064415002,
+      "absolute_bolometric_impact_integral_error": 2605745.866422114,
+      "absolute_error_fraction_of_full_fov_bolometric_image": 2.6786654102172263e-08
+    }
+  ],
+  "scope": "Numerical spot checks at inclinations 50,66,82 degrees for the selected Schwarzschild thin-disk model; not a bound for every possible renderer setting.",
+  "critical_orbit_interpolation_method": "Compare the cached impact lookup against directly integrated RK4 orbits at 2048 logarithmically spaced impact parameters across b_critical +/- [1e-8,0.1] rg; 360 detector azimuths; direct step 0.001 radians versus cached step 0.002 radians.",
+  "subpixel_extra_image_orders_method": "Integrate 2048 impacts b_critical + geomspace(1e-9,0.1) rg for six plane crossings with 720 detector azimuths; compare orders 4 and 5 with four-crossing calculation. Radial integrals are numerical quadrature estimates."
+}

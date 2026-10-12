@@ -1,0 +1,1780 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "frames": 240,
+  "fps": 30,
+  "duration_seconds": 8,
+  "supersample": 1.5,
+  "animation": "Independent static observers, i=83+3cos(2pi phase); no evolving fluid",
+  "disk": {
+    "parameters": {
+      "mass_solar": 10000000000.0,
+      "eddington_ratio": 0.05,
+      "spin_a_star": 0.9,
+      "mass_kg": 1.988409870698051e+40,
+      "rg_m": 14766250380501.25,
+      "tg_s": 49254.90947641268,
+      "isco_rg": 2.320883041761887,
+      "horizon_rg": 1.4358898943540672,
+      "efficiency_binding_energy": 0.1557529919944639,
+      "eddington_luminosity_w": 1.257065179846791e+41,
+      "accretion_rate_kg_s": 4.490037799303716e+23,
+      "flux_normalization_w_m2": 14727908678461.113,
+      "eddington_ratio_definition": "eta*Mdot*c^2/L_Edd; no photon capture correction",
+      "spectrum": "local Planck base; renderer may apply a separately documented atmosphere",
+      "inner_boundary": "stress-free ISCO; no emission inside the ISCO"
+    },
+    "solution": "Page--Thorne 1974, Eqs. 11b, 12, 15",
+    "integral_grid_samples": 65537,
+    "integral_maximum_radius_rg": 100000000.0,
+    "quadrature": "cumulative trapezoid; analytic orbital derivatives",
+    "lookup": "log flux versus log distance from ISCO",
+    "omissions": [
+      "returning-radiation heating",
+      "ISCO stress",
+      "finite thickness",
+      "disk-atmosphere solution",
+      "plunging emission",
+      "corona",
+      "GRMHD evolution"
+    ]
+  },
+  "raytracer": {
+    "model": "Kerr null geodesics; first opaque prograde circular thin-disk intersection",
+    "spin": 0.9,
+    "width": 1620,
+    "height": 1410,
+    "fov_horizontal_rg": 26,
+    "fov_vertical_rg": 22.62962962962963,
+    "roll_deg": 14,
+    "rin_rg": 2.320883041761887,
+    "rout_rg": 500,
+    "scaled_mino_step": 0.006,
+    "maximum_scaled_mino_parameter": 62.83185307179586,
+    "integrator": "RK4 with cubic-Hermite equatorial intersections",
+    "observer": "static at infinity",
+    "threads": 8,
+    "azimuth_and_travel_time": "not required by stationary axisymmetric emission; not integrated",
+    "last_trace_seconds": 3.4933508329995675,
+    "last_inclination_deg": 80.0,
+    "last_constraint_residual_max": 2.631811416390523e-08
+  },
+  "spectrum": {
+    "cie_source": "https://cie.co.at/datatable/cie-1931-colour-matching-functions-2-degree-observer",
+    "cie_doi": "10.25039/CIE.DS.xvudnb9b",
+    "cie_md5": "17cca777db64b17170f06f67ce9d3ab7",
+    "cie_wavelength_nm": [
+      360,
+      830
+    ],
+    "spectral_step_nm": 1,
+    "lookup_bins": 4096,
+    "lookup_temperature_k": [
+      100.0,
+      1000000.0
+    ],
+    "radiance_units": "CIE-weighted W m^-2 sr^-1; no per-pixel normalization",
+    "display_matrix": "ICC sRGB interpretation, section 7"
+  },
+  "camera": {
+    "aperture_m": 20.0,
+    "wavelength_nm": 550.0,
+    "observer_distance_rg": 1000000.0,
+    "support_first_nulls": 40.0,
+    "kernel_subsamples": 3,
+    "first_null_pixels": 1.393238298869815,
+    "model": "unobstructed circular pupil; monochromatic Airy PSF applied to linear RGB",
+    "limitation": "550nm reference wavelength applied equally to RGB; not full polychromatic camera",
+    "boundary": "zero-padded linear convolution; flux beyond cropped image is discarded",
+    "kernel": "pixel-integrated finite support, renormalized to unit sum",
+    "astrophysical_effect": false,
+    "kernel_size_pixels": [
+      113,
+      113
+    ]
+  },
+  "atmosphere": "Done2012 color correction, flux-normalized Li2005 limb law; approximate diluted Planck spectrum",
+  "display": {
+    "exposure": 5.555555555555556e-09,
+    "curve": "v/(1+max(v)) with common RGB divisor, then sRGB",
+    "subpixel_average": "linear physical spectral radiance",
+    "color_tags": "BT709 primaries/matrix, sRGB transfer"
+  },
+  "frame_stats": [
+    {
+      "angle_deg": 86.0,
+      "maximum_local_temperature_k": 32438.287846437517,
+      "maximum_spectral_rgb_radiance": 510950469.14328104,
+      "emitting_fraction": 0.9450100691708256,
+      "constraint_residual_max": 2.944894765089367e-08,
+      "visible_crossing_layers": {
+        "0": 2155449,
+        "1": 2912,
+        "2": 211,
+        "3": 18,
+        "4": 2
+      }
+    },
+    {
+      "angle_deg": 85.99897197492668,
+      "maximum_local_temperature_k": 32438.287854544767,
+      "maximum_spectral_rgb_radiance": 510962963.7807862,
+      "emitting_fraction": 0.9450100691708256,
+      "constraint_residual_max": 2.94486196828959e-08,
+      "visible_crossing_layers": {
+        "0": 2155449,
+        "1": 2912,
+        "2": 211,
+        "3": 18,
+        "4": 2
+      }
+    },
+    {
+      "angle_deg": 85.99588860426373,
+      "maximum_local_temperature_k": 32438.28784821098,
+      "maximum_spectral_rgb_radiance": 511000476.14420885,
+      "emitting_fraction": 0.9450100691708256,
+      "constraint_residual_max": 2.8002948259242288e-08,
+      "visible_crossing_layers": {
+        "0": 2155450,
+        "1": 2911,
+        "2": 211,
+        "3": 18,
+        "4": 2
+      }
+    },
+    {
+      "angle_deg": 85.99075200119938,
+      "maximum_local_temperature_k": 32438.287850495795,
+      "maximum_spectral_rgb_radiance": 511062933.7167298,
+      "emitting_fraction": 0.9450166360213642,
+      "constraint_residual_max": 2.9077236221056305e-08,
+      "visible_crossing_layers": {
+        "0": 2155461,
+        "1": 2913,
+        "2": 212,
+        "3": 18,
+        "4": 3
+      }
+    },
+    {
+      "angle_deg": 85.98356568610482,
+      "maximum_local_temperature_k": 32438.287829969493,
+      "maximum_spectral_rgb_radiance": 511150279.490624,
+      "emitting_fraction": 0.9450148848612205,
+      "constraint_residual_max": 2.9718112449500362e-08,
+      "visible_crossing_layers": {
+        "0": 2155459,
+        "1": 2912,
+        "2": 212,
+        "3": 17,
+        "4": 3
+      }
+    },
+    {
+      "angle_deg": 85.97433458412144,
+      "maximum_local_temperature_k": 32438.28785120276,
+      "maximum_spectral_rgb_radiance": 511262479.45838493,
+      "emitting_fraction": 0.9450161982313282,
+      "constraint_residual_max": 2.8881607292744388e-08,
+      "visible_crossing_layers": {
+        "0": 2155463,
+        "1": 2912,
+        "2": 214,
+        "3": 16,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 85.96306502178541,
+      "maximum_local_temperature_k": 32438.287849477743,
+      "maximum_spectral_rgb_radiance": 511386478.32481134,
+      "emitting_fraction": 0.9450205761316872,
+      "constraint_residual_max": 2.9422409104596153e-08,
+      "visible_crossing_layers": {
+        "0": 2155470,
+        "1": 2914,
+        "2": 215,
+        "3": 16,
+        "6": 1
+      }
+    },
+    {
+      "angle_deg": 85.94976472269187,
+      "maximum_local_temperature_k": 32438.28782211544,
+      "maximum_spectral_rgb_radiance": 511438528.73425776,
+      "emitting_fraction": 0.9450245162420103,
+      "constraint_residual_max": 2.7349978694379845e-08,
+      "visible_crossing_layers": {
+        "0": 2155478,
+        "1": 2915,
+        "2": 215,
+        "3": 16,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 85.93444280220142,
+      "maximum_local_temperature_k": 32438.287848464333,
+      "maximum_spectral_rgb_radiance": 511498340.3094553,
+      "emitting_fraction": 0.9450249540320462,
+      "constraint_residual_max": 2.9292791722973566e-08,
+      "visible_crossing_layers": {
+        "0": 2155478,
+        "1": 2915,
+        "2": 217,
+        "3": 16
+      }
+    },
+    {
+      "angle_deg": 85.91710976119303,
+      "maximum_local_temperature_k": 32438.287844664046,
+      "maximum_spectral_rgb_radiance": 511614299.5180904,
+      "emitting_fraction": 0.945030207512477,
+      "constraint_residual_max": 2.9426109454275075e-08,
+      "visible_crossing_layers": {
+        "0": 2155487,
+        "1": 2916,
+        "2": 218,
+        "3": 16,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 85.8977774788672,
+      "maximum_local_temperature_k": 32438.287841370457,
+      "maximum_spectral_rgb_radiance": 511844820.7546013,
+      "emitting_fraction": 0.9450332720427284,
+      "constraint_residual_max": 2.9728874654086373e-08,
+      "visible_crossing_layers": {
+        "0": 2155492,
+        "1": 2919,
+        "2": 220,
+        "3": 14
+      }
+    },
+    {
+      "angle_deg": 85.87645920460457,
+      "maximum_local_temperature_k": 32438.28784897104,
+      "maximum_spectral_rgb_radiance": 512098676.67118496,
+      "emitting_fraction": 0.9450367743630155,
+      "constraint_residual_max": 2.846479243952092e-08,
+      "visible_crossing_layers": {
+        "0": 2155495,
+        "1": 2920,
+        "2": 221,
+        "3": 15,
+        "4": 2
+      }
+    },
+    {
+      "angle_deg": 85.85316954888546,
+      "maximum_local_temperature_k": 32438.28783140779,
+      "maximum_spectral_rgb_radiance": 512224106.8264514,
+      "emitting_fraction": 0.9450415900534104,
+      "constraint_residual_max": 2.960540606805733e-08,
+      "visible_crossing_layers": {
+        "0": 2155504,
+        "1": 2922,
+        "2": 222,
+        "3": 14,
+        "4": 2
+      }
+    },
+    {
+      "angle_deg": 85.82792447327654,
+      "maximum_local_temperature_k": 32438.287853024663,
+      "maximum_spectral_rgb_radiance": 512319143.6309756,
+      "emitting_fraction": 0.945052097014272,
+      "constraint_residual_max": 2.8393249368825927e-08,
+      "visible_crossing_layers": {
+        "0": 2155521,
+        "1": 2928,
+        "2": 223,
+        "3": 13,
+        "4": 3
+      }
+    },
+    {
+      "angle_deg": 85.8007412794916,
+      "maximum_local_temperature_k": 32438.28782009643,
+      "maximum_spectral_rgb_radiance": 512596536.46055734,
+      "emitting_fraction": 0.9450582260747745,
+      "constraint_residual_max": 2.8028452857991145e-08,
+      "visible_crossing_layers": {
+        "0": 2155529,
+        "1": 2936,
+        "2": 224,
+        "3": 11,
+        "4": 2
+      }
+    },
+    {
+      "angle_deg": 85.77163859753387,
+      "maximum_local_temperature_k": 32438.287833769828,
+      "maximum_spectral_rgb_radiance": 512914165.38050956,
+      "emitting_fraction": 0.9450656685053849,
+      "constraint_residual_max": 2.9221773823010652e-08,
+      "visible_crossing_layers": {
+        "0": 2155538,
+        "1": 2943,
+        "2": 224,
+        "3": 10,
+        "4": 3,
+        "5": 1
+      }
+    },
+    {
+      "angle_deg": 85.74063637292781,
+      "maximum_local_temperature_k": 32438.2878444107,
+      "maximum_spectral_rgb_radiance": 513027077.30665267,
+      "emitting_fraction": 0.945073548726031,
+      "constraint_residual_max": 2.953728261530381e-08,
+      "visible_crossing_layers": {
+        "0": 2155545,
+        "1": 2953,
+        "2": 224,
+        "3": 12,
+        "4": 3
+      }
+    },
+    {
+      "angle_deg": 85.70775585304958,
+      "maximum_local_temperature_k": 32438.28780666052,
+      "maximum_spectral_rgb_radiance": 513223591.57541305,
+      "emitting_fraction": 0.9450757376762104,
+      "constraint_residual_max": 2.97963787176104e-08,
+      "visible_crossing_layers": {
+        "0": 2155547,
+        "1": 2955,
+        "2": 224,
+        "3": 13,
+        "4": 3
+      }
+    },
+    {
+      "angle_deg": 85.67301957256511,
+      "maximum_local_temperature_k": 32438.287855304818,
+      "maximum_spectral_rgb_radiance": 513620266.3748303,
+      "emitting_fraction": 0.9450849312669644,
+      "constraint_residual_max": 2.9817787395946475e-08,
+      "visible_crossing_layers": {
+        "0": 2155571,
+        "1": 2953,
+        "2": 223,
+        "3": 14,
+        "4": 2
+      }
+    },
+    {
+      "angle_deg": 85.6364513379859,
+      "maximum_local_temperature_k": 32438.28779424577,
+      "maximum_spectral_rgb_radiance": 513756880.4226005,
+      "emitting_fraction": 0.9450945626477542,
+      "constraint_residual_max": 2.9677808016043824e-08,
+      "visible_crossing_layers": {
+        "0": 2155593,
+        "1": 2952,
+        "2": 222,
+        "3": 16,
+        "4": 2
+      }
+    },
+    {
+      "angle_deg": 85.59807621135332,
+      "maximum_local_temperature_k": 32438.287831489633,
+      "maximum_spectral_rgb_radiance": 513962308.92367435,
+      "emitting_fraction": 0.9450976271780054,
+      "constraint_residual_max": 2.994236599820731e-08,
+      "visible_crossing_layers": {
+        "0": 2155593,
+        "1": 2958,
+        "2": 223,
+        "3": 17,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 85.55792049306228,
+      "maximum_local_temperature_k": 32438.28785190972,
+      "maximum_spectral_rgb_radiance": 514359153.6449019,
+      "emitting_fraction": 0.9451037562385081,
+      "constraint_residual_max": 2.842578152173142e-08,
+      "visible_crossing_layers": {
+        "0": 2155605,
+        "1": 2962,
+        "2": 223,
+        "3": 16
+      }
+    },
+    {
+      "angle_deg": 85.51601170383627,
+      "maximum_local_temperature_k": 32438.2878193285,
+      "maximum_spectral_rgb_radiance": 514500378.24997073,
+      "emitting_fraction": 0.945108134138867,
+      "constraint_residual_max": 2.9681328657461463e-08,
+      "visible_crossing_layers": {
+        "0": 2155611,
+        "1": 2967,
+        "2": 221,
+        "3": 17
+      }
+    },
+    {
+      "angle_deg": 85.47237856586605,
+      "maximum_local_temperature_k": 32438.287822368795,
+      "maximum_spectral_rgb_radiance": 514794301.1847449,
+      "emitting_fraction": 0.9451177655196568,
+      "constraint_residual_max": 2.972728788081747e-08,
+      "visible_crossing_layers": {
+        "0": 2155629,
+        "1": 2970,
+        "2": 221,
+        "3": 17,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 85.42705098312484,
+      "maximum_local_temperature_k": 32438.287853278016,
+      "maximum_spectral_rgb_radiance": 515097931.96501094,
+      "emitting_fraction": 0.9451217056299799,
+      "constraint_residual_max": 2.9604584343012582e-08,
+      "visible_crossing_layers": {
+        "0": 2155640,
+        "1": 2971,
+        "2": 220,
+        "3": 15,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 85.3800600208737,
+      "maximum_local_temperature_k": 32438.287855304818,
+      "maximum_spectral_rgb_radiance": 515249261.7203626,
+      "emitting_fraction": 0.9451313370107697,
+      "constraint_residual_max": 2.7358715799632754e-08,
+      "visible_crossing_layers": {
+        "0": 2155649,
+        "1": 2978,
+        "2": 224,
+        "3": 17,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 85.33143788437091,
+      "maximum_local_temperature_k": 32438.28785190972,
+      "maximum_spectral_rgb_radiance": 515680679.1405172,
+      "emitting_fraction": 0.9451370282812364,
+      "constraint_residual_max": 2.772571065645863e-08,
+      "visible_crossing_layers": {
+        "0": 2155658,
+        "1": 2982,
+        "2": 225,
+        "3": 17
+      }
+    },
+    {
+      "angle_deg": 85.28121789680009,
+      "maximum_local_temperature_k": 32438.287852616686,
+      "maximum_spectral_rgb_radiance": 515836360.3770545,
+      "emitting_fraction": 0.9451567288328517,
+      "constraint_residual_max": 2.8869842615427927e-08,
+      "visible_crossing_layers": {
+        "0": 2155693,
+        "1": 2990,
+        "2": 225,
+        "3": 18,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 85.22943447643219,
+      "maximum_local_temperature_k": 32438.287840598292,
+      "maximum_spectral_rgb_radiance": 516169580.48374254,
+      "emitting_fraction": 0.9451667980036774,
+      "constraint_residual_max": 2.9690491390774724e-08,
+      "visible_crossing_layers": {
+        "0": 2155709,
+        "1": 2997,
+        "2": 225,
+        "3": 18,
+        "5": 1
+      }
+    },
+    {
+      "angle_deg": 85.17612311303687,
+      "maximum_local_temperature_k": 32438.287848374897,
+      "maximum_spectral_rgb_radiance": 516763679.2662201,
+      "emitting_fraction": 0.9451759915944313,
+      "constraint_residual_max": 2.9415503250808554e-08,
+      "visible_crossing_layers": {
+        "0": 2155727,
+        "1": 2999,
+        "2": 226,
+        "3": 19
+      }
+    },
+    {
+      "angle_deg": 85.12132034355965,
+      "maximum_local_temperature_k": 32438.28783731679,
+      "maximum_spectral_rgb_radiance": 517096497.1250998,
+      "emitting_fraction": 0.9451891252955082,
+      "constraint_residual_max": 2.7918953672338028e-08,
+      "visible_crossing_layers": {
+        "0": 2155754,
+        "1": 3003,
+        "2": 229,
+        "3": 14,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 85.06506372708127,
+      "maximum_local_temperature_k": 32438.287841117104,
+      "maximum_spectral_rgb_radiance": 517696208.96487963,
+      "emitting_fraction": 0.9451952543560108,
+      "constraint_residual_max": 2.8629639980017685e-08,
+      "visible_crossing_layers": {
+        "0": 2155762,
+        "1": 3008,
+        "2": 228,
+        "3": 14,
+        "4": 3
+      }
+    },
+    {
+      "angle_deg": 85.00739181907657,
+      "maximum_local_temperature_k": 32438.287833009766,
+      "maximum_spectral_rgb_radiance": 518059243.47860867,
+      "emitting_fraction": 0.9451948165659749,
+      "constraint_residual_max": 2.766925130949619e-08,
+      "visible_crossing_layers": {
+        "0": 2155767,
+        "1": 3007,
+        "2": 226,
+        "3": 13,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 84.94834414499056,
+      "maximum_local_temperature_k": 32438.287840103694,
+      "maximum_spectral_rgb_radiance": 518533134.63048947,
+      "emitting_fraction": 0.9452092636371596,
+      "constraint_residual_max": 2.9685006465154538e-08,
+      "visible_crossing_layers": {
+        "0": 2155798,
+        "1": 3006,
+        "2": 227,
+        "3": 13,
+        "4": 3
+      }
+    },
+    {
+      "angle_deg": 84.8879611731495,
+      "maximum_local_temperature_k": 32438.28785120276,
+      "maximum_spectral_rgb_radiance": 518998860.3061698,
+      "emitting_fraction": 0.9452188950179494,
+      "constraint_residual_max": 2.955214639398775e-08,
+      "visible_crossing_layers": {
+        "0": 2155814,
+        "1": 3012,
+        "2": 228,
+        "3": 13,
+        "4": 2
+      }
+    },
+    {
+      "angle_deg": 84.82628428702616,
+      "maximum_local_temperature_k": 32438.287840103694,
+      "maximum_spectral_rgb_radiance": 519342539.5989731,
+      "emitting_fraction": 0.9452272130286314,
+      "constraint_residual_max": 2.8324229096804778e-08,
+      "visible_crossing_layers": {
+        "0": 2155832,
+        "1": 3014,
+        "2": 228,
+        "3": 13,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 84.76335575687742,
+      "maximum_local_temperature_k": 32438.28785120276,
+      "maximum_spectral_rgb_radiance": 519899145.04206645,
+      "emitting_fraction": 0.9452372821994571,
+      "constraint_residual_max": 2.928614163983266e-08,
+      "visible_crossing_layers": {
+        "0": 2155852,
+        "1": 3015,
+        "2": 229,
+        "3": 14,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 84.6992187107745,
+      "maximum_local_temperature_k": 32438.287800073118,
+      "maximum_spectral_rgb_radiance": 520121755.3348127,
+      "emitting_fraction": 0.9452456002101393,
+      "constraint_residual_max": 2.9544187254419253e-08,
+      "visible_crossing_layers": {
+        "0": 2155867,
+        "1": 3019,
+        "2": 231,
+        "3": 12,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 84.63391710504509,
+      "maximum_local_temperature_k": 32438.287825915795,
+      "maximum_spectral_rgb_radiance": 520648204.8737921,
+      "emitting_fraction": 0.9452547938008931,
+      "constraint_residual_max": 2.895616280501064e-08,
+      "visible_crossing_layers": {
+        "0": 2155878,
+        "1": 3027,
+        "2": 232,
+        "3": 12,
+        "4": 2
+      }
+    },
+    {
+      "angle_deg": 84.56749569414785,
+      "maximum_local_temperature_k": 32438.287853278016,
+      "maximum_spectral_rgb_radiance": 520900162.73702145,
+      "emitting_fraction": 0.9452679275019701,
+      "constraint_residual_max": 2.8768807151425853e-08,
+      "visible_crossing_layers": {
+        "0": 2155901,
+        "1": 3036,
+        "2": 231,
+        "3": 12,
+        "5": 1
+      }
+    },
+    {
+      "angle_deg": 84.5,
+      "maximum_local_temperature_k": 32438.2878444107,
+      "maximum_spectral_rgb_radiance": 521363524.8796009,
+      "emitting_fraction": 0.945272743192365,
+      "constraint_residual_max": 2.908847113522676e-08,
+      "visible_crossing_layers": {
+        "0": 2155913,
+        "1": 3039,
+        "2": 230,
+        "3": 10
+      }
+    },
+    {
+      "angle_deg": 84.43147628077882,
+      "maximum_local_temperature_k": 32438.287846960968,
+      "maximum_spectral_rgb_radiance": 521723047.60468847,
+      "emitting_fraction": 0.945281061203047,
+      "constraint_residual_max": 2.8578073685347453e-08,
+      "visible_crossing_layers": {
+        "0": 2155923,
+        "1": 3048,
+        "2": 228,
+        "3": 11,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 84.36197149921864,
+      "maximum_local_temperature_k": 32438.287849477743,
+      "maximum_spectral_rgb_radiance": 522405505.6713842,
+      "emitting_fraction": 0.9452963838543035,
+      "constraint_residual_max": 2.852695242105968e-08,
+      "visible_crossing_layers": {
+        "0": 2155939,
+        "1": 3059,
+        "2": 235,
+        "3": 13
+      }
+    },
+    {
+      "angle_deg": 84.29153329042488,
+      "maximum_local_temperature_k": 32438.287808687408,
+      "maximum_spectral_rgb_radiance": 522919536.1093717,
+      "emitting_fraction": 0.9453060152350933,
+      "constraint_residual_max": 2.9021821391781467e-08,
+      "visible_crossing_layers": {
+        "0": 2155950,
+        "1": 3067,
+        "2": 236,
+        "3": 14,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 84.2202099292274,
+      "maximum_local_temperature_k": 32438.2878406104,
+      "maximum_spectral_rgb_radiance": 523449122.57687974,
+      "emitting_fraction": 0.9453204623062779,
+      "constraint_residual_max": 2.863660547161291e-08,
+      "visible_crossing_layers": {
+        "0": 2155984,
+        "1": 3066,
+        "2": 235,
+        "3": 15,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 84.14805029709527,
+      "maximum_local_temperature_k": 32438.287845930812,
+      "maximum_spectral_rgb_radiance": 524115919.670194,
+      "emitting_fraction": 0.9453261535767445,
+      "constraint_residual_max": 2.874908289992441e-08,
+      "visible_crossing_layers": {
+        "0": 2155995,
+        "1": 3071,
+        "2": 233,
+        "3": 13,
+        "4": 2
+      }
+    },
+    {
+      "angle_deg": 84.0751038486359,
+      "maximum_local_temperature_k": 32438.287855811523,
+      "maximum_spectral_rgb_radiance": 524602812.5886905,
+      "emitting_fraction": 0.9453362227475702,
+      "constraint_residual_max": 2.8653487412568452e-08,
+      "visible_crossing_layers": {
+        "0": 2156014,
+        "1": 3073,
+        "2": 232,
+        "3": 17,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 84.00142057770131,
+      "maximum_local_temperature_k": 32438.287836356514,
+      "maximum_spectral_rgb_radiance": 525022473.9849973,
+      "emitting_fraction": 0.9453497942386831,
+      "constraint_residual_max": 2.9123949192498313e-08,
+      "visible_crossing_layers": {
+        "0": 2156040,
+        "1": 3077,
+        "2": 232,
+        "3": 19
+      }
+    },
+    {
+      "angle_deg": 83.92705098312484,
+      "maximum_local_temperature_k": 32438.28784897104,
+      "maximum_spectral_rgb_radiance": 525618616.80941623,
+      "emitting_fraction": 0.9453642413098677,
+      "constraint_residual_max": 2.8624167956669238e-08,
+      "visible_crossing_layers": {
+        "0": 2156056,
+        "1": 3091,
+        "2": 238,
+        "3": 15,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 83.85204603411177,
+      "maximum_local_temperature_k": 32438.28780133993,
+      "maximum_spectral_rgb_radiance": 526038824.6460474,
+      "emitting_fraction": 0.9453782505910165,
+      "constraint_residual_max": 2.8922131299612062e-08,
+      "visible_crossing_layers": {
+        "0": 2156083,
+        "1": 3093,
+        "2": 241,
+        "3": 14,
+        "4": 2
+      }
+    },
+    {
+      "angle_deg": 83.77645713530757,
+      "maximum_local_temperature_k": 32438.287845930812,
+      "maximum_spectral_rgb_radiance": 526438291.78740484,
+      "emitting_fraction": 0.9453826284913756,
+      "constraint_residual_max": 2.7858426276317484e-08,
+      "visible_crossing_layers": {
+        "0": 2156099,
+        "1": 3087,
+        "2": 241,
+        "3": 16
+      }
+    },
+    {
+      "angle_deg": 83.70033609156772,
+      "maximum_local_temperature_k": 32438.287838330212,
+      "maximum_spectral_rgb_radiance": 526963056.75825197,
+      "emitting_fraction": 0.9453852552315909,
+      "constraint_residual_max": 2.910621927871634e-08,
+      "visible_crossing_layers": {
+        "0": 2156108,
+        "1": 3086,
+        "2": 237,
+        "3": 16,
+        "4": 1,
+        "5": 1
+      }
+    },
+    {
+      "angle_deg": 83.62373507245327,
+      "maximum_local_temperature_k": 32438.287849477743,
+      "maximum_spectral_rgb_radiance": 527224597.81198746,
+      "emitting_fraction": 0.9453940110323089,
+      "constraint_residual_max": 2.8841869869690072e-08,
+      "visible_crossing_layers": {
+        "0": 2156132,
+        "1": 3084,
+        "2": 235,
+        "3": 17,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 83.54670657647644,
+      "maximum_local_temperature_k": 32438.287849984445,
+      "maximum_spectral_rgb_radiance": 527867551.51185495,
+      "emitting_fraction": 0.945401891252955,
+      "constraint_residual_max": 2.9041650777633216e-08,
+      "visible_crossing_layers": {
+        "0": 2156150,
+        "1": 3085,
+        "2": 235,
+        "3": 16,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 83.46930339512069,
+      "maximum_local_temperature_k": 32438.287846690873,
+      "maximum_spectral_rgb_radiance": 528455388.20223236,
+      "emitting_fraction": 0.9454084581034936,
+      "constraint_residual_max": 2.8501300858752814e-08,
+      "visible_crossing_layers": {
+        "0": 2156157,
+        "1": 3087,
+        "2": 239,
+        "3": 18,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 83.39157857666015,
+      "maximum_local_temperature_k": 32438.28783423563,
+      "maximum_spectral_rgb_radiance": 529174053.9673581,
+      "emitting_fraction": 0.9454180894842833,
+      "constraint_residual_max": 2.7638563827625387e-08,
+      "visible_crossing_layers": {
+        "0": 2156178,
+        "1": 3090,
+        "2": 240,
+        "3": 16
+      }
+    },
+    {
+      "angle_deg": 83.31358538980297,
+      "maximum_local_temperature_k": 32438.28785049115,
+      "maximum_spectral_rgb_radiance": 529827801.4362063,
+      "emitting_fraction": 0.945419840644427,
+      "constraint_residual_max": 2.712331616328107e-08,
+      "visible_crossing_layers": {
+        "0": 2156179,
+        "1": 3093,
+        "2": 242,
+        "3": 13,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 83.23537728718354,
+      "maximum_local_temperature_k": 32438.287841305257,
+      "maximum_spectral_rgb_radiance": 530275751.4644035,
+      "emitting_fraction": 0.9454342877156116,
+      "constraint_residual_max": 2.6470545265798108e-08,
+      "visible_crossing_layers": {
+        "0": 2156196,
+        "1": 3105,
+        "2": 244,
+        "3": 14,
+        "4": 1,
+        "5": 1
+      }
+    },
+    {
+      "angle_deg": 83.15700786872883,
+      "maximum_local_temperature_k": 32438.28782718258,
+      "maximum_spectral_rgb_radiance": 530791483.83337855,
+      "emitting_fraction": 0.9454456702565449,
+      "constraint_residual_max": 2.7676816690049682e-08,
+      "visible_crossing_layers": {
+        "0": 2156216,
+        "1": 3116,
+        "2": 240,
+        "3": 13,
+        "4": 2
+      }
+    },
+    {
+      "angle_deg": 83.07853084492362,
+      "maximum_local_temperature_k": 32438.28785544455,
+      "maximum_spectral_rgb_radiance": 531392867.6671682,
+      "emitting_fraction": 0.9454579283775502,
+      "constraint_residual_max": 2.8458294783708007e-08,
+      "visible_crossing_layers": {
+        "0": 2156235,
+        "1": 3123,
+        "2": 243,
+        "3": 11,
+        "4": 3
+      }
+    },
+    {
+      "angle_deg": 83.0,
+      "maximum_local_temperature_k": 32438.28782844936,
+      "maximum_spectral_rgb_radiance": 531790021.88225436,
+      "emitting_fraction": 0.9454605551177655,
+      "constraint_residual_max": 2.8828989707839417e-08,
+      "visible_crossing_layers": {
+        "0": 2156240,
+        "1": 3125,
+        "2": 244,
+        "3": 12
+      }
+    },
+    {
+      "angle_deg": 82.92146915507638,
+      "maximum_local_temperature_k": 32438.287851757905,
+      "maximum_spectral_rgb_radiance": 532221440.60205007,
+      "emitting_fraction": 0.9454767533490938,
+      "constraint_residual_max": 2.6979842864958437e-08,
+      "visible_crossing_layers": {
+        "0": 2156264,
+        "1": 3130,
+        "2": 249,
+        "3": 14,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 82.84299213127117,
+      "maximum_local_temperature_k": 32438.28785429142,
+      "maximum_spectral_rgb_radiance": 532742414.45459044,
+      "emitting_fraction": 0.9454798178793451,
+      "constraint_residual_max": 2.6930632555909953e-08,
+      "visible_crossing_layers": {
+        "0": 2156269,
+        "1": 3137,
+        "2": 243,
+        "3": 15,
+        "5": 1
+      }
+    },
+    {
+      "angle_deg": 82.76462271281646,
+      "maximum_local_temperature_k": 32438.287818682507,
+      "maximum_spectral_rgb_radiance": 532989042.33898085,
+      "emitting_fraction": 0.9454890114700989,
+      "constraint_residual_max": 2.693073995752851e-08,
+      "visible_crossing_layers": {
+        "0": 2156293,
+        "1": 3138,
+        "2": 239,
+        "3": 16
+      }
+    },
+    {
+      "angle_deg": 82.68641461019703,
+      "maximum_local_temperature_k": 32438.287839343633,
+      "maximum_spectral_rgb_radiance": 533575920.12460744,
+      "emitting_fraction": 0.9454960161106734,
+      "constraint_residual_max": 2.779550932994159e-08,
+      "visible_crossing_layers": {
+        "0": 2156307,
+        "1": 3143,
+        "2": 236,
+        "3": 16
+      }
+    },
+    {
+      "angle_deg": 82.60842142333985,
+      "maximum_local_temperature_k": 32438.287853024663,
+      "maximum_spectral_rgb_radiance": 534284206.56659025,
+      "emitting_fraction": 0.9455091498117503,
+      "constraint_residual_max": 2.7880899490389835e-08,
+      "visible_crossing_layers": {
+        "0": 2156333,
+        "1": 3147,
+        "2": 238,
+        "3": 14
+      }
+    },
+    {
+      "angle_deg": 82.53069660487931,
+      "maximum_local_temperature_k": 32438.28785505147,
+      "maximum_spectral_rgb_radiance": 534832006.6855363,
+      "emitting_fraction": 0.9455196567726118,
+      "constraint_residual_max": 2.834677409792113e-08,
+      "visible_crossing_layers": {
+        "0": 2156355,
+        "1": 3151,
+        "2": 237,
+        "3": 13
+      }
+    },
+    {
+      "angle_deg": 82.45329342352356,
+      "maximum_local_temperature_k": 32438.287847667933,
+      "maximum_spectral_rgb_radiance": 535315647.76195997,
+      "emitting_fraction": 0.9455214079327554,
+      "constraint_residual_max": 2.782443345323701e-08,
+      "visible_crossing_layers": {
+        "0": 2156357,
+        "1": 3152,
+        "2": 235,
+        "3": 14,
+        "4": 2
+      }
+    },
+    {
+      "angle_deg": 82.37626492754673,
+      "maximum_local_temperature_k": 32438.28783731679,
+      "maximum_spectral_rgb_radiance": 535966291.22827035,
+      "emitting_fraction": 0.945519218982576,
+      "constraint_residual_max": 2.791638616665756e-08,
+      "visible_crossing_layers": {
+        "0": 2156356,
+        "1": 3151,
+        "2": 233,
+        "3": 13,
+        "4": 2
+      }
+    },
+    {
+      "angle_deg": 82.29966390843228,
+      "maximum_local_temperature_k": 32438.28785120276,
+      "maximum_spectral_rgb_radiance": 536499082.0249469,
+      "emitting_fraction": 0.9455200945626477,
+      "constraint_residual_max": 2.807687186388698e-08,
+      "visible_crossing_layers": {
+        "0": 2156368,
+        "1": 3148,
+        "2": 230,
+        "3": 10,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 82.22354286469243,
+      "maximum_local_temperature_k": 32438.28784897104,
+      "maximum_spectral_rgb_radiance": 536847105.40565294,
+      "emitting_fraction": 0.9455306015235093,
+      "constraint_residual_max": 2.7310696659113104e-08,
+      "visible_crossing_layers": {
+        "0": 2156388,
+        "1": 3150,
+        "2": 231,
+        "3": 12
+      }
+    },
+    {
+      "angle_deg": 82.14795396588823,
+      "maximum_local_temperature_k": 32438.28785505147,
+      "maximum_spectral_rgb_radiance": 537411596.0740952,
+      "emitting_fraction": 0.9455376061640837,
+      "constraint_residual_max": 2.766057272087182e-08,
+      "visible_crossing_layers": {
+        "0": 2156392,
+        "1": 3150,
+        "2": 235,
+        "3": 19,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 82.07294901687516,
+      "maximum_local_temperature_k": 32438.287833263115,
+      "maximum_spectral_rgb_radiance": 537816975.5289252,
+      "emitting_fraction": 0.9455472375448735,
+      "constraint_residual_max": 2.8031517466225063e-08,
+      "visible_crossing_layers": {
+        "0": 2156397,
+        "1": 3161,
+        "2": 239,
+        "3": 22
+      }
+    },
+    {
+      "angle_deg": 81.99857942229869,
+      "maximum_local_temperature_k": 32438.287854737588,
+      "maximum_spectral_rgb_radiance": 538176378.3141714,
+      "emitting_fraction": 0.9455590578758427,
+      "constraint_residual_max": 2.718575573893175e-08,
+      "visible_crossing_layers": {
+        "0": 2156410,
+        "1": 3168,
+        "2": 240,
+        "3": 27,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 81.9248961513641,
+      "maximum_local_temperature_k": 32438.287844840077,
+      "maximum_spectral_rgb_radiance": 538657194.469316,
+      "emitting_fraction": 0.9455748183171351,
+      "constraint_residual_max": 2.7019675142116325e-08,
+      "visible_crossing_layers": {
+        "0": 2156438,
+        "1": 3175,
+        "2": 243,
+        "3": 23,
+        "4": 3
+      }
+    },
+    {
+      "angle_deg": 81.85194970290473,
+      "maximum_local_temperature_k": 32438.287855811523,
+      "maximum_spectral_rgb_radiance": 538875202.1956403,
+      "emitting_fraction": 0.9455835741178531,
+      "constraint_residual_max": 2.7079768330547537e-08,
+      "visible_crossing_layers": {
+        "0": 2156447,
+        "1": 3188,
+        "2": 243,
+        "3": 23,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 81.7797900707726,
+      "maximum_local_temperature_k": 32438.287853024663,
+      "maximum_spectral_rgb_radiance": 539309876.8567544,
+      "emitting_fraction": 0.9455953944488223,
+      "constraint_residual_max": 2.63629318822953e-08,
+      "visible_crossing_layers": {
+        "0": 2156463,
+        "1": 3195,
+        "2": 248,
+        "3": 22,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 81.70846670957512,
+      "maximum_local_temperature_k": 32438.287844133112,
+      "maximum_spectral_rgb_radiance": 539708473.1518778,
+      "emitting_fraction": 0.9455980211890377,
+      "constraint_residual_max": 2.659353367624157e-08,
+      "visible_crossing_layers": {
+        "0": 2156475,
+        "1": 3196,
+        "2": 242,
+        "3": 21,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 81.63802850078136,
+      "maximum_local_temperature_k": 32438.287850495795,
+      "maximum_spectral_rgb_radiance": 540211268.3857814,
+      "emitting_fraction": 0.945601085719289,
+      "constraint_residual_max": 2.6928848064260757e-08,
+      "visible_crossing_layers": {
+        "0": 2156476,
+        "1": 3198,
+        "2": 244,
+        "3": 22,
+        "4": 2
+      }
+    },
+    {
+      "angle_deg": 81.56852371922118,
+      "maximum_local_temperature_k": 32438.2878406104,
+      "maximum_spectral_rgb_radiance": 540775278.3209332,
+      "emitting_fraction": 0.9456115926801506,
+      "constraint_residual_max": 2.677241803609757e-08,
+      "visible_crossing_layers": {
+        "0": 2156496,
+        "1": 3199,
+        "2": 247,
+        "3": 24
+      }
+    },
+    {
+      "angle_deg": 81.5,
+      "maximum_local_temperature_k": 32438.287840598292,
+      "maximum_spectral_rgb_radiance": 541287795.0982468,
+      "emitting_fraction": 0.9456247263812275,
+      "constraint_residual_max": 2.70332356938764e-08,
+      "visible_crossing_layers": {
+        "0": 2156527,
+        "1": 3196,
+        "2": 250,
+        "3": 21,
+        "4": 1,
+        "5": 1
+      }
+    },
+    {
+      "angle_deg": 81.43250430585215,
+      "maximum_local_temperature_k": 32438.28785049115,
+      "maximum_spectral_rgb_radiance": 541639965.7195408,
+      "emitting_fraction": 0.9456194729007967,
+      "constraint_residual_max": 2.6724721237608345e-08,
+      "visible_crossing_layers": {
+        "0": 2156523,
+        "1": 3196,
+        "2": 247,
+        "3": 16,
+        "4": 2
+      }
+    },
+    {
+      "angle_deg": 81.36608289495491,
+      "maximum_local_temperature_k": 32438.287824902367,
+      "maximum_spectral_rgb_radiance": 542206969.6393481,
+      "emitting_fraction": 0.9456299798616583,
+      "constraint_residual_max": 2.7131560261429625e-08,
+      "visible_crossing_layers": {
+        "0": 2156539,
+        "1": 3202,
+        "2": 249,
+        "3": 16,
+        "4": 2
+      }
+    },
+    {
+      "angle_deg": 81.3007812892255,
+      "maximum_local_temperature_k": 32438.287837823507,
+      "maximum_spectral_rgb_radiance": 542508287.7089158,
+      "emitting_fraction": 0.945631731021802,
+      "constraint_residual_max": 2.650188876141639e-08,
+      "visible_crossing_layers": {
+        "0": 2156540,
+        "1": 3199,
+        "2": 251,
+        "3": 17,
+        "4": 5
+      }
+    },
+    {
+      "angle_deg": 81.23664424312258,
+      "maximum_local_temperature_k": 32438.287843397287,
+      "maximum_spectral_rgb_radiance": 542948737.2995678,
+      "emitting_fraction": 0.9456365467121969,
+      "constraint_residual_max": 2.7139939417176198e-08,
+      "visible_crossing_layers": {
+        "0": 2156549,
+        "1": 3200,
+        "2": 253,
+        "3": 20,
+        "5": 1
+      }
+    },
+    {
+      "angle_deg": 81.17371571297384,
+      "maximum_local_temperature_k": 32438.287841370457,
+      "maximum_spectral_rgb_radiance": 543255109.9853396,
+      "emitting_fraction": 0.9456387356623763,
+      "constraint_residual_max": 2.6904615909659693e-08,
+      "visible_crossing_layers": {
+        "0": 2156559,
+        "1": 3197,
+        "2": 250,
+        "3": 19,
+        "4": 3
+      }
+    },
+    {
+      "angle_deg": 81.1120388268505,
+      "maximum_local_temperature_k": 32438.287855558174,
+      "maximum_spectral_rgb_radiance": 543624387.6668614,
+      "emitting_fraction": 0.9456466158830225,
+      "constraint_residual_max": 2.7155081793820746e-08,
+      "visible_crossing_layers": {
+        "0": 2156563,
+        "1": 3211,
+        "2": 252,
+        "3": 20
+      }
+    },
+    {
+      "angle_deg": 81.05165585500944,
+      "maximum_local_temperature_k": 32438.28785332365,
+      "maximum_spectral_rgb_radiance": 543881819.735649,
+      "emitting_fraction": 0.9456518693634532,
+      "constraint_residual_max": 2.6534796556403714e-08,
+      "visible_crossing_layers": {
+        "0": 2156555,
+        "1": 3229,
+        "2": 254,
+        "3": 19,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 80.99260818092343,
+      "maximum_local_temperature_k": 32438.28775647075,
+      "maximum_spectral_rgb_radiance": 544236209.7442604,
+      "emitting_fraction": 0.9456593117940636,
+      "constraint_residual_max": 2.7547024775515602e-08,
+      "visible_crossing_layers": {
+        "0": 2156580,
+        "1": 3223,
+        "2": 255,
+        "3": 16,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 80.93493627291873,
+      "maximum_local_temperature_k": 32438.28783351647,
+      "maximum_spectral_rgb_radiance": 544398083.7008219,
+      "emitting_fraction": 0.9456562472638123,
+      "constraint_residual_max": 2.696948372367482e-08,
+      "visible_crossing_layers": {
+        "0": 2156580,
+        "1": 3220,
+        "2": 252,
+        "3": 15,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 80.87867965644035,
+      "maximum_local_temperature_k": 32438.287838076856,
+      "maximum_spectral_rgb_radiance": 544786687.6399708,
+      "emitting_fraction": 0.9456671920147097,
+      "constraint_residual_max": 2.6699489302048525e-08,
+      "visible_crossing_layers": {
+        "0": 2156604,
+        "1": 3221,
+        "2": 250,
+        "3": 17,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 80.82387688696313,
+      "maximum_local_temperature_k": 32438.287847450927,
+      "maximum_spectral_rgb_radiance": 544931609.9870223,
+      "emitting_fraction": 0.9456693809648893,
+      "constraint_residual_max": 2.6440606486350888e-08,
+      "visible_crossing_layers": {
+        "0": 2156615,
+        "1": 3215,
+        "2": 252,
+        "3": 14,
+        "4": 2
+      }
+    },
+    {
+      "angle_deg": 80.77056552356781,
+      "maximum_local_temperature_k": 32438.287791818202,
+      "maximum_spectral_rgb_radiance": 545200625.0061493,
+      "emitting_fraction": 0.9456698187549252,
+      "constraint_residual_max": 2.7076114669287617e-08,
+      "visible_crossing_layers": {
+        "0": 2156612,
+        "1": 3218,
+        "2": 253,
+        "3": 15,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 80.71878210319991,
+      "maximum_local_temperature_k": 32438.287838076856,
+      "maximum_spectral_rgb_radiance": 545407816.4586234,
+      "emitting_fraction": 0.9456733210752123,
+      "constraint_residual_max": 2.6467373438665434e-08,
+      "visible_crossing_layers": {
+        "0": 2156620,
+        "1": 3218,
+        "2": 253,
+        "3": 16
+      }
+    },
+    {
+      "angle_deg": 80.66856211562909,
+      "maximum_local_temperature_k": 32438.28785403807,
+      "maximum_spectral_rgb_radiance": 545530903.785871,
+      "emitting_fraction": 0.9456720077051046,
+      "constraint_residual_max": 2.5772740603562765e-08,
+      "visible_crossing_layers": {
+        "0": 2156621,
+        "1": 3213,
+        "2": 257,
+        "3": 12,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 80.6199399791263,
+      "maximum_local_temperature_k": 32438.287851757905,
+      "maximum_spectral_rgb_radiance": 545812294.3444852,
+      "emitting_fraction": 0.9456785745556431,
+      "constraint_residual_max": 2.658264617404473e-08,
+      "visible_crossing_layers": {
+        "0": 2156633,
+        "1": 3214,
+        "2": 257,
+        "3": 14,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 80.57294901687516,
+      "maximum_local_temperature_k": 32438.28783047621,
+      "maximum_spectral_rgb_radiance": 545937635.4556636,
+      "emitting_fraction": 0.9456741966552841,
+      "constraint_residual_max": 2.6697896002970563e-08,
+      "visible_crossing_layers": {
+        "0": 2156629,
+        "1": 3212,
+        "2": 253,
+        "3": 14,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 80.52762143413395,
+      "maximum_local_temperature_k": 32438.287823888935,
+      "maximum_spectral_rgb_radiance": 546182942.7803795,
+      "emitting_fraction": 0.9456763856054636,
+      "constraint_residual_max": 2.6428046715490406e-08,
+      "visible_crossing_layers": {
+        "0": 2156638,
+        "1": 3209,
+        "2": 250,
+        "3": 15,
+        "4": 2
+      }
+    },
+    {
+      "angle_deg": 80.48398829616373,
+      "maximum_local_temperature_k": 32438.287855304818,
+      "maximum_spectral_rgb_radiance": 546529752.6454183,
+      "emitting_fraction": 0.9456812012958585,
+      "constraint_residual_max": 2.6136720607875522e-08,
+      "visible_crossing_layers": {
+        "0": 2156657,
+        "1": 3203,
+        "2": 251,
+        "3": 12,
+        "4": 2
+      }
+    },
+    {
+      "angle_deg": 80.44207950693772,
+      "maximum_local_temperature_k": 32438.287853784714,
+      "maximum_spectral_rgb_radiance": 546838835.5425118,
+      "emitting_fraction": 0.9456873303563611,
+      "constraint_residual_max": 2.6837156555359796e-08,
+      "visible_crossing_layers": {
+        "0": 2156670,
+        "1": 3203,
+        "2": 251,
+        "3": 14,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 80.40192378864668,
+      "maximum_local_temperature_k": 32438.287822368795,
+      "maximum_spectral_rgb_radiance": 547086809.2704698,
+      "emitting_fraction": 0.9456829524560021,
+      "constraint_residual_max": 2.603088785308047e-08,
+      "visible_crossing_layers": {
+        "0": 2156659,
+        "1": 3201,
+        "2": 252,
+        "3": 16,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 80.36354866201411,
+      "maximum_local_temperature_k": 32438.287818682507,
+      "maximum_spectral_rgb_radiance": 547383221.0175825,
+      "emitting_fraction": 0.9456829524560021,
+      "constraint_residual_max": 2.6921271376093862e-08,
+      "visible_crossing_layers": {
+        "0": 2156656,
+        "1": 3203,
+        "2": 254,
+        "3": 16
+      }
+    },
+    {
+      "angle_deg": 80.32698042743489,
+      "maximum_local_temperature_k": 32438.287841305257,
+      "maximum_spectral_rgb_radiance": 547575338.0495644,
+      "emitting_fraction": 0.9456886437264688,
+      "constraint_residual_max": 2.5739485414889475e-08,
+      "visible_crossing_layers": {
+        "0": 2156662,
+        "1": 3206,
+        "2": 256,
+        "3": 17,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 80.29224414695042,
+      "maximum_local_temperature_k": 32438.287839596982,
+      "maximum_spectral_rgb_radiance": 547794358.7597129,
+      "emitting_fraction": 0.9456960861570791,
+      "constraint_residual_max": 2.6670911918564277e-08,
+      "visible_crossing_layers": {
+        "0": 2156669,
+        "1": 3210,
+        "2": 259,
+        "3": 19,
+        "4": 2
+      }
+    },
+    {
+      "angle_deg": 80.25936362707219,
+      "maximum_local_temperature_k": 32438.287846944222,
+      "maximum_spectral_rgb_radiance": 548042265.6506004,
+      "emitting_fraction": 0.9456987128972945,
+      "constraint_residual_max": 2.650109801390187e-08,
+      "visible_crossing_layers": {
+        "0": 2156668,
+        "1": 3219,
+        "2": 259,
+        "3": 19
+      }
+    },
+    {
+      "angle_deg": 80.22836140246613,
+      "maximum_local_temperature_k": 32438.287849081862,
+      "maximum_spectral_rgb_radiance": 548216555.849042,
+      "emitting_fraction": 0.945700464057438,
+      "constraint_residual_max": 2.6473961225972e-08,
+      "visible_crossing_layers": {
+        "0": 2156669,
+        "1": 3220,
+        "2": 260,
+        "3": 20
+      }
+    },
+    {
+      "angle_deg": 80.1992587205084,
+      "maximum_local_temperature_k": 32438.287842637223,
+      "maximum_spectral_rgb_radiance": 548310917.3423083,
+      "emitting_fraction": 0.9457070309079766,
+      "constraint_residual_max": 2.6038562340256088e-08,
+      "visible_crossing_layers": {
+        "0": 2156683,
+        "1": 3224,
+        "2": 258,
+        "3": 18,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 80.17207552672346,
+      "maximum_local_temperature_k": 32438.287814261326,
+      "maximum_spectral_rgb_radiance": 548511308.3960266,
+      "emitting_fraction": 0.945709219858156,
+      "constraint_residual_max": 2.5772304306053854e-08,
+      "visible_crossing_layers": {
+        "0": 2156683,
+        "1": 3227,
+        "2": 258,
+        "3": 20,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 80.14683045111454,
+      "maximum_local_temperature_k": 32438.28780919413,
+      "maximum_spectral_rgb_radiance": 548696279.6330395,
+      "emitting_fraction": 0.9457131599684792,
+      "constraint_residual_max": 2.6040062115005144e-08,
+      "visible_crossing_layers": {
+        "0": 2156689,
+        "1": 3231,
+        "2": 259,
+        "3": 18,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 80.12354079539543,
+      "maximum_local_temperature_k": 32438.287853784714,
+      "maximum_spectral_rgb_radiance": 548833472.7628033,
+      "emitting_fraction": 0.9457109710182996,
+      "constraint_residual_max": 2.612480508024025e-08,
+      "visible_crossing_layers": {
+        "0": 2156686,
+        "1": 3228,
+        "2": 259,
+        "3": 18,
+        "4": 2
+      }
+    },
+    {
+      "angle_deg": 80.1022225211328,
+      "maximum_local_temperature_k": 32438.28785201126,
+      "maximum_spectral_rgb_radiance": 548891823.2841189,
+      "emitting_fraction": 0.9457087820681201,
+      "constraint_residual_max": 2.699745266130019e-08,
+      "visible_crossing_layers": {
+        "0": 2156684,
+        "1": 3229,
+        "2": 257,
+        "3": 17,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 80.08289023880697,
+      "maximum_local_temperature_k": 32438.28784821098,
+      "maximum_spectral_rgb_radiance": 548944204.6352181,
+      "emitting_fraction": 0.9457149111286227,
+      "constraint_residual_max": 2.526403987950042e-08,
+      "visible_crossing_layers": {
+        "0": 2156693,
+        "1": 3231,
+        "2": 258,
+        "3": 19,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 80.06555719779858,
+      "maximum_local_temperature_k": 32438.28785251796,
+      "maximum_spectral_rgb_radiance": 549058504.7012318,
+      "emitting_fraction": 0.9457144733385868,
+      "constraint_residual_max": 2.6175385963978347e-08,
+      "visible_crossing_layers": {
+        "0": 2156693,
+        "1": 3230,
+        "2": 259,
+        "3": 19
+      }
+    },
+    {
+      "angle_deg": 80.05023527730813,
+      "maximum_local_temperature_k": 32438.28784542411,
+      "maximum_spectral_rgb_radiance": 549167918.04899,
+      "emitting_fraction": 0.9457162244987304,
+      "constraint_residual_max": 2.6455937702676228e-08,
+      "visible_crossing_layers": {
+        "0": 2156697,
+        "1": 3232,
+        "2": 258,
+        "3": 18
+      }
+    },
+    {
+      "angle_deg": 80.03693497821459,
+      "maximum_local_temperature_k": 32438.28783918437,
+      "maximum_spectral_rgb_radiance": 549262617.6750607,
+      "emitting_fraction": 0.9457153489186586,
+      "constraint_residual_max": 2.5859647105115248e-08,
+      "visible_crossing_layers": {
+        "0": 2156695,
+        "1": 3232,
+        "2": 257,
+        "3": 17,
+        "4": 2
+      }
+    },
+    {
+      "angle_deg": 80.02566541587856,
+      "maximum_local_temperature_k": 32438.287847704276,
+      "maximum_spectral_rgb_radiance": 549342626.4476703,
+      "emitting_fraction": 0.9457166622887663,
+      "constraint_residual_max": 2.518988051759027e-08,
+      "visible_crossing_layers": {
+        "0": 2156695,
+        "1": 3235,
+        "2": 256,
+        "3": 18,
+        "4": 2
+      }
+    },
+    {
+      "angle_deg": 80.01643431389518,
+      "maximum_local_temperature_k": 32438.28785251796,
+      "maximum_spectral_rgb_radiance": 549407994.4499167,
+      "emitting_fraction": 0.9457149111286227,
+      "constraint_residual_max": 2.631737119921014e-08,
+      "visible_crossing_layers": {
+        "0": 2156688,
+        "1": 3236,
+        "2": 257,
+        "3": 18,
+        "4": 3
+      }
+    },
+    {
+      "angle_deg": 80.00924799880062,
+      "maximum_local_temperature_k": 32438.287854544767,
+      "maximum_spectral_rgb_radiance": 549431912.7886968,
+      "emitting_fraction": 0.9457162244987304,
+      "constraint_residual_max": 2.561850523814815e-08,
+      "visible_crossing_layers": {
+        "0": 2156691,
+        "1": 3236,
+        "2": 257,
+        "3": 18,
+        "4": 1,
+        "5": 1,
+        "6": 1
+      }
+    },
+    {
+      "angle_deg": 80.00411139573627,
+      "maximum_local_temperature_k": 32438.287855304818,
+      "maximum_spectral_rgb_radiance": 549445043.2903498,
+      "emitting_fraction": 0.9457153489186586,
+      "constraint_residual_max": 2.6193727134193172e-08,
+      "visible_crossing_layers": {
+        "0": 2156693,
+        "1": 3234,
+        "2": 257,
+        "3": 18,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 80.00102802507332,
+      "maximum_local_temperature_k": 32438.287842130518,
+      "maximum_spectral_rgb_radiance": 549453029.2719461,
+      "emitting_fraction": 0.9457166622887663,
+      "constraint_residual_max": 2.646603050614e-08,
+      "visible_crossing_layers": {
+        "0": 2156695,
+        "1": 3234,
+        "2": 257,
+        "3": 19,
+        "4": 1
+      }
+    },
+    {
+      "angle_deg": 80.0,
+      "maximum_local_temperature_k": 32438.28785429142,
+      "maximum_spectral_rgb_radiance": 549455658.7440609,
+      "emitting_fraction": 0.9457162244987304,
+      "constraint_residual_max": 2.631811416390523e-08,
+      "visible_crossing_layers": {
+        "0": 2156694,
+        "1": 3233,
+        "2": 257,
+        "3": 19,
+        "4": 2
+      }
+    }
+  ],
+  "elapsed_seconds": 522.114642540997
+}

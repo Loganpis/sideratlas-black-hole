@@ -1,0 +1,2553 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "frames": 240,
+  "duration_seconds": 8,
+  "supersample": 1.5,
+  "disk": {
+    "parameters": {
+      "mass_solar": 10000000000.0,
+      "eddington_ratio": 0.05,
+      "spin_a_star": 0.9,
+      "mass_kg": 1.988409870698051e+40,
+      "rg_m": 14766250380501.25,
+      "tg_s": 49254.90947641268,
+      "isco_rg": 2.320883041761887,
+      "horizon_rg": 1.4358898943540672,
+      "efficiency_binding_energy": 0.1557529919944639,
+      "eddington_luminosity_w": 1.257065179846791e+41,
+      "accretion_rate_kg_s": 4.490037799303716e+23,
+      "flux_normalization_w_m2": 14727908678461.113,
+      "eddington_ratio_definition": "eta*Mdot*c^2/L_Edd; no photon capture correction",
+      "spectrum": "local Planck base; renderer may apply a separately documented atmosphere",
+      "inner_boundary": "stress-free ISCO; no emission inside the ISCO"
+    },
+    "solution": "Page--Thorne 1974, Eqs. 11b, 12, 15",
+    "integral_grid_samples": 65537,
+    "integral_maximum_radius_rg": 100000000.0,
+    "quadrature": "cumulative trapezoid; analytic orbital derivatives",
+    "lookup": "log flux versus log distance from ISCO",
+    "omissions": [
+      "returning-radiation heating",
+      "ISCO stress",
+      "finite thickness",
+      "disk-atmosphere solution",
+      "plunging emission",
+      "corona",
+      "GRMHD evolution"
+    ]
+  },
+  "raytracer": {
+    "model": "Kerr null geodesics; first opaque prograde circular thin-disk intersection",
+    "spin": 0.9,
+    "width": 1950,
+    "height": 2760,
+    "fov_horizontal_rg": 28.88888888888889,
+    "fov_vertical_rg": 40.88888888888889,
+    "roll_deg": 14,
+    "rin_rg": 2.320883041761887,
+    "rout_rg": 500,
+    "scaled_mino_step": 0.018,
+    "maximum_scaled_mino_parameter": 62.83185307179586,
+    "integrator": "RK4 with cubic-Hermite equatorial intersections",
+    "observer": "static at infinity",
+    "threads": 8,
+    "azimuth_and_travel_time": "not required by stationary axisymmetric emission; not integrated",
+    "last_trace_seconds": 3.120841833995655,
+    "last_inclination_deg": 85.0,
+    "last_constraint_residual_max": 7.964014354975545e-07
+  },
+  "camera": {
+    "model": "wavelength-resolved Airy intensity PSF of an unobstructed circular aperture",
+    "aperture_m": 10.0,
+    "observer_distance_rg": 1000000.0,
+    "field_horizontal_rg": 28.88888888888889,
+    "detector_width_pixels": 1300,
+    "detector_height_pixels": 1840,
+    "wavelength_nm": [
+      360.0,
+      830.0
+    ],
+    "wavelength_step_nm": 10,
+    "wavelength_samples": 48,
+    "integration": "actual-wavelength trapezoidal quadrature, including half endpoint weights",
+    "order": "scalar Planck radiance; detector subpixel average; per-wavelength PSF; CIE XYZ; linear sRGB",
+    "first_null_pixels_360_830_nm": [
+      1.9758652238517376,
+      4.555467043880395
+    ],
+    "kernel_quadrature": "Gauss-Legendre integration over each detector pixel; more nodes for undersampled kernels",
+    "kernel_minimum_quadrature_nodes_per_axis": 3,
+    "kernel_support_first_nulls": 24.0,
+    "recommended_overscan_pixels_each_edge": 110,
+    "boundary": "zero outside supplied input field; crop an overscan margin to avoid missing external light",
+    "finite_support": "pixel-integrated circular cutoff, normalized to unit sum at each wavelength",
+    "kernel_fourier_storage": "real float32; radiance/color accumulation float64",
+    "kernel_cache_bytes": 318919680,
+    "setup_seconds": 2.1844644579978194,
+    "astrophysical_effect": false,
+    "cie_doi": "10.25039/CIE.DS.xvudnb9b",
+    "cie_md5": "17cca777db64b17170f06f67ce9d3ab7",
+    "display_matrix": "ICC sRGB interpretation, section 7",
+    "exposure_or_tone_mapping": "none; caller applies one fixed exposure and display transform",
+    "acceleration": {
+      "method": "normalized scalar Planck SVD; absolute amplitude restored before BOX average; RGB-weighted spectral OTF sums",
+      "rank": 18,
+      "temperature_domain_k": [
+        24.763801678208843,
+        100000.0
+      ],
+      "exact_zero_temperature_k": 24.763801678208843,
+      "exact_zero_rule": "same exponent >= 700 cutoff already used by direct planck_lambda; no additional light truncation",
+      "temperature_training_samples": 4096,
+      "temperature_lookup_samples": 32769,
+      "independent_half_grid_validation_samples": 32768,
+      "max_monochromatic_error_relative_to_continuous_Planck_peak": 0.00011553688555825083,
+      "discarded_singular_value": 1.536010251937324e-05,
+      "out_of_domain_policy": "direct wavelength-resolved fallback; zero sentinel retained",
+      "cold_scene_policy": "direct fallback when all emitting temperatures are below 2000 K",
+      "FFT_count_per_frame": {
+        "forward": 18,
+        "inverse": 3
+      },
+      "optical_model_changed": false,
+      "setup_seconds": 4.149962458992377,
+      "basis_OTF_cache_bytes": 358784640,
+      "last_apply_seconds": 1.9748143759934464
+    },
+    "last_apply_seconds": 1.9748143759934464,
+    "last_source_shape_pixels": [
+      2760,
+      1950
+    ]
+  },
+  "checkpoint_signature": "5ce13ee2e6f621bede2f721d0818883845b2bf43578d5bf488088e81cd23518b",
+  "restored_views": 0,
+  "composition": {
+    "visible_fov_horizontal_rg": 24.0,
+    "hero_height": 1620,
+    "hero_y": 30,
+    "overscan_each_edge_pixels": 110
+  },
+  "animation": "85\u201388 degree cosine view study, i=86.5+1.5cos(2pi phase); independent static observers",
+  "display": {
+    "exposure": 5.555555555555556e-09,
+    "curve": "v=max(RGB,0)*E; m=max(v); out=v*m/(1+m^2); sRGB encoding",
+    "color_role": "calculated visible color for the specified model; fixed display contrast, no automatic white balance",
+    "source_radiance": "diluted shifted Planck spectrum, not bolometric false color"
+  },
+  "frame_stats": [
+    {
+      "angle_deg": 88.0,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.216574236661931e-07,
+      "temperature_max_k": 32438.287796526045,
+      "observed_color_temperature_max_k": 50623.36113902742,
+      "frequency_shift_min": 0.1643637865781784,
+      "frequency_shift_max": 1.5911502838134766,
+      "visible_crossing_layers": {
+        "0": 4893905,
+        "1": 339205,
+        "2": 245,
+        "3": 16,
+        "4": 3,
+        "5": 1,
+        "6": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 2.1877758329937933,
+      "camera_radiance_max": 485498239.2458074,
+      "ideal_radiance_max": 495376967.261168
+    },
+    {
+      "angle_deg": 87.99948598746333,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.28195922942252e-07,
+      "temperature_max_k": 32438.287796526045,
+      "observed_color_temperature_max_k": 50623.35453259371,
+      "frequency_shift_min": 0.16437503695487976,
+      "frequency_shift_max": 1.59114670753479,
+      "visible_crossing_layers": {
+        "0": 4894388,
+        "1": 338724,
+        "2": 245,
+        "3": 16,
+        "4": 3,
+        "5": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 2.084825833007926,
+      "camera_radiance_max": 485501490.3351071,
+      "ideal_radiance_max": 495380593.7406909
+    },
+    {
+      "angle_deg": 87.99794430213186,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.381803583451723e-07,
+      "temperature_max_k": 32438.28784871769,
+      "observed_color_temperature_max_k": 50623.32997814866,
+      "frequency_shift_min": 0.16440877318382263,
+      "frequency_shift_max": 1.5911359786987305,
+      "visible_crossing_layers": {
+        "0": 4895958,
+        "1": 337157,
+        "2": 245,
+        "3": 16,
+        "4": 3
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 2.0683828740002355,
+      "camera_radiance_max": 485511472.6589077,
+      "ideal_radiance_max": 495391501.8014073
+    },
+    {
+      "angle_deg": 87.99537600059969,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.418572603633815e-07,
+      "temperature_max_k": 32438.28785226461,
+      "observed_color_temperature_max_k": 50623.281748015,
+      "frequency_shift_min": 0.16446495056152344,
+      "frequency_shift_max": 1.5911178588867188,
+      "visible_crossing_layers": {
+        "0": 4898475,
+        "1": 334640,
+        "2": 245,
+        "3": 16,
+        "4": 3
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 2.2081659999967087,
+      "camera_radiance_max": 485528071.82090807,
+      "ideal_radiance_max": 495409646.7207765
+    },
+    {
+      "angle_deg": 87.9917828430524,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.501840069662836e-07,
+      "temperature_max_k": 32438.287829209432,
+      "observed_color_temperature_max_k": 50623.194020501825,
+      "frequency_shift_min": 0.16450321674346924,
+      "frequency_shift_max": 1.5910921096801758,
+      "visible_crossing_layers": {
+        "0": 4902061,
+        "1": 331059,
+        "2": 245,
+        "3": 16,
+        "4": 3
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 2.1300867500103777,
+      "camera_radiance_max": 485551273.20713425,
+      "ideal_radiance_max": 495434996.4279495
+    },
+    {
+      "angle_deg": 87.98716729206072,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.995092784936562e-07,
+      "temperature_max_k": 32438.28785226461,
+      "observed_color_temperature_max_k": 50623.05284527183,
+      "frequency_shift_min": 0.16462412476539612,
+      "frequency_shift_max": 1.5910581350326538,
+      "visible_crossing_layers": {
+        "0": 4906567,
+        "1": 326557,
+        "2": 245,
+        "3": 16,
+        "4": 3
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 2.050084375005099,
+      "camera_radiance_max": 485581063.5905975,
+      "ideal_radiance_max": 495467542.8774167
+    },
+    {
+      "angle_deg": 87.9815325108927,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.816928047733533e-07,
+      "temperature_max_k": 32438.287849984445,
+      "observed_color_temperature_max_k": 50622.836673086254,
+      "frequency_shift_min": 0.1644323468208313,
+      "frequency_shift_max": 1.5910155773162842,
+      "visible_crossing_layers": {
+        "0": 4912095,
+        "1": 321033,
+        "2": 245,
+        "3": 16,
+        "4": 3
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 2.0871562079992145,
+      "camera_radiance_max": 485617452.587087,
+      "ideal_radiance_max": 495507240.7187405
+    },
+    {
+      "angle_deg": 87.97488236134593,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.554418830215757e-07,
+      "temperature_max_k": 32438.287854798116,
+      "observed_color_temperature_max_k": 50622.51573197883,
+      "frequency_shift_min": 0.16458964347839355,
+      "frequency_shift_max": 1.5909637212753296,
+      "visible_crossing_layers": {
+        "0": 4918498,
+        "1": 314634,
+        "2": 245,
+        "3": 16,
+        "4": 3
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 2.064174416998867,
+      "camera_radiance_max": 485660375.0433742,
+      "ideal_radiance_max": 495554164.51150525
+    },
+    {
+      "angle_deg": 87.96722140110072,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.911931422719394e-07,
+      "temperature_max_k": 32438.28784821098,
+      "observed_color_temperature_max_k": 50622.06623249459,
+      "frequency_shift_min": 0.16445916891098022,
+      "frequency_shift_max": 1.5909017324447632,
+      "visible_crossing_layers": {
+        "0": 4925843,
+        "1": 307298,
+        "2": 245,
+        "3": 16,
+        "4": 3
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 2.084700499995961,
+      "camera_radiance_max": 485709773.2735988,
+      "ideal_radiance_max": 495608115.39123863
+    },
+    {
+      "angle_deg": 87.95855488059651,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.964740011314474e-07,
+      "temperature_max_k": 32438.287797286128,
+      "observed_color_temperature_max_k": 50621.450803088694,
+      "frequency_shift_min": 0.1644028276205063,
+      "frequency_shift_max": 1.590828776359558,
+      "visible_crossing_layers": {
+        "0": 4934014,
+        "1": 299140,
+        "2": 245,
+        "3": 16,
+        "4": 3
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.977143750002142,
+      "camera_radiance_max": 485765608.94357526,
+      "ideal_radiance_max": 495669174.8042278
+    },
+    {
+      "angle_deg": 87.9488887394336,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.120464242367678e-07,
+      "temperature_max_k": 32438.287846960968,
+      "observed_color_temperature_max_k": 50620.63331882088,
+      "frequency_shift_min": 0.1644657850265503,
+      "frequency_shift_max": 1.5907437801361084,
+      "visible_crossing_layers": {
+        "0": 4942967,
+        "1": 290205,
+        "2": 245,
+        "3": 16,
+        "4": 3
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9772370010032319,
+      "camera_radiance_max": 485827848.92756015,
+      "ideal_radiance_max": 495737203.26123345
+    },
+    {
+      "angle_deg": 87.93822960230229,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.801729112091392e-07,
+      "temperature_max_k": 32438.287854544767,
+      "observed_color_temperature_max_k": 50619.574165484635,
+      "frequency_shift_min": 0.16466981172561646,
+      "frequency_shift_max": 1.5906457901000977,
+      "visible_crossing_layers": {
+        "0": 4952723,
+        "1": 280458,
+        "2": 245,
+        "3": 16,
+        "4": 4
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9187309999979334,
+      "camera_radiance_max": 485896189.9257227,
+      "ideal_radiance_max": 495812172.070492
+    },
+    {
+      "angle_deg": 87.92658477444273,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.337900153470739e-07,
+      "temperature_max_k": 32438.287848464333,
+      "observed_color_temperature_max_k": 50618.23372626062,
+      "frequency_shift_min": 0.1644565910100937,
+      "frequency_shift_max": 1.5905334949493408,
+      "visible_crossing_layers": {
+        "0": 4963137,
+        "1": 270052,
+        "2": 245,
+        "3": 16,
+        "4": 2,
+        "5": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 2.0140626249922207,
+      "camera_radiance_max": 485970798.3697978,
+      "ideal_radiance_max": 495894038.6221768
+    },
+    {
+      "angle_deg": 87.91396223663827,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.808524213567798e-07,
+      "temperature_max_k": 32438.287851504552,
+      "observed_color_temperature_max_k": 50616.56415779012,
+      "frequency_shift_min": 0.1647234410047531,
+      "frequency_shift_max": 1.5904059410095215,
+      "visible_crossing_layers": {
+        "0": 4974268,
+        "1": 258920,
+        "2": 245,
+        "3": 15,
+        "4": 2,
+        "5": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 2.0070913739909884,
+      "camera_radiance_max": 486051511.07728827,
+      "ideal_radiance_max": 495982660.5642443
+    },
+    {
+      "angle_deg": 87.9003706397458,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.422109523963473e-07,
+      "temperature_max_k": 32438.287838836917,
+      "observed_color_temperature_max_k": 50614.53056923444,
+      "frequency_shift_min": 0.1645430028438568,
+      "frequency_shift_max": 1.5902615785598755,
+      "visible_crossing_layers": {
+        "0": 4985958,
+        "1": 247241,
+        "2": 245,
+        "3": 14,
+        "4": 2
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.934284373986884,
+      "camera_radiance_max": 486138440.47581816,
+      "ideal_radiance_max": 496077995.7432989
+    },
+    {
+      "angle_deg": 87.88581929876693,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.407976820232664e-07,
+      "temperature_max_k": 32438.287834023184,
+      "observed_color_temperature_max_k": 50613.282062789294,
+      "frequency_shift_min": 0.1645115315914154,
+      "frequency_shift_max": 1.5900990962982178,
+      "visible_crossing_layers": {
+        "0": 4998138,
+        "1": 235072,
+        "2": 247,
+        "3": 14,
+        "4": 2,
+        "5": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9826132080052048,
+      "camera_radiance_max": 486231443.1631727,
+      "ideal_radiance_max": 496180065.75715435
+    },
+    {
+      "angle_deg": 87.8703181864639,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.054877733464023e-07,
+      "temperature_max_k": 32438.28785120276,
+      "observed_color_temperature_max_k": 50611.81929245208,
+      "frequency_shift_min": 0.16478106379508972,
+      "frequency_shift_max": 1.5899171829223633,
+      "visible_crossing_layers": {
+        "0": 5010827,
+        "1": 222381,
+        "2": 247,
+        "3": 14,
+        "4": 2
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9164896250149468,
+      "camera_radiance_max": 486330398.5696019,
+      "ideal_radiance_max": 496288622.4876734
+    },
+    {
+      "angle_deg": 87.85387792652479,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.356685549710307e-07,
+      "temperature_max_k": 32438.287835796666,
+      "observed_color_temperature_max_k": 50609.9075055023,
+      "frequency_shift_min": 0.16458801925182343,
+      "frequency_shift_max": 1.5897144079208374,
+      "visible_crossing_layers": {
+        "0": 5023873,
+        "1": 209351,
+        "2": 247,
+        "3": 14,
+        "4": 2
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8979597489960724,
+      "camera_radiance_max": 486434073.89653695,
+      "ideal_radiance_max": 496391856.6254283
+    },
+    {
+      "angle_deg": 87.83650978628255,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.971716449298404e-07,
+      "temperature_max_k": 32438.287825752104,
+      "observed_color_temperature_max_k": 50607.50316832953,
+      "frequency_shift_min": 0.16462722420692444,
+      "frequency_shift_max": 1.5894893407821655,
+      "visible_crossing_layers": {
+        "0": 5037202,
+        "1": 196040,
+        "2": 247,
+        "3": 14,
+        "4": 4
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9520868330000667,
+      "camera_radiance_max": 486537785.79100823,
+      "ideal_radiance_max": 496442853.4569146
+    },
+    {
+      "angle_deg": 87.81822566899295,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.802703841405984e-07,
+      "temperature_max_k": 32438.287825045143,
+      "observed_color_temperature_max_k": 50605.560749800345,
+      "frequency_shift_min": 0.1649392992258072,
+      "frequency_shift_max": 1.5892404317855835,
+      "visible_crossing_layers": {
+        "0": 5050730,
+        "1": 182522,
+        "2": 249,
+        "3": 14,
+        "4": 3
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.905760708003072,
+      "camera_radiance_max": 486646832.8280028,
+      "ideal_radiance_max": 496547011.3205709
+    },
+    {
+      "angle_deg": 87.79903810567666,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.019744872105963e-07,
+      "temperature_max_k": 32438.287847957632,
+      "observed_color_temperature_max_k": 50604.732092659244,
+      "frequency_shift_min": 0.1648610234260559,
+      "frequency_shift_max": 1.5889662504196167,
+      "visible_crossing_layers": {
+        "0": 5064477,
+        "1": 168798,
+        "2": 249,
+        "3": 15,
+        "4": 3
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9188751670153579,
+      "camera_radiance_max": 486761187.9459648,
+      "ideal_radiance_max": 496677860.1300522
+    },
+    {
+      "angle_deg": 87.77896024653114,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.308290320760003e-07,
+      "temperature_max_k": 32438.287840863748,
+      "observed_color_temperature_max_k": 50604.88744591099,
+      "frequency_shift_min": 0.16467754542827606,
+      "frequency_shift_max": 1.5886653661727905,
+      "visible_crossing_layers": {
+        "0": 5078230,
+        "1": 155053,
+        "2": 250,
+        "3": 14,
+        "4": 2,
+        "6": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9235211239865748,
+      "camera_radiance_max": 486880438.44217837,
+      "ideal_radiance_max": 496814532.3207095
+    },
+    {
+      "angle_deg": 87.75800585191814,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.478105968147511e-07,
+      "temperature_max_k": 32438.28784542411,
+      "observed_color_temperature_max_k": 50604.487432745205,
+      "frequency_shift_min": 0.1649053394794464,
+      "frequency_shift_max": 1.5883363485336304,
+      "visible_crossing_layers": {
+        "0": 5091879,
+        "1": 141414,
+        "2": 248,
+        "3": 14,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8734233739960473,
+      "camera_radiance_max": 487003881.7996048,
+      "ideal_radiance_max": 497006638.1777067
+    },
+    {
+      "angle_deg": 87.73618928293303,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.146753080118816e-07,
+      "temperature_max_k": 32438.28784618417,
+      "observed_color_temperature_max_k": 50603.481993874295,
+      "frequency_shift_min": 0.16476963460445404,
+      "frequency_shift_max": 1.5879777669906616,
+      "visible_crossing_layers": {
+        "0": 5105479,
+        "1": 127823,
+        "2": 248,
+        "3": 14
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8444627499993658,
+      "camera_radiance_max": 487130428.6074114,
+      "ideal_radiance_max": 497293173.7433132
+    },
+    {
+      "angle_deg": 87.71352549156242,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.653314546974593e-07,
+      "temperature_max_k": 32438.287850997855,
+      "observed_color_temperature_max_k": 50601.82956036466,
+      "frequency_shift_min": 0.1648951917886734,
+      "frequency_shift_max": 1.5875881910324097,
+      "visible_crossing_layers": {
+        "0": 5118859,
+        "1": 114462,
+        "2": 248,
+        "3": 14
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8526516669953708,
+      "camera_radiance_max": 487335986.3828411,
+      "ideal_radiance_max": 497574466.42307246
+    },
+    {
+      "angle_deg": 87.69003001043686,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.376965390998364e-07,
+      "temperature_max_k": 32438.287813733805,
+      "observed_color_temperature_max_k": 50599.48185106018,
+      "frequency_shift_min": 0.16484232246875763,
+      "frequency_shift_max": 1.587166428565979,
+      "visible_crossing_layers": {
+        "0": 5131936,
+        "1": 101415,
+        "2": 247,
+        "3": 14,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8504670419933973,
+      "camera_radiance_max": 487548775.19319475,
+      "ideal_radiance_max": 497804200.7525692
+    },
+    {
+      "angle_deg": 87.66571894218545,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.308225757908646e-07,
+      "temperature_max_k": 32438.28785429142,
+      "observed_color_temperature_max_k": 50596.39939171937,
+      "frequency_shift_min": 0.16489684581756592,
+      "frequency_shift_max": 1.5867111682891846,
+      "visible_crossing_layers": {
+        "0": 5144592,
+        "1": 88767,
+        "2": 247,
+        "3": 15,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8446652499987977,
+      "camera_radiance_max": 487768686.14336044,
+      "ideal_radiance_max": 498116093.47063524
+    },
+    {
+      "angle_deg": 87.64060894840004,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.570750680300658e-07,
+      "temperature_max_k": 32438.28784821098,
+      "observed_color_temperature_max_k": 50594.45032991643,
+      "frequency_shift_min": 0.1650371253490448,
+      "frequency_shift_max": 1.5862212181091309,
+      "visible_crossing_layers": {
+        "0": 5156749,
+        "1": 76616,
+        "2": 248,
+        "3": 15,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8838343329989584,
+      "camera_radiance_max": 487995476.116978,
+      "ideal_radiance_max": 498438015.9108157
+    },
+    {
+      "angle_deg": 87.61471723821609,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.783402765188333e-07,
+      "temperature_max_k": 32438.287844917406,
+      "observed_color_temperature_max_k": 50591.735789728795,
+      "frequency_shift_min": 0.16499099135398865,
+      "frequency_shift_max": 1.5856956243515015,
+      "visible_crossing_layers": {
+        "0": 5168335,
+        "1": 65053,
+        "2": 247,
+        "3": 16,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 2.0032810410048114,
+      "camera_radiance_max": 488233236.0308345,
+      "ideal_radiance_max": 498769704.66066986
+    },
+    {
+      "angle_deg": 87.58806155651843,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.963123306644674e-07,
+      "temperature_max_k": 32438.287854737588,
+      "observed_color_temperature_max_k": 50588.188836241345,
+      "frequency_shift_min": 0.16520138084888458,
+      "frequency_shift_max": 1.5851331949234009,
+      "visible_crossing_layers": {
+        "0": 5179237,
+        "1": 54180,
+        "2": 247,
+        "3": 16,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8788192499923753,
+      "camera_radiance_max": 488477941.13301927,
+      "ideal_radiance_max": 499095158.70616794
+    },
+    {
+      "angle_deg": 87.56066017177982,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.823573709186927e-07,
+      "temperature_max_k": 32438.287853024663,
+      "observed_color_temperature_max_k": 50584.116231545675,
+      "frequency_shift_min": 0.16520066559314728,
+      "frequency_shift_max": 1.5846669673919678,
+      "visible_crossing_layers": {
+        "0": 5189265,
+        "1": 44166,
+        "2": 248,
+        "3": 16,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8733305000059772,
+      "camera_radiance_max": 488726907.90489465,
+      "ideal_radiance_max": 499237158.52643013
+    },
+    {
+      "angle_deg": 87.53253186354063,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.209361010286185e-07,
+      "temperature_max_k": 32438.287855558174,
+      "observed_color_temperature_max_k": 50583.68482488594,
+      "frequency_shift_min": 0.16512039303779602,
+      "frequency_shift_max": 1.5844799280166626,
+      "visible_crossing_layers": {
+        "0": 5198500,
+        "1": 34948,
+        "2": 248,
+        "3": 16,
+        "4": 2
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9046122089930577,
+      "camera_radiance_max": 488982201.5093425,
+      "ideal_radiance_max": 499588825.3223938
+    },
+    {
+      "angle_deg": 87.5036959095383,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.353540871466764e-07,
+      "temperature_max_k": 32438.28782844936,
+      "observed_color_temperature_max_k": 50582.38566148379,
+      "frequency_shift_min": 0.16510269045829773,
+      "frequency_shift_max": 1.5842653512954712,
+      "visible_crossing_layers": {
+        "0": 5206687,
+        "1": 26764,
+        "2": 247,
+        "3": 16,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8748472500010394,
+      "camera_radiance_max": 489236265.8436953,
+      "ideal_radiance_max": 499875880.6244857
+    },
+    {
+      "angle_deg": 87.47417207249528,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.837163227818521e-07,
+      "temperature_max_k": 32438.287831742982,
+      "observed_color_temperature_max_k": 50580.1933102411,
+      "frequency_shift_min": 0.16515366733074188,
+      "frequency_shift_max": 1.5840222835540771,
+      "visible_crossing_layers": {
+        "0": 5213809,
+        "1": 19659,
+        "2": 246,
+        "3": 16,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8684005830000388,
+      "camera_radiance_max": 489490859.01058847,
+      "ideal_radiance_max": 500116265.88613683
+    },
+    {
+      "angle_deg": 87.44398058657475,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.89592107192623e-07,
+      "temperature_max_k": 32438.287843903992,
+      "observed_color_temperature_max_k": 50577.09052979921,
+      "frequency_shift_min": 0.16524286568164825,
+      "frequency_shift_max": 1.584370732307434,
+      "visible_crossing_layers": {
+        "0": 5219784,
+        "1": 13728,
+        "2": 248,
+        "3": 16,
+        "5": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8659949159919051,
+      "camera_radiance_max": 489755421.2854887,
+      "ideal_radiance_max": 500364928.02114373
+    },
+    {
+      "angle_deg": 87.41314214351308,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.266582738597433e-07,
+      "temperature_max_k": 32438.287839343633,
+      "observed_color_temperature_max_k": 50574.67580295025,
+      "frequency_shift_min": 0.16534580290317535,
+      "frequency_shift_max": 1.583728551864624,
+      "visible_crossing_layers": {
+        "0": 5224508,
+        "1": 9017,
+        "2": 249,
+        "3": 17
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8494181660062168,
+      "camera_radiance_max": 490027616.32094264,
+      "ideal_radiance_max": 500740675.0521619
+    },
+    {
+      "angle_deg": 87.38167787843871,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.886647628860358e-07,
+      "temperature_max_k": 32438.287843650636,
+      "observed_color_temperature_max_k": 50571.685341318866,
+      "frequency_shift_min": 0.16567376255989075,
+      "frequency_shift_max": 1.5832082033157349,
+      "visible_crossing_layers": {
+        "0": 5227899,
+        "1": 5643,
+        "2": 248,
+        "3": 17,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8426889999973355,
+      "camera_radiance_max": 490304970.80816805,
+      "ideal_radiance_max": 501123727.267836
+    },
+    {
+      "angle_deg": 87.34960935538724,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.90713912497899e-07,
+      "temperature_max_k": 32438.287855304818,
+      "observed_color_temperature_max_k": 50567.73008719755,
+      "frequency_shift_min": 0.16550178825855255,
+      "frequency_shift_max": 1.5829483270645142,
+      "visible_crossing_layers": {
+        "0": 5229814,
+        "1": 3746,
+        "2": 247,
+        "3": 18
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8050349999975879,
+      "camera_radiance_max": 490570024.6513746,
+      "ideal_radiance_max": 501339804.2609462
+    },
+    {
+      "angle_deg": 87.31695855252254,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.925501757559944e-07,
+      "temperature_max_k": 32438.287852771307,
+      "observed_color_temperature_max_k": 50562.79854204309,
+      "frequency_shift_min": 0.16545261442661285,
+      "frequency_shift_max": 1.5826581716537476,
+      "visible_crossing_layers": {
+        "0": 5230288,
+        "1": 3301,
+        "2": 246,
+        "3": 18
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8302684169902932,
+      "camera_radiance_max": 490829662.76142055,
+      "ideal_radiance_max": 501460141.10110354
+    },
+    {
+      "angle_deg": 87.28374784707393,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.902739049864304e-07,
+      "temperature_max_k": 32438.287850495795,
+      "observed_color_temperature_max_k": 50559.60372313628,
+      "frequency_shift_min": 0.1654406487941742,
+      "frequency_shift_max": 1.5823370218276978,
+      "visible_crossing_layers": {
+        "0": 5230307,
+        "1": 3302,
+        "2": 247,
+        "3": 16
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8762474579998525,
+      "camera_radiance_max": 491089492.5080215,
+      "ideal_radiance_max": 501831397.4879386
+    },
+    {
+      "angle_deg": 87.25,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.858940366147758e-07,
+      "temperature_max_k": 32438.287837770444,
+      "observed_color_temperature_max_k": 50557.390095077426,
+      "frequency_shift_min": 0.16546569764614105,
+      "frequency_shift_max": 1.5819844007492065,
+      "visible_crossing_layers": {
+        "0": 5230320,
+        "1": 3306,
+        "2": 248,
+        "3": 16
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8891103329951875,
+      "camera_radiance_max": 491331496.7036363,
+      "ideal_radiance_max": 502090535.1082147
+    },
+    {
+      "angle_deg": 87.21573814038942,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.328371545628586e-07,
+      "temperature_max_k": 32438.287847704276,
+      "observed_color_temperature_max_k": 50554.29818231843,
+      "frequency_shift_min": 0.16559849679470062,
+      "frequency_shift_max": 1.5816805362701416,
+      "visible_crossing_layers": {
+        "0": 5230334,
+        "1": 3311,
+        "2": 252,
+        "3": 16,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.849880875000963,
+      "camera_radiance_max": 491596426.0247998,
+      "ideal_radiance_max": 502352932.0373418
+    },
+    {
+      "angle_deg": 87.18098574960932,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.707538754735612e-07,
+      "temperature_max_k": 32438.287822368795,
+      "observed_color_temperature_max_k": 50552.040768741834,
+      "frequency_shift_min": 0.16577546298503876,
+      "frequency_shift_max": 1.58136785030365,
+      "visible_crossing_layers": {
+        "0": 5230356,
+        "1": 3314,
+        "2": 252,
+        "3": 15,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8313906679977663,
+      "camera_radiance_max": 491869656.59584486,
+      "ideal_radiance_max": 502526738.88938594
+    },
+    {
+      "angle_deg": 87.14576664521245,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.412009541187171e-07,
+      "temperature_max_k": 32438.287846254003,
+      "observed_color_temperature_max_k": 50548.77877915959,
+      "frequency_shift_min": 0.16572006046772003,
+      "frequency_shift_max": 1.5810245275497437,
+      "visible_crossing_layers": {
+        "0": 5230385,
+        "1": 3314,
+        "2": 252,
+        "3": 15,
+        "4": 2
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.848709832993336,
+      "camera_radiance_max": 492140827.795931,
+      "ideal_radiance_max": 502919655.0202363
+    },
+    {
+      "angle_deg": 87.1101049646137,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.081092958190481e-07,
+      "temperature_max_k": 32438.28782211544,
+      "observed_color_temperature_max_k": 50544.51628326369,
+      "frequency_shift_min": 0.16578835248947144,
+      "frequency_shift_max": 1.5806502103805542,
+      "visible_crossing_layers": {
+        "0": 5230393,
+        "1": 3319,
+        "2": 251,
+        "3": 15,
+        "4": 2
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.827398750014254,
+      "camera_radiance_max": 492409987.9018072,
+      "ideal_radiance_max": 503304765.5613664
+    },
+    {
+      "angle_deg": 87.07402514854763,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.080649613855343e-07,
+      "temperature_max_k": 32438.287818315068,
+      "observed_color_temperature_max_k": 50539.27246381057,
+      "frequency_shift_min": 0.1660124659538269,
+      "frequency_shift_max": 1.580244779586792,
+      "visible_crossing_layers": {
+        "0": 5230408,
+        "1": 3324,
+        "2": 249,
+        "3": 14
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.834163499996066,
+      "camera_radiance_max": 492633668.29811794,
+      "ideal_radiance_max": 503426657.98378235
+    },
+    {
+      "angle_deg": 87.03755192431795,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.314160773233738e-07,
+      "temperature_max_k": 32438.28784567746,
+      "observed_color_temperature_max_k": 50533.36294079807,
+      "frequency_shift_min": 0.16597595810890198,
+      "frequency_shift_max": 1.5798081159591675,
+      "visible_crossing_layers": {
+        "0": 5230442,
+        "1": 3330,
+        "2": 249,
+        "3": 13,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.941555083001731,
+      "camera_radiance_max": 492859076.77173984,
+      "ideal_radiance_max": 503549053.7830129
+    },
+    {
+      "angle_deg": 87.00071028885066,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.508144745504998e-07,
+      "temperature_max_k": 32438.287794499134,
+      "observed_color_temperature_max_k": 50530.20204593625,
+      "frequency_shift_min": 0.16599369049072266,
+      "frequency_shift_max": 1.5793402194976807,
+      "visible_crossing_layers": {
+        "0": 5230468,
+        "1": 3340,
+        "2": 250,
+        "3": 15,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8482438750070287,
+      "camera_radiance_max": 493115084.18874407,
+      "ideal_radiance_max": 503830217.28940064
+    },
+    {
+      "angle_deg": 86.96352549156242,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.751633099170864e-07,
+      "temperature_max_k": 32438.28785544455,
+      "observed_color_temperature_max_k": 50528.095922713124,
+      "frequency_shift_min": 0.16611512005329132,
+      "frequency_shift_max": 1.578841209411621,
+      "visible_crossing_layers": {
+        "0": 5230490,
+        "1": 3354,
+        "2": 250,
+        "3": 13
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.821740207989933,
+      "camera_radiance_max": 493364863.34637934,
+      "ideal_radiance_max": 504097707.7132028
+    },
+    {
+      "angle_deg": 86.92602301705588,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.951262608269645e-07,
+      "temperature_max_k": 32438.28783858357,
+      "observed_color_temperature_max_k": 50525.00937206156,
+      "frequency_shift_min": 0.1660734862089157,
+      "frequency_shift_max": 1.578311562538147,
+      "visible_crossing_layers": {
+        "0": 5230501,
+        "1": 3353,
+        "2": 250,
+        "3": 13,
+        "4": 2
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8360501670103986,
+      "camera_radiance_max": 493616196.1768999,
+      "ideal_radiance_max": 504366764.21022713
+    },
+    {
+      "angle_deg": 86.88822856765378,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.893455278777454e-07,
+      "temperature_max_k": 32438.28784719758,
+      "observed_color_temperature_max_k": 50520.956363486956,
+      "frequency_shift_min": 0.16606567800045013,
+      "frequency_shift_max": 1.5777512788772583,
+      "visible_crossing_layers": {
+        "0": 5230520,
+        "1": 3356,
+        "2": 250,
+        "3": 15,
+        "4": 3
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9109996249899268,
+      "camera_radiance_max": 493846184.87841976,
+      "ideal_radiance_max": 504511667.6342549
+    },
+    {
+      "angle_deg": 86.85016804578386,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.950633548299983e-07,
+      "temperature_max_k": 32438.287830729565,
+      "observed_color_temperature_max_k": 50515.966056866,
+      "frequency_shift_min": 0.16615547239780426,
+      "frequency_shift_max": 1.5771609544754028,
+      "visible_crossing_layers": {
+        "0": 5230534,
+        "1": 3357,
+        "2": 249,
+        "3": 14,
+        "4": 2,
+        "5": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8661413340014406,
+      "camera_radiance_max": 494072625.60760367,
+      "ideal_radiance_max": 504799581.63139975
+    },
+    {
+      "angle_deg": 86.81186753622664,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.397445150591893e-07,
+      "temperature_max_k": 32438.2878502378,
+      "observed_color_temperature_max_k": 50510.18045649235,
+      "frequency_shift_min": 0.16611148416996002,
+      "frequency_shift_max": 1.5765410661697388,
+      "visible_crossing_layers": {
+        "0": 5230547,
+        "1": 3362,
+        "2": 252,
+        "3": 13,
+        "4": 1,
+        "5": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 2.106563334004022,
+      "camera_radiance_max": 494313314.9619444,
+      "ideal_radiance_max": 505182933.93044436
+    },
+    {
+      "angle_deg": 86.77335328823823,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.388473080715501e-07,
+      "temperature_max_k": 32438.287839343633,
+      "observed_color_temperature_max_k": 50505.04857260386,
+      "frequency_shift_min": 0.16644953191280365,
+      "frequency_shift_max": 1.5758922100067139,
+      "visible_crossing_layers": {
+        "0": 5230555,
+        "1": 3365,
+        "2": 253,
+        "3": 12
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 2.058938041998772,
+      "camera_radiance_max": 494535877.58800757,
+      "ideal_radiance_max": 505300637.994481
+    },
+    {
+      "angle_deg": 86.73465169756035,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.112591481955953e-07,
+      "temperature_max_k": 32438.287829969493,
+      "observed_color_temperature_max_k": 50500.95330627117,
+      "frequency_shift_min": 0.16624599695205688,
+      "frequency_shift_max": 1.5752151012420654,
+      "visible_crossing_layers": {
+        "0": 5230587,
+        "1": 3369,
+        "2": 255,
+        "3": 15,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 2.023599499996635,
+      "camera_radiance_max": 494758710.3407203,
+      "ideal_radiance_max": 505417959.6807236
+    },
+    {
+      "angle_deg": 86.69578928833008,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.157135120435302e-07,
+      "temperature_max_k": 32438.287846944222,
+      "observed_color_temperature_max_k": 50497.742939244585,
+      "frequency_shift_min": 0.16653841733932495,
+      "frequency_shift_max": 1.5755311250686646,
+      "visible_crossing_layers": {
+        "0": 5230607,
+        "1": 3372,
+        "2": 255,
+        "3": 14,
+        "4": 3
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9839955419884063,
+      "camera_radiance_max": 494977125.3495097,
+      "ideal_radiance_max": 505534841.4624173
+    },
+    {
+      "angle_deg": 86.65679269490148,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.064871691612468e-07,
+      "temperature_max_k": 32438.287846690873,
+      "observed_color_temperature_max_k": 50493.643594284054,
+      "frequency_shift_min": 0.16646327078342438,
+      "frequency_shift_max": 1.5749070644378662,
+      "visible_crossing_layers": {
+        "0": 5230638,
+        "1": 3374,
+        "2": 255,
+        "3": 14,
+        "4": 5
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9696410409960663,
+      "camera_radiance_max": 495185120.32216936,
+      "ideal_radiance_max": 505790565.8213274
+    },
+    {
+      "angle_deg": 86.61768864359176,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.135804418397034e-07,
+      "temperature_max_k": 32438.28785251796,
+      "observed_color_temperature_max_k": 50488.69475506299,
+      "frequency_shift_min": 0.16645774245262146,
+      "frequency_shift_max": 1.574257493019104,
+      "visible_crossing_layers": {
+        "0": 5230655,
+        "1": 3375,
+        "2": 255,
+        "3": 15,
+        "4": 2,
+        "5": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9697672920010518,
+      "camera_radiance_max": 495392826.5025785,
+      "ideal_radiance_max": 506052349.5898356
+    },
+    {
+      "angle_deg": 86.57850393436442,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.120514723102854e-07,
+      "temperature_max_k": 32438.287821862075,
+      "observed_color_temperature_max_k": 50483.491590142505,
+      "frequency_shift_min": 0.16652126610279083,
+      "frequency_shift_max": 1.5735831260681152,
+      "visible_crossing_layers": {
+        "0": 5230673,
+        "1": 3376,
+        "2": 255,
+        "3": 13,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9761382919969037,
+      "camera_radiance_max": 495594347.84909153,
+      "ideal_radiance_max": 506254550.2299068
+    },
+    {
+      "angle_deg": 86.53926542246181,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.473242342734159e-07,
+      "temperature_max_k": 32438.287782590993,
+      "observed_color_temperature_max_k": 50478.42169976383,
+      "frequency_shift_min": 0.16661463677883148,
+      "frequency_shift_max": 1.5728847980499268,
+      "visible_crossing_layers": {
+        "0": 5230679,
+        "1": 3385,
+        "2": 257,
+        "3": 14
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9929820420074975,
+      "camera_radiance_max": 495804267.87885094,
+      "ideal_radiance_max": 506366263.65732116
+    },
+    {
+      "angle_deg": 86.5,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.798496282346837e-07,
+      "temperature_max_k": 32438.28782692922,
+      "observed_color_temperature_max_k": 50472.56463083691,
+      "frequency_shift_min": 0.16676336526870728,
+      "frequency_shift_max": 1.5721638202667236,
+      "visible_crossing_layers": {
+        "0": 5230698,
+        "1": 3391,
+        "2": 262,
+        "3": 14
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9977065829880303,
+      "camera_radiance_max": 496020435.5717226,
+      "ideal_radiance_max": 506628378.0362518
+    },
+    {
+      "angle_deg": 86.46073457753819,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.613247121629892e-07,
+      "temperature_max_k": 32438.287844664046,
+      "observed_color_temperature_max_k": 50467.62090816563,
+      "frequency_shift_min": 0.1667238175868988,
+      "frequency_shift_max": 1.5714209079742432,
+      "visible_crossing_layers": {
+        "0": 5230723,
+        "1": 3392,
+        "2": 266,
+        "3": 16,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.987255667001591,
+      "camera_radiance_max": 496224922.43046474,
+      "ideal_radiance_max": 506919701.2300001
+    },
+    {
+      "angle_deg": 86.42149606563558,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.29483076481615e-07,
+      "temperature_max_k": 32438.28785190972,
+      "observed_color_temperature_max_k": 50463.425057042856,
+      "frequency_shift_min": 0.16675007343292236,
+      "frequency_shift_max": 1.5706572532653809,
+      "visible_crossing_layers": {
+        "0": 5230736,
+        "1": 3395,
+        "2": 264,
+        "3": 16
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9912524999963352,
+      "camera_radiance_max": 496459400.5429162,
+      "ideal_radiance_max": 507026348.5954932
+    },
+    {
+      "angle_deg": 86.38231135640824,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.224976423958644e-07,
+      "temperature_max_k": 32438.287816794913,
+      "observed_color_temperature_max_k": 50458.49247915442,
+      "frequency_shift_min": 0.1668722927570343,
+      "frequency_shift_max": 1.5698741674423218,
+      "visible_crossing_layers": {
+        "0": 5230768,
+        "1": 3389,
+        "2": 263,
+        "3": 16
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.982527875006781,
+      "camera_radiance_max": 496785701.31468403,
+      "ideal_radiance_max": 507131949.496649
+    },
+    {
+      "angle_deg": 86.34320730509852,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.40354373331345e-07,
+      "temperature_max_k": 32438.287854030623,
+      "observed_color_temperature_max_k": 50454.11683903287,
+      "frequency_shift_min": 0.16682161390781403,
+      "frequency_shift_max": 1.5690726041793823,
+      "visible_crossing_layers": {
+        "0": 5230787,
+        "1": 3388,
+        "2": 261,
+        "3": 16,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.962602165993303,
+      "camera_radiance_max": 497088081.137975,
+      "ideal_radiance_max": 507236176.3208619
+    },
+    {
+      "angle_deg": 86.30421071166992,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.881457164351483e-07,
+      "temperature_max_k": 32438.287843397287,
+      "observed_color_temperature_max_k": 50449.12973916227,
+      "frequency_shift_min": 0.1668156236410141,
+      "frequency_shift_max": 1.5684046745300293,
+      "visible_crossing_layers": {
+        "0": 5230793,
+        "1": 3397,
+        "2": 261,
+        "3": 17,
+        "4": 2
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9529294169915374,
+      "camera_radiance_max": 497385401.13295996,
+      "ideal_radiance_max": 507339205.74582493
+    },
+    {
+      "angle_deg": 86.26534830243965,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.094197819968712e-07,
+      "temperature_max_k": 32438.287846960968,
+      "observed_color_temperature_max_k": 50443.478072034704,
+      "frequency_shift_min": 0.16704538464546204,
+      "frequency_shift_max": 1.5678976774215698,
+      "visible_crossing_layers": {
+        "0": 5230804,
+        "1": 3399,
+        "2": 259,
+        "3": 18,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9739699170168024,
+      "camera_radiance_max": 497676887.0841263,
+      "ideal_radiance_max": 507566378.46252567
+    },
+    {
+      "angle_deg": 86.22664671176177,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.925487121539213e-07,
+      "temperature_max_k": 32438.2878502378,
+      "observed_color_temperature_max_k": 50437.19727916287,
+      "frequency_shift_min": 0.1669396460056305,
+      "frequency_shift_max": 1.567373514175415,
+      "visible_crossing_layers": {
+        "0": 5230818,
+        "1": 3402,
+        "2": 258,
+        "3": 17
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9677287509985035,
+      "camera_radiance_max": 497962551.87410265,
+      "ideal_radiance_max": 507805732.34228045
+    },
+    {
+      "angle_deg": 86.18813246377336,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.869292870918422e-07,
+      "temperature_max_k": 32438.28784415734,
+      "observed_color_temperature_max_k": 50431.001102359456,
+      "frequency_shift_min": 0.1670706570148468,
+      "frequency_shift_max": 1.5674309730529785,
+      "visible_crossing_layers": {
+        "0": 5230828,
+        "1": 3405,
+        "2": 262,
+        "3": 17
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9873612089868402,
+      "camera_radiance_max": 498245949.3062458,
+      "ideal_radiance_max": 507918058.0669809
+    },
+    {
+      "angle_deg": 86.14983195421614,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.162870258646817e-07,
+      "temperature_max_k": 32438.287813754607,
+      "observed_color_temperature_max_k": 50426.992103243094,
+      "frequency_shift_min": 0.16722802817821503,
+      "frequency_shift_max": 1.5666484832763672,
+      "visible_crossing_layers": {
+        "0": 5230846,
+        "1": 3413,
+        "2": 261,
+        "3": 16,
+        "4": 2
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9948545830120565,
+      "camera_radiance_max": 498519786.71554404,
+      "ideal_radiance_max": 508013602.45911646
+    },
+    {
+      "angle_deg": 86.11177143234622,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.334437116891079e-07,
+      "temperature_max_k": 32438.287846437517,
+      "observed_color_temperature_max_k": 50422.7833266141,
+      "frequency_shift_min": 0.1670958399772644,
+      "frequency_shift_max": 1.5658544301986694,
+      "visible_crossing_layers": {
+        "0": 5230862,
+        "1": 3416,
+        "2": 262,
+        "3": 17,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.961499291996006,
+      "camera_radiance_max": 498790736.2625828,
+      "ideal_radiance_max": 508177245.06878465
+    },
+    {
+      "angle_deg": 86.07397698294412,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.73330996040726e-07,
+      "temperature_max_k": 32438.287855558174,
+      "observed_color_temperature_max_k": 50418.008820990835,
+      "frequency_shift_min": 0.16723036766052246,
+      "frequency_shift_max": 1.565308928489685,
+      "visible_crossing_layers": {
+        "0": 5230876,
+        "1": 3420,
+        "2": 260,
+        "3": 18
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9940236659895163,
+      "camera_radiance_max": 499058521.1758008,
+      "ideal_radiance_max": 508440349.7370599
+    },
+    {
+      "angle_deg": 86.03647450843758,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.870669031134163e-07,
+      "temperature_max_k": 32438.287848464333,
+      "observed_color_temperature_max_k": 50412.701514860586,
+      "frequency_shift_min": 0.167364701628685,
+      "frequency_shift_max": 1.5647841691970825,
+      "visible_crossing_layers": {
+        "0": 5230889,
+        "1": 3429,
+        "2": 260,
+        "3": 18,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9620138330064947,
+      "camera_radiance_max": 499322334.7618059,
+      "ideal_radiance_max": 508572385.97814333
+    },
+    {
+      "angle_deg": 85.99928971114934,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.115624926261069e-07,
+      "temperature_max_k": 32438.287827435935,
+      "observed_color_temperature_max_k": 50406.89844251526,
+      "frequency_shift_min": 0.16727177798748016,
+      "frequency_shift_max": 1.5642482042312622,
+      "visible_crossing_layers": {
+        "0": 5230913,
+        "1": 3434,
+        "2": 261,
+        "3": 18
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.946254251000937,
+      "camera_radiance_max": 499582839.33991134,
+      "ideal_radiance_max": 508852754.9856585
+    },
+    {
+      "angle_deg": 85.96244807568205,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.978508061604086e-07,
+      "temperature_max_k": 32438.28785251796,
+      "observed_color_temperature_max_k": 50400.63969373873,
+      "frequency_shift_min": 0.1674133688211441,
+      "frequency_shift_max": 1.563701868057251,
+      "visible_crossing_layers": {
+        "0": 5230941,
+        "1": 3434,
+        "2": 260,
+        "3": 16
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 2.0296356250037206,
+      "camera_radiance_max": 499840075.91289264,
+      "ideal_radiance_max": 509129649.4645468
+    },
+    {
+      "angle_deg": 85.92597485145237,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.694269674649659e-07,
+      "temperature_max_k": 32438.287854030623,
+      "observed_color_temperature_max_k": 50394.12136572257,
+      "frequency_shift_min": 0.1674756556749344,
+      "frequency_shift_max": 1.5631909370422363,
+      "visible_crossing_layers": {
+        "0": 5230929,
+        "1": 3434,
+        "2": 259,
+        "3": 17
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 2.0063291670230683,
+      "camera_radiance_max": 500093841.7249015,
+      "ideal_radiance_max": 509402903.9783315
+    },
+    {
+      "angle_deg": 85.8898950353863,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.005529353137653e-07,
+      "temperature_max_k": 32438.287832249694,
+      "observed_color_temperature_max_k": 50390.18583789499,
+      "frequency_shift_min": 0.1675354391336441,
+      "frequency_shift_max": 1.5626887083053589,
+      "visible_crossing_layers": {
+        "0": 5230952,
+        "1": 3438,
+        "2": 260,
+        "3": 19,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 2.0490355840011034,
+      "camera_radiance_max": 500344031.7960253,
+      "ideal_radiance_max": 509673761.26075244
+    },
+    {
+      "angle_deg": 85.85423335478755,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.275361585107866e-07,
+      "temperature_max_k": 32438.287827942648,
+      "observed_color_temperature_max_k": 50385.81664148925,
+      "frequency_shift_min": 0.16753631830215454,
+      "frequency_shift_max": 1.5621787309646606,
+      "visible_crossing_layers": {
+        "0": 5230967,
+        "1": 3435,
+        "2": 261,
+        "3": 19,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 2.0024069159990177,
+      "camera_radiance_max": 500590318.03304124,
+      "ideal_radiance_max": 509945071.5003791
+    },
+    {
+      "angle_deg": 85.81901425039068,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.97739408715209e-07,
+      "temperature_max_k": 32438.28785505147,
+      "observed_color_temperature_max_k": 50381.043063248726,
+      "frequency_shift_min": 0.16760919988155365,
+      "frequency_shift_max": 1.561662197113037,
+      "visible_crossing_layers": {
+        "0": 5230980,
+        "1": 3437,
+        "2": 259,
+        "3": 21,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9797977499983972,
+      "camera_radiance_max": 500832575.72337675,
+      "ideal_radiance_max": 510212131.2119395
+    },
+    {
+      "angle_deg": 85.78426185961058,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.974018632502258e-07,
+      "temperature_max_k": 32438.287842890582,
+      "observed_color_temperature_max_k": 50375.901414397595,
+      "frequency_shift_min": 0.1675824373960495,
+      "frequency_shift_max": 1.5611400604248047,
+      "visible_crossing_layers": {
+        "0": 5230998,
+        "1": 3441,
+        "2": 262,
+        "3": 21
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9527703759958968,
+      "camera_radiance_max": 501074807.2154149,
+      "ideal_radiance_max": 510474806.9338847
+    },
+    {
+      "angle_deg": 85.75,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.025370055105455e-07,
+      "temperature_max_k": 32438.287853531365,
+      "observed_color_temperature_max_k": 50370.42919939277,
+      "frequency_shift_min": 0.1679638922214508,
+      "frequency_shift_max": 1.5606135129928589,
+      "visible_crossing_layers": {
+        "0": 5231017,
+        "1": 3442,
+        "2": 262,
+        "3": 20,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9865540419850731,
+      "camera_radiance_max": 501313045.77480185,
+      "ideal_radiance_max": 510733006.2020789
+    },
+    {
+      "angle_deg": 85.71625215292607,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.142466874455732e-07,
+      "temperature_max_k": 32438.287851757905,
+      "observed_color_temperature_max_k": 50364.65535425724,
+      "frequency_shift_min": 0.16770733892917633,
+      "frequency_shift_max": 1.5600835084915161,
+      "visible_crossing_layers": {
+        "0": 5231038,
+        "1": 3448,
+        "2": 260,
+        "3": 19,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9669148750108434,
+      "camera_radiance_max": 501546474.5421858,
+      "ideal_radiance_max": 510986440.0433109
+    },
+    {
+      "angle_deg": 85.68304144747746,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.359026551229104e-07,
+      "temperature_max_k": 32438.28785544455,
+      "observed_color_temperature_max_k": 50359.133807428494,
+      "frequency_shift_min": 0.168073832988739,
+      "frequency_shift_max": 1.5595512390136719,
+      "visible_crossing_layers": {
+        "0": 5231043,
+        "1": 3449,
+        "2": 260,
+        "3": 21,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9583611249981914,
+      "camera_radiance_max": 501775124.4956188,
+      "ideal_radiance_max": 511235145.6598749
+    },
+    {
+      "angle_deg": 85.65039064461276,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.001730192618169e-07,
+      "temperature_max_k": 32438.287850997855,
+      "observed_color_temperature_max_k": 50353.664876479765,
+      "frequency_shift_min": 0.16781212389469147,
+      "frequency_shift_max": 1.5590176582336426,
+      "visible_crossing_layers": {
+        "0": 5231056,
+        "1": 3453,
+        "2": 261,
+        "3": 19,
+        "4": 2
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9661549180018483,
+      "camera_radiance_max": 501999142.6966379,
+      "ideal_radiance_max": 511478860.47406447
+    },
+    {
+      "angle_deg": 85.61832212156129,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.881557062166585e-07,
+      "temperature_max_k": 32438.287802860104,
+      "observed_color_temperature_max_k": 50349.10925413724,
+      "frequency_shift_min": 0.16791799664497375,
+      "frequency_shift_max": 1.5586446523666382,
+      "visible_crossing_layers": {
+        "0": 5231063,
+        "1": 3455,
+        "2": 262,
+        "3": 20,
+        "4": 3
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.981365248997463,
+      "camera_radiance_max": 502208377.54012465,
+      "ideal_radiance_max": 511671918.07345545
+    },
+    {
+      "angle_deg": 85.58685785648692,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.95024292257935e-07,
+      "temperature_max_k": 32438.287847704276,
+      "observed_color_temperature_max_k": 50344.80663473336,
+      "frequency_shift_min": 0.1679258495569229,
+      "frequency_shift_max": 1.5581607818603516,
+      "visible_crossing_layers": {
+        "0": 5231073,
+        "1": 3461,
+        "2": 262,
+        "3": 18,
+        "4": 2,
+        "5": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9602758750115754,
+      "camera_radiance_max": 502410583.8187516,
+      "ideal_radiance_max": 511900288.47360593
+    },
+    {
+      "angle_deg": 85.55601941342525,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.648411984572425e-07,
+      "temperature_max_k": 32438.287794646014,
+      "observed_color_temperature_max_k": 50340.28260011051,
+      "frequency_shift_min": 0.16791333258152008,
+      "frequency_shift_max": 1.5576777458190918,
+      "visible_crossing_layers": {
+        "0": 5231081,
+        "1": 3468,
+        "2": 262,
+        "3": 20,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9753450419957517,
+      "camera_radiance_max": 502610078.54473263,
+      "ideal_radiance_max": 512123447.96637714
+    },
+    {
+      "angle_deg": 85.52582792750472,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.253124671669561e-07,
+      "temperature_max_k": 32438.2878406104,
+      "observed_color_temperature_max_k": 50335.56632305492,
+      "frequency_shift_min": 0.16795898973941803,
+      "frequency_shift_max": 1.5571966171264648,
+      "visible_crossing_layers": {
+        "0": 5231088,
+        "1": 3479,
+        "2": 262,
+        "3": 18,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9639097500039497,
+      "camera_radiance_max": 502805475.85726666,
+      "ideal_radiance_max": 512291697.65343475
+    },
+    {
+      "angle_deg": 85.4963040904617,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.61698759434757e-07,
+      "temperature_max_k": 32438.28784897104,
+      "observed_color_temperature_max_k": 50330.77109947582,
+      "frequency_shift_min": 0.16811934113502502,
+      "frequency_shift_max": 1.5567182302474976,
+      "visible_crossing_layers": {
+        "0": 5231105,
+        "1": 3485,
+        "2": 263,
+        "3": 17,
+        "4": 2
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9689009160065325,
+      "camera_radiance_max": 502994985.0007358,
+      "ideal_radiance_max": 512480069.81403494
+    },
+    {
+      "angle_deg": 85.46746813645937,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.186418721612624e-07,
+      "temperature_max_k": 32438.287839090273,
+      "observed_color_temperature_max_k": 50326.42352127651,
+      "frequency_shift_min": 0.16816842555999756,
+      "frequency_shift_max": 1.556243658065796,
+      "visible_crossing_layers": {
+        "0": 5231116,
+        "1": 3487,
+        "2": 262,
+        "3": 16,
+        "4": 3
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9535384589980822,
+      "camera_radiance_max": 503179499.81004316,
+      "ideal_radiance_max": 512857378.83406
+    },
+    {
+      "angle_deg": 85.43933982822018,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.271919030815881e-07,
+      "temperature_max_k": 32438.28784542411,
+      "observed_color_temperature_max_k": 50321.942739706676,
+      "frequency_shift_min": 0.1680808812379837,
+      "frequency_shift_max": 1.5557738542556763,
+      "visible_crossing_layers": {
+        "0": 5231119,
+        "1": 3497,
+        "2": 261,
+        "3": 13,
+        "4": 2
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9306267089996254,
+      "camera_radiance_max": 503367139.7426989,
+      "ideal_radiance_max": 513224705.8419245
+    },
+    {
+      "angle_deg": 85.41193844348157,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.110319600164997e-07,
+      "temperature_max_k": 32438.287842130518,
+      "observed_color_temperature_max_k": 50317.34653744609,
+      "frequency_shift_min": 0.1682915985584259,
+      "frequency_shift_max": 1.5553096532821655,
+      "visible_crossing_layers": {
+        "0": 5231130,
+        "1": 3494,
+        "2": 262,
+        "3": 12,
+        "4": 2
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9210001660103444,
+      "camera_radiance_max": 503625400.8196883,
+      "ideal_radiance_max": 513581959.02127796
+    },
+    {
+      "angle_deg": 85.38528276178391,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.143457835116231e-07,
+      "temperature_max_k": 32438.28785429142,
+      "observed_color_temperature_max_k": 50312.67343382515,
+      "frequency_shift_min": 0.16814282536506653,
+      "frequency_shift_max": 1.5548521280288696,
+      "visible_crossing_layers": {
+        "0": 5231140,
+        "1": 3496,
+        "2": 262,
+        "3": 11,
+        "4": 4
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9283079580054618,
+      "camera_radiance_max": 503876056.25708497,
+      "ideal_radiance_max": 513884967.59956056
+    },
+    {
+      "angle_deg": 85.35939105159996,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.200665128101534e-07,
+      "temperature_max_k": 32438.287770175994,
+      "observed_color_temperature_max_k": 50307.93778579406,
+      "frequency_shift_min": 0.16824845969676971,
+      "frequency_shift_max": 1.5544021129608154,
+      "visible_crossing_layers": {
+        "0": 5231143,
+        "1": 3497,
+        "2": 263,
+        "3": 10,
+        "4": 2
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9112167499988573,
+      "camera_radiance_max": 504118538.167254,
+      "ideal_radiance_max": 514074725.65412533
+    },
+    {
+      "angle_deg": 85.33428105781455,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.999991469416234e-07,
+      "temperature_max_k": 32438.287848374897,
+      "observed_color_temperature_max_k": 50303.19899362784,
+      "frequency_shift_min": 0.1684989035129547,
+      "frequency_shift_max": 1.5539604425430298,
+      "visible_crossing_layers": {
+        "0": 5231150,
+        "1": 3498,
+        "2": 261,
+        "3": 11,
+        "4": 3
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9220261260052212,
+      "camera_radiance_max": 504353298.1121917,
+      "ideal_radiance_max": 514394083.0555868
+    },
+    {
+      "angle_deg": 85.30996998956314,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.959485812349376e-07,
+      "temperature_max_k": 32438.287838076856,
+      "observed_color_temperature_max_k": 50299.50147104659,
+      "frequency_shift_min": 0.1685042828321457,
+      "frequency_shift_max": 1.553528070449829,
+      "visible_crossing_layers": {
+        "0": 5231164,
+        "1": 3499,
+        "2": 262,
+        "3": 13,
+        "4": 2,
+        "5": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9135267090168782,
+      "camera_radiance_max": 504579735.9197114,
+      "ideal_radiance_max": 514667524.6340106
+    },
+    {
+      "angle_deg": 85.28647450843758,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.767621377034861e-07,
+      "temperature_max_k": 32438.287853278016,
+      "observed_color_temperature_max_k": 50296.190481953694,
+      "frequency_shift_min": 0.16826124489307404,
+      "frequency_shift_max": 1.5531057119369507,
+      "visible_crossing_layers": {
+        "0": 5231172,
+        "1": 3502,
+        "2": 263,
+        "3": 14,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9093133330025012,
+      "camera_radiance_max": 504797511.1286837,
+      "ideal_radiance_max": 514867945.01185393
+    },
+    {
+      "angle_deg": 85.26381071706697,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.795767107540452e-07,
+      "temperature_max_k": 32438.28782616915,
+      "observed_color_temperature_max_k": 50292.93564677855,
+      "frequency_shift_min": 0.1684522181749344,
+      "frequency_shift_max": 1.5526942014694214,
+      "visible_crossing_layers": {
+        "0": 5231177,
+        "1": 3505,
+        "2": 263,
+        "3": 14
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.903089748986531,
+      "camera_radiance_max": 505007220.3589668,
+      "ideal_radiance_max": 515060740.46051574
+    },
+    {
+      "angle_deg": 85.24199414808186,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.042806528660955e-07,
+      "temperature_max_k": 32438.287855811523,
+      "observed_color_temperature_max_k": 50289.66446586873,
+      "frequency_shift_min": 0.16838423907756805,
+      "frequency_shift_max": 1.5522942543029785,
+      "visible_crossing_layers": {
+        "0": 5231188,
+        "1": 3504,
+        "2": 264,
+        "3": 17
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8963670829980401,
+      "camera_radiance_max": 505208693.46862274,
+      "ideal_radiance_max": 515278528.28427887
+    },
+    {
+      "angle_deg": 85.22103975346886,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.727276528660057e-07,
+      "temperature_max_k": 32438.287854737588,
+      "observed_color_temperature_max_k": 50286.39999325277,
+      "frequency_shift_min": 0.168351411819458,
+      "frequency_shift_max": 1.5519068241119385,
+      "visible_crossing_layers": {
+        "0": 5231189,
+        "1": 3505,
+        "2": 266,
+        "3": 17,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 2.0062383329932345,
+      "camera_radiance_max": 505401045.32614976,
+      "ideal_radiance_max": 515537824.02589417
+    },
+    {
+      "angle_deg": 85.20096189432334,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.169521531811347e-07,
+      "temperature_max_k": 32438.2877795506,
+      "observed_color_temperature_max_k": 50283.16062808278,
+      "frequency_shift_min": 0.1684957891702652,
+      "frequency_shift_max": 1.5515323877334595,
+      "visible_crossing_layers": {
+        "0": 5231183,
+        "1": 3504,
+        "2": 268,
+        "3": 16,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9354434999986552,
+      "camera_radiance_max": 505585025.85207605,
+      "ideal_radiance_max": 515785913.59478384
+    },
+    {
+      "angle_deg": 85.18177433100705,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.646786045991698e-07,
+      "temperature_max_k": 32438.287854030623,
+      "observed_color_temperature_max_k": 50279.96119825685,
+      "frequency_shift_min": 0.16836567223072052,
+      "frequency_shift_max": 1.5511717796325684,
+      "visible_crossing_layers": {
+        "0": 5231199,
+        "1": 3503,
+        "2": 267,
+        "3": 18,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9973732909857063,
+      "camera_radiance_max": 505760558.4669073,
+      "ideal_radiance_max": 516022739.9529436
+    },
+    {
+      "angle_deg": 85.16349021371745,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.690897942849316e-07,
+      "temperature_max_k": 32438.28785544455,
+      "observed_color_temperature_max_k": 50276.82010476921,
+      "frequency_shift_min": 0.16859352588653564,
+      "frequency_shift_max": 1.550825595855713,
+      "visible_crossing_layers": {
+        "0": 5231210,
+        "1": 3508,
+        "2": 268,
+        "3": 19,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 2.021651916002156,
+      "camera_radiance_max": 505927059.9656776,
+      "ideal_radiance_max": 516243023.2083677
+    },
+    {
+      "angle_deg": 85.14612207347521,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.22380839076992e-07,
+      "temperature_max_k": 32438.287837063443,
+      "observed_color_temperature_max_k": 50273.75683275166,
+      "frequency_shift_min": 0.16855432093143463,
+      "frequency_shift_max": 1.5504945516586304,
+      "visible_crossing_layers": {
+        "0": 5231210,
+        "1": 3510,
+        "2": 269,
+        "3": 20,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9455843750038184,
+      "camera_radiance_max": 506071652.18432105,
+      "ideal_radiance_max": 516316090.5754107
+    },
+    {
+      "angle_deg": 85.1296818135361,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.51737944997716e-07,
+      "temperature_max_k": 32438.287844664046,
+      "observed_color_temperature_max_k": 50270.78567121325,
+      "frequency_shift_min": 0.1684848666191101,
+      "frequency_shift_max": 1.550179123878479,
+      "visible_crossing_layers": {
+        "0": 5231224,
+        "1": 3514,
+        "2": 270,
+        "3": 19
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9192075009923428,
+      "camera_radiance_max": 506208269.447727,
+      "ideal_radiance_max": 516385103.5573649
+    },
+    {
+      "angle_deg": 85.11418070123307,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.805347291244784e-07,
+      "temperature_max_k": 32438.287841370457,
+      "observed_color_temperature_max_k": 50267.91842054912,
+      "frequency_shift_min": 0.16862058639526367,
+      "frequency_shift_max": 1.5498799085617065,
+      "visible_crossing_layers": {
+        "0": 5231229,
+        "1": 3513,
+        "2": 270,
+        "3": 20
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8991587490017992,
+      "camera_radiance_max": 506336835.79848135,
+      "ideal_radiance_max": 516458606.852595
+    },
+    {
+      "angle_deg": 85.0996293602542,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.044726751364352e-07,
+      "temperature_max_k": 32438.287839850338,
+      "observed_color_temperature_max_k": 50265.17705788892,
+      "frequency_shift_min": 0.16873839497566223,
+      "frequency_shift_max": 1.5495975017547607,
+      "visible_crossing_layers": {
+        "0": 5231234,
+        "1": 3514,
+        "2": 269,
+        "3": 20
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9074804590054555,
+      "camera_radiance_max": 506457432.9230629,
+      "ideal_radiance_max": 516633616.64862853
+    },
+    {
+      "angle_deg": 85.08603776336173,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.982416080644318e-07,
+      "temperature_max_k": 32438.287826675863,
+      "observed_color_temperature_max_k": 50262.56515723868,
+      "frequency_shift_min": 0.16856659948825836,
+      "frequency_shift_max": 1.549891710281372,
+      "visible_crossing_layers": {
+        "0": 5231242,
+        "1": 3514,
+        "2": 267,
+        "3": 21
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9033905410033185,
+      "camera_radiance_max": 506569859.5174056,
+      "ideal_radiance_max": 516796954.0323612
+    },
+    {
+      "angle_deg": 85.07341522555727,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.865438790304615e-07,
+      "temperature_max_k": 32438.287846254003,
+      "observed_color_temperature_max_k": 50260.09757286059,
+      "frequency_shift_min": 0.16850043833255768,
+      "frequency_shift_max": 1.5496618747711182,
+      "visible_crossing_layers": {
+        "0": 5231258,
+        "1": 3515,
+        "2": 266,
+        "3": 20,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8915748340077698,
+      "camera_radiance_max": 506668213.5447936,
+      "ideal_radiance_max": 516915634.74923277
+    },
+    {
+      "angle_deg": 85.06177039769771,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.10315723334248e-07,
+      "temperature_max_k": 32438.287835796666,
+      "observed_color_temperature_max_k": 50257.789620272626,
+      "frequency_shift_min": 0.16868352890014648,
+      "frequency_shift_max": 1.5494489669799805,
+      "visible_crossing_layers": {
+        "0": 5231257,
+        "1": 3516,
+        "2": 266,
+        "3": 19,
+        "4": 4
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8994591249938821,
+      "camera_radiance_max": 506756016.22015005,
+      "ideal_radiance_max": 517008743.3765546
+    },
+    {
+      "angle_deg": 85.0511112605664,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.110612943495291e-07,
+      "temperature_max_k": 32438.28785226461,
+      "observed_color_temperature_max_k": 50255.64494306545,
+      "frequency_shift_min": 0.16880176961421967,
+      "frequency_shift_max": 1.5492531061172485,
+      "visible_crossing_layers": {
+        "0": 5231258,
+        "1": 3516,
+        "2": 264,
+        "3": 19,
+        "4": 3
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9022591249959078,
+      "camera_radiance_max": 506840281.88595057,
+      "ideal_radiance_max": 517093820.04412436
+    },
+    {
+      "angle_deg": 85.04144511940349,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.991695300422697e-07,
+      "temperature_max_k": 32438.28784542411,
+      "observed_color_temperature_max_k": 50254.22048460571,
+      "frequency_shift_min": 0.1687091737985611,
+      "frequency_shift_max": 1.5490748882293701,
+      "visible_crossing_layers": {
+        "0": 5231257,
+        "1": 3518,
+        "2": 264,
+        "3": 20,
+        "4": 3
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9122363339993171,
+      "camera_radiance_max": 506922070.1809665,
+      "ideal_radiance_max": 517170988.6557852
+    },
+    {
+      "angle_deg": 85.03277859889928,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.141975812635312e-07,
+      "temperature_max_k": 32438.28784415734,
+      "observed_color_temperature_max_k": 50252.95134858232,
+      "frequency_shift_min": 0.16879802942276,
+      "frequency_shift_max": 1.5489144325256348,
+      "visible_crossing_layers": {
+        "0": 5231263,
+        "1": 3520,
+        "2": 265,
+        "3": 21,
+        "4": 2,
+        "5": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9002882499917177,
+      "camera_radiance_max": 506995306.6302877,
+      "ideal_radiance_max": 517240055.19402725
+    },
+    {
+      "angle_deg": 85.02511763865407,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.20255432583814e-07,
+      "temperature_max_k": 32438.28785190972,
+      "observed_color_temperature_max_k": 50251.809161650395,
+      "frequency_shift_min": 0.16865701973438263,
+      "frequency_shift_max": 1.5487722158432007,
+      "visible_crossing_layers": {
+        "0": 5231265,
+        "1": 3522,
+        "2": 265,
+        "3": 21,
+        "4": 4
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.8970054169913055,
+      "camera_radiance_max": 507060102.8111973,
+      "ideal_radiance_max": 517301079.64079875
+    },
+    {
+      "angle_deg": 85.0184674891073,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.804845550521991e-07,
+      "temperature_max_k": 32438.28783199634,
+      "observed_color_temperature_max_k": 50250.809816447436,
+      "frequency_shift_min": 0.16864627599716187,
+      "frequency_shift_max": 1.548648476600647,
+      "visible_crossing_layers": {
+        "0": 5231265,
+        "1": 3522,
+        "2": 265,
+        "3": 21,
+        "4": 3
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9048879990150454,
+      "camera_radiance_max": 507116203.1090342,
+      "ideal_radiance_max": 517354004.3054689
+    },
+    {
+      "angle_deg": 85.01283270793928,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.050633678651331e-07,
+      "temperature_max_k": 32438.287847667933,
+      "observed_color_temperature_max_k": 50249.95163138785,
+      "frequency_shift_min": 0.16863247752189636,
+      "frequency_shift_max": 1.5485433340072632,
+      "visible_crossing_layers": {
+        "0": 5231267,
+        "1": 3522,
+        "2": 263,
+        "3": 21,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9238486660033232,
+      "camera_radiance_max": 507163681.09678626,
+      "ideal_radiance_max": 517398856.6730919
+    },
+    {
+      "angle_deg": 85.0082171569476,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 8.002360058155464e-07,
+      "temperature_max_k": 32438.287855811523,
+      "observed_color_temperature_max_k": 50249.24339397213,
+      "frequency_shift_min": 0.1687091886997223,
+      "frequency_shift_max": 1.5484570264816284,
+      "visible_crossing_layers": {
+        "0": 5231267,
+        "1": 3524,
+        "2": 263,
+        "3": 21,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9660955010185717,
+      "camera_radiance_max": 507202585.2032896,
+      "ideal_radiance_max": 517435457.8179764
+    },
+    {
+      "angle_deg": 85.00462399940031,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.843190351792667e-07,
+      "temperature_max_k": 32438.287844133112,
+      "observed_color_temperature_max_k": 50248.68809654976,
+      "frequency_shift_min": 0.16865774989128113,
+      "frequency_shift_max": 1.5483897924423218,
+      "visible_crossing_layers": {
+        "0": 5231273,
+        "1": 3526,
+        "2": 263,
+        "3": 21,
+        "4": 2
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9629346239962615,
+      "camera_radiance_max": 507232874.2626654,
+      "ideal_radiance_max": 517464019.2319475
+    },
+    {
+      "angle_deg": 85.00205569786814,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.909185219579523e-07,
+      "temperature_max_k": 32438.287854030623,
+      "observed_color_temperature_max_k": 50248.28629999231,
+      "frequency_shift_min": 0.16869579255580902,
+      "frequency_shift_max": 1.5483417510986328,
+      "visible_crossing_layers": {
+        "0": 5231276,
+        "1": 3526,
+        "2": 263,
+        "3": 21,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.953924083005404,
+      "camera_radiance_max": 507254510.29903316,
+      "ideal_radiance_max": 517484431.97838855
+    },
+    {
+      "angle_deg": 85.00051401253667,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.954755039774013e-07,
+      "temperature_max_k": 32438.28785429142,
+      "observed_color_temperature_max_k": 50248.04510984781,
+      "frequency_shift_min": 0.1686890870332718,
+      "frequency_shift_max": 1.548312783241272,
+      "visible_crossing_layers": {
+        "0": 5231279,
+        "1": 3526,
+        "2": 263,
+        "3": 21,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9463972080120584,
+      "camera_radiance_max": 507267492.7020211,
+      "ideal_radiance_max": 517496686.2372479
+    },
+    {
+      "angle_deg": 85.0,
+      "ray_integration_step_used": 0.018,
+      "constraint_residual_max": 7.964014354975545e-07,
+      "temperature_max_k": 32438.287853531365,
+      "observed_color_temperature_max_k": 50247.96863952336,
+      "frequency_shift_min": 0.16869649291038513,
+      "frequency_shift_max": 1.5483031272888184,
+      "visible_crossing_layers": {
+        "0": 5231280,
+        "1": 3526,
+        "2": 263,
+        "3": 21,
+        "4": 1
+      },
+      "emission_outside_isco": true,
+      "spectrum_camera_seconds": 1.9748143759934464,
+      "camera_radiance_max": 507271823.3212104,
+      "ideal_radiance_max": 517500791.0217468
+    }
+  ],
+  "elapsed_seconds": 715.4077050829947,
+  "outputs": {
+    "camera": "atlastro-truecolor-optics-reel.mp4",
+    "ideal": "atlastro-truecolor-ideal-reel.mp4"
+  }
+}

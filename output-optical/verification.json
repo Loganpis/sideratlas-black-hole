@@ -1,0 +1,858 @@
+{
+  "preflight_only": false,
+  "videos": {
+    "camera": {
+      "file": "output-optical/atlastro-truecolor-optics-reel.mp4",
+      "size_bytes": 839924,
+      "stream": {
+        "codec_name": "h264",
+        "profile": "High",
+        "width": 1080,
+        "height": 1920,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "nb_frames": "240",
+        "duration": "8.000000",
+        "start_time": "0.000000",
+        "color_space": "bt709",
+        "color_transfer": "iec61966-2-1",
+        "color_primaries": "bt709"
+      },
+      "checks": [
+        {
+          "name": "1080x1920_reel",
+          "passed": true
+        },
+        {
+          "name": "h264_yuv420p",
+          "passed": true
+        },
+        {
+          "name": "30_fps",
+          "passed": true
+        },
+        {
+          "name": "240_declared_frames",
+          "passed": true
+        },
+        {
+          "name": "eight_second_duration",
+          "passed": true
+        },
+        {
+          "name": "zero_start_time",
+          "passed": true
+        },
+        {
+          "name": "no_audio_stream",
+          "passed": true
+        },
+        {
+          "name": "specified_color_tags",
+          "passed": true
+        },
+        {
+          "name": "fast_start",
+          "passed": true
+        },
+        {
+          "name": "all_240_frames_decode",
+          "passed": true
+        },
+        {
+          "name": "loop_seam_with_codec_tolerance",
+          "passed": true
+        }
+      ],
+      "mp4_atom_offsets": {
+        "ftyp": 0,
+        "moov": 32,
+        "free": 1765,
+        "mdat": 1773
+      },
+      "decode": {
+        "decoded_frames": 240,
+        "decoder_errors": "",
+        "difference_units": "mean absolute difference, RGB code values on a 0\u2013255 scale",
+        "all_transition_mae": {
+          "minimum": 0.002069508744855967,
+          "median": 0.06280815972222223,
+          "maximum": 0.26689895190329216
+        },
+        "first_three_transition_mae": [
+          0.05135834619341564,
+          0.0142211612654321,
+          0.007691936728395062
+        ],
+        "last_three_transition_mae": [
+          0.009106385030864198,
+          0.006584683641975309,
+          0.002069508744855967
+        ],
+        "seam_mae": 0.2330885095164609,
+        "hero_region_y": [
+          380,
+          1210
+        ],
+        "hero_first_three_transition_mae": [
+          0.07838688085676038,
+          0.026587089097129257,
+          0.015550349546333482
+        ],
+        "hero_last_three_transition_mae": [
+          0.018058902275769746,
+          0.011665551093261936,
+          0.004241038226982002
+        ],
+        "hero_seam_mae": 0.30679495760821063,
+        "codec_mae_allowance": 2.0,
+        "seam_limit_from_endpoint_transitions": 2.0513583461934157,
+        "hero_seam_limit_from_endpoint_transitions": 2.0783868808567605,
+        "seam_consistent_with_nearby_transitions": true,
+        "seam_check_scope": "A perceptual discontinuity screen with codec tolerance; exact periodicity is checked separately on uncompressed renderer frames."
+      },
+      "passed": true
+    },
+    "ideal": {
+      "file": "output-optical/atlastro-truecolor-ideal-reel.mp4",
+      "size_bytes": 859516,
+      "stream": {
+        "codec_name": "h264",
+        "profile": "High",
+        "width": 1080,
+        "height": 1920,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "nb_frames": "240",
+        "duration": "8.000000",
+        "start_time": "0.000000",
+        "color_space": "bt709",
+        "color_transfer": "iec61966-2-1",
+        "color_primaries": "bt709"
+      },
+      "checks": [
+        {
+          "name": "1080x1920_reel",
+          "passed": true
+        },
+        {
+          "name": "h264_yuv420p",
+          "passed": true
+        },
+        {
+          "name": "30_fps",
+          "passed": true
+        },
+        {
+          "name": "240_declared_frames",
+          "passed": true
+        },
+        {
+          "name": "eight_second_duration",
+          "passed": true
+        },
+        {
+          "name": "zero_start_time",
+          "passed": true
+        },
+        {
+          "name": "no_audio_stream",
+          "passed": true
+        },
+        {
+          "name": "specified_color_tags",
+          "passed": true
+        },
+        {
+          "name": "fast_start",
+          "passed": true
+        },
+        {
+          "name": "all_240_frames_decode",
+          "passed": true
+        },
+        {
+          "name": "loop_seam_with_codec_tolerance",
+          "passed": true
+        }
+      ],
+      "mp4_atom_offsets": {
+        "ftyp": 0,
+        "moov": 32,
+        "free": 1765,
+        "mdat": 1773
+      },
+      "decode": {
+        "decoded_frames": 240,
+        "decoder_errors": "",
+        "difference_units": "mean absolute difference, RGB code values on a 0\u2013255 scale",
+        "all_transition_mae": {
+          "minimum": 0.001299832818930041,
+          "median": 0.06385657793209877,
+          "maximum": 0.26845325360082306
+        },
+        "first_three_transition_mae": [
+          0.049398630401234565,
+          0.012507716049382715,
+          0.011045203189300412
+        ],
+        "last_three_transition_mae": [
+          0.007718621399176955,
+          0.007001832561728395,
+          0.001299832818930041
+        ],
+        "seam_mae": 0.2330420524691358,
+        "hero_region_y": [
+          380,
+          1210
+        ],
+        "hero_first_three_transition_mae": [
+          0.07472036293321434,
+          0.02355421686746988,
+          0.019755689424364124
+        ],
+        "hero_last_three_transition_mae": [
+          0.015547374683920869,
+          0.013962516733601072,
+          0.0025821805741484457
+        ],
+        "hero_seam_mae": 0.3062282463186078,
+        "codec_mae_allowance": 2.0,
+        "seam_limit_from_endpoint_transitions": 2.0493986304012344,
+        "hero_seam_limit_from_endpoint_transitions": 2.0747203629332143,
+        "seam_consistent_with_nearby_transitions": true,
+        "seam_check_scope": "A perceptual discontinuity screen with codec tolerance; exact periodicity is checked separately on uncompressed renderer frames."
+      },
+      "passed": true
+    }
+  },
+  "errors": [],
+  "baseline_provenance": {
+    "scope": "Previously saved diagnostics for unchanged modules; not rerun by this verifier.",
+    "reports": {
+      "kerr-emission-diagnostics.json": {
+        "passed": true,
+        "sha256": "39797b1c0c88c872b3ebf276ed17d438455fb3d3edc400f59a541f63c6923471"
+      },
+      "kerr-raytrace-diagnostics.json": {
+        "passed": true,
+        "sha256": "58f419c8542f9e420e8fb48a9d512fde1cc720b12d20a7f764c66b1470f69202"
+      },
+      "optics-diagnostics.json": {
+        "passed": true,
+        "sha256": "56be95a3bb32f93088306d8a915b4ed3561242b859663219503912183ffeac8e"
+      }
+    },
+    "passed": true
+  },
+  "spectral_optics": {
+    "wavelength_samples": 48,
+    "wavelength_step_nm": 10,
+    "quadrature_weight_sum_m": 4.7000000000000005e-07,
+    "temperature_test_range_k": [
+      2000,
+      100000
+    ],
+    "temperature_test_samples": 101,
+    "max_RGB_relative_to_peak_channel_error_against_1nm": 0.001091064746175864,
+    "max_CIE_Y_relative_error_against_1nm": 1.1408557320180535e-05,
+    "max_CIE_xy_absolute_error_against_1nm": 0.00013841638706668657,
+    "J1_lookup_kernel_L1_error_against_direct_quadrature": 1.881560761444605e-08,
+    "kernel_3_to_9_Gauss_nodes_L1_change_at_2_3pixel_first_null": 5.048120759602492e-05,
+    "Airy_first_null_wavelength_ratio_absolute_error": 4.440892098500626e-16,
+    "nonnegative_scalar_convolution": true,
+    "impulse_flux_error": 5.994357750171986e-07,
+    "impulse_RMS_radius_360nm_pixels": 0.9149289484944323,
+    "impulse_RMS_radius_830nm_pixels": 2.0334648046976125,
+    "red_impulse_broader_than_blue": true,
+    "convolution_linearity_absolute_error": 1.9418456508343338e-16,
+    "float32_Fourier_kernel_max_error_against_float64": 3.085561790948832e-10,
+    "supersampled_radiance_averaging_relative_error": 2.888731793577289e-08,
+    "elapsed_seconds": 0.8534062079997966,
+    "passed": true
+  },
+  "spectral_acceleration": {
+    "acceleration": {
+      "method": "normalized scalar Planck SVD; absolute amplitude restored before BOX average; RGB-weighted spectral OTF sums",
+      "rank": 18,
+      "temperature_domain_k": [
+        24.763801678208843,
+        100000.0
+      ],
+      "exact_zero_temperature_k": 24.763801678208843,
+      "exact_zero_rule": "same exponent >= 700 cutoff already used by direct planck_lambda; no additional light truncation",
+      "temperature_training_samples": 4096,
+      "temperature_lookup_samples": 32769,
+      "independent_half_grid_validation_samples": 32768,
+      "max_monochromatic_error_relative_to_continuous_Planck_peak": 0.00011553688555825083,
+      "discarded_singular_value": 1.536010251937324e-05,
+      "out_of_domain_policy": "direct wavelength-resolved fallback; zero sentinel retained",
+      "cold_scene_policy": "direct fallback when all emitting temperatures are below 2000 K",
+      "FFT_count_per_frame": {
+        "forward": 18,
+        "inverse": 3
+      },
+      "optical_model_changed": false,
+      "setup_seconds": 0.14149183400149923,
+      "basis_OTF_cache_bytes": 22511520,
+      "last_apply_seconds": 0.10516849998384714
+    },
+    "comparisons": [
+      {
+        "name": "Planck numerical zero threshold--100000 K; zero sentinels; variable dilution; 1.5x source",
+        "direct_seconds": 0.062331207998795435,
+        "fast_seconds_excluding_once_only_setup": 0.015595290999044664,
+        "speedup": 3.9967967255380947,
+        "views": {
+          "camera": {
+            "max_RGB_error_relative_to_frame_peak": 7.055150748372778e-08,
+            "RMS_RGB_error_relative_to_frame_peak": 3.2879992428265818e-09,
+            "max_CIE_Y_error_relative_to_frame_peak_Y": 8.249311104659867e-08,
+            "finite": true
+          },
+          "ideal": {
+            "max_RGB_error_relative_to_frame_peak": 7.182129609237528e-08,
+            "RMS_RGB_error_relative_to_frame_peak": 3.0151497621905286e-09,
+            "max_CIE_Y_error_relative_to_frame_peak_Y": 8.343020037256125e-08,
+            "finite": true
+          }
+        }
+      },
+      {
+        "name": "sub-100 K source with hot pixels; must use basis without whole-frame fallback",
+        "direct_seconds": 0.0561692080082139,
+        "fast_seconds_excluding_once_only_setup": 0.012977207996300422,
+        "speedup": 4.328296812706306,
+        "views": {
+          "camera": {
+            "max_RGB_error_relative_to_frame_peak": 1.5997151947724365e-08,
+            "RMS_RGB_error_relative_to_frame_peak": 4.3317930315692393e-10,
+            "max_CIE_Y_error_relative_to_frame_peak_Y": 1.2344399116183856e-08,
+            "finite": true
+          },
+          "ideal": {
+            "max_RGB_error_relative_to_frame_peak": 1.5517118600535243e-08,
+            "RMS_RGB_error_relative_to_frame_peak": 2.64890663353904e-10,
+            "max_CIE_Y_error_relative_to_frame_peak_Y": 1.2890259775524627e-08,
+            "finite": true
+          }
+        }
+      },
+      {
+        "name": "two-temperature source checkerboard; radiance averaging",
+        "direct_seconds": 0.05686054199759383,
+        "fast_seconds_excluding_once_only_setup": 0.012975292003829964,
+        "speedup": 4.38221675325766,
+        "views": {
+          "camera": {
+            "max_RGB_error_relative_to_frame_peak": 3.0437539926077155e-08,
+            "RMS_RGB_error_relative_to_frame_peak": 1.3066244118386765e-08,
+            "max_CIE_Y_error_relative_to_frame_peak_Y": 2.8898535510388742e-08,
+            "finite": true
+          },
+          "ideal": {
+            "max_RGB_error_relative_to_frame_peak": 1.5517118600535243e-08,
+            "RMS_RGB_error_relative_to_frame_peak": 8.519138986300756e-09,
+            "max_CIE_Y_error_relative_to_frame_peak_Y": 1.2890259775524627e-08,
+            "finite": true
+          }
+        }
+      },
+      {
+        "name": "three monochromatic-temperature impulses",
+        "direct_seconds": 0.05613537500903476,
+        "fast_seconds_excluding_once_only_setup": 0.012640208995435387,
+        "speedup": 4.441016365259964,
+        "views": {
+          "camera": {
+            "max_RGB_error_relative_to_frame_peak": 3.49495419961143e-08,
+            "RMS_RGB_error_relative_to_frame_peak": 1.7966159262410148e-10,
+            "max_CIE_Y_error_relative_to_frame_peak_Y": 1.1771684346424757e-08,
+            "finite": true
+          },
+          "ideal": {
+            "max_RGB_error_relative_to_frame_peak": 3.494409030328815e-08,
+            "RMS_RGB_error_relative_to_frame_peak": 1.5512123993525923e-10,
+            "max_CIE_Y_error_relative_to_frame_peak_Y": 1.1932639386159924e-08,
+            "finite": true
+          }
+        }
+      },
+      {
+        "name": "120 K all-cold direct fallback",
+        "direct_seconds": 0.03269912498944905,
+        "fast_seconds_excluding_once_only_setup": 0.032900916994549334,
+        "speedup": 0.9938666753533429,
+        "views": {
+          "camera": {
+            "max_RGB_error_relative_to_frame_peak": 0.0,
+            "RMS_RGB_error_relative_to_frame_peak": 0.0,
+            "max_CIE_Y_error_relative_to_frame_peak_Y": 0.0,
+            "finite": true
+          },
+          "ideal": {
+            "max_RGB_error_relative_to_frame_peak": 0.0,
+            "RMS_RGB_error_relative_to_frame_peak": 0.0,
+            "max_CIE_Y_error_relative_to_frame_peak_Y": 0.0,
+            "finite": true
+          }
+        }
+      },
+      {
+        "name": "200000 K out-of-domain direct fallback",
+        "direct_seconds": 0.03324708300351631,
+        "fast_seconds_excluding_once_only_setup": 0.03264079100335948,
+        "speedup": 1.0185746724120266,
+        "views": {
+          "camera": {
+            "max_RGB_error_relative_to_frame_peak": 0.0,
+            "RMS_RGB_error_relative_to_frame_peak": 0.0,
+            "max_CIE_Y_error_relative_to_frame_peak_Y": 0.0,
+            "finite": true
+          },
+          "ideal": {
+            "max_RGB_error_relative_to_frame_peak": 0.0,
+            "RMS_RGB_error_relative_to_frame_peak": 0.0,
+            "max_CIE_Y_error_relative_to_frame_peak_Y": 0.0,
+            "finite": true
+          }
+        }
+      },
+      {
+        "name": "270px Kerr raymap at 85.0 degrees",
+        "direct_seconds": 0.432693124996149,
+        "fast_seconds_excluding_once_only_setup": 0.11738974999752827,
+        "speedup": 3.685953202943695,
+        "views": {
+          "camera": {
+            "max_RGB_error_relative_to_frame_peak": 7.702645494329752e-08,
+            "RMS_RGB_error_relative_to_frame_peak": 3.6777633915225545e-09,
+            "max_CIE_Y_error_relative_to_frame_peak_Y": 9.835675656841365e-08,
+            "finite": true
+          },
+          "ideal": {
+            "max_RGB_error_relative_to_frame_peak": 8.499940908439538e-08,
+            "RMS_RGB_error_relative_to_frame_peak": 3.596269157099689e-09,
+            "max_CIE_Y_error_relative_to_frame_peak_Y": 1.2509557167207692e-07,
+            "finite": true
+          }
+        }
+      },
+      {
+        "name": "270px Kerr raymap at 86.5 degrees",
+        "direct_seconds": 0.424225667011342,
+        "fast_seconds_excluding_once_only_setup": 0.10794441599864513,
+        "speedup": 3.930038094945705,
+        "views": {
+          "camera": {
+            "max_RGB_error_relative_to_frame_peak": 8.925775081605066e-08,
+            "RMS_RGB_error_relative_to_frame_peak": 3.5298664002311403e-09,
+            "max_CIE_Y_error_relative_to_frame_peak_Y": 1.0875855305330625e-07,
+            "finite": true
+          },
+          "ideal": {
+            "max_RGB_error_relative_to_frame_peak": 9.958483483560485e-08,
+            "RMS_RGB_error_relative_to_frame_peak": 3.4614112157049126e-09,
+            "max_CIE_Y_error_relative_to_frame_peak_Y": 1.3501354583947316e-07,
+            "finite": true
+          }
+        }
+      },
+      {
+        "name": "270px Kerr raymap at 88.0 degrees",
+        "direct_seconds": 0.42809824999130797,
+        "fast_seconds_excluding_once_only_setup": 0.10516849998384714,
+        "speedup": 4.070593857068036,
+        "views": {
+          "camera": {
+            "max_RGB_error_relative_to_frame_peak": 1.099286658665408e-07,
+            "RMS_RGB_error_relative_to_frame_peak": 3.300894696411163e-09,
+            "max_CIE_Y_error_relative_to_frame_peak_Y": 9.547240459487539e-08,
+            "finite": true
+          },
+          "ideal": {
+            "max_RGB_error_relative_to_frame_peak": 1.2245882716859831e-07,
+            "RMS_RGB_error_relative_to_frame_peak": 3.2519403308827294e-09,
+            "max_CIE_Y_error_relative_to_frame_peak_Y": 1.1694417578358383e-07,
+            "finite": true
+          }
+        }
+      }
+    ],
+    "below_direct_Planck_threshold_exact_zero": true,
+    "sub_100_K_sources_use_acceleration": true,
+    "acceptance_max_RGB_and_Y_error_relative_to_frame_peak": 2e-06,
+    "elapsed_seconds": 3.718736333990819,
+    "passed": true
+  },
+  "selected_model": {
+    "parameters": {
+      "mass_solar": 10000000000.0,
+      "eddington_ratio": 0.05,
+      "spin_a_star": 0.9,
+      "mass_kg": 1.988409870698051e+40,
+      "rg_m": 14766250380501.25,
+      "tg_s": 49254.90947641268,
+      "isco_rg": 2.320883041761887,
+      "horizon_rg": 1.4358898943540672,
+      "efficiency_binding_energy": 0.1557529919944639,
+      "eddington_luminosity_w": 1.257065179846791e+41,
+      "accretion_rate_kg_s": 4.490037799303716e+23,
+      "flux_normalization_w_m2": 14727908678461.113,
+      "eddington_ratio_definition": "eta*Mdot*c^2/L_Edd; no photon capture correction",
+      "spectrum": "local Planck base; renderer may apply a separately documented atmosphere",
+      "inner_boundary": "stress-free ISCO; no emission inside the ISCO"
+    },
+    "inclinations_deg": [
+      85,
+      86.5,
+      88
+    ],
+    "checks": [
+      {
+        "name": "mass_and_accretion_flux_scaling",
+        "passed": true,
+        "maximum_relative_error": 2.220446049250313e-16
+      },
+      {
+        "name": "85_degree_rays_resolved",
+        "passed": true
+      },
+      {
+        "name": "85_degree_emission_angles_physical",
+        "passed": true
+      },
+      {
+        "name": "85_degree_isco_boundary",
+        "passed": true
+      },
+      {
+        "name": "85_degree_potential_constraints",
+        "passed": true,
+        "maximum_relative_residual": 6.261568853733207e-07
+      },
+      {
+        "name": "85_degree_temperature_and_shift_finite",
+        "passed": true
+      },
+      {
+        "name": "86.5_degree_rays_resolved",
+        "passed": true
+      },
+      {
+        "name": "86.5_degree_emission_angles_physical",
+        "passed": true
+      },
+      {
+        "name": "86.5_degree_isco_boundary",
+        "passed": true
+      },
+      {
+        "name": "86.5_degree_potential_constraints",
+        "passed": true,
+        "maximum_relative_residual": 7.163606997416901e-07
+      },
+      {
+        "name": "86.5_degree_temperature_and_shift_finite",
+        "passed": true
+      },
+      {
+        "name": "88_degree_rays_resolved",
+        "passed": true
+      },
+      {
+        "name": "88_degree_emission_angles_physical",
+        "passed": true
+      },
+      {
+        "name": "88_degree_isco_boundary",
+        "passed": true
+      },
+      {
+        "name": "88_degree_potential_constraints",
+        "passed": true,
+        "maximum_relative_residual": 6.868722842310195e-07
+      },
+      {
+        "name": "88_degree_temperature_and_shift_finite",
+        "passed": true
+      },
+      {
+        "name": "88_degree_integration_step_refinement",
+        "passed": true,
+        "mask_disagreement": 0.0,
+        "radius_p99_relative_error": 8.696643050143393e-08,
+        "frequency_shift_p99_relative_error": 0.0,
+        "scope": "Map radii and frequency shifts are stored as float32; zero differences do not imply exact trajectories."
+      }
+    ],
+    "peak_effective_temperature_k": 32438.28778826873,
+    "peak_color_hardening_factor": 1.0661739510795285,
+    "sampled_views": {
+      "85": {
+        "frequency_shift_range": [
+          0.17024777829647064,
+          1.5452711582183838
+        ],
+        "maximum_effective_temperature_k": 32438.287774229888,
+        "maximum_observed_color_temperature_k": 50246.74763393541,
+        "maximum_emission_angle_cosine": 0.9999363422393799,
+        "highest_visible_disk_crossing": 2
+      },
+      "86.5": {
+        "frequency_shift_range": [
+          0.1666470617055893,
+          1.565375566482544
+        ],
+        "maximum_effective_temperature_k": 32438.287538031866,
+        "maximum_observed_color_temperature_k": 50470.85537391763,
+        "maximum_emission_angle_cosine": 0.9999663829803467,
+        "highest_visible_disk_crossing": 3
+      },
+      "88": {
+        "frequency_shift_range": [
+          0.16578683257102966,
+          1.577913522720337
+        ],
+        "maximum_effective_temperature_k": 32438.286092887207,
+        "maximum_observed_color_temperature_k": 50602.143961109155,
+        "maximum_emission_angle_cosine": 0.9999261498451233,
+        "highest_visible_disk_crossing": 3
+      }
+    },
+    "passed": true
+  },
+  "display": {
+    "declared_exposure": 5.555555555555556e-09,
+    "checks": [
+      {
+        "name": "actual_curve_preserves_in_gamut_chromaticity",
+        "passed": true,
+        "maximum_RGB_ratio_error": 3.3306690738754696e-16
+      },
+      {
+        "name": "actual_curve_stays_in_display_range",
+        "passed": true
+      },
+      {
+        "name": "actual_curve_exposure_is_monotone",
+        "passed": true
+      },
+      {
+        "name": "zero_radiance_remains_black",
+        "passed": true
+      },
+      {
+        "name": "sRGB_encoding_follows_the_checked_curve",
+        "passed": true
+      }
+    ],
+    "scope": "Chromaticity check precedes quantization. Clipping negative out-of-sRGB primaries is the documented display-gamut limitation; the curve is not a physical emission law.",
+    "passed": true
+  },
+  "periodicity_and_optics": {
+    "checks": [
+      {
+        "name": "phase_function_periodic",
+        "passed": true,
+        "maximum_mirrored_phase_error_deg": 1.4210854715202004e-14
+      },
+      {
+        "name": "inclination_scan_is_85_to_88_degrees",
+        "passed": true
+      },
+      {
+        "name": "camera_uncompressed_phase_zero_equals_phase_one",
+        "passed": true,
+        "frame_dimensions": [
+          270,
+          480
+        ]
+      },
+      {
+        "name": "ideal_uncompressed_phase_zero_equals_phase_one",
+        "passed": true,
+        "frame_dimensions": [
+          270,
+          480
+        ]
+      },
+      {
+        "name": "overscan_covers_every_nonzero_PSF_offset",
+        "passed": true,
+        "traced_margin_pixels": 28,
+        "largest_kernel_radius_pixels": 28
+      },
+      {
+        "name": "overscan_preserves_angular_pixel_scale",
+        "passed": true,
+        "field_per_pixel_absolute_error": 0.0
+      },
+      {
+        "name": "camera_accelerated_spectrum_matches_direct",
+        "passed": true,
+        "maximum_RGB_error_relative_to_frame_peak": 8.925775081605066e-08
+      },
+      {
+        "name": "camera_10_to_5nm_spectral_camera_convergence",
+        "passed": true,
+        "total_CIE_Y_relative_error": 9.176223912721326e-06,
+        "maximum_CIE_Y_error_relative_to_peak": 1.1670640160553393e-05,
+        "maximum_RGB_error_relative_to_peak": 0.0008923187385059274,
+        "CIE_Y_p99_relative_error_where_Y_exceeds_0_001_of_peak": 0.0005183009302989084
+      },
+      {
+        "name": "ideal_accelerated_spectrum_matches_direct",
+        "passed": true,
+        "maximum_RGB_error_relative_to_frame_peak": 9.958483483560485e-08
+      },
+      {
+        "name": "ideal_10_to_5nm_spectral_camera_convergence",
+        "passed": true,
+        "total_CIE_Y_relative_error": 9.286316401624362e-06,
+        "maximum_CIE_Y_error_relative_to_peak": 9.173415500605735e-06,
+        "maximum_RGB_error_relative_to_peak": 0.0008770233981455647,
+        "CIE_Y_p99_relative_error_where_Y_exceeds_0_001_of_peak": 1.0337210899171722e-05
+      }
+    ],
+    "spectral_comparison": {
+      "camera": {
+        "total_CIE_Y_relative_error": 9.176223912721326e-06,
+        "maximum_CIE_Y_error_relative_to_peak": 1.1670640160553393e-05,
+        "maximum_RGB_error_relative_to_peak": 0.0008923187385059274,
+        "CIE_Y_p99_relative_error_where_Y_exceeds_0_001_of_peak": 0.0005183009302989084
+      },
+      "ideal": {
+        "total_CIE_Y_relative_error": 9.286316401624362e-06,
+        "maximum_CIE_Y_error_relative_to_peak": 9.173415500605735e-06,
+        "maximum_RGB_error_relative_to_peak": 0.0008770233981455647,
+        "CIE_Y_p99_relative_error_where_Y_exceeds_0_001_of_peak": 1.0337210899171722e-05
+      }
+    },
+    "scope": "Exact frame periodicity and whole-image 10-versus-5-nm comparison at 270x480, using 1.5x supersampled rays. The same finite-support pupil is used at each wavelength. Full-resolution encoded video is checked separately.",
+    "passed": true
+  },
+  "render_metadata": {
+    "file": "output-optical/render-metadata.json",
+    "checks": [
+      {
+        "name": "rendered_physical_parameters",
+        "passed": true
+      },
+      {
+        "name": "raytracer_disk_and_spin_match_emission",
+        "passed": true
+      },
+      {
+        "name": "reel_delivery_format",
+        "passed": true
+      },
+      {
+        "name": "scientific_viewport_and_subpixel_setting",
+        "passed": true
+      },
+      {
+        "name": "overscan_contains_declared_PSF_support",
+        "passed": true,
+        "supplied_margin_pixels": 110,
+        "independently_calculated_required_margin_pixels": 110
+      },
+      {
+        "name": "camera_detector_and_overscan_dimensions_match",
+        "passed": true
+      },
+      {
+        "name": "traced_subpixels_match_camera",
+        "passed": true
+      },
+      {
+        "name": "overscan_field_matches_visible_pixel_angle",
+        "passed": true
+      },
+      {
+        "name": "wavelength_resolved_camera_is_explicit",
+        "passed": true
+      },
+      {
+        "name": "fixed_display_exposure",
+        "passed": true
+      },
+      {
+        "name": "spectral_acceleration_keeps_same_optical_model",
+        "passed": true,
+        "scope": "Shape error includes the direct Planck numerical-zero discontinuity near 25 K; fresh spectral_acceleration checks separately require rendered RGB and Y errors below 2e-6 of frame peak.",
+        "acceleration": {
+          "method": "normalized scalar Planck SVD; absolute amplitude restored before BOX average; RGB-weighted spectral OTF sums",
+          "rank": 18,
+          "temperature_domain_k": [
+            24.763801678208843,
+            100000.0
+          ],
+          "exact_zero_temperature_k": 24.763801678208843,
+          "exact_zero_rule": "same exponent >= 700 cutoff already used by direct planck_lambda; no additional light truncation",
+          "temperature_training_samples": 4096,
+          "temperature_lookup_samples": 32769,
+          "independent_half_grid_validation_samples": 32768,
+          "max_monochromatic_error_relative_to_continuous_Planck_peak": 0.00011553688555825083,
+          "discarded_singular_value": 1.536010251937324e-05,
+          "out_of_domain_policy": "direct wavelength-resolved fallback; zero sentinel retained",
+          "cold_scene_policy": "direct fallback when all emitting temperatures are below 2000 K",
+          "FFT_count_per_frame": {
+            "forward": 18,
+            "inverse": 3
+          },
+          "optical_model_changed": false,
+          "setup_seconds": 4.149962458992377,
+          "basis_OTF_cache_bytes": 358784640,
+          "last_apply_seconds": 1.9748143759934464
+        }
+      },
+      {
+        "name": "all_views_use_checked_ray_steps",
+        "passed": true
+      },
+      {
+        "name": "all_121_independently_traced_views_recorded",
+        "passed": true,
+        "count": 121,
+        "maximum_expected_angle_error_deg": 0.0
+      },
+      {
+        "name": "every_view_has_small_geodesic_constraint_residual",
+        "passed": true,
+        "maximum_relative_residual": 8.570750680300658e-07
+      },
+      {
+        "name": "all_views_use_the_selected_thermal_solution",
+        "passed": true,
+        "independent_analytic_peak_k": 32438.28778826873,
+        "rendered_peak_range_k": [
+          32438.287770175994,
+          32438.287855811523
+        ]
+      },
+      {
+        "name": "no_view_emits_inside_ISCO",
+        "passed": true
+      },
+      {
+        "name": "all_recorded_frequency_shifts_physical",
+        "passed": true
+      },
+      {
+        "name": "all_views_contain_higher_order_disk_images",
+        "passed": true
+      },
+      {
+        "name": "both_outputs_have_finite_positive_radiance_every_view",
+        "passed": true
+      }
+    ],
+    "unresolved_ray_guard": "KerrTracer.trace raises for any unresolved or nonfinite ray. Saved per-view statistics imply that guard passed; full maps are not archived.",
+    "passed": true
+  },
+  "passed": true,
+  "elapsed_seconds": 14.191106416008552
+}

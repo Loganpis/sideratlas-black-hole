@@ -1,0 +1,356 @@
+{
+  "physics_skipped": false,
+  "videos": {
+    "bolometric": {
+      "file": "output/atlastro-black-hole-reel.mp4",
+      "size_bytes": 1147149,
+      "stream": {
+        "codec_name": "h264",
+        "profile": "High",
+        "width": 1080,
+        "height": 1920,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "nb_frames": "240",
+        "duration": "8.000000",
+        "start_time": "0.000000",
+        "color_space": "bt709",
+        "color_transfer": "iec61966-2-1",
+        "color_primaries": "bt709"
+      },
+      "checks": [
+        {
+          "name": "1080x1920_reel",
+          "passed": true
+        },
+        {
+          "name": "h264_yuv420p",
+          "passed": true
+        },
+        {
+          "name": "30_fps",
+          "passed": true
+        },
+        {
+          "name": "240_declared_frames",
+          "passed": true
+        },
+        {
+          "name": "eight_second_duration",
+          "passed": true
+        },
+        {
+          "name": "zero_start_time",
+          "passed": true
+        },
+        {
+          "name": "no_audio_stream",
+          "passed": true
+        },
+        {
+          "name": "specified_color_tags",
+          "passed": true
+        },
+        {
+          "name": "fast_start",
+          "passed": true
+        },
+        {
+          "name": "all_240_frames_decode",
+          "passed": true
+        },
+        {
+          "name": "loop_seam_with_codec_tolerance",
+          "passed": true
+        }
+      ],
+      "mp4_atom_offsets": {
+        "ftyp": 0,
+        "moov": 32,
+        "free": 1800,
+        "mdat": 1808
+      },
+      "decode": {
+        "decoded_frames": 240,
+        "decoder_errors": "",
+        "difference_units": "mean absolute difference, RGB code values on a 0\u2013255 scale",
+        "all_transition_mae": {
+          "minimum": 0.010103202160493827,
+          "median": 0.22505931712962962,
+          "maximum": 0.3907470100308642
+        },
+        "first_three_transition_mae": [
+          0.04341965663580247,
+          0.01631365740740741,
+          0.02666232638888889
+        ],
+        "last_three_transition_mae": [
+          0.046951678240740743,
+          0.027764274691358025,
+          0.010103202160493827
+        ],
+        "seam_mae": 0.21904079861111111,
+        "hero_region_y": [
+          380,
+          1210
+        ],
+        "hero_first_three_transition_mae": [
+          0.0582095046854083,
+          0.031255020080321286,
+          0.05118362338241857
+        ],
+        "hero_last_three_transition_mae": [
+          0.09882864792503347,
+          0.058511825078090135,
+          0.020580098170459617
+        ],
+        "hero_seam_mae": 0.33135765283355645,
+        "codec_mae_allowance": 2.0,
+        "seam_limit_from_endpoint_transitions": 2.046951678240741,
+        "hero_seam_limit_from_endpoint_transitions": 2.0988286479250333,
+        "seam_consistent_with_nearby_transitions": true,
+        "seam_check_scope": "A perceptual discontinuity screen with codec tolerance; exact periodicity is checked separately on uncompressed renderer frames."
+      },
+      "passed": true
+    },
+    "thermal": {
+      "file": "output/atlastro-visible-thermal-reel.mp4",
+      "size_bytes": 1477985,
+      "stream": {
+        "codec_name": "h264",
+        "profile": "High",
+        "width": 1080,
+        "height": 1920,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "nb_frames": "240",
+        "duration": "8.000000",
+        "start_time": "0.000000",
+        "color_space": "bt709",
+        "color_transfer": "iec61966-2-1",
+        "color_primaries": "bt709"
+      },
+      "checks": [
+        {
+          "name": "1080x1920_reel",
+          "passed": true
+        },
+        {
+          "name": "h264_yuv420p",
+          "passed": true
+        },
+        {
+          "name": "30_fps",
+          "passed": true
+        },
+        {
+          "name": "240_declared_frames",
+          "passed": true
+        },
+        {
+          "name": "eight_second_duration",
+          "passed": true
+        },
+        {
+          "name": "zero_start_time",
+          "passed": true
+        },
+        {
+          "name": "no_audio_stream",
+          "passed": true
+        },
+        {
+          "name": "specified_color_tags",
+          "passed": true
+        },
+        {
+          "name": "fast_start",
+          "passed": true
+        },
+        {
+          "name": "all_240_frames_decode",
+          "passed": true
+        },
+        {
+          "name": "loop_seam_with_codec_tolerance",
+          "passed": true
+        }
+      ],
+      "mp4_atom_offsets": {
+        "ftyp": 0,
+        "moov": 32,
+        "free": 1800,
+        "mdat": 1808
+      },
+      "decode": {
+        "decoded_frames": 240,
+        "decoder_errors": "",
+        "difference_units": "mean absolute difference, RGB code values on a 0\u2013255 scale",
+        "all_transition_mae": {
+          "minimum": 0.017977109053497944,
+          "median": 0.3059535751028807,
+          "maximum": 0.5431942836934156
+        },
+        "first_three_transition_mae": [
+          0.05570505401234568,
+          0.03814332561728395,
+          0.05199395576131687
+        ],
+        "last_three_transition_mae": [
+          0.0715210262345679,
+          0.051160943930041156,
+          0.02624823173868313
+        ],
+        "seam_mae": 0.2679462448559671,
+        "hero_region_y": [
+          380,
+          1210
+        ],
+        "hero_first_three_transition_mae": [
+          0.082458723784025,
+          0.07233526699390153,
+          0.09694332887103971
+        ],
+        "hero_last_three_transition_mae": [
+          0.14067231890525064,
+          0.10039454112747286,
+          0.05029413952104715
+        ],
+        "hero_seam_mae": 0.4236657742079429,
+        "codec_mae_allowance": 2.0,
+        "seam_limit_from_endpoint_transitions": 2.071521026234568,
+        "hero_seam_limit_from_endpoint_transitions": 2.1406723189052506,
+        "seam_consistent_with_nearby_transitions": true,
+        "seam_check_scope": "A perceptual discontinuity screen with codec tolerance; exact periodicity is checked separately on uncompressed renderer frames."
+      },
+      "passed": true
+    }
+  },
+  "errors": [],
+  "physics": {
+    "emission": {
+      "parameters": {
+        "mass_solar": 100000000.0,
+        "eddington_ratio": 0.1,
+        "spin_a_star": 0.0,
+        "mass_kg": 1.988409870698051e+38,
+        "rg_m": 147662503805.01248,
+        "tg_s": 492.5490947641267,
+        "isco_rg": 6.0,
+        "horizon_rg": 2.0,
+        "efficiency_binding_energy": 0.057190958417936644,
+        "eddington_luminosity_w": 1.2570651798467909e+39,
+        "accretion_rate_kg_s": 2.445620219543168e+22,
+        "flux_normalization_w_m2": 1.2032929186436474e+16,
+        "spectrum": "isotropic Planck blackbody; color correction f_col=1",
+        "eddington_ratio_definition": "eta*Mdot*c^2/L_Edd; does not correct for photon capture"
+      },
+      "page_thorne_integral_max_relative_error": 1.9862462119490942e-08,
+      "flux_peak_radius_rg": 9.55095,
+      "flux_peak_shape": 0.00011458947324171412,
+      "flux_peak_w_m2": 1378847017028.6033,
+      "temperature_peak_k": 70222.46766797506,
+      "stefan_boltzmann_integral_relative_error": 1.2724555631393741e-08,
+      "planck_liouville_relative_error": 2.8199664825478976e-14,
+      "cie_lookup_max_relative_error_2000_to_500000k": 0.00024264652315730828,
+      "rgb_at_peak_temperature": [
+        376243120.84996563,
+        539325538.4819336,
+        1171101530.074683
+      ],
+      "spectrum": {
+        "cie_source": "https://cie.co.at/datatable/cie-1931-colour-matching-functions-2-degree-observer",
+        "cie_doi": "10.25039/CIE.DS.xvudnb9b",
+        "cie_md5": "17cca777db64b17170f06f67ce9d3ab7",
+        "cie_wavelength_nm": [
+          360,
+          830
+        ],
+        "spectral_step_nm": 1,
+        "lookup_bins": 4096,
+        "lookup_temperature_k": [
+          100.0,
+          1000000.0
+        ],
+        "radiance_units": "CIE-weighted W m^-2 sr^-1; no per-pixel normalization",
+        "display_matrix": "ICC sRGB interpretation, section 7"
+      }
+    },
+    "raytrace": {
+      "passed": true,
+      "geometry_reflection_symmetric": true,
+      "approaching_mean_g": 1.0271284580230713,
+      "receding_mean_g": 0.8268632292747498,
+      "approaching_to_receding_test_flux": 5.499269671776723,
+      "weak_field_deflection_b200": 0.02029996622702246,
+      "weak_field_leading_order": 0.02,
+      "refinement_mask_disagreement_fraction": 0.0,
+      "refinement_radius_p99_relative_error": 1.7941132455234765e-06,
+      "refinement_integrated_test_flux_relative_error": 1.943724076502888e-06,
+      "visible_first_hit_layers": {
+        "0": 37166,
+        "1": 162,
+        "2": 6,
+        "3": 2
+      },
+      "coarse_cache": {
+        "model": "Schwarzschild null geodesics; first opaque Keplerian thin-disk hit",
+        "width": 192,
+        "height": 256,
+        "fov_horizontal_rg": 32,
+        "fov_vertical_rg": 42.666666666666664,
+        "roll_deg": 0,
+        "rin_rg": 6,
+        "rout_rg": 40,
+        "layers": 4,
+        "radial_samples_total": 6144,
+        "angle_step": 0.003999481417682741,
+        "critical_impact_rg": 5.196152422706632,
+        "orbit_cache_mb": 73.6640625,
+        "setup_seconds": 0.30375016600009985
+      },
+      "elapsed_seconds": 1.3176978749979753
+    },
+    "passed": true
+  },
+  "periodicity": {
+    "default_animation": {
+      "fps": 30,
+      "frames": 240,
+      "duration_seconds": 8,
+      "inclination_min_deg": 78.0,
+      "inclination_max_deg": 87.0,
+      "phase_zero_deg": 87.0,
+      "phase_one_deg": 87.0,
+      "maximum_mirrored_phase_angle_error_deg": 1.4210854715202004e-14
+    },
+    "checks": [
+      {
+        "name": "default_phase_math_periodic",
+        "passed": true
+      },
+      {
+        "name": "bolometric_uncompressed_phase_zero_equals_one",
+        "passed": true,
+        "dimensions": [
+          270,
+          480
+        ]
+      },
+      {
+        "name": "thermal_uncompressed_phase_zero_equals_one",
+        "passed": true,
+        "dimensions": [
+          270,
+          480
+        ]
+      }
+    ],
+    "scope": "Actual phase0/1 frame equality at 270x480; all default 240-frame camera phases checked at their full-precision values. Movie encoding is checked separately.",
+    "passed": true
+  },
+  "passed": true,
+  "elapsed_seconds": 7.06836945899704
+}

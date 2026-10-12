@@ -1,0 +1,85 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "frames": 240,
+  "duration_seconds": 8,
+  "supersample": 1.5,
+  "inclination_degrees": [
+    78,
+    87
+  ],
+  "animation": "periodic static-viewpoint scan; no fluid evolution",
+  "disk": {
+    "mass_solar": 100000000.0,
+    "eddington_ratio": 0.1,
+    "spin_a_star": 0.0,
+    "mass_kg": 1.988409870698051e+38,
+    "rg_m": 147662503805.01248,
+    "tg_s": 492.5490947641267,
+    "isco_rg": 6.0,
+    "horizon_rg": 2.0,
+    "efficiency_binding_energy": 0.057190958417936644,
+    "eddington_luminosity_w": 1.2570651798467909e+39,
+    "accretion_rate_kg_s": 2.445620219543168e+22,
+    "flux_normalization_w_m2": 1.2032929186436474e+16,
+    "spectrum": "isotropic Planck blackbody; color correction f_col=1",
+    "eddington_ratio_definition": "eta*Mdot*c^2/L_Edd; does not correct for photon capture"
+  },
+  "raytracer": {
+    "model": "Schwarzschild null geodesics; first opaque Keplerian thin-disk hit",
+    "width": 1620,
+    "height": 1800,
+    "fov_horizontal_rg": 32,
+    "fov_vertical_rg": 35.55555555555556,
+    "roll_deg": 15,
+    "rin_rg": 6,
+    "rout_rg": 40,
+    "layers": 4,
+    "radial_samples_total": 10240,
+    "angle_step": 0.0019997407088413704,
+    "critical_impact_rg": 5.196152422706632,
+    "orbit_cache_mb": 245.5078125,
+    "setup_seconds": 1.0315603749986622
+  },
+  "spectrum": {
+    "cie_source": "https://cie.co.at/datatable/cie-1931-colour-matching-functions-2-degree-observer",
+    "cie_doi": "10.25039/CIE.DS.xvudnb9b",
+    "cie_md5": "17cca777db64b17170f06f67ce9d3ab7",
+    "cie_wavelength_nm": [
+      360,
+      830
+    ],
+    "spectral_step_nm": 1,
+    "lookup_bins": 4096,
+    "lookup_temperature_k": [
+      100.0,
+      1000000.0
+    ],
+    "radiance_units": "CIE-weighted W m^-2 sr^-1; no per-pixel normalization",
+    "display_matrix": "ICC sRGB interpretation, section 7"
+  },
+  "display": {
+    "bolometric_white_w_m2_sr": 1300000000000.0,
+    "thermal_white_cie_weighted": 1700000000.0,
+    "encoding": "sRGB transfer, BT.709 YCbCr matrix; fixed global exposure; no additional effects",
+    "subpixel_average": "linear physical radiance, box filter"
+  },
+  "last_frame_stats": {
+    "bolometric": {
+      "max_linear_display_value": 0.9320811790393349,
+      "negative_fraction": 0.0,
+      "over_white_fraction": 0.0
+    },
+    "thermal": {
+      "max_linear_display_value": 0.9386085394621749,
+      "negative_fraction": 9.716506630086877e-06,
+      "over_white_fraction": 0.0
+    }
+  },
+  "elapsed_seconds": 117.77328345800197,
+  "outputs": {
+    "bolometric": "atlastro-black-hole-reel.mp4",
+    "thermal": "atlastro-visible-thermal-reel.mp4"
+  }
+}

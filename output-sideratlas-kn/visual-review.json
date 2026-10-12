@@ -1,0 +1,99 @@
+{
+  "video_sha256": "fc5ae0ced5d396bf94fff9ab0d3882bbb550a05a9691176cc98926523ef352f1",
+  "source_sha256": "3103914c35fa2e799ee5eaba5c72b11d052c6ee0c557064cb7302be413c196b9",
+  "scope": "Color-managed decoded samples versus the corresponding float-radiance compositions; not an Instagram-upload measurement",
+  "frames": [
+    {
+      "frame": 0,
+      "seconds": 0.0,
+      "full_rgb_mae_255": 0.12742830504115227,
+      "lit_disk_rgb_mae_255": 2.1153574032373337,
+      "black_top_max": 0
+    },
+    {
+      "frame": 20,
+      "seconds": 0.6666666666666666,
+      "full_rgb_mae_255": 0.16183031121399177,
+      "lit_disk_rgb_mae_255": 1.1152580539320396,
+      "black_top_max": 0
+    },
+    {
+      "frame": 40,
+      "seconds": 1.3333333333333333,
+      "full_rgb_mae_255": 0.19878938400205762,
+      "lit_disk_rgb_mae_255": 0.995884421714213,
+      "black_top_max": 0
+    },
+    {
+      "frame": 60,
+      "seconds": 2.0,
+      "full_rgb_mae_255": 0.1588448431069959,
+      "lit_disk_rgb_mae_255": 0.7602836159429776,
+      "black_top_max": 0
+    },
+    {
+      "frame": 80,
+      "seconds": 2.6666666666666665,
+      "full_rgb_mae_255": 0.1777539866255144,
+      "lit_disk_rgb_mae_255": 1.0451772031270887,
+      "black_top_max": 0
+    },
+    {
+      "frame": 100,
+      "seconds": 3.3333333333333335,
+      "full_rgb_mae_255": 0.13041843492798355,
+      "lit_disk_rgb_mae_255": 1.3019627123219002,
+      "black_top_max": 0
+    },
+    {
+      "frame": 120,
+      "seconds": 4.0,
+      "full_rgb_mae_255": 0.11470566486625515,
+      "lit_disk_rgb_mae_255": 2.092761454463582,
+      "black_top_max": 0
+    },
+    {
+      "frame": 140,
+      "seconds": 4.666666666666667,
+      "full_rgb_mae_255": 0.1636013052983539,
+      "lit_disk_rgb_mae_255": 1.2584212344158932,
+      "black_top_max": 0
+    },
+    {
+      "frame": 160,
+      "seconds": 5.333333333333333,
+      "full_rgb_mae_255": 0.193740033436214,
+      "lit_disk_rgb_mae_255": 1.0411554575523705,
+      "black_top_max": 0
+    },
+    {
+      "frame": 180,
+      "seconds": 6.0,
+      "full_rgb_mae_255": 0.1484643454218107,
+      "lit_disk_rgb_mae_255": 0.7029464769068582,
+      "black_top_max": 0
+    },
+    {
+      "frame": 200,
+      "seconds": 6.666666666666667,
+      "full_rgb_mae_255": 0.18214699074074073,
+      "lit_disk_rgb_mae_255": 1.0736980751058238,
+      "black_top_max": 0
+    },
+    {
+      "frame": 220,
+      "seconds": 7.333333333333333,
+      "full_rgb_mae_255": 0.1427031893004115,
+      "lit_disk_rgb_mae_255": 1.4515946642501274,
+      "black_top_max": 0
+    }
+  ],
+  "overlay_bbox": [
+    67,
+    270,
+    966,
+    1619
+  ],
+  "bottom_clearance_pixels": 301,
+  "exact_black_header": true
+}

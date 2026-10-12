@@ -1,0 +1,39 @@
+NO.001 — THE BLACK HOLE
+@sideratlas
+
+Bends light into multiple images of its disk
+Approaching gas appears brighter
+Gravity redshifts light and delays its arrival
+Inner orbits shear bright structures faster
+Spin drags spacetime around the black hole
+
+Original Kerr calculation: a* = Jc/(GM²) = +0.9
+Chosen alignment: equatorial, prograde — disk and hole rotate in the same sense
+The inner emitting edge is the ISCO, about 2.32 GM/c²
+
+CALCULATED
+Kerr light paths, disk intersections, source azimuths, gravitational/Doppler shifts and relative photon delays
+Spin-dependent Page–Thorne mean brightness; I_obs = g⁴ I_em
+Kerr orbital motion: Ω = 1/(r^(3/2)+a), in G=M=c=1
+
+ASSUMED
+Opaque razor-thin disk to 28 GM/c², zero ISCO stress, identical isotropic emission on both faces
+Sheared streaks are prescribed brightness, not simulated magnetic turbulence
+The view makes a full 360° virtual scan above and below the disk
+The 8-second loop represents 800 GM/c³; repeating source births close it without altering orbital speeds
+No physical mass or accretion rate is assigned
+
+Orange is illustrative BRIGHTNESS, not true visible color
+No disk thickness, fluid evolution, magnetic fields, plunging emission, corona or returning-radiation heating
+NASA's non-rotating 2019 animation is the visual reference; no NASA footage or code is used
+
+SOURCES & ROLES
+Bardeen, Press & Teukolsky 1972 — ISCO/orbits, doi:10.1086/151796
+Page & Thorne 1974 — flux, doi:10.1086/152990
+Gralla & Lupsasca 2020 — Kerr geodesics, arXiv:1910.12881
+Cárdenas-Avendaño et al. 2023 — retarded source/transfer, arXiv:2211.07469
+Schnittman & Bertschinger 2004 — hot-spot precedent, arXiv:astro-ph/0309458
+James et al. 2015 — lensing background, arXiv:1502.03808
+Schwarzschild benchmarks: Luminet 1979, A&A 75,228; Müller & Frauendiener 2012, arXiv:1206.4259; Bozza 2002, arXiv:gr-qc/0208075
+NASA/Goddard/J. Schnittman 2019 — visual reference: https://svs.gsfc.nasa.gov/13326/
+ICC — sRGB display encoding

@@ -1,0 +1,1192 @@
+{
+  "scope": "Verify the current Kerr\u2013Newman renderer, saved numerical diagnostics and final files.\n\nThese checks measure numerical consistency of the specified idealized model,\nnot physical validation of a turbulent flow or agreement with NASA's movie.\n",
+  "preflight_only": false,
+  "verifier_sha256": "a13e10900b45c87f5551442d64e799725b12e7531d3a8a6160a252732ddf9abb",
+  "videos": {
+    "color": {
+      "file": "output-sideratlas-kn/sideratlas-kerr-newman-reel.mp4",
+      "sha256": "fc5ae0ced5d396bf94fff9ab0d3882bbb550a05a9691176cc98926523ef352f1",
+      "size_bytes": 15640912,
+      "stream": {
+        "codec_name": "h264",
+        "profile": "High",
+        "width": 1080,
+        "height": 1920,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "nb_frames": "960",
+        "duration": "32.000000",
+        "start_time": "0.000000",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "color_range": "tv",
+        "level": 50,
+        "bit_rate": "3909031",
+        "chroma_location": "left"
+      },
+      "checks": [
+        {
+          "name": "1080x1920_h264_high_420",
+          "passed": true
+        },
+        {
+          "name": "thirty_fps_960_frames_32_seconds",
+          "passed": true
+        },
+        {
+          "name": "zero_start_silent",
+          "passed": true
+        },
+        {
+          "name": "rec709_limited_range",
+          "passed": true
+        },
+        {
+          "name": "faststart",
+          "passed": true
+        },
+        {
+          "name": "all_960_frames_decode_cleanly",
+          "passed": true
+        },
+        {
+          "name": "seam_consistent_with_adjacent_motion",
+          "passed": true
+        },
+        {
+          "name": "four_pixel_identical_decoded_cycles",
+          "passed": true
+        }
+      ],
+      "atoms": {
+        "ftyp": 0,
+        "moov": 32,
+        "free": 4772,
+        "mdat": 4780
+      },
+      "decode": {
+        "decoded_frames": 960,
+        "decoder_errors": "",
+        "difference_units": "mean absolute difference, RGB code values on a 0\u2013255 scale",
+        "all_transition_mae": {
+          "minimum": 0.3715946502057613,
+          "median": 0.6259185313786009,
+          "maximum": 0.8246471514917696
+        },
+        "first_three_transition_mae": [
+          0.655995691872428,
+          0.6578047839506173,
+          0.658021958590535
+        ],
+        "last_three_transition_mae": [
+          0.6342351466049383,
+          0.6237826324588477,
+          0.6357201646090535
+        ],
+        "seam_mae": 0.688048482510288,
+        "hero_region_y": [
+          425,
+          1145
+        ],
+        "hero_first_three_transition_mae": [
+          1.7384010631001372,
+          1.7539274691358024,
+          1.7546737825788752
+        ],
+        "hero_last_three_transition_mae": [
+          1.6908114711934157,
+          1.6630731310013718,
+          1.6950518689986283
+        ],
+        "hero_seam_mae": 1.7295760459533607,
+        "codec_mae_allowance": 2.0,
+        "seam_limit_from_endpoint_transitions": 2.658021958590535,
+        "hero_seam_limit_from_endpoint_transitions": 3.754673782578875,
+        "seam_consistent_with_nearby_transitions": true,
+        "seam_check_scope": "A perceptual discontinuity screen with codec tolerance; exact periodicity is checked separately on uncompressed renderer frames."
+      },
+      "first_cycle_framemd5": [
+        "8ec3755d790b9881d8f3cc545875c938",
+        "f3539d6f097851db265259ef09876f26",
+        "74db19c17b43e64d1cf28d4b471bb1b5",
+        "56d2c3055f679ff7d5a2faf4bb2422e7",
+        "06d25013421adeba218acecb0309b9b4",
+        "5e023002c288e96e9e3143dbfd179b2b",
+        "16cd8888a2bbb4b6de4077c772b108f9",
+        "b287fa4646da39990bfa8145750917ee",
+        "4377caa48ba5e20c2101b71ba02cadc9",
+        "ffba9fdddfcb884efb5cf2d9182faafe",
+        "1803b69579a771aa51fe721a02c43d92",
+        "2ce42c4994d0a313c0f8d9346d77fb75",
+        "abffc04e9a434fccbbecb1883592cc03",
+        "84514599322943199f57263787b87fbe",
+        "653e02f0bd15eb2a5aa02fc059802b4a",
+        "ef821c3a49e0433efad2ef9f7c71416f",
+        "4632ee7287b95205a894f8ec4e73cd47",
+        "4562e725baaa0b5e9e62dd76d4108906",
+        "df40dc9dd03a1e767d38a0b5327ee963",
+        "9fd0f571c23e2b57ff1c4be0768024b2",
+        "7117916c0db63a8fe300db2fd3e0a4e8",
+        "5d2adceccaca85e8178ddd89a2c8a88f",
+        "c57127775fb9db46a1ebbd24ec1c8c10",
+        "aef183805299fbf2b0d767697857b369",
+        "100abc9bc2da4e8cd203d28870241a15",
+        "780ff430f5dded0118f813499a346724",
+        "5f39be9073ba97bb128e967304370c5c",
+        "48cde33b69a37e0dc0e27bde67f11e97",
+        "061bf7fed19badd1c743f899f17e1d68",
+        "1872fab03cb538af038849fe12e128b5",
+        "748a5638b5a919c2f7a8adba68be11cc",
+        "06687905b0e6a65ce6b444a684fe3aa2",
+        "9259d7c5e880e629a81a69c29ba1bba2",
+        "841d2edcd1a1659935fe07970526a0c6",
+        "c432ffe956ad043bce6a279fa399e2ef",
+        "ed8c703c69d7f03d8d111079aef0a24f",
+        "aef6f5c632d6337e83391d93ba6b5e27",
+        "c1cf13d3ad6f52a1df3c54f9ecdcd809",
+        "e1cc74e89098145a35e3cd4f8355026a",
+        "48c707959b1f1c7c9ee93942ae506771",
+        "7cb4a13104c7f93e338940deee0e9106",
+        "cf4fe2ec0df6a306586ffd8e4bf4cd9b",
+        "53917c24cbc2f1801ec5ac6edba44292",
+        "e2bb053e582856eb9f2f2df0c94000f0",
+        "8b69394f32a201e1cfb0e1ad643df1bf",
+        "8800c78225534b9fac6613e79a4f847b",
+        "e645f8418fcc5558f30bd64b25b35985",
+        "a9cb8dcf3e84d2f183e7c137b2dfb2bd",
+        "280235b850b6ce4fe1bb067fdfec4a2a",
+        "75dd96229787ae086c24b6a54a790531",
+        "acdeba8b956a1a3580b884042ba1c73d",
+        "77115bf4fd4da505d76dd4879f38650f",
+        "341f93de3d783b5b4c248f5a30adb7f1",
+        "b17a5092881f0b351891b130e6cc2b25",
+        "ec62c5a14f100648ebd9eae3dc1ee3b5",
+        "55074a6aa51a72881859f980091b3f55",
+        "e946d8484bf0831c090d77473e894759",
+        "f9c0b06b9e3d895330c80d3c3c94c422",
+        "fd0717648fae70d3025912ee768cac8d",
+        "ed09783f235adb8ad40a5cf7ec07b8a9",
+        "57957d5e6701c13c683e642ab293b768",
+        "3b9c06239dbebe40ce8a657cc1a3908b",
+        "36354abfd79f59c5c6c2cb20d8e910cb",
+        "1b1cbbc140f0218bbc80594e111c4847",
+        "6e975c80b83fb13930520bc4c238b5f9",
+        "c81696242fd5747c98e91da1c5c08220",
+        "810d12b0854e06ac67ee97bee9e24703",
+        "9e8155f4947303071c37e7a786b074d6",
+        "4e636d4ae874e7aea50f6bcc1a548fca",
+        "37f4a53d2a0d1705999ba773339a4901",
+        "e19bd83659681384379434eb02ce81b0",
+        "dd5848c7c8498b31c4562f5e710e3152",
+        "d6bd1076cd17c04b3c739f861028fd86",
+        "919253704f8db2f270daf31a5c5318f7",
+        "d18c3a2c17e65babc33cbd7b00f9c3c7",
+        "fbd8a0097191274be722f105eadaf3db",
+        "14599b2152e4e90045f8f2900bae5063",
+        "e5659fa9eed2e9c12f8b112265d2a9b6",
+        "39bedf5256c96514519c515fd60d55b4",
+        "cad7e9ebdf070e15d94f1b760629b9bc",
+        "e66be7d3f64f9b741687f407e3c31e1f",
+        "153734c41eaac6e2e84e6c4ec973b2d8",
+        "fa20d1601925b713a5cf89f959fcf15c",
+        "137bb35a51bfb2f2431769e9a2583be1",
+        "143d02cf3c12602317d9df5da5aa630a",
+        "2089a29ea9159ee4e222f69c51c0e299",
+        "bbc48c64de7ca3db669675098aa4da6c",
+        "c2f56a4b317164facb9f7c8df6f7efed",
+        "4a89a0fc46abd606af949f5bb0c15a8d",
+        "2c0c9c485f368e0b0aa2dec942c784c6",
+        "6efa95e4c4c5939c22dce27274cdb80b",
+        "6c34c59efaa4fac03b603c00db55957c",
+        "f544cd919fc1c84e0b657fb510c9b2e4",
+        "6fa26f88f72a0e70bbb70eb5fb278fe6",
+        "58661b98468a081e9f4a8084454f4c97",
+        "dff0c65c3b047a47685998ccd00d5dfa",
+        "15022392b7590b30302e5e9128c7a692",
+        "a88067f4f118da128d028dfb54b25563",
+        "edf3a8b8cf88c37f185ea14b97d3e1b6",
+        "6ee03b3aff280f69f473e15297f63f24",
+        "ef390b29b020d08763e92d0559dba547",
+        "25c213cf2637da554e04b8ff62c6303e",
+        "0f8937aa568d6c69c45dbfcc0e6579a4",
+        "825a73005cf78324c7b88ff9fccbe548",
+        "72d29afd38bb5110606bf16d62fe4547",
+        "a0e88309824644d0996da6377c50e974",
+        "be2d5bb1d0d0c6098493ea4b7697ff8b",
+        "709fb0e01c35980e82b8fb79e21f144d",
+        "96b377aa6c1f743eb67dc4d90e725ea3",
+        "89269296b34c2daf1d1e91946b53055c",
+        "14e578f247286ab5ab4a5d8169b07ea3",
+        "903b6781e3df8dc32b2adf684b93c4b6",
+        "67d1ab5f66ca735a97726065de55d029",
+        "d5e8ad5bcaf16e7bf79cf1fd9ee87ecb",
+        "ddcc22d16f57a00df22832fe454a2104",
+        "be113619d67b21a6fe3d9e039f7a0eb5",
+        "ceed9cfdd146ab1d9f20b75d8f2f28a8",
+        "cfdab1142f93d556fe2759ec2ead8e41",
+        "7e95c82625cb8e4b3da6b1e4131d92cb",
+        "a0aff2f2e593afa35256327399d3b716",
+        "30846fc2e85a0053615cdf6193bb38ac",
+        "615b6fcbd18e175d01595ff0d20f8a27",
+        "d37a48e65516511c07e47a8ffac51827",
+        "608142aeec0cf33b3b8b9e39ee007bd0",
+        "c6f595687ba29dc1ef73a274e55f6c6d",
+        "a917f742c0f8b88859baec354918b720",
+        "a8b6a3e3b6138b7b4a1a04837d96aa65",
+        "c9b9c4fee253896588ed3b475fc809d8",
+        "e189d03284b720ccfd8321c71c9f31d4",
+        "6bef2eb38de672c3621a8c748f30b575",
+        "607a4ecc8a80fb35ca4d5693eb5f9e83",
+        "41251685fdeb0d427e11274fb62352ed",
+        "41c85edcc47ed32a1f241b8364243248",
+        "17120de0b5283db4cd290ba3051105d0",
+        "a9fa546b77fc88913775d495708c5e57",
+        "73f7af3da41859b4ace4b218606530fb",
+        "6b4608889f3760208adcc516d0f72d16",
+        "dd099a3f50094a61f863b885f367ca99",
+        "03f3698f9c9ecc57dbeb11536da1865b",
+        "6309eda526a5ac6984367c8af609a3e2",
+        "80cb89c6516f15f1cac6ae0f80bf7aaf",
+        "b12cf76587dff59d0772e3c73cefa39c",
+        "8f1f31681152fa5aefcc23b4f839410d",
+        "6a262a880ae0eba8a7ee9d5061d8198e",
+        "de471d4ef68cf7dce387a65ba7769c05",
+        "bdc4775b319054c6580f8e6ff933634a",
+        "b51a7fbc531dd2ac458c758186b63c2a",
+        "34c3d22feb402be8ee8846dd2ee032e4",
+        "346db4b3e886053644281a4a3556e3cd",
+        "72e072eee79b422f55bbbc2bc47f0e8e",
+        "ccc2fb25c87b5fa731ed06c69095b108",
+        "8cf67d8c01964828b8b0647f71a38ea1",
+        "67fa1e743233073fb1f602349a2e7018",
+        "20e45682a1064f4107bba6b96afbf650",
+        "e422f13ef6da0c1715bc6d5bb3c799d1",
+        "e6016b695a8604787cd308c208bbbe75",
+        "780a660c47495c791572aa6a17b6d1f9",
+        "9d99042c2a84212848f00162f5482688",
+        "923dc15b9dc21b5fb9b544c5436414a8",
+        "b13e79af1df6a638fe97b99b9566a451",
+        "43dbec81f6304ad943158c886c9b8446",
+        "a0d62483e147c28827fdc14d9f1dec7a",
+        "4138d7da3b3d5f9a6477a63b27070f11",
+        "7af4adb2ff6e201720e7030e4724b79f",
+        "efa24ff3889d5031c751b5553957311f",
+        "53c702586ca724a3bb2807b9312c28b6",
+        "bfa12216884b9c9a027c6b169d9702a5",
+        "bd2bb5f852f916ea065a35bf321fea13",
+        "ea7812abc2571a6b0c671a4041584fae",
+        "e92e9faa67053cfd9868fc7c5d4aefe0",
+        "a12a190e081b7fe3a01da463222c699e",
+        "368967d37e13523b4d9dca11b4fafc69",
+        "a53fea7a46dc0b755a70c8661edcb313",
+        "9bec030c152b089b2972c70a22c48d5b",
+        "0f2328318a486923aed4d52f266762b2",
+        "546b591a03b136766ec3d8083a079dfa",
+        "591b418e8f22ea1c0d93c7e14e143cbb",
+        "86b38e7e1d2852e706b0a1aa139e71a9",
+        "47c78a22e68c5d7a2afa697286fef57e",
+        "80a456cc9e7414c88f252f59164b8a0c",
+        "5ed6b1f1b428a0674a0d6ec525bc99c2",
+        "da6fc929eb7f68ce60248f2c3d37a8ec",
+        "9bc36debd2ce91162069c6c7caec62ae",
+        "3a56248a0ad50c59099be80d8df6f1ad",
+        "e282173ed6ac324da091fbfc5f22a02d",
+        "f887bf5d809bd8a395b5cf7a708a8f95",
+        "8aebc89ea89cf4201c625c833a953e5c",
+        "9bce218010bdb370d4e0d0fd56978caf",
+        "7de5353170e792cbed9071a5b07081b4",
+        "48e71ad805d91dcafb27b83e4fc72ab1",
+        "b1c5a0dae10522b823e37c6e6665f02c",
+        "a6fea410adb5711af5b4b2aedc4fdcdd",
+        "01de9d4b3c926619cdb9e386d270cdab",
+        "3ffd73788243c1eb785b385ce396fe57",
+        "1d140af3c4044cca58dcb3fd58dca761",
+        "45e8af6b9584ef167fd64361cd7f6b7d",
+        "8e2b2b681eccab42bde9e79b94ea1449",
+        "54c236a0e1a34ef04386a9b976679254",
+        "30f9efbfa4de639e42ea13fde7dd19d4",
+        "33bb1709afa2bc79ab4a83cd0fa1eef6",
+        "074040ae8a9de871fb332b8948b8f594",
+        "dc7a10ca340e30818d144cb431c14ce3",
+        "d5623389077d59c50e6710c9afbed580",
+        "9fca8b5d61a5267f840239b10b450c71",
+        "90cce65b691620dc9ed1275c25650aef",
+        "f9df4943f36ddbc611fc6e7e63bbb310",
+        "1368568df4cdfe00b3e160cfce948529",
+        "322c843aba618287b4ee6b1ca838a34e",
+        "aae477e0138fd735695aa2406430137d",
+        "690dde3ad50195aac56e7732b1ccd3c9",
+        "41d0dd357844fe08928815a2355fc764",
+        "1ba396eb23183222fdf7f5143455a797",
+        "f8097dffcdf946382bd33011bff2a2d1",
+        "8fcf5a5ae28f8a2df344bd86bc2f1c84",
+        "d3dc35b1a0fc31d11d7ce27c025aae4b",
+        "d57830a1ef8a663d1d147fe4b27a5b4e",
+        "db819c006d2d621052e0090e976d11db",
+        "dbbaa0e7c5cd29304ffca1d735f6a0ad",
+        "9c011263d683c16ad3264e60c6f462e2",
+        "f6fc63077e5de5528231b9dbc77cb197",
+        "a36a63d6f23383ef5a30fb4441b1f662",
+        "1e3fc857f48b2a871178301c0971729c",
+        "23c0e18f6cf69d909ecb99df7fe15d4e",
+        "1b1340ca943f1330fe23b547472df676",
+        "894e9cc3f03a3d5a36cdbcdc955241c8",
+        "16eaa5ebbc692eefaa03ff27559bced6",
+        "904388e7912c925ef380ed0587affe35",
+        "898c054b491108f5818fce617ee11c57",
+        "05d3b00be0ac2fa5fca0f617e6a4a92e",
+        "a0d46198305eb7efd2a63ab5c02be385",
+        "b704825cd72bf04766471aee0a5da31a",
+        "ec0599a4ea2e8c2536ffd7cf6a2b02ca",
+        "d6b81fd6c5150806581ad5f311ad4d0d",
+        "4413ecdf53478eb4fc83059b3e219d41",
+        "56267a20a010ca982f806935f443fe73",
+        "6c0d2e4964dd938f04433fa127bda83c",
+        "cec1948579e557c9b6cac9b7c39bd31c",
+        "c3368bd85d830d6f8716dc033155f914",
+        "0e830ef9240889ac57e0146c742c3129",
+        "4df232e8648f5fd502d96b7f2ac8ab16"
+      ],
+      "passed": true
+    },
+    "mono": {
+      "file": "output-sideratlas-kn/sideratlas-kerr-newman-intensity.mp4",
+      "sha256": "0c04fea675b9cb399af558fbc11c2a0671bf8157f8f66fb56235188724a1156b",
+      "size_bytes": 12541052,
+      "stream": {
+        "codec_name": "h264",
+        "profile": "High",
+        "width": 1080,
+        "height": 1920,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "nb_frames": "960",
+        "duration": "32.000000",
+        "start_time": "0.000000",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "color_range": "tv",
+        "level": 50,
+        "bit_rate": "3134037",
+        "chroma_location": "left"
+      },
+      "checks": [
+        {
+          "name": "1080x1920_h264_high_420",
+          "passed": true
+        },
+        {
+          "name": "thirty_fps_960_frames_32_seconds",
+          "passed": true
+        },
+        {
+          "name": "zero_start_silent",
+          "passed": true
+        },
+        {
+          "name": "rec709_limited_range",
+          "passed": true
+        },
+        {
+          "name": "faststart",
+          "passed": true
+        },
+        {
+          "name": "all_960_frames_decode_cleanly",
+          "passed": true
+        },
+        {
+          "name": "seam_consistent_with_adjacent_motion",
+          "passed": true
+        },
+        {
+          "name": "four_pixel_identical_decoded_cycles",
+          "passed": true
+        }
+      ],
+      "atoms": {
+        "ftyp": 0,
+        "moov": 32,
+        "free": 4888,
+        "mdat": 4896
+      },
+      "decode": {
+        "decoded_frames": 960,
+        "decoder_errors": "",
+        "difference_units": "mean absolute difference, RGB code values on a 0\u2013255 scale",
+        "all_transition_mae": {
+          "minimum": 0.4263358410493827,
+          "median": 1.0630772569444444,
+          "maximum": 1.3553819444444444
+        },
+        "first_three_transition_mae": [
+          1.175597511574074,
+          1.166766975308642,
+          1.1601268325617284
+        ],
+        "last_three_transition_mae": [
+          1.2304957561728396,
+          1.1876374421296296,
+          1.1783603395061728
+        ],
+        "seam_mae": 1.216439525462963,
+        "hero_region_y": [
+          425,
+          1145
+        ],
+        "hero_first_three_transition_mae": [
+          3.124198816872428,
+          3.1112821502057613,
+          3.093671553497942
+        ],
+        "hero_last_three_transition_mae": [
+          3.281310442386831,
+          3.167022890946502,
+          3.142283950617284
+        ],
+        "hero_seam_mae": 3.1381288580246913,
+        "codec_mae_allowance": 2.0,
+        "seam_limit_from_endpoint_transitions": 3.2304957561728394,
+        "hero_seam_limit_from_endpoint_transitions": 5.281310442386831,
+        "seam_consistent_with_nearby_transitions": true,
+        "seam_check_scope": "A perceptual discontinuity screen with codec tolerance; exact periodicity is checked separately on uncompressed renderer frames."
+      },
+      "first_cycle_framemd5": [
+        "a750e04e109fddaf93160ec195dccbff",
+        "73698786868f233491f7cfe1b8ad5335",
+        "fb5b4de13b799d80a0055ad6684e22af",
+        "fd71098787c37d89b024342d32afbccf",
+        "c473fbe20cd71753a94934b108245ebb",
+        "affb998792ba6c845f25e3efefa33bf5",
+        "aff7469dbd30fb904453ab416036b305",
+        "17b85312664272023efa517c0373d190",
+        "c054c415fd313896ac34d7bc00f8e84e",
+        "ff6d9d0132903f49810e217392856645",
+        "796528801b4bc5cc42e040c568ee2216",
+        "e3b182c2fbd825f39345f2b804a2ef35",
+        "c8a73b4056476819194277bb1c9ee23b",
+        "a650f9c4f0a6994c64afca692b123b5b",
+        "6254bcd8680d877bb93a231ff3422ea7",
+        "08979f4f7f12c7961ce976b98b9cc1d3",
+        "6324868f8127d8fc09e5e59bc4e2682b",
+        "8688e8e63398960cd6bb06f7ec966956",
+        "cd1c2e95d52d2ef3b1c028516a0bec3e",
+        "fcacfdc1beebe3a2008da2b5c2551dd2",
+        "5a80ffd914d94ca201ead376cb3a3a5a",
+        "9e31f3294c7ecc8dd91d9bd2737674da",
+        "c8c5c62984f5135abdee78ab63f9c8c0",
+        "27f2cc23dc9e94d2c5d06743ad028c44",
+        "e537677508311e64b875f2b5c9a5e96c",
+        "28fd57a63c57a8f17f2e684440c986c6",
+        "b6809fbb41b385483070825f14783b4d",
+        "ce6182c54e63058f89daec64371251f7",
+        "bb4e10702bb75070aebdd175de8ab08e",
+        "89388dcbbc39d370db1bcaa40ba51595",
+        "8b1554601133841831f7d4dc8766a239",
+        "19e1f423deee6824df4a272060d0527a",
+        "6f4838c947c77805b679d3b9c93c6239",
+        "93c8eacddc401fb546b302e1a4b17d0a",
+        "f5119ce5f1ee53b9ee902c42c8ac5c76",
+        "7377172c46759b1b9895b69d08251a0f",
+        "b6b99fae0f41419e30f0e8cbf038f5e4",
+        "67db55c5a22a666fcba9ae8eae65b1a5",
+        "f5f0d42ec52c9137dea06a1b70a9a285",
+        "60dba8ee29f7666dcd8bf59b2b705891",
+        "1b65af019aa080150989122e2d26421c",
+        "d212289d5b3eabfcec6d7ae0a2c7105f",
+        "e008617bb74e7eb85b3d6ce51bee0b8e",
+        "fbbfdc9a07d573e9893ccc56e93a42a3",
+        "2215a85a35055176a777fb73d854c18b",
+        "9d2eb2c6ec741981c377781f327e13f3",
+        "a897e0a6eef322d7f37794ce105c4aff",
+        "e15e7748c9beef02f50cd2f2251aace5",
+        "f52a3cea989eb257a3f73cefc39600de",
+        "7fbea929f26a0509648d46c07ef42079",
+        "b62b6c222d07af6949c130271cbb8915",
+        "1a3025e0d57c9e9a91ae1139282ea291",
+        "6fae9dd3c4bbacc9e0f78d050772b9e4",
+        "8aa2f71056e79986b09c1312a13c0521",
+        "e117d49226fe07857c1bfdadb97961b8",
+        "7e42e94e0916e127d4ad54d3f9ef1179",
+        "be0b44a830d54a7d014a530612d8c4ed",
+        "fc28159099ac1938f8b77b6d0975aec7",
+        "99276e5679472dc117e4fd43efd30de7",
+        "1bc53e9a92c8139a9ec3189e86a80dfd",
+        "a1fb40d09cc1e79f0b8687e2a1ec2cb8",
+        "3aae9b3b58a4176605fba5e20a3f1171",
+        "00990bb18c644098a4fd7f0447f745c4",
+        "8292c02b64b46a405210823633804d33",
+        "63235fbe767ee7ad8838ae42f63cc2e2",
+        "dfd84879c6b4a6e5c04ee595970a0564",
+        "7678127772546ba3e8ce85e0b51c4121",
+        "f73595d39a95b1df8cf46760d139bb4b",
+        "aa7d1f5790f9af96fd7f87d56d738d0b",
+        "3cdcf096c546e4b7608266463ea05d15",
+        "c592ee2cd86e343978594bdda9003312",
+        "5c38e456b5b1fdf692dd0438e6aae244",
+        "b4544821f6bd7506e717bac71f9dd412",
+        "ce327064609cc67f2d4783731060a51b",
+        "58ac4a7304de9ec537231e1d2e663ecf",
+        "070a16cac86696feb1e689571c9e2d92",
+        "2ec40a2d6c809f61ac0d24373f4eb81e",
+        "abf7ff34d2e5cc16e9998b4986a63025",
+        "3c199243356688865c3c046db045cc3c",
+        "a028f47d75192a319a73e73032af3bfe",
+        "51e0f0cb9f9c289b8457949c628f6b5f",
+        "b1cffe16685242ebca95865f908d8a92",
+        "c16b25e549f95234c3bed4b01d021a4f",
+        "26ca90cf671ced16b9d02a7d09d77221",
+        "dda1bb2e563259b5004aa24e2e95e15f",
+        "84aeefaa29fe8194760dee30226c4156",
+        "d6ea82ed6c73eaf949b78ddc777fc470",
+        "6f0a836bb6ce624fae03997929655497",
+        "293c7c8d5ccf29630bcbcd6f87d10c7a",
+        "f96839b5a5a71959c077343f7a22cbf8",
+        "11cab80ef1fb3333ccde62785b38a361",
+        "043306e5a5a8e7799a0efeec92a5b56c",
+        "3d67aaf8f3053440439f58c623e62945",
+        "a5c48dbac75f9dd8fed3ad7ddef2aff5",
+        "fa4a46d53dca6212568542163c9060cb",
+        "b44d819800b1509fa2a66d6e6de5d5c5",
+        "387061a13acfa3e69f7a43d6ac4d25ae",
+        "bc188941de698e16c9f85bbe98f2addf",
+        "20c81207532b12ebc9eb0bda66e25d88",
+        "541894b14a7408cc41fbce8ebb193783",
+        "c07a6d3c9f663baeab1cafbd0019bb5a",
+        "050b9e60f098cec0c99c430430891304",
+        "962c73cc98b9044074bd55cee411aa3f",
+        "a38121b789c95226ef7d10a55a464958",
+        "07c600dc8f35f7f75d3f0e334477b2ba",
+        "8dc540a20f4127fbfb08d040988e9e27",
+        "d3d76a481f62c44623361229423d668f",
+        "a735f97a713b62274379dace542709cd",
+        "696367675f9b7f4540a74d3128cecf6f",
+        "4fa02b6586b8bac70948129b657a6019",
+        "7eba9894683b56e6ce66d2608514ee56",
+        "a36762216070de3f3dedff38e50cf22b",
+        "fe30ee84796ce06bf7edfdd42102396f",
+        "4f26090ea16f02fdda03149a87026da8",
+        "48d2154586e68a3195bdc109d51ff6bb",
+        "7650e42edba4fb6bc74cc62c68d2ef1e",
+        "5c3bd05cf1f70a61f9162bab907481b9",
+        "ed95483bae85532c7aff1630aa35ab9d",
+        "aae48a2e38af6483225d13fbf903cd94",
+        "3aea04717839c4eeae0143151a89e551",
+        "e278b08ffd0ad9afecfc38638dffe6c6",
+        "0b52ae0737155d02c465915ce2246dfa",
+        "8fb89d8999edd35d4dfd412e44773643",
+        "861dc04f1076ef2805a49671aa9f6f64",
+        "28615c450d050dcdbc452a6d002f3dda",
+        "aa6ef0a417f6e55a13357713483152fb",
+        "c13891e06fc560789a1969ec409cc790",
+        "300425ae167b33cf49bba21068f01d93",
+        "edac81730ba98a1cb2fe0b6d5389b6af",
+        "3fe6520d193623edf05243be6136def0",
+        "a8975446c0cb5cd6e71be10dc5af6a2c",
+        "8a67d25a22273c1cee5a9056d7baba32",
+        "42c176132963ca3a0e2b535b046fc67e",
+        "0dd47b42ee6ea5ed5bc319c4680f1a7d",
+        "6758aa58642fff8f0d3406dbcccbe80c",
+        "73af5701318e9c803ff7d5fcda05e804",
+        "e2206d54483a54231cb79a3028beda11",
+        "8ff4162806d974fdc1ca1f1a0df02d7f",
+        "7fafa1c26ca806c206aed0a6b6db2273",
+        "44600339c8f48a01cef06fe18fec06e8",
+        "4eeac221835c2f18401f5bcdbe56691e",
+        "c5f173d528d6148b8c940f7b9d9dcc8a",
+        "7a3e639b4463030cb55bafea7a4fc831",
+        "befbb8ad78b4124cebfc67cf56316539",
+        "bca61ff64a7f71f142fda92366272e5a",
+        "93911d9ab1301b39e22b2459ea8106ce",
+        "1d207e19fb252677cda56304efdba7ee",
+        "8f776c0262414fb40ef4b96b03a3938d",
+        "286123458be4cfe028e78e99a8ffe326",
+        "273bce8784080ea50e3aa12cb191b606",
+        "b90f1fa68ed60c356fb4c45596e9c384",
+        "3e4ec395e518c593cc5fdfee6cb94a07",
+        "21818c13861f011e9bc2584780471300",
+        "9a5c7e1fbb7d40674fe65a51ad6721ff",
+        "e4f448b2f528617b30a626ab9705581d",
+        "d8897a719e08fe8dd626c5e90d010991",
+        "28b814f9f716780d81ad4eef46cc50ac",
+        "d97607e5d8c9fa0b969df5c3fd0f6890",
+        "e773cf1a3e90ad83663aaddbfd8dcd59",
+        "8733f549d3238a8fe71605e848fddc79",
+        "4b913c45481d13e990b307a11e1b7b8f",
+        "5899bf210c2ffb996547d374b9d0c632",
+        "7c60a0b5732c3133f38e28acacfef8bc",
+        "5d279041e8a4d8150b3ec6df9d750718",
+        "5c063975adeec927371f7aff7eafd788",
+        "8aa2f395b039bfd9089651017fdc7fa2",
+        "ca2563dae6fb2ee6ab9a0b2167ca9bf2",
+        "c6619e978fe48c50c457a5e82f711087",
+        "0618977dda11f35f03233fa2b85c4393",
+        "da793583812f686803252da3f1a01354",
+        "8510811c46f6cb4fb362534a7ac5ef4c",
+        "02bc3a1e89770a275ae58650e67f691b",
+        "fcdd419b252c4f6fe431199cce922379",
+        "44e4802eb28ecdaaaef820752372c2e8",
+        "0406cef35ef6be40939e39c3828454e7",
+        "f5e1356154a636187e910a25a32f9188",
+        "ed8c42bebe9dd28ef9a2d37521c183b8",
+        "dbf00cfdf39fe3aa427fae0762f4e583",
+        "72688aa159e2ae861b4742386df45196",
+        "a1d5446ed633d2f20177527aef49ea7e",
+        "0644b81386238f99e1b82990bb950601",
+        "a97949be606a4bc3277e82a3cd91347d",
+        "869ada4a9ab9a23dc7bb425926f5b366",
+        "50859ca3b394d3467a96dda452b43f5e",
+        "fbc5ffe6e91e4e6871a72c60fc125889",
+        "7ef36a15a9a2004d25c42746f7ad3c9f",
+        "7ede9d2ae4294e0c2bdb8979f8e4044e",
+        "33a6c04287d0687fd5f665ce4e127a87",
+        "7fce3dcf61def86219e4d1eb9fa0c774",
+        "331bd76a844f24fd31fe50660f2f2a11",
+        "f62f5843e27637d7e58b831941fe6e2b",
+        "1ac3864072ad23121e5b4faecd0999b0",
+        "84686f13ee809d90e34a0dd62abc401b",
+        "1d67b5034cd7c723ceb223832f59c963",
+        "1fb6f912a4952eb362bdacab1833559f",
+        "dc98361a0d77156a25a04f6a9031747c",
+        "9f8703f66979c5b62eac3e4365a6340d",
+        "40b6041cc77b08c7cf42a07019e945f9",
+        "617cfa4a25ecfc0d17d3d5d88a9284df",
+        "338c7608d2a11f57afa4f9f4ccb246a0",
+        "de567ca6386b73c17975c0bab008206b",
+        "30115e2c17731b3d8fcdba4c125d0558",
+        "26eab272c94c40f437b4118ed1f8ba87",
+        "cace915c6c2b13149dcdd217a40436d0",
+        "8e189b4eaa5058550c57b0e48dcfc80e",
+        "bca2aa4683ec451270fd60ede2945636",
+        "d7704b4849e2ba3328528bfab6751ae7",
+        "c25e67c3ff593d2bf872a7ee323177f6",
+        "6e3810f38f467d46680d50078b4e3468",
+        "adf1d740dd8f1899b6676c9f0183e834",
+        "771dd88657eadc906a725aead215d232",
+        "f120fa1951e2038464d49103131e8f56",
+        "261a164d5840005435cf40d7eae2737b",
+        "5bf2ad0dd7743826b0af59f5187cf387",
+        "783b0285f263889c71cbf0d07ba1658b",
+        "72fe67fef5fab449591cf9ad087ffd23",
+        "f5e08ac7969ce13d471057cca1be2de9",
+        "aadd85cc8cc04af09ea228e594939bbd",
+        "c16f356f8d53f8718d2b7cd1c12d69d3",
+        "9f1661ce98301bb4a52fe375b77d0de4",
+        "6e133ce0af763a26c17a97b34d368984",
+        "a2c7e760e8d2fb4cce22a8b6eab2596a",
+        "a85883db9c9637750176fc86a0da8df5",
+        "b75cf9d415eb6b46b6aff8f50764ae81",
+        "e6f0244662617b669210c7513fc80463",
+        "48a2e7c14ca4d544410189950ff45b45",
+        "23eccfd8029601aed32f01056a67647c",
+        "39c6e4b3b97776c5df15014df604fca5",
+        "9ea30ce56d8731a4bf367807ca9f48e2",
+        "8ff61fc065cc7d4bcd7388d6fc7dc32a",
+        "442e5000d2cb9c6780b23d9c2333da62",
+        "d9e15c3c5fb594fba2acf3b092360811",
+        "5107c1125b95bff07856713f4dbc7037",
+        "1af4cc106769b5a9025cd53604dfaf8f",
+        "a8a07693b6f233ee4ca08e2f5cc12a4e",
+        "00dae34dba5aaed9419ab704b947cb0b",
+        "e5e068e37861b29536cd8c42c2c81f65",
+        "bf41476594e090ecc2509b0a9b8db543",
+        "cf36eb36755c7be03b0662e5f83bf7c7",
+        "1bd31a67637feddf1f3e4aea7e416ed9"
+      ],
+      "passed": true
+    }
+  },
+  "numerical_reports": {
+    "scope": "Saved numerical diagnostics with every recorded source hash checked against the current files",
+    "reports": {
+      "kn-orbit-trace-diagnostics.json": {
+        "sha256": "5287c4cf8bb5828c89d5edad1630f638fb550f98e9ea802dd3ba17c27c49dbc8",
+        "checks": 62,
+        "source_matches": {
+          "kn_orbit_trace.py": true,
+          "kn_orbit_trace.cpp": true,
+          "kn_orbits.py": true,
+          "verify_kn_trace.py": true
+        }
+      },
+      "kn-orbit-emission-diagnostics.json": {
+        "sha256": "c5887d92a3102de127237abfd50073b681a9ddc81f262db559b0b42dff2aa81a",
+        "checks": 69,
+        "source_matches": {
+          "kn_orbits.py": true,
+          "kn_orbit_emission.py": true,
+          "verify_kn_orbit_emission.py": true,
+          "kerr_orbit_emission.py": true,
+          "kerr_emission.py": true,
+          "nasa_emission.py": true,
+          "emission.py": true
+        }
+      }
+    },
+    "checks": [
+      {
+        "name": "kn-orbit-trace-diagnostics.json_passed_with_current_sources",
+        "passed": true
+      },
+      {
+        "name": "kn-orbit-emission-diagnostics.json_passed_with_current_sources",
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "display": {
+    "scope": "Current KN renderer display functions; color is illustrative brightness",
+    "checks": [
+      {
+        "name": "black_exact",
+        "passed": true
+      },
+      {
+        "name": "palette_luminance_monotonic",
+        "passed": true
+      },
+      {
+        "name": "fixed_display_curve_monotonic_bounded",
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "actual_renderer": {
+    "scope": "Fresh checks with current rendering code at 270x480 and 2x sampling",
+    "geometry": {
+      "model": "Kerr-Newman null geodesics; first opaque prograde circular thin-disk intersection",
+      "spin": 0.9,
+      "charge_q": 0.4,
+      "charge_definition": "q=Q/(M sqrt(4 pi epsilon_0 G)); geometrized Q/M",
+      "disk_matter": "neutral test matter; no Lorentz force or plasma response",
+      "spin_definition": "a*=cJ/(GM^2)",
+      "spin_alignment": "black-hole angular momentum and disk angular momentum both +z; prograde",
+      "width": 540,
+      "height": 450,
+      "fov_horizontal_rg": 72.0,
+      "fov_vertical_rg": 60.0,
+      "roll_deg": 0,
+      "rin_rg": 1.577504566512094,
+      "rout_rg": 28.0,
+      "outer_horizon_rg": 1.1732050807568875,
+      "scaled_mino_step": 0.012,
+      "maximum_scaled_mino_parameter": 62.832,
+      "integrator": "double-precision RK4; Hermite equatorial root followed by partial RK4 event step",
+      "observer": "static at infinity",
+      "threads": 8,
+      "camera_angle_convention": "signed degrees about disk x axis; n=(0,-sin(theta),cos(theta))",
+      "camera_screen_basis": "e_x=(1,0,0); e_y=(0,cos(theta),sin(theta)); continuous through both poles",
+      "disk_plane_crossing": "observer-at-infinity crossing excluded; coplanar rays first enter outer rim",
+      "delay_units": "t_g=GM/c^3",
+      "delay_definition": "elapsed coordinate propagation time minus one common observer Kerr-Newman r*; q-r*(hit)",
+      "invalid_delay_value": 0,
+      "emission_time_rule": "t_em=t_obs-delay_tg; one common additive origin",
+      "azimuth": "pole-regular angular vector plus backward Kerr-Newman radial frame-dragging integral",
+      "disk_surfaces": "same prescribed isotropic surface emission on both faces"
+    },
+    "emission": {
+      "spin_a_star": 0.9,
+      "charge_q": 0.4,
+      "outer_radius_rg": 28.0,
+      "loop_period_tg": 800.0,
+      "contrast": 1.6,
+      "seed": 13326,
+      "radial_bands": 64,
+      "radial_log_half_width": 0.04,
+      "azimuthal_kappa": 2.5,
+      "lifetime_orbits": 1.5,
+      "maximum_lifetime_loop_fraction": 0.8,
+      "mean_overlapping_births": 2.0,
+      "model": "original kinematic source, not NASA software or GRMHD",
+      "intensity": "relative bolometric comoving surface intensity",
+      "radial_profile": "general Page-Thorne conservation integral with neutral Kerr-Newman circular orbits; zero ISCO stress; peak=1",
+      "radial_peak_rg": 2.2008687199235943,
+      "unscaled_radial_peak": 0.01806537327602981,
+      "angular_velocity_tg_inverse": "Omega(r)=sqrt(r-q^2)/(r^2+a*sqrt(r-q^2)), never quantized",
+      "radial_weight": "exp[-2 x^2/(1-x^2)], |x|<1; x=ln(r/r_j)/half_width",
+      "radial_e_folding_fraction_approx": 0.023094010767585032,
+      "angular_weight": "exp[kappa*cos(phi-phi_j-Omega(r)*age)]/I0(kappa)",
+      "lifetime_envelope": "sin(pi*age/lifetime)^4 on 0<age<lifetime; zero outside",
+      "lifetime_tg_range": [
+        28.181570689512697,
+        640.0
+      ],
+      "birth_count": 1060,
+      "normalization": "exact azimuthal mean equals Page-Thorne at each emission time and radius",
+      "loop_assumption": "periodically repeated finite-lived source births; not repeating gas orbits",
+      "retarded_time": "evaluate at t_em=t_obs-delay for each ray",
+      "not_modeled": [
+        "disk magnetohydrodynamics or MRI",
+        "fluid dynamics",
+        "disk thickness",
+        "radial inflow",
+        "plunging-region emission",
+        "thermal spectra",
+        "polarization",
+        "corona",
+        "returning radiation",
+        "charged-particle Lorentz forces",
+        "plasma currents",
+        "charge neutralization or evolution",
+        "disk backreaction"
+      ],
+      "sources": [
+        {
+          "doi": "10.1086/152990",
+          "role": "mean thin-disk flux"
+        },
+        {
+          "doi": "10.1086/383180",
+          "role": "orbiting/sheared inhomogeneities as a kinematic model"
+        },
+        {
+          "doi": "10.1103/PhysRevD.107.043030",
+          "role": "variable equatorial source, retarded time, orbital scales; not its stochastic solver"
+        },
+        {
+          "arxiv": "1303.6250",
+          "role": "neutral Kerr-Newman circular orbits and metric"
+        },
+        {
+          "arxiv": "gr-qc/0504025",
+          "role": "neutral specific energy and angular momentum, Eqs.19-20"
+        },
+        {
+          "arxiv": "1706.05466",
+          "role": "independent published neutral ISCO equation benchmark, not the root solver"
+        }
+      ],
+      "inner_radius_rg": 1.577504566512094,
+      "spin_alignment": "aligned / prograde",
+      "spin_definition": "a*=Jc/(G M^2); chosen model parameter, not a measurement",
+      "orbital_direction": "positive Boyer-Lindquist azimuth",
+      "charge_definition": "q=Q/(M*sqrt(4*pi*epsilon_0*G)); chosen theoretical parameter",
+      "emitter_specific_charge": 0.0,
+      "matter_assumption": "neutral test-matter disk in a fixed charged geometry; no Lorentz force or plasma dynamics",
+      "radial_quadrature": "cumulative trapezoid with analytic circular-orbit derivatives",
+      "radial_quadrature_samples": 65537,
+      "radial_lookup": "log flux versus log(r-rISCO); quadratic unresolved edge limit",
+      "dimensional_normalization": "none; mass, accretion rate, temperature and spectrum unspecified",
+      "surface_emission": "two identical opaque, isotropically emitting faces",
+      "flux_equation": "F proportional to -Omega'/(r*(E-Omega*L)^2) integral_ISCO^r (E-Omega*L)*L' dr"
+    },
+    "checks": [
+      {
+        "name": "spin_and_inner_boundary",
+        "passed": true
+      },
+      {
+        "name": "source_periodic_at_unwrapped_retarded_times",
+        "passed": true,
+        "maximum_error": 6.591949208711867e-17
+      },
+      {
+        "name": "light_arrival_delays_affect_evolving_source",
+        "passed": true,
+        "rms_difference": 0.041481141846312984
+      },
+      {
+        "name": "color_uncompressed_loop_endpoints_match",
+        "passed": true
+      },
+      {
+        "name": "mono_uncompressed_loop_endpoints_match",
+        "passed": true
+      },
+      {
+        "name": "phase_0_finite_positive_physics",
+        "passed": true,
+        "angle_deg": 83.0,
+        "hit_count": 36625,
+        "largest_constraint_residual": 3.748079002584122e-09
+      },
+      {
+        "name": "phase_0.125_finite_positive_physics",
+        "passed": true,
+        "angle_deg": 38.0,
+        "hit_count": 120015,
+        "largest_constraint_residual": 7.016857764225517e-10
+      },
+      {
+        "name": "phase_0.25_finite_positive_physics",
+        "passed": true,
+        "angle_deg": -7.0,
+        "hit_count": 146450,
+        "largest_constraint_residual": 8.524264649287536e-11
+      },
+      {
+        "name": "phase_0.375_finite_positive_physics",
+        "passed": true,
+        "angle_deg": -52.0,
+        "hit_count": 97657,
+        "largest_constraint_residual": 1.342002789843193e-09
+      },
+      {
+        "name": "phase_0.5_finite_positive_physics",
+        "passed": true,
+        "angle_deg": -97.0,
+        "hit_count": 36625,
+        "largest_constraint_residual": 3.748078669748421e-09
+      },
+      {
+        "name": "phase_0.625_finite_positive_physics",
+        "passed": true,
+        "angle_deg": -142.0,
+        "hit_count": 120015,
+        "largest_constraint_residual": 7.016861598063121e-10
+      },
+      {
+        "name": "phase_0.75_finite_positive_physics",
+        "passed": true,
+        "angle_deg": -187.0,
+        "hit_count": 146450,
+        "largest_constraint_residual": 8.524264649287536e-11
+      },
+      {
+        "name": "phase_0.875_finite_positive_physics",
+        "passed": true,
+        "angle_deg": -232.0,
+        "hit_count": 97657,
+        "largest_constraint_residual": 1.342002789843193e-09
+      },
+      {
+        "name": "phase_0.230556_finite_positive_physics",
+        "passed": true,
+        "angle_deg": 0.0,
+        "hit_count": 147404,
+        "largest_constraint_residual": 8.415782106599133e-11
+      },
+      {
+        "name": "phase_0.730556_finite_positive_physics",
+        "passed": true,
+        "angle_deg": -180.0,
+        "hit_count": 147404,
+        "largest_constraint_residual": 8.415782106599133e-11
+      },
+      {
+        "name": "north_pole_shift_matches_circular_orbit_time_dilation",
+        "passed": true,
+        "max_absolute_error": 4.214835336302514e-08
+      },
+      {
+        "name": "north_axisymmetric_geometry",
+        "passed": true
+      },
+      {
+        "name": "south_pole_shift_matches_circular_orbit_time_dilation",
+        "passed": true,
+        "max_absolute_error": 4.214835336302514e-08
+      },
+      {
+        "name": "south_axisymmetric_geometry",
+        "passed": true
+      },
+      {
+        "name": "identical_disk_faces_have_same_smooth_pole_image",
+        "passed": true
+      },
+      {
+        "name": "antipodal_retarded_radiance_matches_fresh_trace_0",
+        "passed": true,
+        "maximum_absolute_error": 9.5367431640625e-07
+      },
+      {
+        "name": "antipodal_retarded_radiance_matches_fresh_trace_0.125",
+        "passed": true,
+        "maximum_absolute_error": 5.960464477539063e-08
+      },
+      {
+        "name": "antipodal_retarded_radiance_matches_fresh_trace_0.230556",
+        "passed": true,
+        "maximum_absolute_error": 1.4901161193847656e-08
+      },
+      {
+        "name": "approaching_side_brighter",
+        "passed": true,
+        "left_right_ratio": 10.783483363060338
+      },
+      {
+        "name": "opposite_view_reverses_side_asymmetry",
+        "passed": true
+      },
+      {
+        "name": "higher_order_disk_images_present",
+        "passed": true,
+        "orders": {
+          "0": 31047,
+          "1": 5575,
+          "2": 3
+        }
+      },
+      {
+        "name": "spin_breaks_side_view_left_right_geometric_symmetry",
+        "passed": true
+      },
+      {
+        "name": "exact_plane_-90_finite",
+        "passed": true
+      },
+      {
+        "name": "exact_plane_-270_finite",
+        "passed": true
+      },
+      {
+        "name": "full_orbit_maps_return",
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "metadata": {
+    "checks": [
+      {
+        "name": "recorded_source_matches_current_code",
+        "passed": true
+      },
+      {
+        "name": "delivery_dimensions_and_timing",
+        "passed": true
+      },
+      {
+        "name": "kerr_newman_spin_charge_disk_and_detector_parameters",
+        "passed": true
+      },
+      {
+        "name": "camera_completes_continuous_revolution",
+        "passed": true
+      },
+      {
+        "name": "static_observer_and_disk_face_assumptions_disclosed",
+        "passed": true
+      },
+      {
+        "name": "illustrative_color_disclosed",
+        "passed": true
+      },
+      {
+        "name": "chosen_spin_disclosed",
+        "passed": true
+      },
+      {
+        "name": "source_parameters_match",
+        "passed": true
+      },
+      {
+        "name": "export_settings_match",
+        "passed": true
+      },
+      {
+        "name": "brand_and_ui_clearance",
+        "passed": true
+      },
+      {
+        "name": "files_fully_rendered",
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "assets": {
+    "files": {
+      "sideratlas-kerr-newman-reel.mp4": {
+        "sha256": "fc5ae0ced5d396bf94fff9ab0d3882bbb550a05a9691176cc98926523ef352f1",
+        "size_bytes": 15640912
+      },
+      "sideratlas-kerr-newman-intensity.mp4": {
+        "sha256": "0c04fea675b9cb399af558fbc11c2a0671bf8157f8f66fb56235188724a1156b",
+        "size_bytes": 12541052
+      },
+      "sideratlas-kerr-newman-reel-loop.mp4": {
+        "sha256": "686b29b2a9004ead5cff6700ead2d9c67a1b0f07e6690febdb01bcee2634fa99",
+        "size_bytes": 3910843
+      },
+      "sideratlas-kerr-newman-intensity-loop.mp4": {
+        "sha256": "2ee567c09999a0c8e5017aee366bcae37bf70b2d676841c77717fde046bf9408",
+        "size_bytes": 3135869
+      },
+      "render-metadata.json": {
+        "sha256": "df0b6d21132fed1e03073d601d4c9a479020eb461dc3bc41a9398571b0af3137",
+        "size_bytes": 10212
+      },
+      "sideratlas-kerr-newman-color-cover.png": {
+        "sha256": "6642d40421a43250d088cf946b54a02553a572e612e75ec1bbc8409b182c0189",
+        "size_bytes": 232054
+      },
+      "sideratlas-kerr-newman-mono-cover.png": {
+        "sha256": "c7fd97a5feb733181f16d37730f36de8cf74dca0b2f1d94426fb05717601ddb9",
+        "size_bytes": 200425
+      },
+      "steady-reference.png": {
+        "sha256": "7df100d6eaf08f362edc9061be020ff3caa853e2d43603b16618ebb305082e7f",
+        "size_bytes": 163003
+      },
+      "contact-sheet.jpg": {
+        "sha256": "e2583959bfe29868df3b5d5f1796ae5fefbc460fe91f47aab2e193b6372339b6",
+        "size_bytes": 284819
+      }
+    },
+    "checks": [
+      {
+        "name": "sideratlas-kerr-newman-reel.mp4_exists",
+        "passed": true
+      },
+      {
+        "name": "sideratlas-kerr-newman-intensity.mp4_exists",
+        "passed": true
+      },
+      {
+        "name": "sideratlas-kerr-newman-reel-loop.mp4_exists",
+        "passed": true
+      },
+      {
+        "name": "sideratlas-kerr-newman-intensity-loop.mp4_exists",
+        "passed": true
+      },
+      {
+        "name": "render-metadata.json_exists",
+        "passed": true
+      },
+      {
+        "name": "sideratlas-kerr-newman-color-cover.png_exists",
+        "passed": true
+      },
+      {
+        "name": "sideratlas-kerr-newman-color-cover.png_image_decodes",
+        "passed": true
+      },
+      {
+        "name": "sideratlas-kerr-newman-mono-cover.png_exists",
+        "passed": true
+      },
+      {
+        "name": "sideratlas-kerr-newman-mono-cover.png_image_decodes",
+        "passed": true
+      },
+      {
+        "name": "steady-reference.png_exists",
+        "passed": true
+      },
+      {
+        "name": "steady-reference.png_image_decodes",
+        "passed": true
+      },
+      {
+        "name": "contact-sheet.jpg_exists",
+        "passed": true
+      },
+      {
+        "name": "contact-sheet.jpg_image_decodes",
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "passed": true,
+  "elapsed_seconds": 42.3644636250101
+}

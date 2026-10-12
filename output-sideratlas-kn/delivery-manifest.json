@@ -1,0 +1,14 @@
+{
+  "archive": {
+    "path": "sideratlas-kerr-newman-source.zip",
+    "sha256": "e7c510e9a791bc2cb0fb99ecd3a88bbc478643f7527b020de3ecb58cf087adf1",
+    "size_bytes": 62633338,
+    "members": 158
+  },
+  "main_video": {
+    "path": "sideratlas-kerr-newman-reel.mp4",
+    "sha256": "fc5ae0ced5d396bf94fff9ab0d3882bbb550a05a9691176cc98926523ef352f1"
+  },
+  "verification_sha256": "2a41191ffd198ccba62e0e5c6d337a7f81925be0f8af6f3392ea5257e43345f8",
+  "metadata_sha256": "df0b6d21132fed1e03073d601d4c9a479020eb461dc3bc41a9398571b0af3137"
+}

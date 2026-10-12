@@ -1,0 +1,139 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "frames": 240,
+  "duration_seconds": 8,
+  "inclination_degrees": [
+    0,
+    180
+  ],
+  "view_angle_degrees": [
+    -277.0,
+    83.0
+  ],
+  "camera_orbit": {
+    "law": "theta = theta_start - 360\u00b0 phase (modulo one turn)",
+    "start_deg": 83.0,
+    "angular_span_deg": -360,
+    "end_deg": 83.0,
+    "north_pole_phase": 0.23055555555555557,
+    "south_pole_phase": 0.7305555555555555,
+    "observer": "sequence of static observers at infinity; no camera-velocity aberration",
+    "screen_basis": "continuous rotation in a plane perpendicular to the disk",
+    "gas_time_direction": "forward throughout the full revolution"
+  },
+  "geometry": {
+    "model": "Schwarzschild null geodesics; first opaque Keplerian thin-disk hit",
+    "width": 2160,
+    "height": 1800,
+    "fov_horizontal_rg": 72.0,
+    "fov_vertical_rg": 60.0,
+    "roll_deg": 0,
+    "rin_rg": 6,
+    "rout_rg": 28.0,
+    "layers": 4,
+    "radial_samples_total": 10240,
+    "angle_step": 0.0019997407088413704,
+    "critical_impact_rg": 5.196152422706632,
+    "orbit_cache_mb": 245.5078125,
+    "time_cache_mb": 245.5078125,
+    "delay_units": "t_g=GM/c^3",
+    "delay_definition": "coordinate propagation time minus common observer r*; q-r*(hit)",
+    "invalid_delay_value": 0,
+    "emission_time_rule": "t_em=t_obs-delay_tg; one common additive origin",
+    "camera_angle_convention": "signed degrees about disk x axis; n=(0,-sin(theta),cos(theta))",
+    "camera_screen_basis": "e_x=(1,0,0); e_y=(0,cos(theta),sin(theta)); continuous through both poles",
+    "disk_plane_crossing": "positive root psi=pi for noncoplanar rays; coplanar rays first hit outer rim",
+    "disk_surfaces": "same prescribed isotropic surface emission on both faces",
+    "setup_seconds": 2.629649959009839
+  },
+  "emission": {
+    "outer_radius_rg": 28.0,
+    "loop_period_tg": 800.0,
+    "contrast": 1.6,
+    "seed": 13326,
+    "radial_bands": 64,
+    "radial_log_half_width": 0.04,
+    "azimuthal_kappa": 2.5,
+    "lifetime_orbits": 1.5,
+    "maximum_lifetime_loop_fraction": 0.8,
+    "mean_overlapping_births": 2.0,
+    "model": "original kinematic source, not NASA software or GRMHD",
+    "intensity": "relative bolometric comoving surface intensity",
+    "radial_profile": "zero-torque Schwarzschild Page-Thorne flux; peak=1",
+    "radial_peak_rg": 9.550928092711349,
+    "unscaled_radial_peak": 0.00011458947324417224,
+    "angular_velocity_tg_inverse": "Omega(r)=r^(-3/2), never quantized",
+    "radial_weight": "exp[-2 x^2/(1-x^2)], |x|<1; x=ln(r/r_j)/half_width",
+    "radial_e_folding_fraction_approx": 0.023094010767585032,
+    "angular_weight": "exp[kappa*cos(phi-phi_j-Omega(r)*age)]/I0(kappa)",
+    "lifetime_envelope": "sin(pi*age/lifetime)^4 on 0<age<lifetime; zero outside",
+    "lifetime_tg_range": [
+      138.51538165748133,
+      640.0
+    ],
+    "birth_count": 338,
+    "normalization": "exact azimuthal mean equals Page-Thorne at each emission time and radius",
+    "loop_assumption": "periodically repeated finite-lived source births; not repeating gas orbits",
+    "retarded_time": "evaluate at t_em=t_obs-delay for each ray",
+    "not_modeled": [
+      "magnetic fields or MRI",
+      "fluid dynamics",
+      "disk thickness",
+      "radial inflow",
+      "plunging-region emission",
+      "thermal spectra",
+      "polarization",
+      "corona",
+      "returning radiation"
+    ],
+    "sources": [
+      {
+        "doi": "10.1086/152990",
+        "role": "mean thin-disk flux"
+      },
+      {
+        "doi": "10.1086/383180",
+        "role": "orbiting/sheared inhomogeneities as a kinematic model"
+      },
+      {
+        "doi": "10.1103/PhysRevD.107.043030",
+        "role": "variable equatorial source, retarded time, orbital scales; not its stochastic solver"
+      }
+    ]
+  },
+  "display": {
+    "exposure": 0.65,
+    "curve": "x/(1+x), x=relative radiance/exposure",
+    "color": "original illustrative orange brightness palette, not thermal true color",
+    "averaging": "physical bolometric radiance averaged before display transform"
+  },
+  "scene": "original calculation; no NASA images, frames or source code used",
+  "time": "800 t_g shown in 8 seconds; periodic source forcing, full 360-degree viewpoint revolution; no physical mass assigned",
+  "disk_faces": "same isotropic modeled emission field on both faces of a geometrically thin opaque disk",
+  "ray_maps": {
+    "inclination_degrees": 83.0,
+    "delay_tg_range": [
+      -32.67668914794922,
+      82.64935302734375
+    ],
+    "frequency_shift_range": [
+      0.4735443890094757,
+      1.3996708393096924
+    ],
+    "image_layers": {
+      "0": 447626,
+      "1": 74714,
+      "2": 608,
+      "3": 22
+    }
+  },
+  "outputs": {
+    "color": "atlastro-schwarzschild-reel.mp4",
+    "mono": "atlastro-schwarzschild-intensity.mp4"
+  },
+  "source_sha256": "b62662a9ccfbf185d507333019287aba63b3c169d6aeba16cf87f1b9d1def60e",
+  "supersample": 2,
+  "elapsed_seconds": 376.506765291997
+}

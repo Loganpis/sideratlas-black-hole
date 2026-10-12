@@ -1,0 +1,484 @@
+{
+  "status": "passed",
+  "checks_passed": 69,
+  "checks": [
+    {
+      "name": "Schwarzschild_ISCO",
+      "value": 5.999999999999993,
+      "passed": true
+    },
+    {
+      "name": "subextremal_chosen_parameters",
+      "value": 0.9700000000000001,
+      "passed": true
+    },
+    {
+      "name": "horizon_rg",
+      "value": 1.1732050807568875,
+      "passed": true
+    },
+    {
+      "name": "ISCO_R_Rprime_Rsecond_a0_q0",
+      "value": [
+        0.0,
+        0.0,
+        2.842170943040401e-14
+      ],
+      "passed": true
+    },
+    {
+      "name": "ISCO_stability_side_a0_q0_d-0.001",
+      "value": 0.0040006668891550135,
+      "passed": true
+    },
+    {
+      "name": "ISCO_stability_side_a0_q0_d0.001",
+      "value": -0.003999333555469775,
+      "passed": true
+    },
+    {
+      "name": "independent_Kerr_ISCO_a0",
+      "value": 5.999999999999993,
+      "passed": true
+    },
+    {
+      "name": "ISCO_R_Rprime_Rsecond_a0.9_q0",
+      "value": [
+        1.4210854715202004e-14,
+        2.3092638912203256e-14,
+        3.6415315207705135e-14
+      ],
+      "passed": true
+    },
+    {
+      "name": "ISCO_stability_side_a0.9_q0_d-0.001",
+      "value": 0.0040029714567024755,
+      "passed": true
+    },
+    {
+      "name": "ISCO_stability_side_a0.9_q0_d0.001",
+      "value": -0.003997036476106608,
+      "passed": true
+    },
+    {
+      "name": "independent_Kerr_ISCO_a0.9",
+      "value": 2.320883041761884,
+      "passed": true
+    },
+    {
+      "name": "ISCO_R_Rprime_Rsecond_a-0.9_q0",
+      "value": [
+        0.0,
+        0.0,
+        -1.2789769243681803e-13
+      ],
+      "passed": true
+    },
+    {
+      "name": "ISCO_stability_side_a-0.9_q0_d-0.001",
+      "value": 0.004000405341230362,
+      "passed": true
+    },
+    {
+      "name": "ISCO_stability_side_a-0.9_q0_d0.001",
+      "value": -0.0039995948262969705,
+      "passed": true
+    },
+    {
+      "name": "independent_Kerr_ISCO_a-0.9",
+      "value": 8.717352279606512,
+      "passed": true
+    },
+    {
+      "name": "ISCO_R_Rprime_Rsecond_a0_q0.4",
+      "value": [
+        -3.410605131648481e-13,
+        -2.8421709430404007e-13,
+        -1.4921397450962104e-13
+      ],
+      "passed": true
+    },
+    {
+      "name": "ISCO_stability_side_a0_q0.4_d-0.001",
+      "value": 0.003923648501974242,
+      "passed": true
+    },
+    {
+      "name": "ISCO_stability_side_a0_q0.4_d0.001",
+      "value": -0.00392230530560056,
+      "passed": true
+    },
+    {
+      "name": "Reissner_Nordstrom_outer_ISCO_cubic",
+      "value": 5.752780428652002,
+      "passed": true
+    },
+    {
+      "name": "ISCO_R_Rprime_Rsecond_a0.9_q0.4",
+      "value": [
+        2.4424906541753444e-15,
+        1.1324274851176597e-14,
+        3.1308289294429414e-14
+      ],
+      "passed": true
+    },
+    {
+      "name": "ISCO_stability_side_a0.9_q0.4_d-0.001",
+      "value": 0.0036934518010742767,
+      "passed": true
+    },
+    {
+      "name": "ISCO_stability_side_a0.9_q0.4_d0.001",
+      "value": -0.0036810515569720703,
+      "passed": true
+    },
+    {
+      "name": "ISCO_R_Rprime_Rsecond_a0.4_q0.8",
+      "value": [
+        -1.4210854715202004e-14,
+        0.0,
+        1.4210854715202004e-14
+      ],
+      "passed": true
+    },
+    {
+      "name": "ISCO_stability_side_a0.4_q0.8_d-0.001",
+      "value": 0.003267592996788693,
+      "passed": true
+    },
+    {
+      "name": "ISCO_stability_side_a0.4_q0.8_d0.001",
+      "value": -0.003265540967579028,
+      "passed": true
+    },
+    {
+      "name": "ISCO_R_Rprime_Rsecond_a-0.4_q0.8",
+      "value": [
+        0.0,
+        -5.684341886080802e-14,
+        -4.973799150320701e-14
+      ],
+      "passed": true
+    },
+    {
+      "name": "ISCO_stability_side_a-0.4_q0.8_d-0.001",
+      "value": 0.0036858274748610143,
+      "passed": true
+    },
+    {
+      "name": "ISCO_stability_side_a-0.4_q0.8_d0.001",
+      "value": -0.0036848312380115544,
+      "passed": true
+    },
+    {
+      "name": "published_ISCO_equation_scaled_residual",
+      "value": 3.0890781907808114e-15,
+      "passed": true
+    },
+    {
+      "name": "neutral_charge_sign_symmetry_ISCO",
+      "value": 1.577504566512094,
+      "passed": true
+    },
+    {
+      "name": "charge_moves_chosen_ISCO_inward",
+      "value": 1.577504566512094,
+      "passed": true
+    },
+    {
+      "name": "normalized_flux_qzero_Kerr_limit",
+      "value": 2.020605904817785e-14,
+      "passed": true
+    },
+    {
+      "name": "orbital_qzero_Kerr_limit_energy",
+      "value": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "orbital_qzero_Kerr_limit_angular_momentum",
+      "value": 1.7763568394002505e-15,
+      "passed": true
+    },
+    {
+      "name": "orbital_qzero_Kerr_limit_denergy_dr",
+      "value": 6.474855374083432e-16,
+      "passed": true
+    },
+    {
+      "name": "orbital_qzero_Kerr_limit_dangular_momentum_dr",
+      "value": 2.7478019859472624e-15,
+      "passed": true
+    },
+    {
+      "name": "orbital_qzero_Kerr_limit_omega",
+      "value": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "orbital_qzero_Kerr_limit_domega_dr",
+      "value": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "orbital_qzero_Kerr_limit_energy_minus_omega_l",
+      "value": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "raw_flux_Schwarzschild_analytic_limit_max_relative_error",
+      "value": 1.3375273444360403e-08,
+      "passed": true
+    },
+    {
+      "name": "normalized_profile_Schwarzschild_limit_max_relative_error",
+      "value": 9.373922749134067e-09,
+      "passed": true
+    },
+    {
+      "name": "complete_structured_source_Schwarzschild_limit_max_relative_error",
+      "value": 9.270004541761523e-09,
+      "passed": true
+    },
+    {
+      "name": "peak_normalization",
+      "value": 1.0,
+      "passed": true
+    },
+    {
+      "name": "KN_radial_peak_moves_inside_Schwarzschild_ISCO",
+      "value": 2.2008687199235943,
+      "passed": true
+    },
+    {
+      "name": "flux_doubled_grid_max_relative_error",
+      "value": 1.2859732723136119e-08,
+      "passed": true
+    },
+    {
+      "name": "independent_linear_grid_integral_max_relative_error",
+      "value": 1.1514726616645987e-08,
+      "passed": true
+    },
+    {
+      "name": "independent_metric_energy",
+      "value": 1.887379141862766e-15,
+      "passed": true
+    },
+    {
+      "name": "independent_metric_angular_momentum",
+      "value": 5.551115123125783e-15,
+      "passed": true
+    },
+    {
+      "name": "independent_metric_omega",
+      "value": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "independent_metric_ut",
+      "value": 9.769962616701378e-15,
+      "passed": true
+    },
+    {
+      "name": "metric_complex_step_denergy_dr",
+      "value": 5.835609773185979e-15,
+      "passed": true
+    },
+    {
+      "name": "metric_complex_step_dangular_momentum_dr",
+      "value": 1.4904744105592727e-14,
+      "passed": true
+    },
+    {
+      "name": "metric_complex_step_domega_dr",
+      "value": 1.3877787807814457e-16,
+      "passed": true
+    },
+    {
+      "name": "circular_orbit_dE_equals_Omega_dL",
+      "value": 1.1379786002407855e-15,
+      "passed": true
+    },
+    {
+      "name": "energy_minus_OmegaL_equals_inverse_ut",
+      "value": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "neutral_charge_sign_symmetry_all_orbit_quantities",
+      "value": null,
+      "passed": true
+    },
+    {
+      "name": "exact_KN_orbital_frequency",
+      "value": 0.0,
+      "passed": true
+    },
+    {
+      "name": "lifetime_uses_KN_orbital_period",
+      "value": 0.0,
+      "passed": true
+    },
+    {
+      "name": "structured_azimuthal_mean_equals_Page_Thorne",
+      "value": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "source_birth_periodicity",
+      "value": 7.749356711883593e-14,
+      "passed": true
+    },
+    {
+      "name": "finite_positive_emission",
+      "value": [
+        8.493359027356413e-05,
+        2.369119651066723
+      ],
+      "passed": true
+    },
+    {
+      "name": "retarded_time_sign_and_broadcasting",
+      "value": 0.0,
+      "passed": true
+    },
+    {
+      "name": "prepared_KN_omega_for_each_radius",
+      "value": 0.0,
+      "passed": true
+    },
+    {
+      "name": "independent_scalar_retarded_source_equation",
+      "value": 1.3322676295501878e-15,
+      "passed": true
+    },
+    {
+      "name": "nonemitting_invalid_radii_zero",
+      "value": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "name": "smooth_mode_exact_radial_profile",
+      "value": 0.0,
+      "passed": true
+    },
+    {
+      "name": "seam_derivative_continuity_halving_ratio",
+      "value": 0.5000000283847698,
+      "passed": true
+    },
+    {
+      "name": "orbital_frequency_not_quantized_to_loop",
+      "value": 3.884334264362893,
+      "passed": true
+    },
+    {
+      "name": "zero_contrast_gives_radial_profile",
+      "value": 0.0,
+      "passed": true
+    }
+  ],
+  "metadata": {
+    "spin_a_star": 0.9,
+    "charge_q": 0.4,
+    "outer_radius_rg": 28.0,
+    "loop_period_tg": 800.0,
+    "contrast": 1.6,
+    "seed": 13326,
+    "radial_bands": 64,
+    "radial_log_half_width": 0.04,
+    "azimuthal_kappa": 2.5,
+    "lifetime_orbits": 1.5,
+    "maximum_lifetime_loop_fraction": 0.8,
+    "mean_overlapping_births": 2.0,
+    "model": "original kinematic source, not NASA software or GRMHD",
+    "intensity": "relative bolometric comoving surface intensity",
+    "radial_profile": "general Page-Thorne conservation integral with neutral Kerr-Newman circular orbits; zero ISCO stress; peak=1",
+    "radial_peak_rg": 2.2008687199235943,
+    "unscaled_radial_peak": 0.01806537327602981,
+    "angular_velocity_tg_inverse": "Omega(r)=sqrt(r-q^2)/(r^2+a*sqrt(r-q^2)), never quantized",
+    "radial_weight": "exp[-2 x^2/(1-x^2)], |x|<1; x=ln(r/r_j)/half_width",
+    "radial_e_folding_fraction_approx": 0.023094010767585032,
+    "angular_weight": "exp[kappa*cos(phi-phi_j-Omega(r)*age)]/I0(kappa)",
+    "lifetime_envelope": "sin(pi*age/lifetime)^4 on 0<age<lifetime; zero outside",
+    "lifetime_tg_range": [
+      28.181570689512697,
+      640.0
+    ],
+    "birth_count": 1060,
+    "normalization": "exact azimuthal mean equals Page-Thorne at each emission time and radius",
+    "loop_assumption": "periodically repeated finite-lived source births; not repeating gas orbits",
+    "retarded_time": "evaluate at t_em=t_obs-delay for each ray",
+    "not_modeled": [
+      "disk magnetohydrodynamics or MRI",
+      "fluid dynamics",
+      "disk thickness",
+      "radial inflow",
+      "plunging-region emission",
+      "thermal spectra",
+      "polarization",
+      "corona",
+      "returning radiation",
+      "charged-particle Lorentz forces",
+      "plasma currents",
+      "charge neutralization or evolution",
+      "disk backreaction"
+    ],
+    "sources": [
+      {
+        "doi": "10.1086/152990",
+        "role": "mean thin-disk flux"
+      },
+      {
+        "doi": "10.1086/383180",
+        "role": "orbiting/sheared inhomogeneities as a kinematic model"
+      },
+      {
+        "doi": "10.1103/PhysRevD.107.043030",
+        "role": "variable equatorial source, retarded time, orbital scales; not its stochastic solver"
+      },
+      {
+        "arxiv": "1303.6250",
+        "role": "neutral Kerr-Newman circular orbits and metric"
+      },
+      {
+        "arxiv": "gr-qc/0504025",
+        "role": "neutral specific energy and angular momentum, Eqs.19-20"
+      },
+      {
+        "arxiv": "1706.05466",
+        "role": "independent published neutral ISCO equation benchmark, not the root solver"
+      }
+    ],
+    "inner_radius_rg": 1.577504566512094,
+    "spin_alignment": "aligned / prograde",
+    "spin_definition": "a*=Jc/(G M^2); chosen model parameter, not a measurement",
+    "orbital_direction": "positive Boyer-Lindquist azimuth",
+    "charge_definition": "q=Q/(M*sqrt(4*pi*epsilon_0*G)); chosen theoretical parameter",
+    "emitter_specific_charge": 0.0,
+    "matter_assumption": "neutral test-matter disk in a fixed charged geometry; no Lorentz force or plasma dynamics",
+    "radial_quadrature": "cumulative trapezoid with analytic circular-orbit derivatives",
+    "radial_quadrature_samples": 65537,
+    "radial_lookup": "log flux versus log(r-rISCO); quadratic unresolved edge limit",
+    "dimensional_normalization": "none; mass, accretion rate, temperature and spectrum unspecified",
+    "surface_emission": "two identical opaque, isotropically emitting faces",
+    "flux_equation": "F proportional to -Omega'/(r*(E-Omega*L)^2) integral_ISCO^r (E-Omega*L)*L' dr"
+  },
+  "source_sha256": {
+    "kn_orbits.py": "84c097f23ce6427c10466a57db53395105a47047dd10d53da4569158183d08cf",
+    "kn_orbit_emission.py": "c1a8587a2b82380ab9c5abc8b87ffab08513ea8dea759569a723cf8925ec68cf",
+    "verify_kn_orbit_emission.py": "d201ad55bb26ae61116822cc5d89fad6c3c5667d787c7241913b9063b06ccfdc",
+    "kerr_orbit_emission.py": "378afecf40b3ad60f2912a78b066e254ca53395dfa061756caf12cf9550605bd",
+    "kerr_emission.py": "960e8fdc132ab2167f9df7bd406430e6431f92c38ee6e9c724eb17048577f986",
+    "nasa_emission.py": "98acbba4cca4311e6d3edd0620ea0f60e32f9191929163113153b9db8cb010b4",
+    "emission.py": "b250a41640e0461ef3d5b8c6bb85e728f465096177935a866ef9a9d76ac8f532"
+  },
+  "scope": "Neutral Kerr-Newman orbits, emission quadrature and kinematic source invariants; not plasma/GRMHD validation or a fit to NASA"
+}

@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "outer_radius_rg": 28.0,
+    "loop_period_tg": 800.0,
+    "contrast": 1.6,
+    "seed": 13326,
+    "radial_bands": 64,
+    "radial_log_half_width": 0.04,
+    "azimuthal_kappa": 2.5,
+    "lifetime_orbits": 1.5,
+    "maximum_lifetime_loop_fraction": 0.8,
+    "mean_overlapping_births": 2.0,
+    "model": "original kinematic source, not NASA software or GRMHD",
+    "intensity": "relative bolometric comoving surface intensity",
+    "radial_profile": "zero-torque Schwarzschild Page-Thorne flux; peak=1",
+    "radial_peak_rg": 9.550928092711349,
+    "unscaled_radial_peak": 0.00011458947324417224,
+    "angular_velocity_tg_inverse": "Omega(r)=r^(-3/2), never quantized",
+    "radial_weight": "exp[-2 x^2/(1-x^2)], |x|<1; x=ln(r/r_j)/half_width",
+    "radial_e_folding_fraction_approx": 0.023094010767585032,
+    "angular_weight": "exp[kappa*cos(phi-phi_j-Omega(r)*age)]/I0(kappa)",
+    "lifetime_envelope": "sin(pi*age/lifetime)^4 on 0<age<lifetime; zero outside",
+    "lifetime_tg_range": [
+      138.51538165748133,
+      640.0
+    ],
+    "birth_count": 338,
+    "normalization": "exact azimuthal mean equals Page-Thorne at each emission time and radius",
+    "loop_assumption": "periodically repeated finite-lived source births; not repeating gas orbits",
+    "retarded_time": "evaluate at t_em=t_obs-delay for each ray",
+    "not_modeled": [
+      "magnetic fields or MRI",
+      "fluid dynamics",
+      "disk thickness",
+      "radial inflow",
+      "plunging-region emission",
+      "thermal spectra",
+      "polarization",
+      "corona",
+      "returning radiation"
+    ],
+    "sources": [
+      {
+        "doi": "10.1086/152990",
+        "role": "mean thin-disk flux"
+      },
+      {
+        "doi": "10.1086/383180",
+        "role": "orbiting/sheared inhomogeneities as a kinematic model"
+      },
+      {
+        "doi": "10.1103/PhysRevD.107.043030",
+        "role": "variable equatorial source, retarded time, orbital scales; not its stochastic solver"
+      }
+    ]
+  },
+  "azimuthal_mean_max_relative_error": 4.440892098500626e-16,
+  "periodicity_max_absolute_error": 1.5987211554602254e-14,
+  "prepared_vs_direct_max_absolute_error": 0.0,
+  "independent_scalar_equation_max_absolute_error": 2.3314683517128287e-15,
+  "seam_left_right_derivative_max_difference_dt_1e_minus3": 8.43532310668138e-06,
+  "seam_left_right_derivative_max_difference_dt_5e_minus4": 4.217662219474505e-06,
+  "seam_derivative_difference_halving_ratio": 0.5000000789695672,
+  "smooth_mode_max_absolute_error": 0.0,
+  "rms_source_change_over_one_video_frame": 0.04485094018211761,
+  "orbital_kinematics_example": {
+    "radius_rg": 10.0,
+    "period_tg": 198.691765315922,
+    "loop_period_tg": 800.0,
+    "orbital_turns_per_loop": 4.026336968358963,
+    "interpretation": "Noninteger orbital turns: the source births repeat; the orbit frequency is not forced to loop."
+  },
+  "positive_emission_min": 5.203066666637054e-05,
+  "structured_to_mean_factor_range": [
+    0.25100420836535803,
+    2.9600950611018844
+  ],
+  "masked_radius_output": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "benchmark": {
+    "emitting_rays": 300000,
+    "prepare_seconds": 0.04894958400109317,
+    "frame_seconds": 0.1358265000017127,
+    "all_finite": true
+  },
+  "scope": "source-model invariants only; not a NASA reconstruction or GRMHD validation"
+}

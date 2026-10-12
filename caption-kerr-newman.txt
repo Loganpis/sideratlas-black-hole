@@ -1,0 +1,48 @@
+NO.001 — THE BLACK HOLE
+@sideratlas
+
+Bends light into multiple images of its disk
+Approaching gas appears brighter
+Gravity redshifts light and delays its arrival
+Inner orbits shear bright structures faster
+Spin drags spacetime around the black hole
+Electric charge changes spacetime and light paths
+
+Kerr–Newman: a* = 0.9, q = 0.4
+Aligned, prograde disk: disk and hole rotate in the same sense
+a* = Jc/(GM²), q = Q/[M√(4πε₀G)]
+
+HYPOTHETICAL LARGE CHARGE · NEUTRAL TEST DISK
+q = 0.4 is a deliberate theoretical choice, not a typical astrophysical charge
+Photons are neutral; charge affects their paths through spacetime curvature
+This does not simulate the electromagnetic response of real accretion plasma
+
+CALCULATED
+Kerr–Newman light paths, disk intersections, shifts and relative photon delays
+Neutral circular orbits, ISCO and a recomputed Page–Thorne mean flux
+Retarded emission with I_obs = g⁴ I_em
+
+ASSUMED
+Opaque razor-thin equatorial disk, ISCO to 28 GM/c², zero inner stress
+Identical isotropic faces; prescribed shearing brightness patches
+Full 360° virtual scan; no mass, accretion rate or temperature assigned
+One 8-second/800 GM/c³ constructed loop repeated FOUR times: 32 seconds
+Orange is illustrative brightness, not true visible color
+No fluid evolution, Lorentz forces, plasma response, plunging emission or returning-radiation heating
+
+SOURCES & ROLES
+Metric foundations: Newman et al. 1965; Kerr 1963
+Wang, Lee & Lin 2022 — KN rays, arXiv:2208.11906
+Pugliese et al. 2013 — neutral KN orbits, arXiv:1303.6250
+Ivanov & Prodanov 2005 — neutral E,L, gr-qc/0504025
+Liu et al. 2017 — ISCO, arXiv:1706.05466
+Page & Thorne 1974 — flux, doi:10.1086/152990
+Zajaček et al. 2018 — charge context, arXiv:1808.07327
+Kerr limits/background: Bardeen et al. 1972; Gralla & Lupsasca 2020; James et al. 2015
+Retarded source/transfer: Cárdenas-Avendaño et al. 2023
+Hot-spot precedent: Schnittman & Bertschinger 2004
+Schwarzschild benchmarks: Luminet 1979; Müller & Frauendiener 2012; Bozza 2002
+NASA/Goddard/J. Schnittman 2019 — visual reference only: https://svs.gsfc.nasa.gov/13326/
+No NASA footage or code used
+ICC — sRGB encoding
+Full sources and assumptions accompany the code
