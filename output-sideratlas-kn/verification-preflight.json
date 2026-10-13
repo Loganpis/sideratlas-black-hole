@@ -1,7 +1,7 @@
 {
   "scope": "Verify the current Kerr\u2013Newman renderer, saved numerical diagnostics and final files.\n\nThese checks measure numerical consistency of the specified idealized model,\nnot physical validation of a turbulent flow or agreement with NASA's movie.\n",
   "preflight_only": true,
-  "verifier_sha256": "a13e10900b45c87f5551442d64e799725b12e7531d3a8a6160a252732ddf9abb",
+  "verifier_sha256": "f42027868eb5a73aebbb11ccfe21bd1a1fc5e6fdde745c70a8a8dc0faf791d43",
   "videos": {},
   "numerical_reports": {
     "scope": "Saved numerical diagnostics with every recorded source hash checked against the current files",
@@ -56,6 +56,56 @@
       {
         "name": "fixed_display_curve_monotonic_bounded",
         "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "composition": {
+    "scope": "Actual compositor applied to synthetic native float-radiance fields; no ray tracing needed",
+    "checks": [
+      {
+        "name": "color_only_header_text_remains",
+        "passed": true,
+        "overlay_bbox": [
+          15,
+          66,
+          242,
+          98
+        ]
+      },
+      {
+        "name": "mono_only_header_text_remains",
+        "passed": true,
+        "overlay_bbox": [
+          15,
+          66,
+          242,
+          98
+        ]
+      },
+      {
+        "name": "color_and_intensity_have_same_header",
+        "passed": true
+      },
+      {
+        "name": "uniform_radiance_fills_entire_portrait",
+        "passed": true,
+        "maximum_channel_error": 0
+      },
+      {
+        "name": "centered_circular_source_is_not_stretched",
+        "passed": true,
+        "centroid_pixels": [
+          135.0,
+          240.0
+        ],
+        "variance_ratio": 1.0
+      },
+      {
+        "name": "edge_on_emission_spans_corner_diagonal",
+        "passed": true,
+        "measured_angle_degrees": 60.64220719580485,
+        "expected_angle_degrees": 60.64224645720873
       }
     ],
     "passed": true
@@ -307,12 +357,12 @@
       {
         "name": "antipodal_retarded_radiance_matches_fresh_trace_0.230556",
         "passed": true,
-        "maximum_absolute_error": 1.4901161193847656e-08
+        "maximum_absolute_error": 2.9802322387695312e-08
       },
       {
         "name": "approaching_side_brighter",
         "passed": true,
-        "left_right_ratio": 10.783483363060338
+        "left_right_ratio": 10.783484028538172
       },
       {
         "name": "opposite_view_reverses_side_asymmetry",
@@ -347,5 +397,5 @@
     "passed": true
   },
   "passed": true,
-  "elapsed_seconds": 9.589310708994162
+  "elapsed_seconds": 20.408096874976764
 }

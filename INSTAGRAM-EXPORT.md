@@ -1,6 +1,10 @@
 # Instagram delivery for @sideratlas
 
-The delivery file is a native **1080 × 1920, 30 fps, 32-second SDR MP4** (four copies of one eight-second cycle). It is encoded directly from the animation's RGB frames, without an intermediate compressed video. The disk is already rendered with spatial supersampling before being reduced to its delivery size. The export does not upscale the finished video, sharpen the rings, or add grain.
+The delivery file is a native **1080 × 1920, 30 fps, 32-second SDR MP4** (four copies of one eight-second cycle). It is encoded directly from the animation's RGB frames, without an intermediate compressed video. The disk is traced at approximately the final angular pixel density; the rotated viewport is filtered in floating-point radiance before display encoding. The export does not upscale the finished video, sharpen the rings, or add grain.
+
+Version 1.1.0 uses the entire portrait frame for a close diagonal view. The default source detector is 2700 × 2250, covering an unrolled field of view of 72 × 60 r_g. Floating-point radiance is bilinearly sampled into a 2× portrait viewport with a 28 r_g horizontal field of view and a fixed −60.642° screen rotation, then box-averaged to delivery size before tone mapping. The close framing deliberately crops some outer-disk emission in certain views, especially near the poles. This is a presentation change; the physical model is unchanged.
+
+Only **@sideratlas**, **NO.001**, and **THE BLACK HOLE** remain on screen, over the simulation, with a subtle glyph shadow. All former lower text, model disclosures, and source credits are in [`caption-kerr-newman.text`](caption-kerr-newman.text), with a compatible `.txt` copy. Use that description when posting the video so the scientific context accompanies the clean visual.
 
 ## Export choices
 
@@ -23,7 +27,8 @@ We do not rely on the thread's claim that small files avoid Instagram recompress
 1. Transfer the original MP4 to your phone using a method that preserves the file, such as AirDrop or a file download. Avoid an extra export or a messaging app's compressed-video mode
 2. In Instagram's settings, find **Media quality** and enable **Upload at highest quality** if that control is available; exact menu wording can vary by app version
 3. Select the original file, keep its vertical framing, and check the placement preview for the title and account name before posting
-4. Keep text clear of interface overlays. [Meta's Reels guidance](https://www.facebook.com/business/ads/facebook-instagram-reels-ads) recommends safe zones for key messages, but organic Reel controls, expanded captions, and different screens can cover different areas
+4. Copy the supplied `.text` description, including its model assumptions, study credits, and code link, into the Instagram description
+5. Check the title and account name against the interface overlays. [Meta's Reels guidance](https://www.facebook.com/business/ads/facebook-instagram-reels-ads) recommends safe zones for key messages, but organic Reel controls, expanded captions, and different screens can cover different areas. The full-frame simulation continues beneath those areas; no lower blank panel is reserved
 
 The upload-quality setting comes from the supplied discussion; the Instagram Help page and detailed Ads Guide were not retrievable during this review. No universal current pixel-safe area or guaranteed post-upload sharpness is claimed. The final appearance still depends on Instagram's processing, the viewer's device and playback conditions.
 

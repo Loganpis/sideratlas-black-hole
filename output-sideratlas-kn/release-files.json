@@ -3,8 +3,8 @@
   "scope": "Complete published source and completed media, including historical versions; generated caches excluded",
   "files": {
     "INSTAGRAM-EXPORT.md": {
-      "sha256": "8a87d86cd514980e2f19384da7d0f11fe3004a127b5898332935aadf10be9937",
-      "size_bytes": 5433
+      "sha256": "69109065022d487e9378fe3f56aab8ffe940c740ca1e578a175d376e7891f3d1",
+      "size_bytes": 6673
     },
     "OPTICS-NOTES.md": {
       "sha256": "3970b6593f24e9b22551a6c8acf648fb4b5813ea42eddd403cb735984b79a250",
@@ -15,12 +15,12 @@
       "size_bytes": 4476
     },
     "PUBLICATION.md": {
-      "sha256": "c545e150f98db3dc8db9a9b977681b5cc5ed48ccdb7be4384898ba12990d4765",
-      "size_bytes": 2190
+      "sha256": "15a27ad8ba7dad36a20b6cea639505e3ec413d760c500f351062602992157fd7",
+      "size_bytes": 4988
     },
     "README-KERR-NEWMAN.md": {
-      "sha256": "c3c0e78e33b75308afdaf0ffb298104c5b6df82a6816e9fd036ed8b9ac9a3e38",
-      "size_bytes": 16112
+      "sha256": "e9cc636ac698840600a88bd131616f7ac538808251f8427ad5bc464a3f42f2e4",
+      "size_bytes": 17667
     },
     "README-KERR-ORBIT.md": {
       "sha256": "2da9a25e2b164a1588e585fc8020000f11c25e794967dd6c34085199122a9859",
@@ -43,20 +43,24 @@
       "size_bytes": 16817
     },
     "README.md": {
-      "sha256": "9127ae934b17c55a904ba2f873458673986b6d96cd926f680c5e9358d8daa38c",
-      "size_bytes": 6827
+      "sha256": "bbd4ff1085d0d7f2a8ee22338fd5282c7722f93e5bcf0110c3f1cb39b887e249",
+      "size_bytes": 8043
     },
     "START-HERE.md": {
-      "sha256": "62d38ba2d7fc3b846a3ccadd7c12c9f4d81f6af348d86488e4f68f6de58cd5e6",
-      "size_bytes": 3446
+      "sha256": "b54e9329193bbda8fd0863ffa4327803a393bd1b560bfe1f19f6266423eb41b8",
+      "size_bytes": 4079
     },
     "THIRD-PARTY-NOTICES.md": {
       "sha256": "e9a9ca989018ef0d66101c81e9e171e789fd1b6d1ea6540835210eed1b987b67",
       "size_bytes": 2440
     },
+    "caption-kerr-newman.text": {
+      "sha256": "c306cf29e5da6ca8b4e9c213f3f578fdef2982e35e12f273e4ceae572d312212",
+      "size_bytes": 2011
+    },
     "caption-kerr-newman.txt": {
-      "sha256": "6a80eeb1c3429a222d5a72852f5263a25da1ff949c6d84df3063fc90604c620f",
-      "size_bytes": 2224
+      "sha256": "c306cf29e5da6ca8b4e9c213f3f578fdef2982e35e12f273e4ceae572d312212",
+      "size_bytes": 2011
     },
     "caption-kerr-orbit.txt": {
       "sha256": "5307a5ff82a9ecf21fcf3e80057acce227d9a1b1033acd5e02b07808e4f628e3",
@@ -195,8 +199,8 @@
       "size_bytes": 12623
     },
     "package_kn_release.py": {
-      "sha256": "f9ee960417c085b56930b2ee181c3ab04a1f89b988d9c22543daf3d75354c75e",
-      "size_bytes": 3107
+      "sha256": "e6f3e424e6dafea02e6174da3074812b3e59af172c061d15282fccf2d9fc5509",
+      "size_bytes": 3115
     },
     "physics-audit.json": {
       "sha256": "d873b35ca890e237b35d44c39b7e1e5a8db60a2fcf3e73e9a34c7bdf753daff7",
@@ -223,8 +227,8 @@
       "size_bytes": 16939
     },
     "render_kn_orbit.py": {
-      "sha256": "f450fb149d267c519a622e2641f1f786a78d696462667811bc1fcbd020d184ba",
-      "size_bytes": 21206
+      "sha256": "94b393f626a837edf1b91bd6ce00b7db89aa753a2fa572a79ffbb472b63f4fc4",
+      "size_bytes": 20575
     },
     "render_nasa.py": {
       "sha256": "6366fa6245ee9b2ffbc265c32d4c1ad076bd4152f45ea44b5d55baf3e6b43499",
@@ -239,8 +243,8 @@
       "size_bytes": 29
     },
     "review_kn_video.py": {
-      "sha256": "ddc27065091bd4a1de7f26065e1ceea046342ab0e1d6f362274e2b40dcdec252",
-      "size_bytes": 2563
+      "sha256": "498bfaf7809fb4d0a06dc33dd3fda005fadb1e6d8d2b70a97aecb2529dc55711",
+      "size_bytes": 5115
     },
     "spectral-optics-diagnostics.json": {
       "sha256": "bf8aa82e0c1e1a34cbc7fa33bd0649bd2bb6794851df590776b1abfa6f0e15f2",
@@ -279,8 +283,8 @@
       "size_bytes": 9692
     },
     "verify_kn_orbit.py": {
-      "sha256": "a13e10900b45c87f5551442d64e799725b12e7531d3a8a6160a252732ddf9abb",
-      "size_bytes": 13671
+      "sha256": "f42027868eb5a73aebbb11ccfe21bd1a1fc5e6fdde745c70a8a8dc0faf791d43",
+      "size_bytes": 18274
     },
     "verify_kn_orbit_emission.py": {
       "sha256": "d201ad55bb26ae61116822cc5d89fad6c3c5667d787c7241913b9063b06ccfdc",
@@ -511,60 +515,60 @@
       "size_bytes": 24276
     },
     "output-sideratlas-kn/contact-sheet.jpg": {
-      "sha256": "e2583959bfe29868df3b5d5f1796ae5fefbc460fe91f47aab2e193b6372339b6",
-      "size_bytes": 284819
+      "sha256": "20e294339ddeaedcb8c1f42e0740c7478e4c4691551f358383caa03f8a4189f5",
+      "size_bytes": 355287
     },
     "output-sideratlas-kn/decoded-review.png": {
-      "sha256": "1205590281d7223d86e1d90555d15fc3d6118cb4da25266c15e2021119b69b18",
-      "size_bytes": 529693
+      "sha256": "0b1c812219b5863415089851e061eff980de6b47b5ce7ac7559a8a154135c077",
+      "size_bytes": 1437590
     },
     "output-sideratlas-kn/orbit-review.jpg": {
-      "sha256": "232ee8e2f4a2a479d86801166f82548837c728539811c94b893df4a1b2d95239",
-      "size_bytes": 329670
+      "sha256": "9e6942ddf32fcfcbce78c6d0599a8e85f521c3ee3a28432d3375bec55829e2a3",
+      "size_bytes": 536154
     },
     "output-sideratlas-kn/render-metadata.json": {
-      "sha256": "df0b6d21132fed1e03073d601d4c9a479020eb461dc3bc41a9398571b0af3137",
-      "size_bytes": 10212
+      "sha256": "ed2dd4c6ebbdf465c41334d0fe9ba2b8d02787e3ae2f2d7bf52a6127e4929856",
+      "size_bytes": 10589
     },
     "output-sideratlas-kn/sideratlas-kerr-newman-color-cover.png": {
-      "sha256": "6642d40421a43250d088cf946b54a02553a572e612e75ec1bbc8409b182c0189",
-      "size_bytes": 232054
+      "sha256": "17ade64ba3a29d504751a5f33239f8d9a468cb886542bfcd7e871ccf63eb6bcb",
+      "size_bytes": 799987
     },
     "output-sideratlas-kn/sideratlas-kerr-newman-intensity-loop.mp4": {
-      "sha256": "2ee567c09999a0c8e5017aee366bcae37bf70b2d676841c77717fde046bf9408",
-      "size_bytes": 3135869
+      "sha256": "902f156b6a3f96021282a97e780fa453593eeb50a5deb22c3763ebce38aec409",
+      "size_bytes": 8949981
     },
     "output-sideratlas-kn/sideratlas-kerr-newman-intensity.mp4": {
-      "sha256": "0c04fea675b9cb399af558fbc11c2a0671bf8157f8f66fb56235188724a1156b",
-      "size_bytes": 12541052
+      "sha256": "7d9c2ba4e574fd04fc1f75b0b601e9b0fd4ac3a3ac310d954f72acd324a11b39",
+      "size_bytes": 35797484
     },
     "output-sideratlas-kn/sideratlas-kerr-newman-mono-cover.png": {
-      "sha256": "c7fd97a5feb733181f16d37730f36de8cf74dca0b2f1d94426fb05717601ddb9",
-      "size_bytes": 200425
+      "sha256": "40fd474d7c61219ada8d560b7ec3be211c2d9c8b395e4f695666ea27da4652a1",
+      "size_bytes": 527922
     },
     "output-sideratlas-kn/sideratlas-kerr-newman-reel-loop.mp4": {
-      "sha256": "686b29b2a9004ead5cff6700ead2d9c67a1b0f07e6690febdb01bcee2634fa99",
-      "size_bytes": 3910843
+      "sha256": "d5dd925908bd6b2220de0946b79750c66bf78736c24a1cbbf0896009b1432a05",
+      "size_bytes": 13152782
     },
     "output-sideratlas-kn/sideratlas-kerr-newman-reel.mp4": {
-      "sha256": "fc5ae0ced5d396bf94fff9ab0d3882bbb550a05a9691176cc98926523ef352f1",
-      "size_bytes": 15640912
+      "sha256": "643b8ded603559fb422cc4649d600982b4434b1834e03a758dd7eaf976175c67",
+      "size_bytes": 52608752
     },
     "output-sideratlas-kn/steady-reference.png": {
-      "sha256": "7df100d6eaf08f362edc9061be020ff3caa853e2d43603b16618ebb305082e7f",
-      "size_bytes": 163003
+      "sha256": "61e1bc5c6a318b39904fec07e5a36b390c0c8742a996ffe1d79430478c969885",
+      "size_bytes": 332233
     },
     "output-sideratlas-kn/verification-preflight.json": {
-      "sha256": "4922dafbcf52335f66f5c27ca07d841ee004b2f9d98d44ebef846a96d8f6eb88",
-      "size_bytes": 12367
+      "sha256": "c762399f041b939f5d87ec7723b51a3c4ae6b70f017c628c5d7f2bf1ff8fc70f",
+      "size_bytes": 13544
     },
     "output-sideratlas-kn/verification.json": {
-      "sha256": "2a41191ffd198ccba62e0e5c6d337a7f81925be0f8af6f3392ea5257e43345f8",
-      "size_bytes": 43710
+      "sha256": "16632b31618a581cdb74864a3850e01fd65692351f30f4e775d01f8a62a39b41",
+      "size_bytes": 45461
     },
     "output-sideratlas-kn/visual-review.json": {
-      "sha256": "da72c71ef56cffebfd21e60c4bdb9340290ffd6436a8ed6cf2038a3eac736c8f",
-      "size_bytes": 2677
+      "sha256": "8193b984df638af020c819708b2542e8879592c0a14114f25de8cca1083231f3",
+      "size_bytes": 4573
     },
     "fonts/FONT-SOURCES.md": {
       "sha256": "3bc651ac08053c4325eafe801881adc448c96565ee3c701cc982eddb39b33f7a",

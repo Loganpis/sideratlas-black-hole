@@ -34,10 +34,10 @@
     "disk_matter": "neutral test matter; no Lorentz force or plasma response",
     "spin_definition": "a*=cJ/(GM^2)",
     "spin_alignment": "black-hole angular momentum and disk angular momentum both +z; prograde",
-    "width": 2160,
-    "height": 1800,
+    "width": 2700,
+    "height": 2250,
     "fov_horizontal_rg": 72.0,
-    "fov_vertical_rg": 60.0,
+    "fov_vertical_rg": 60.00000000000001,
     "roll_deg": 0,
     "rin_rg": 1.577504566512094,
     "rout_rg": 28.0,
@@ -157,15 +157,23 @@
   "layout": {
     "brand": "@sideratlas",
     "header_top": 270,
-    "hero_y": 425,
-    "hero_height": 720,
-    "hero_width": 864,
-    "hero_x": 108,
-    "radiance_height": 900,
+    "hero_y": 0,
+    "hero_height": 1920,
+    "hero_width": 1080,
+    "hero_x": 0,
+    "full_frame": true,
+    "radiance_shape": [
+      2250,
+      2700
+    ],
+    "display_roll_degrees": -60.64224645720873,
+    "viewport_fov_horizontal_rg": 28.0,
     "text_left": 72,
     "text_right": 965,
-    "last_credit_top": 1599,
-    "safe_area_note": "Extra top clearance; interface overlays vary by device and caption state"
+    "lower_text_in_caption": true,
+    "caption_file": "caption-kerr-newman.text",
+    "viewport": "fixed rigid image-plane rotation and isotropic crop; outer disk can leave the frame near pole views",
+    "safe_area_note": "Title over the full-frame simulation; interface overlays vary by device and caption state"
   },
   "encoding": {
     "pipeline_version": 1,
@@ -213,7 +221,7 @@
     "exposure": 0.02,
     "curve": "x/(1+x), x=relative radiance/exposure",
     "color": "original illustrative orange brightness palette, not thermal true color",
-    "averaging": "physical bolometric radiance averaged before display transform"
+    "averaging": "native float detector radiance; bilinear rotated viewport at 2x output size, BOX averaged before display transform"
   },
   "scene": "original calculation; no NASA images, frames or source code used",
   "time": "800 t_g shown in each 8-second cycle; same encoded cycle repeated four times for 32 seconds; periodic source forcing, full 360-degree viewpoint revolution; no physical mass assigned",
@@ -221,19 +229,18 @@
   "ray_maps": {
     "inclination_degrees": 83.0,
     "delay_tg_range": [
-      -32.68569564819336,
-      130.78753662109375
+      -32.82321548461914,
+      97.3201675415039
     ],
     "frequency_shift_range": [
-      0.08296407759189606,
-      1.4593536853790283
+      0.08290962874889374,
+      1.4592515230178833
     ],
     "image_layers": {
-      "0": 496755,
-      "1": 89105,
-      "2": 47,
-      "3": 5,
-      "4": 2
+      "0": 776277,
+      "1": 139191,
+      "2": 76,
+      "3": 6
     }
   },
   "outputs": {
@@ -244,9 +251,9 @@
     "color": "sideratlas-kerr-newman-reel-loop.mp4",
     "mono": "sideratlas-kerr-newman-intensity-loop.mp4"
   },
-  "source_sha256": "3103914c35fa2e799ee5eaba5c72b11d052c6ee0c557064cb7302be413c196b9",
-  "supersample": 2,
-  "radiance_signature": "88200306aa581da94014cbf33f6803f678fe3fbad391b17748706c171df46f86",
+  "source_sha256": "fbe75566b8ecc19e196f52aa943bff01026cac7d0dbc9eeaa819008adaf4c5ea",
+  "supersample": 2.5,
+  "radiance_signature": "7802e6ecc1fc1aa58645e537ae62c672a3bb6c8e586b5b2ac2b09bed7d4edafc",
   "repetition_encoding": "Four copies of one 8-second H.264 stream; lossless packet copy, no extra encode",
-  "elapsed_seconds": 1022.4310035419912
+  "elapsed_seconds": 515.8007661250012
 }

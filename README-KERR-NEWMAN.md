@@ -12,17 +12,17 @@ NASA Goddard / Jeremy Schnittman's [2019 visualization](https://svs.gsfc.nasa.go
 - `output-sideratlas-kn/sideratlas-kerr-newman-intensity.mp4`: the same calculated radiance in monochrome, 32 seconds
 - `output-sideratlas-kn/render-metadata.json`: numerical configuration, model assumptions and provenance
 - `output-sideratlas-kn/verification.json`: checks of the identified finished release
-- `caption-kerr-newman.txt`: ready-to-copy caption with assumptions and source credits
+- `caption-kerr-newman.text`: ready-to-copy Instagram description with the former lower text, assumptions, all source credits, and repository link (`.txt` is also supplied for compatibility)
 
-The delivery is **four identical repetitions of one eight-second loop**, not 32 seconds of newly simulated source evolution. Each loop contains one 360° virtual viewpoint scan, with source time advancing by 800 GM/c³. The movie remains 1080 × 1920 at 30 fps. The @sideratlas identity, LaTeX-like fonts, black background and Instagram text margins are retained. See `INSTAGRAM-EXPORT.md` for encoding and upload guidance.
+The delivery is **four identical repetitions of one eight-second loop**, not 32 seconds of newly simulated source evolution. Each loop contains one 360° virtual viewpoint scan, with source time advancing by 800 GM/c³. The movie remains 1080 × 1920 at 30 fps. In version 1.1.0, the enlarged diagonal simulation occupies the whole portrait frame behind **@sideratlas**, **NO.001**, and **THE BLACK HOLE**. Latin Modern/STIX fonts and the black sky are retained. There is no lower text block, model strip, or on-screen bibliography. See `INSTAGRAM-EXPORT.md` for encoding and upload guidance.
 
-The two added explanatory lines are:
+The description file includes the explanatory lines:
 
 > Spin drags spacetime around the black hole
 >
 > Electric charge changes spacetime and light paths
 
-The information strip identifies **Kerr–Newman: a* = 0.9, q = 0.4** and illustrative color. A nearby line discloses the hypothetical large charge and neutral test disk. Photons have no electric charge: the additional deflection here follows the charged black hole's spacetime geometry, not electrical attraction of light.
+The description identifies **Kerr–Newman: a* = 0.9, q = 0.4**, illustrative color, the hypothetical large charge, and the neutral test disk. It also includes “The code for this simulation is to be found at github.com/loganpis/sideratlas-black-hole”. Post the description with the video so the model choices and credits remain available. Photons have no electric charge: the additional deflection here follows the charged black hole's spacetime geometry, not electrical attraction of light.
 
 ## Parameter convention and disk model
 
@@ -43,6 +43,7 @@ The black-hole condition is a*² + q² ≤ 1. This choice gives 0.97, so the mod
 | Variable structure | Positive finite-lived shearing brightness patches with a repeating birth schedule |
 | Observer | A sequence of static observers at infinity, scanned through a complete revolution |
 | Display | Fixed exposure 0.02 in peak-normalized radiance units; monotone orange illustrative palette or monochrome intensity |
+| Composition | Full-frame portrait crop, horizontal field of view 28 r_g, fixed screen rotation −arctan(16/9) ≈ −60.642° |
 | Physical scale | No numerical mass, accretion rate, thermal spectrum or temperature assigned |
 
 The disk prescription does not solve the dynamics of charged accretion gas. Treating matter as neutral test emitters avoids silently choosing a particle charge-to-mass ratio or a magnetosphere, but remains a consequential idealization at q = 0.4.
@@ -85,7 +86,9 @@ F(r) ∝ −Ω,r / [r(E − ΩL)²] × ∫(r_ISCO to r) (E − ΩL)L,r dr
 
 The equatorial determinant factor is r in the near-disk coordinates used by that integral. The old Kerr closed-form radial profile is not reused. Peak normalization removes the unassigned luminosity scale. Consequently orange remains **illustrative total-light brightness, not true visible color**.
 
-The display first averages the calculated radiance over the detector samples and presentation pixels. A single curve, x/(1+x) with x = radiance/0.02, then sets the brightness for every viewpoint and both display modes. There is no frame-by-frame auto-exposure. The value 0.02 is a presentation choice, not a physical luminosity, and this peak-normalized animation cannot establish which black-hole model is intrinsically brighter.
+The display uses an unrolled detector with a field of view of 72 × 60 r_g. An inverse affine map samples its floating-point radiance bilinearly into a 2× portrait viewport, with a horizontal field of view of 28 r_g and fixed screen rotation −arctan(16/9) ≈ −60.642°. A box average reduces that viewport to the delivery resolution before any tone mapping. This rotates the screen coordinates and enlarges the composition; it does not tilt the disk relative to the spin or alter the photon paths. The close crop can exclude outer-disk emission in some views, particularly near the poles.
+
+A single curve, x/(1+x) with x = radiance/0.02, then sets the brightness for every viewpoint and both display modes. There is no frame-by-frame auto-exposure. The value 0.02 is a presentation choice, not a physical luminosity, and this peak-normalized animation cannot establish which black-hole model is intrinsically brighter. Only the account name, number, and title are composited above the image, with a subtle glyph shadow for legibility.
 
 The retained patch prescription uses the new Ω(r) in shear, lifetimes and retarded-time sampling. Patches have positive brightness and a normalization that preserves the prescribed azimuthal radial mean. They die smoothly, and their birth schedule repeats every 800 t_g to close the loop without quantizing orbital frequencies. This is prescribed kinematic structure, not turbulence generated by fluid or magnetic-field equations.
 
@@ -104,13 +107,13 @@ python3 render_kn_orbit.py
 python3 verify_kn_orbit.py
 ```
 
-`--preview --width 540 --supersample 1 --output output-sideratlas-kn/preview` makes a small still-image preview. The default render independently traces a 2160 × 1800 detector for 120 views, evaluates 240 radiance frames, averages the radiance before the display transform and exports both 1080 × 1920 versions. A parameter-and-source-keyed floating-point cache allows an interrupted render to resume; no earlier Schwarzschild/Kerr frames are reused.
+`--preview --width 540 --supersample 1 --output output-sideratlas-kn/preview` makes a small still-image preview. The default render uses a detector supersampling factor of 2.5: it independently traces a 2700 × 2250 unrolled detector for 120 views, evaluates 240 radiance frames, samples and averages radiance into the diagonal portrait viewport before the display transform, and exports both 1080 × 1920 versions. A parameter-and-source-keyed floating-point cache allows an interrupted render to resume; no earlier Schwarzschild/Kerr frames are reused.
 
-The finished release passed **62 ray-tracing checks**, **69 orbital/emission checks**, and **75 renderer, provenance and delivery checks**. Reports identify their exact source hashes. The independent checks include uncharged Kerr and Schwarzschild limits, charge-sign symmetry, analytic capture boundaries, radial stability, numerical refinement, both poles and disk-plane crossings, and independently integrated azimuth and arrival times. These are numerical consistency tests of the declared idealized model, not validation of charged accretion plasma.
+The supplied ray-tracing, orbital/emission, and delivery reports identify their exact source hashes and measured results. The independent checks include uncharged Kerr and Schwarzschild limits, charge-sign symmetry, analytic capture boundaries, radial stability, numerical refinement, both poles and disk-plane crossings, and independently integrated azimuth and arrival times. Version 1.1.0 changes the presentation and detector sampling; the geodesic equations, orbital motion, emission prescription, and retarded-time treatment are unchanged. These are numerical consistency tests of the declared idealized model, not validation of charged accretion plasma.
 
-Both final videos decode all **960 frames at 1080 × 1920, 30 fps, exactly 32 seconds**. Decoded frame hashes confirm four pixel-identical copies of the original eight-second cycle. The loop boundary is consistent with nearby motion. The delivery uses H.264 High, limited-range Rec.709 and fast-start MP4. Twelve color-managed decoded color frames were also compared with their original radiance compositions: full-frame mean absolute RGB differences range from 0.115 to 0.199 on a 0–255 scale; the largest lit-disk mean difference is 2.116. This measures the local encode, not Instagram's subsequent processing.
+The delivery format is **960 frames at 1080 × 1920, 30 fps, exactly 32 seconds**, using H.264 High, limited-range Rec.709 and fast-start MP4. The delivery audit checks decoded frames, repeated-cycle equality, the loop boundary, and encoding metadata. Color-managed decoded-frame comparisons measure the local encode, not Instagram's subsequent processing; consult the supplied reports for the results for this composition.
 
-The sampled orbit contact sheet and full-frame review confirm that the changing disk views and text fit the intended layout. The overlay spans y = 270 through 1618, leaving 301 pixels clear below. The exact checks, video hashes and sample comparisons are in `output-sideratlas-kn/verification.json` and `visual-review.json`.
+The sampled orbit contact sheet and full-frame review show the close diagonal framing through the changing viewpoints. The account name and number begin at y = 270, and the title begins at y = 333; the simulation continues behind them and through the bottom of the frame. There is no lower overlay. Instagram controls and expanded captions can still cover part of the simulation. The exact checks, video hashes, and sample comparisons are in `output-sideratlas-kn/verification.json` and `visual-review.json`. The [v1.0.0 release](https://github.com/Loganpis/sideratlas-black-hole/releases/tag/v1.0.0) preserves the prior composition and its historical reports.
 
 ## Sources and their roles
 

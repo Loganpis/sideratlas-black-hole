@@ -10,7 +10,7 @@ if report.get('passed') is not True:raise RuntimeError('Final verification must 
 output_names='''sideratlas-kerr-newman-reel.mp4 sideratlas-kerr-newman-intensity.mp4 sideratlas-kerr-newman-reel-loop.mp4 sideratlas-kerr-newman-intensity-loop.mp4 sideratlas-kerr-newman-color-cover.png sideratlas-kerr-newman-mono-cover.png steady-reference.png contact-sheet.jpg render-metadata.json verification.json decoded-review.png orbit-review.jpg visual-review.json'''.split()
 for name in output_names:
     if not (OUT/name).is_file():raise FileNotFoundError(OUT/name)
-files=sorted(p for p in ROOT.iterdir() if p.is_file() and p.suffix in ('.py','.cpp','.md','.txt','.json'))
+files=sorted(p for p in ROOT.iterdir() if p.is_file() and p.suffix in ('.py','.cpp','.md','.txt','.text','.json'))
 files.append(ROOT/'.gitignore')
 excluded={'render-process.json','checks-process.json','delivery-manifest.json','release-files.json'}
 for directory in ('output','output-kerr','output-optical','output-schwarzschild','output-sideratlas','output-sideratlas-kn'):

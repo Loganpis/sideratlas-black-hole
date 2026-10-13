@@ -27,6 +27,14 @@ def sha256(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
+def portable_path(path):
+    """Keep published reports free of local machine paths."""
+    try:
+        return str(Path(path).resolve().relative_to(ROOT.resolve()))
+    except ValueError:
+        return Path(path).name
+
+
 def finish(record):
     record['passed']=all(c['passed'] for c in record.get('checks',[]))
     return record
@@ -79,7 +87,7 @@ def actual_renderer_checks():
         m=renderer.maps; hit=m['mask']
         check(result,f'phase_{phase:g}_finite_positive_physics',
               all(np.isfinite(m[k]).all() for k in ('r','phi','g','delay_tg')) and
-              np.isfinite(radiance).all() and np.all(radiance>=0) and hit.any() and
+              radiance.shape==m['r'].shape and np.isfinite(radiance).all() and np.all(radiance>=0) and hit.any() and
               np.all(m['r'][hit]>=RIN-2e-6) and np.all(m['r'][hit]<=OUTER_RADIUS+2e-6) and
               np.all(m['g'][hit]>0) and np.all(m['delay_tg'][~hit]==0),
               angle_deg=view_angle_at_phase(phase),hit_count=int(hit.sum()),
@@ -105,7 +113,8 @@ def actual_renderer_checks():
         error=float(np.max(abs(reused-traced)))
         check(result,f'antipodal_retarded_radiance_matches_fresh_trace_{phase:g}',np.allclose(reused,traced,rtol=5e-5,atol=2e-6),maximum_absolute_error=error)
     smooth0=renderer.radiance(0,structured=False)
-    left,right=float(smooth0[:,:135].sum()),float(smooth0[:,135:].sum())
+    midpoint=smooth0.shape[1]//2
+    left,right=float(smooth0[:,:midpoint].sum()),float(smooth0[:,midpoint:].sum())
     check(result,'approaching_side_brighter',left>right,left_right_ratio=left/right)
     opposite=renderer.radiance(.5,structured=False)
     check(result,'opposite_view_reverses_side_asymmetry',np.allclose(smooth0,np.fliplr(opposite),atol=3e-5,rtol=3e-5))
@@ -119,19 +128,88 @@ def actual_renderer_checks():
     return finish(result)
 
 
+def composition_checks():
+    """Independent synthetic fields expose distortion, framing and footer regressions."""
+    renderer=KerrNewmanRenderer.__new__(KerrNewmanRenderer)
+    renderer.width,renderer.height,renderer.scale=270,480,.25
+    renderer.spin,renderer.charge,renderer.fov=SPIN,CHARGE,FOV
+    renderer._configure_layout()
+    renderer.overlays={mode:renderer._overlay(mode) for mode in VIDEO_NAMES}
+    result={'scope':'Actual compositor applied to synthetic native float-radiance fields; no ray tracing needed'}
+    for mode,overlay in renderer.overlays.items():
+        alpha=np.asarray(overlay)[...,3]
+        box=overlay.getbbox()
+        check(result,mode+'_only_header_text_remains',box is not None and
+              box[1]>=round(250*renderer.scale) and not alpha[round(500*renderer.scale):].any(),
+              overlay_bbox=list(box) if box else None)
+    check(result,'color_and_intensity_have_same_header',np.array_equal(
+        np.asarray(renderer.overlays['color']),np.asarray(renderer.overlays['mono'])))
+    # Removing the overlay here isolates spatial sampling from text/shadow pixels.
+    renderer.overlays={mode:Image.new('RGBA',(renderer.width,renderer.height)) for mode in VIDEO_NAMES}
+    shape=(450,540)
+    constant=np.full(shape,.02,np.float32)
+    image=np.asarray(renderer.compose(constant,'color'))
+    expected=illustrative_palette(display_intensity(np.array(.02)))
+    check(result,'uniform_radiance_fills_entire_portrait',np.all(image==expected),
+          maximum_channel_error=int(np.abs(image.astype(int)-expected.astype(int)).max()))
+    spacing=FOV/shape[1]
+    x=(np.arange(shape[1])+.5-shape[1]/2)*spacing
+    y=-(np.arange(shape[0])+.5-shape[0]/2)*spacing
+    xx,yy=np.meshgrid(x,y)
+    px,py=np.meshgrid(np.arange(renderer.width)+.5,np.arange(renderer.height)+.5)
+    def image_moments(field):
+        weights=np.asarray(renderer.compose(field.astype(np.float32),'mono'))[...,0].astype(float)
+        total=weights.sum()
+        cx,cy=float((weights*px).sum()/total),float((weights*py).sum()/total)
+        dx,dy=px-cx,py-cy
+        covariance=np.array([[(weights*dx*dx).sum(),(weights*dx*dy).sum()],
+                             [(weights*dx*dy).sum(),(weights*dy*dy).sum()]])/total
+        return cx,cy,covariance
+    cx,cy,cov=image_moments(.02*np.exp(-(xx**2+yy**2)/(2*1.2**2)))
+    check(result,'centered_circular_source_is_not_stretched',
+          abs(cx-renderer.width/2)<.1 and abs(cy-renderer.height/2)<.1 and
+          abs(cov[0,0]/cov[1,1]-1)<.01 and abs(cov[0,1])/np.trace(cov)<.005,
+          centroid_pixels=[cx,cy],variance_ratio=float(cov[0,0]/cov[1,1]))
+    _,_,cov=image_moments(.02*np.exp(-yy**2/(2*.18**2))*(abs(xx)<25))
+    _,vectors=np.linalg.eigh(cov)
+    axis=vectors[:,-1]
+    angle=math.degrees(math.atan2(axis[1],axis[0]))%180
+    expected_angle=math.degrees(math.atan2(renderer.height,renderer.width))
+    check(result,'edge_on_emission_spans_corner_diagonal',abs(angle-expected_angle)<1,
+          measured_angle_degrees=angle,expected_angle_degrees=expected_angle)
+    return finish(result)
+
+
 def metadata_checks(output):
     d=json.loads((output/'render-metadata.json').read_text());result={}
     check(result,'recorded_source_matches_current_code',d['source_sha256']==source_hash())
-    check(result,'delivery_dimensions_and_timing',(d['width'],d['height'],d['fps'],d['frames'],d['duration_seconds'],d['supersample'])==(1080,1920,30,960,32,2))
+    check(result,'delivery_dimensions_and_timing',(d['width'],d['height'],d['fps'],d['frames'],d['duration_seconds'],d['supersample'])==(1080,1920,30,960,32,2.5))
     g=d['geometry'];spin=d['spin_configuration']
-    check(result,'kerr_newman_spin_charge_disk_and_detector_parameters',spin['a_star']==.9 and spin['charge_q']==.4 and g['charge_q']==.4 and spin['alignment']=='aligned, prograde equatorial disk' and g['spin']==.9 and abs(g['rin_rg']-RIN)<1e-12 and g['rout_rg']==28 and g['fov_horizontal_rg']==72 and (g['width'],g['height'])==(2160,1800))
+    check(result,'kerr_newman_spin_charge_disk_and_detector_parameters',spin['a_star']==.9 and spin['charge_q']==.4 and g['charge_q']==.4 and spin['alignment']=='aligned, prograde equatorial disk' and g['spin']==.9 and abs(g['rin_rg']-RIN)<1e-12 and g['rout_rg']==28 and g['fov_horizontal_rg']==72 and g['roll_deg']==0 and (g['width'],g['height'])==(2700,2250))
     check(result,'camera_completes_continuous_revolution',d['view_angle_degrees']==[-277,83] and d['camera_orbit']['angular_span_deg']==-360)
     check(result,'static_observer_and_disk_face_assumptions_disclosed','static observers' in d['camera_orbit']['observer'] and 'both faces' in d['disk_faces'])
     check(result,'illustrative_color_disclosed','not thermal true color' in d['display']['color'])
     check(result,'chosen_spin_disclosed','not a fit' in spin['choice'])
     check(result,'source_parameters_match',d['emission']==__import__('kn_orbit_emission').ShearingDiskEmission().metadata())
     check(result,'export_settings_match',d['encoding']==export_metadata())
-    check(result,'brand_and_ui_clearance',d['layout']['brand']=='@sideratlas' and d['layout']['header_top']>=250 and d['layout']['last_credit_top']<1620)
+    layout=d['layout']
+    check(result,'brand_header_and_caption_only_explanation',layout['brand']=='@sideratlas' and layout['header_top']>=250 and layout['lower_text_in_caption'] and 'last_credit_top' not in layout)
+    check(result,'simulation_uses_entire_portrait',layout['full_frame'] and
+          (layout['hero_x'],layout['hero_y'],layout['hero_width'],layout['hero_height'])==(0,0,1080,1920))
+    roll=math.radians(layout['display_roll_degrees'])
+    fov=layout['viewport_fov_horizontal_rg']
+    half_w=fov/2;half_h=half_w*d['height']/d['width']
+    extent_x=abs(math.cos(roll))*half_w+abs(math.sin(roll))*half_h
+    extent_y=abs(math.sin(roll))*half_w+abs(math.cos(roll))*half_h
+    check(result,'diagonal_viewport_stays_inside_traced_domain',
+          fov==28 and abs(roll+math.atan2(d['height'],d['width']))<1e-12 and
+          extent_x<g['fov_horizontal_rg']/2 and extent_y<g['fov_vertical_rg']/2,
+          viewport_half_extent_rg=[extent_x,extent_y],
+          traced_half_extent_rg=[g['fov_horizontal_rg']/2,g['fov_vertical_rg']/2])
+    native_density=g['width']/g['fov_horizontal_rg']
+    display_density=d['width']/fov
+    check(result,'native_detector_density_near_delivery_pixel_density',native_density/display_density>=.97,
+          native_samples_per_final_pixel=native_density/display_density)
     check(result,'files_fully_rendered',d.get('elapsed_seconds',0)>0 and not list(output.glob('*.partial.mp4')))
     return finish(result)
 
@@ -153,7 +231,7 @@ def output_assets(output):
 
 def video_checks(path):
     ffmpeg,ffprobe=shutil.which('ffmpeg'),shutil.which('ffprobe')
-    result={'file':str(path),'sha256':sha256(path),'size_bytes':path.stat().st_size}
+    result={'file':portable_path(path),'sha256':sha256(path),'size_bytes':path.stat().st_size}
     probe,s=probe_video(path,ffprobe)
     result['stream']={k:s.get(k) for k in ['codec_name','profile','width','height','pix_fmt',
       'r_frame_rate','avg_frame_rate','nb_frames','duration','start_time','color_space',
@@ -164,7 +242,7 @@ def video_checks(path):
     check(result,'rec709_limited_range',all(s[k]=='bt709' for k in ('color_space','color_transfer','color_primaries')) and s['color_range']=='tv')
     atoms=mp4_atoms(path);result['atoms']=atoms
     check(result,'faststart',atoms.get('moov',1e20)<atoms.get('mdat',-1))
-    result['decode']=decode_statistics(path,ffmpeg,1080,1920,hero_region=(425,1145))
+    result['decode']=decode_statistics(path,ffmpeg,1080,1920,hero_region=(0,1920))
     check(result,'all_960_frames_decode_cleanly',result['decode']['decoded_frames']==960 and not result['decode']['decoder_errors'])
     check(result,'seam_consistent_with_adjacent_motion',result['decode']['seam_consistent_with_nearby_transitions'])
     # Check decoded YUV hashes, including the IDR at each eight-second seam.
@@ -182,7 +260,7 @@ def main():
     args=parser.parse_args();args.output.mkdir(exist_ok=True,parents=True)
     start=time.perf_counter()
     result={'scope':__doc__,'preflight_only':args.preflight,'verifier_sha256':sha256(__file__),'videos':{}}
-    functions=[('numerical_reports',numerical_reports),('display',display_checks),('actual_renderer',actual_renderer_checks)]
+    functions=[('numerical_reports',numerical_reports),('display',display_checks),('composition',composition_checks),('actual_renderer',actual_renderer_checks)]
     if not args.preflight:
         functions += [('metadata',lambda:metadata_checks(args.output)),('assets',lambda:output_assets(args.output))]
     for name,fn in functions:

@@ -29,6 +29,9 @@ from render import Renderer as FontProvider, ROOT, FPS, encode_srgb
 from instagram_export import encoder, metadata as encoding_metadata
 
 FOV = 72.0
+VIEWPORT_FOV = 28.0
+DISPLAY_ROLL = -math.degrees(math.atan2(16, 9))
+DEFAULT_SUPERSAMPLE = 2.5
 OUTER_RADIUS = 28.0
 INCLINATION = 83.0
 LOOP_TG = 800.0
@@ -77,19 +80,14 @@ def illustrative_palette(values):
 class KerrNewmanRenderer:
     font = FontProvider.font
 
-    def __init__(self, width=1080, supersample=2, inclination=INCLINATION,
+    def __init__(self, width=1080, supersample=DEFAULT_SUPERSAMPLE, inclination=INCLINATION,
                  fov=FOV, outer_radius=OUTER_RADIUS, spin=SPIN, charge=CHARGE, angle_step=.012):
         if width < 270 or width % 2 or supersample < 1:
             raise ValueError('even width >=270 and supersample >=1 required')
         self.width, self.height = width, round(width*16/9)//2*2
         self.scale = width/1080
-        # The pole view is circular: leave enough black space around the full
-        # disk to keep it clear of the title and explanatory text at all phases.
-        self.hero_h, self.hero_y = round(900*self.scale), round(425*self.scale)
-        # Preserve the physical detector and full field of view. A smaller,
-        # isotropic presentation leaves the lower explanation clear of UI.
-        self.hero_display_size = (round(864*self.scale), round(720*self.scale))
-        self.hero_x = (self.width-self.hero_display_size[0])//2
+        self.fov = float(fov)
+        self._configure_layout()
         self.inclination = inclination
         self.spin, self.charge = float(spin), float(charge)
         self.source = ShearingDiskEmission(spin_a_star=self.spin, charge_q=self.charge, outer_radius_rg=outer_radius, loop_period_tg=LOOP_TG)
@@ -100,6 +98,16 @@ class KerrNewmanRenderer:
         self.current_inclination = None
         self.set_view(0)
         self.overlays = {mode: self._overlay(mode) for mode in VIDEO_NAMES}
+
+    def _configure_layout(self):
+        # Trace a reflection-symmetric, unrolled domain so the antipodal
+        # geodesic reuse remains exact. A fixed rotated portrait viewport is
+        # sampled from the native float radiance, before the display curve.
+        self.hero_h = round(900*self.scale)
+        self.hero_x, self.hero_y = 0, 0
+        self.hero_display_size = (self.width, self.height)
+        self.viewport_fov = VIEWPORT_FOV
+        self.display_roll = DISPLAY_ROLL
 
     def set_view(self, phase):
         angle=view_angle_at_phase(phase,self.inclination)
@@ -113,50 +121,13 @@ class KerrNewmanRenderer:
     def _overlay(self, mode):
         overlay = Image.new('RGBA', (self.width, self.height))
         d, s = ImageDraw.Draw(overlay), self.scale
-        white, soft, muted = (245,245,245), (208,208,208), (165,165,165)
+        white, soft = (245,245,245), (208,208,208)
         def text(x,y,value,size=28,fill=white,role='regular',anchor='lt'):
-            d.text((x*s,y*s),value,font=self.font(size,role),fill=fill,anchor=anchor)
-        def line(y):
-            d.line((72*s,y*s,965*s,y*s),fill=(55,55,55),width=max(1,round(s)))
-        def equation(y,runs,size=31):
-            x=72*s
-            for value,script in runs:
-                face=self.font(size if script is None else size*.64,'math')
-                dy=0 if script is None else (size*.45 if script=='sub' else -size*.16)
-                d.text((x,(y+dy)*s),value,font=face,fill=soft,anchor='lt')
-                x+=d.textlength(value,font=face)
+            d.text((x*s,y*s),value,font=self.font(size,role),fill=fill,anchor=anchor,
+                   stroke_width=max(1,round(2*s)),stroke_fill=(0,0,0,220))
         text(72,270,'@sideratlas',34)
         text(965,277,'NO.001',25,soft,anchor='rt')
         text(64,333,'THE BLACK HOLE',82,role='bold')
-        line(411)
-        label = 'Illustrative color' if mode=='color' else 'Total-light intensity'
-        text(72,1159,f'Original relativistic model  –  Kerr–Newman: a* = {self.spin:g}, q = {self.charge:g}',25,soft)
-        text(72,1191,'Hypothetical large charge  ·  Neutral test disk  ·  '+label,23,soft)
-        line(1224)
-        descriptions = [
-            'Bends light into multiple images of its disk',
-            'Approaching gas appears brighter',
-            'Gravity redshifts light and delays its arrival',
-            'Inner orbits shear bright structures faster',
-            'Spin drags spacetime around the black hole',
-            'Electric charge changes spacetime and light paths',
-        ]
-        for j,value in enumerate(descriptions):
-            text(72,1238+29*j,value,29)
-        equation(1421,[('I',None),('obs','sub'),(' = g',None),('4','sup'),
-                       (' I',None),('em','sub'),('     Δ = r',None),('2','sup'),
-                       (' − 2r + a',None),('2','sup'),(' + q',None),('2','sup')],27)
-        text(72,1458,f'G = M = c = 1   ·   rISCO ≈ {isco_radius(self.spin,self.charge):.2f} rg   ·   Aligned, prograde disk',22,soft,'math')
-        credits = [
-            'Newman et al. 1965 · Page & Thorne 1974 · Pugliese et al. 2013',
-            'Wang et al. 2022 · Ivanov & Prodanov 2005 · Liu et al. 2017 · Zajaček et al. 2018',
-            'Kerr 1963 · Bardeen, Press & Teukolsky 1972 · Luminet 1979 · Bozza 2002',
-            'Müller & Frauendiener 2012 · Schnittman & Bertschinger 2004',
-            'James et al. 2015 · Gralla & Lupsasca 2020 · Cárdenas-Avendaño et al. 2023',
-            'ICC sRGB · Motion reference: NASA / Goddard / J. Schnittman 2019',
-        ]
-        for j,value in enumerate(credits):
-            text(72,1494+21*j,value,20,muted)
         return overlay
 
     def radiance(self, phase, structured=True):
@@ -165,9 +136,7 @@ class KerrNewmanRenderer:
         values = self.prepared.evaluate(t, structured=structured)*self.transfer
         if not np.isfinite(values).all() or np.any(values < 0):
             raise AssertionError('nonfinite or negative radiance')
-        small = np.asarray(Image.fromarray(values.astype('float32')).resize(
-            (self.width,self.hero_h),Image.Resampling.BOX))
-        return small
+        return values.astype('float32')
 
     def antipodal_radiance(self, phase):
         """Exact isometry maps the observer to phase+1/2; no image warping.
@@ -187,18 +156,39 @@ class KerrNewmanRenderer:
         values=prepared.evaluate(t)*maps['g'].astype(np.float64)**4
         if not np.isfinite(values).all() or np.any(values<0):
             raise AssertionError('invalid antipodal radiance')
-        return np.asarray(Image.fromarray(values.astype('float32')).resize(
-            (self.width,self.hero_h),Image.Resampling.BOX))
+        return values.astype('float32')
+
+    def viewport_affine(self, radiance_shape, output_size):
+        """Inverse rigid image-plane rotation plus one isotropic pixel scale.
+
+        PIL transforms pixel centers in boundary coordinates. The source
+        detector has square pixels of size fov/source_width in r_g.
+        """
+        source_h, source_w = radiance_shape
+        output_w, output_h = output_size
+        pixel_scale = self.viewport_fov/output_w * source_w/self.fov
+        angle = math.radians(self.display_roll)
+        a, b = math.cos(angle)*pixel_scale, -math.sin(angle)*pixel_scale
+        d, e = math.sin(angle)*pixel_scale, math.cos(angle)*pixel_scale
+        return (a,b,source_w/2-a*output_w/2-b*output_h/2,
+                d,e,source_h/2-d*output_w/2-e*output_h/2)
+
+    def viewport_radiance(self, radiance):
+        # Bilinear interpolation is nonnegative and cannot introduce bright
+        # ringing around a photon image. Average a 2x portrait grid in radiance
+        # before the nonlinear display transform; never rotate encoded RGB.
+        size = (self.width*2,self.height*2)
+        sampled = Image.fromarray(np.asarray(radiance,dtype='float32')).transform(
+            size,Image.Transform.AFFINE,self.viewport_affine(radiance.shape,size),
+            resample=Image.Resampling.BILINEAR,fillcolor=0)
+        return np.asarray(sampled.resize((self.width,self.height),Image.Resampling.BOX))
 
     def compose(self, radiance, mode):
-        presented = np.asarray(Image.fromarray(radiance.astype('float32')).resize(
-            self.hero_display_size,Image.Resampling.BOX))
+        presented = self.viewport_radiance(radiance)
         level = display_intensity(presented)
         rgb = illustrative_palette(level) if mode=='color' else np.repeat(encode_srgb(level)[...,None],3,axis=2)
-        canvas = Image.new('RGB',(self.width,self.height))
-        canvas.paste(Image.fromarray(rgb),(self.hero_x,self.hero_y))
-        canvas.paste(self.overlays[mode],(0,0),self.overlays[mode])
-        return canvas
+        canvas = Image.fromarray(rgb).convert('RGBA')
+        return Image.alpha_composite(canvas,self.overlays[mode]).convert('RGB')
 
     def frames(self, phase, modes=tuple(VIDEO_NAMES), structured=True):
         values = self.radiance(phase,structured=structured)
@@ -227,15 +217,19 @@ class KerrNewmanRenderer:
                                       'matter':'neutral test disk; electromagnetic forces on plasma are not modeled', 'alignment':'aligned, prograde equatorial disk',
                                       'choice':'user-chosen hypothetical spin and large net charge, not a fit to an observed black hole',
                                       'angular_momentum_direction':'+z for both black hole and disk'},
-                'layout':{'brand':'@sideratlas','header_top':270,'hero_y':425,'hero_height':720,
-                          'hero_width':864,'hero_x':108,'radiance_height':900,
+                'layout':{'brand':'@sideratlas','header_top':270,'hero_y':0,'hero_height':1920,
+                          'hero_width':1080,'hero_x':0,'full_frame':True,
+                          'radiance_shape':[self.tracer.height,self.tracer.width],
+                          'display_roll_degrees':self.display_roll,
+                          'viewport_fov_horizontal_rg':self.viewport_fov,
                           'text_left':72,'text_right':965,
-                          'last_credit_top':1599,
-                          'safe_area_note':'Extra top clearance; interface overlays vary by device and caption state'},
+                          'lower_text_in_caption':True,'caption_file':'caption-kerr-newman.text',
+                          'viewport':'fixed rigid image-plane rotation and isotropic crop; outer disk can leave the frame near pole views',
+                          'safe_area_note':'Title over the full-frame simulation; interface overlays vary by device and caption state'},
                 'encoding':encoding_metadata(),
                 'display':{'exposure':EXPOSURE,'curve':'x/(1+x), x=relative radiance/exposure',
                            'color':'original illustrative orange brightness palette, not thermal true color',
-                           'averaging':'physical bolometric radiance averaged before display transform'},
+                           'averaging':'native float detector radiance; bilinear rotated viewport at 2x output size, BOX averaged before display transform'},
                 'scene':'original calculation; no NASA images, frames or source code used',
                 'time':'800 t_g shown in each 8-second cycle; same encoded cycle repeated four times for 32 seconds; periodic source forcing, full 360-degree viewpoint revolution; no physical mass assigned',
                 'disk_faces':'same isotropic modeled emission field on both faces of a geometrically thin opaque disk',
@@ -272,7 +266,7 @@ def radiance_signature(metadata):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--width',type=int,default=1080)
-    parser.add_argument('--supersample',type=float,default=2)
+    parser.add_argument('--supersample',type=float,default=DEFAULT_SUPERSAMPLE)
     parser.add_argument('--preview',action='store_true')
     parser.add_argument('--spin',type=float,default=SPIN)
     parser.add_argument('--charge',type=float,default=CHARGE)
@@ -327,7 +321,7 @@ def main():
                 if cache_manifest and hashlib.sha256(file.read_bytes()).hexdigest()!=cache_manifest['frames_sha256'][file.name]:
                     raise ValueError('cached frame does not match its provenance manifest')
                 values=np.load(file,allow_pickle=False)
-                if values.shape!=(renderer.hero_h,renderer.width) or not np.isfinite(values).all() or np.any(values<0):
+                if values.shape!=(renderer.tracer.height,renderer.tracer.width) or not np.isfinite(values).all() or np.any(values<0):
                     raise ValueError('invalid cached radiance')
             else:
                 values=renderer.radiance(n/total)
