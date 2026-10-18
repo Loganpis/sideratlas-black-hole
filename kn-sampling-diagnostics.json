@@ -1,0 +1,557 @@
+{
+  "scope": "Independent critical-curve coverage and pixel-quadrature checks for v1.2.\n\nThe critical curve is used only to allocate trajectories. Its spherical\nnull-orbit conditions R=R'=0 are checked directly, and a zero-emissivity\nsource must remain dark through the complete sampled radiance pipeline.\nActual AA2/AA3/AA4 renders and a separately traced AA12 critical-pixel\nreference quantify finite-resolution differences. These checks do not\nclaim that every infinitely thin photon subring is individually resolved.\n",
+  "checks": [
+    {
+      "name": "independent_spherical_null_conditions_a0.9_q0.4_view83",
+      "passed": true,
+      "normalized_R_max": 3.273212807447515e-16,
+      "normalized_Rprime_max": 4.474784286336541e-16
+    },
+    {
+      "name": "critical_curve_pixel_allocation_coverage_a0.9_q0.4_view83",
+      "passed": true,
+      "coverage_fraction": 1.0,
+      "sampling_pixel_fraction": 0.0084155161078238,
+      "samples": 53684
+    },
+    {
+      "name": "independent_spherical_null_conditions_a0.9_q0.4_view38",
+      "passed": true,
+      "normalized_R_max": 3.273212807447515e-16,
+      "normalized_Rprime_max": 2.509549413576453e-16
+    },
+    {
+      "name": "critical_curve_pixel_allocation_coverage_a0.9_q0.4_view38",
+      "passed": true,
+      "coverage_fraction": 1.0,
+      "sampling_pixel_fraction": 0.008210972313536416,
+      "samples": 37924
+    },
+    {
+      "name": "independent_spherical_null_conditions_a0.9_q0.4_view0",
+      "passed": true,
+      "normalized_R_max": 2.5008278663733076e-16,
+      "normalized_Rprime_max": 1.1392760283459875e-16
+    },
+    {
+      "name": "critical_curve_pixel_allocation_coverage_a0.9_q0.4_view0",
+      "passed": true,
+      "coverage_fraction": 1.0,
+      "sampling_pixel_fraction": 0.010534005405800278,
+      "samples": 2001
+    },
+    {
+      "name": "independent_spherical_null_conditions_a0.9_q0.4_view-97",
+      "passed": true,
+      "normalized_R_max": 3.273212807447515e-16,
+      "normalized_Rprime_max": 4.474784286336541e-16
+    },
+    {
+      "name": "critical_curve_pixel_allocation_coverage_a0.9_q0.4_view-97",
+      "passed": true,
+      "coverage_fraction": 1.0,
+      "sampling_pixel_fraction": 0.0084155161078238,
+      "samples": 53684
+    },
+    {
+      "name": "independent_spherical_null_conditions_a0_q0.4_view83",
+      "passed": true,
+      "normalized_R_max": 3.037171549178433e-16,
+      "normalized_Rprime_max": 3.6635520451507e-16
+    },
+    {
+      "name": "critical_curve_pixel_allocation_coverage_a0_q0.4_view83",
+      "passed": true,
+      "coverage_fraction": 1.0,
+      "sampling_pixel_fraction": 0.008576229089049602,
+      "samples": 2001
+    },
+    {
+      "name": "independent_spherical_null_conditions_a0_q0.4_view0",
+      "passed": true,
+      "normalized_R_max": 2.024781032785622e-16,
+      "normalized_Rprime_max": 2.93084163612056e-16
+    },
+    {
+      "name": "critical_curve_pixel_allocation_coverage_a0_q0.4_view0",
+      "passed": true,
+      "coverage_fraction": 1.0,
+      "sampling_pixel_fraction": 0.008576229089049602,
+      "samples": 2001
+    },
+    {
+      "name": "independent_spherical_null_conditions_a0_q0_view38",
+      "passed": true,
+      "normalized_R_max": 3.4873263104790204e-16,
+      "normalized_Rprime_max": 3.274390487373734e-16
+    },
+    {
+      "name": "critical_curve_pixel_allocation_coverage_a0_q0_view38",
+      "passed": true,
+      "coverage_fraction": 1.0,
+      "sampling_pixel_fraction": 0.008897655051501205,
+      "samples": 2001
+    },
+    {
+      "name": "AA2_to_AA4_preview_global_flux_and_RGB_side83",
+      "passed": true,
+      "native_total_flux_relative_difference": 0.0005186498783335909,
+      "native_L1_relative_to_total_flux": 0.004887901451135654,
+      "viewport_total_flux_relative_difference": 0.000519386914735839,
+      "viewport_L1_relative_to_total_flux": 0.0036006888321719996,
+      "RGB_mean_absolute_difference_0_to_255": 0.03588220164609054,
+      "RGB_max_absolute_difference_0_to_255": 142
+    },
+    {
+      "name": "AA3_to_AA4_reduces_preview_integrated_absolute_error_side83",
+      "passed": true,
+      "native_total_flux_relative_difference": 0.00035928678831502584,
+      "native_L1_relative_to_total_flux": 0.002322282952623801,
+      "viewport_total_flux_relative_difference": 0.0003587269583378051,
+      "viewport_L1_relative_to_total_flux": 0.001691816076267068,
+      "RGB_mean_absolute_difference_0_to_255": 0.01577417695473251,
+      "RGB_max_absolute_difference_0_to_255": 78
+    },
+    {
+      "name": "positive_finite_real_trajectory_pixel_quadrature_side83",
+      "passed": true,
+      "native_detector_shape": [
+        338,
+        405
+      ],
+      "refined_parent_pixels": 4134
+    },
+    {
+      "name": "AA2_to_AA4_preview_global_flux_and_RGB_pole0",
+      "passed": true,
+      "native_total_flux_relative_difference": 6.747888919910177e-06,
+      "native_L1_relative_to_total_flux": 0.0003125568460947259,
+      "viewport_total_flux_relative_difference": 8.31339018808757e-06,
+      "viewport_L1_relative_to_total_flux": 0.00027346417458713155,
+      "RGB_mean_absolute_difference_0_to_255": 0.0035570987654320986,
+      "RGB_max_absolute_difference_0_to_255": 3
+    },
+    {
+      "name": "AA3_to_AA4_reduces_preview_integrated_absolute_error_pole0",
+      "passed": true,
+      "native_total_flux_relative_difference": 1.8981548878973154e-06,
+      "native_L1_relative_to_total_flux": 7.751553757981704e-05,
+      "viewport_total_flux_relative_difference": 2.337484686044402e-06,
+      "viewport_L1_relative_to_total_flux": 6.824408789818503e-05,
+      "RGB_mean_absolute_difference_0_to_255": 0.0009053497942386831,
+      "RGB_max_absolute_difference_0_to_255": 1
+    },
+    {
+      "name": "positive_finite_real_trajectory_pixel_quadrature_pole0",
+      "passed": true,
+      "native_detector_shape": [
+        338,
+        405
+      ],
+      "refined_parent_pixels": 1630
+    },
+    {
+      "name": "AA2_to_AA4_preview_global_flux_and_RGB_view38",
+      "passed": true,
+      "native_total_flux_relative_difference": 3.359971598138223e-05,
+      "native_L1_relative_to_total_flux": 0.00040645471813633734,
+      "viewport_total_flux_relative_difference": 3.67452767241553e-05,
+      "viewport_L1_relative_to_total_flux": 0.00031763983979919626,
+      "RGB_mean_absolute_difference_0_to_255": 0.0034799382716049383,
+      "RGB_max_absolute_difference_0_to_255": 3
+    },
+    {
+      "name": "AA3_to_AA4_reduces_preview_integrated_absolute_error_view38",
+      "passed": true,
+      "native_total_flux_relative_difference": 6.48879034653841e-06,
+      "native_L1_relative_to_total_flux": 0.0001028869428418364,
+      "viewport_total_flux_relative_difference": 7.099415179877217e-06,
+      "viewport_L1_relative_to_total_flux": 8.276280283776409e-05,
+      "RGB_mean_absolute_difference_0_to_255": 0.0008847736625514403,
+      "RGB_max_absolute_difference_0_to_255": 1
+    },
+    {
+      "name": "positive_finite_real_trajectory_pixel_quadrature_view38",
+      "passed": true,
+      "native_detector_shape": [
+        338,
+        405
+      ],
+      "refined_parent_pixels": 1304
+    },
+    {
+      "name": "independent_AA12_critical_pixel_reference_contains_real_plunge_and_higher_images",
+      "passed": true,
+      "maximum_image_orders": {
+        "2": 2,
+        "4": 2,
+        "8": 3,
+        "12": 3
+      },
+      "sampling": {
+        "2": {
+          "rays": 384,
+          "plunging_events": 17
+        },
+        "4": {
+          "rays": 1536,
+          "plunging_events": 72
+        },
+        "8": {
+          "rays": 6144,
+          "plunging_events": 287
+        },
+        "12": {
+          "rays": 13824,
+          "plunging_events": 650
+        }
+      }
+    },
+    {
+      "name": "critical_pixel_AA4_improves_integrated_error_over_AA2",
+      "passed": true,
+      "relative_to_AA12": {
+        "2": {
+          "total_flux_relative_difference": 0.0072116349938395686,
+          "L1_relative_to_patch_flux": 0.02696077523278821,
+          "maximum_relative_pixel_difference": 0.9178874882698318
+        },
+        "4": {
+          "total_flux_relative_difference": 0.006292961557641694,
+          "L1_relative_to_patch_flux": 0.011741300795784525,
+          "maximum_relative_pixel_difference": 0.4456238542656075
+        },
+        "8": {
+          "total_flux_relative_difference": 0.0004595957678720216,
+          "L1_relative_to_patch_flux": 0.001588217823186706,
+          "maximum_relative_pixel_difference": 0.1638962653040641
+        }
+      }
+    },
+    {
+      "name": "critical_pixel_AA8_to_AA12_integrated_L1_below_half_percent",
+      "passed": true,
+      "total_flux_relative_difference": 0.0004595957678720216,
+      "L1_relative_to_patch_flux": 0.001588217823186706,
+      "maximum_relative_pixel_difference": 0.1638962653040641
+    },
+    {
+      "name": "critical_curve_sampling_adds_no_light_for_zero_emissivity",
+      "passed": true,
+      "maximum_radiance": 0.0
+    }
+  ],
+  "critical_curve_samples": [
+    {
+      "spin": 0.9,
+      "charge": 0.4,
+      "view": 83,
+      "coverage": 1.0,
+      "normalized_R_max": 3.273212807447515e-16,
+      "normalized_Rprime_max": 4.474784286336541e-16
+    },
+    {
+      "spin": 0.9,
+      "charge": 0.4,
+      "view": 38,
+      "coverage": 1.0,
+      "normalized_R_max": 3.273212807447515e-16,
+      "normalized_Rprime_max": 2.509549413576453e-16
+    },
+    {
+      "spin": 0.9,
+      "charge": 0.4,
+      "view": 0,
+      "coverage": 1.0,
+      "normalized_R_max": 2.5008278663733076e-16,
+      "normalized_Rprime_max": 1.1392760283459875e-16
+    },
+    {
+      "spin": 0.9,
+      "charge": 0.4,
+      "view": -97,
+      "coverage": 1.0,
+      "normalized_R_max": 3.273212807447515e-16,
+      "normalized_Rprime_max": 4.474784286336541e-16
+    },
+    {
+      "spin": 0,
+      "charge": 0.4,
+      "view": 83,
+      "coverage": 1.0,
+      "normalized_R_max": 3.037171549178433e-16,
+      "normalized_Rprime_max": 3.6635520451507e-16
+    },
+    {
+      "spin": 0,
+      "charge": 0.4,
+      "view": 0,
+      "coverage": 1.0,
+      "normalized_R_max": 2.024781032785622e-16,
+      "normalized_Rprime_max": 2.93084163612056e-16
+    },
+    {
+      "spin": 0,
+      "charge": 0,
+      "view": 38,
+      "coverage": 1.0,
+      "normalized_R_max": 3.4873263104790204e-16,
+      "normalized_Rprime_max": 3.274390487373734e-16
+    }
+  ],
+  "preview_pixel_quadrature": {
+    "final_frame_size": [
+      270,
+      480
+    ],
+    "native_supersample": 1.5,
+    "native_detector_shape": [
+      338,
+      405
+    ],
+    "temporal_samples": 1,
+    "comparison": "same source and geodesic settings; only independent within-pixel trajectory quadrature changes",
+    "views": [
+      {
+        "view": 83.0,
+        "phase": 0.0,
+        "relative_to_AA4": {
+          "2": {
+            "native_total_flux_relative_difference": 0.0005186498783335909,
+            "native_L1_relative_to_total_flux": 0.004887901451135654,
+            "viewport_total_flux_relative_difference": 0.000519386914735839,
+            "viewport_L1_relative_to_total_flux": 0.0036006888321719996,
+            "RGB_mean_absolute_difference_0_to_255": 0.03588220164609054,
+            "RGB_max_absolute_difference_0_to_255": 142
+          },
+          "3": {
+            "native_total_flux_relative_difference": 0.00035928678831502584,
+            "native_L1_relative_to_total_flux": 0.002322282952623801,
+            "viewport_total_flux_relative_difference": 0.0003587269583378051,
+            "viewport_L1_relative_to_total_flux": 0.001691816076267068,
+            "RGB_mean_absolute_difference_0_to_255": 0.01577417695473251,
+            "RGB_max_absolute_difference_0_to_255": 78
+          }
+        },
+        "seconds": {
+          "2": 0.4029562500072643,
+          "3": 0.5246364590129815,
+          "4": 0.6291468749986961
+        }
+      },
+      {
+        "view": 0.0,
+        "phase": 0.23055555555555557,
+        "relative_to_AA4": {
+          "2": {
+            "native_total_flux_relative_difference": 6.747888919910177e-06,
+            "native_L1_relative_to_total_flux": 0.0003125568460947259,
+            "viewport_total_flux_relative_difference": 8.31339018808757e-06,
+            "viewport_L1_relative_to_total_flux": 0.00027346417458713155,
+            "RGB_mean_absolute_difference_0_to_255": 0.0035570987654320986,
+            "RGB_max_absolute_difference_0_to_255": 3
+          },
+          "3": {
+            "native_total_flux_relative_difference": 1.8981548878973154e-06,
+            "native_L1_relative_to_total_flux": 7.751553757981704e-05,
+            "viewport_total_flux_relative_difference": 2.337484686044402e-06,
+            "viewport_L1_relative_to_total_flux": 6.824408789818503e-05,
+            "RGB_mean_absolute_difference_0_to_255": 0.0009053497942386831,
+            "RGB_max_absolute_difference_0_to_255": 1
+          }
+        },
+        "seconds": {
+          "2": 0.30976033402839676,
+          "3": 0.34601170802488923,
+          "4": 0.3668094159802422
+        }
+      },
+      {
+        "view": 38.0,
+        "phase": 0.125,
+        "relative_to_AA4": {
+          "2": {
+            "native_total_flux_relative_difference": 3.359971598138223e-05,
+            "native_L1_relative_to_total_flux": 0.00040645471813633734,
+            "viewport_total_flux_relative_difference": 3.67452767241553e-05,
+            "viewport_L1_relative_to_total_flux": 0.00031763983979919626,
+            "RGB_mean_absolute_difference_0_to_255": 0.0034799382716049383,
+            "RGB_max_absolute_difference_0_to_255": 3
+          },
+          "3": {
+            "native_total_flux_relative_difference": 6.48879034653841e-06,
+            "native_L1_relative_to_total_flux": 0.0001028869428418364,
+            "viewport_total_flux_relative_difference": 7.099415179877217e-06,
+            "viewport_L1_relative_to_total_flux": 8.276280283776409e-05,
+            "RGB_mean_absolute_difference_0_to_255": 0.0008847736625514403,
+            "RGB_max_absolute_difference_0_to_255": 1
+          }
+        },
+        "seconds": {
+          "2": 0.3439414159511216,
+          "3": 0.39906787499785423,
+          "4": 0.409715874993708
+        }
+      }
+    ],
+    "limitation": "preview evidence for integrated image stability; does not imply individual convergence of arbitrarily narrow subrings"
+  },
+  "critical_pixel_reference": {
+    "view_deg": 83,
+    "detector_pixel_indices": [
+      55693,
+      56096,
+      56108,
+      56505,
+      56517,
+      56910,
+      56922,
+      57311,
+      57323,
+      57710,
+      57722,
+      57734,
+      58118,
+      58130,
+      58142,
+      58523,
+      58543,
+      58922,
+      58951,
+      59328,
+      59360,
+      59735,
+      60132,
+      60172,
+      60573,
+      60943,
+      61346,
+      61391,
+      61794,
+      62160,
+      62561,
+      62963,
+      63013,
+      63416,
+      63819,
+      64182,
+      64584,
+      64986,
+      65040,
+      65443,
+      65846,
+      66206,
+      66609,
+      67012,
+      67068,
+      67471,
+      67874,
+      68277,
+      68636,
+      69039,
+      69442,
+      69498,
+      69901,
+      70303,
+      70706,
+      71066,
+      71469,
+      71872,
+      71926,
+      72327,
+      72730,
+      73093,
+      73495,
+      73898,
+      73948,
+      74350,
+      74715,
+      75117,
+      75519,
+      75564,
+      75967,
+      76337,
+      76738,
+      76778,
+      77175,
+      77550,
+      77582,
+      77959,
+      77988,
+      78367,
+      78387,
+      78768,
+      78780,
+      78792,
+      79175,
+      79187,
+      79199,
+      79586,
+      79598,
+      79987,
+      79999,
+      80392,
+      80404,
+      80801,
+      80813,
+      81217
+    ],
+    "independent_RK4_step": 0.003,
+    "reference_subrays_per_pixel": 144,
+    "relative_to_AA12": {
+      "2": {
+        "total_flux_relative_difference": 0.0072116349938395686,
+        "L1_relative_to_patch_flux": 0.02696077523278821,
+        "maximum_relative_pixel_difference": 0.9178874882698318
+      },
+      "4": {
+        "total_flux_relative_difference": 0.006292961557641694,
+        "L1_relative_to_patch_flux": 0.011741300795784525,
+        "maximum_relative_pixel_difference": 0.4456238542656075
+      },
+      "8": {
+        "total_flux_relative_difference": 0.0004595957678720216,
+        "L1_relative_to_patch_flux": 0.001588217823186706,
+        "maximum_relative_pixel_difference": 0.1638962653040641
+      }
+    },
+    "maximum_image_orders": {
+      "2": 2,
+      "4": 2,
+      "8": 3,
+      "12": 3
+    },
+    "sampling": {
+      "2": {
+        "rays": 384,
+        "plunging_events": 17
+      },
+      "4": {
+        "rays": 1536,
+        "plunging_events": 72
+      },
+      "8": {
+        "rays": 6144,
+        "plunging_events": 287
+      },
+      "12": {
+        "rays": 13824,
+        "plunging_events": 650
+      }
+    },
+    "limitation": "isolated critical pixels can retain large relative differences despite very small integrated image error; no order is artificially broadened or brightened"
+  },
+  "source_sha256": {
+    "verify_kn_sampling.py": "6b4dccab9134262a667c983a1e756c303b61161fbaad6e21598eb1b30f797bd8",
+    "render_kn_accretion.py": "8a4d530517aa6fbae9a62d966feb344c045a1630ebc87fb536b7c3de3440e645",
+    "render_kn_orbit.py": "94b393f626a837edf1b91bd6ce00b7db89aa753a2fa572a79ffbb472b63f4fc4",
+    "kn_accretion_trace.py": "d5ee4950d726c9b3b84d2d966c4309a2e47074e5ac1ffbeeb4bcfc2c9d4fb867",
+    "kn_accretion_trace.cpp": "deb2a0ec621ae42dea626ab43e1746c6d06f24267de3ecdf8a5dbebb0045f81f",
+    "kn_flow.py": "6c925008ef8eff7c570c4de793307a945b345202a24c88a3ab60a308e0eb2c40",
+    "kn_dynamic_emission.py": "4458d9eea4b82a92d0ebf9ae40fa52023118d4ee3fb9a46fc8310036842c316e",
+    "kn_orbit_emission.py": "c1a8587a2b82380ab9c5abc8b87ffab08513ea8dea759569a723cf8925ec68cf",
+    "kn_orbits.py": "84c097f23ce6427c10466a57db53395105a47047dd10d53da4569158183d08cf"
+  },
+  "elapsed_seconds": 4.87566862499807,
+  "passed": true
+}

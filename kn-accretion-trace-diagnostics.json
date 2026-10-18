@@ -1,0 +1,447 @@
+{
+  "scope": "Numerical validation of layered Kerr\u2013Newman null rays, independent of gas art.\n\nChecks preserve the established opaque-disk solution, compare null capture\nwith independent polynomial roots and compare hit azimuth/delay with separated\nquadratures. Critical-curve samples follow exact spherical null-orbit constants;\ntheir multiple image orders emerge from integration, without ring templates.\nThese tests validate the specified geometric/transfer inputs, not a GRMHD disk.\n",
+  "checks": [
+    {
+      "name": "opaque_outer_disk_compatibility_view_83",
+      "passed": true,
+      "max_errors": {
+        "r": 1.9073486328125e-06,
+        "phi": 0.0,
+        "delay_tg": 1.9073486328125e-06
+      },
+      "plunge_intersections": 202
+    },
+    {
+      "name": "events_outside_black_horizon_view_83",
+      "passed": true,
+      "minimum_emitting_radius_rg": 1.1736047267913818,
+      "cutoff_rg": 1.1733050807568874
+    },
+    {
+      "name": "opaque_disk_is_final_event_view_83",
+      "passed": true
+    },
+    {
+      "name": "opaque_outer_disk_compatibility_view_0",
+      "passed": true,
+      "max_errors": {
+        "r": 0.0,
+        "phi": 1.862645149230957e-09,
+        "delay_tg": 2.384185791015625e-07
+      },
+      "plunge_intersections": 180
+    },
+    {
+      "name": "events_outside_black_horizon_view_0",
+      "passed": true,
+      "minimum_emitting_radius_rg": 1.204148292541504,
+      "cutoff_rg": 1.1733050807568874
+    },
+    {
+      "name": "opaque_disk_is_final_event_view_0",
+      "passed": true
+    },
+    {
+      "name": "opaque_outer_disk_compatibility_view_-90",
+      "passed": true,
+      "max_errors": {
+        "r": 0.0,
+        "phi": 0.0,
+        "delay_tg": 9.5367431640625e-07
+      },
+      "plunge_intersections": 304
+    },
+    {
+      "name": "events_outside_black_horizon_view_-90",
+      "passed": true,
+      "minimum_emitting_radius_rg": 1.1741790771484375,
+      "cutoff_rg": 1.1733050807568874
+    },
+    {
+      "name": "opaque_disk_is_final_event_view_-90",
+      "passed": true
+    },
+    {
+      "name": "opaque_outer_disk_compatibility_view_-97",
+      "passed": true,
+      "max_errors": {
+        "r": 1.9073486328125e-06,
+        "phi": 1.4901161193847656e-08,
+        "delay_tg": 1.9073486328125e-06
+      },
+      "plunge_intersections": 202
+    },
+    {
+      "name": "events_outside_black_horizon_view_-97",
+      "passed": true,
+      "minimum_emitting_radius_rg": 1.1736047267913818,
+      "cutoff_rg": 1.1733050807568874
+    },
+    {
+      "name": "opaque_disk_is_final_event_view_-97",
+      "passed": true
+    },
+    {
+      "name": "opaque_outer_disk_compatibility_view_-180",
+      "passed": true,
+      "max_errors": {
+        "r": 0.0,
+        "phi": 1.862645149230957e-09,
+        "delay_tg": 2.384185791015625e-07
+      },
+      "plunge_intersections": 180
+    },
+    {
+      "name": "events_outside_black_horizon_view_-180",
+      "passed": true,
+      "minimum_emitting_radius_rg": 1.204148292541504,
+      "cutoff_rg": 1.1733050807568874
+    },
+    {
+      "name": "opaque_disk_is_final_event_view_-180",
+      "passed": true
+    },
+    {
+      "name": "opaque_outer_disk_compatibility_view_-270",
+      "passed": true,
+      "max_errors": {
+        "r": 0.0,
+        "phi": 1.1920928955078125e-07,
+        "delay_tg": 9.5367431640625e-07
+      },
+      "plunge_intersections": 304
+    },
+    {
+      "name": "events_outside_black_horizon_view_-270",
+      "passed": true,
+      "minimum_emitting_radius_rg": 1.1741790771484375,
+      "cutoff_rg": 1.1733050807568874
+    },
+    {
+      "name": "opaque_disk_is_final_event_view_-270",
+      "passed": true
+    },
+    {
+      "name": "opaque_outer_disk_compatibility_view_89.999",
+      "passed": true,
+      "max_errors": {
+        "r": 1.9073486328125e-06,
+        "phi": 1.1920928955078125e-07,
+        "delay_tg": 0.0
+      },
+      "plunge_intersections": 304
+    },
+    {
+      "name": "events_outside_black_horizon_view_89.999",
+      "passed": true,
+      "minimum_emitting_radius_rg": 1.1741588115692139,
+      "cutoff_rg": 1.1733050807568874
+    },
+    {
+      "name": "opaque_disk_is_final_event_view_89.999",
+      "passed": true
+    },
+    {
+      "name": "opaque_outer_disk_compatibility_view_90.001",
+      "passed": true,
+      "max_errors": {
+        "r": 1.9073486328125e-06,
+        "phi": 1.1920928955078125e-07,
+        "delay_tg": 0.0
+      },
+      "plunge_intersections": 304
+    },
+    {
+      "name": "events_outside_black_horizon_view_90.001",
+      "passed": true,
+      "minimum_emitting_radius_rg": 1.1741588115692139,
+      "cutoff_rg": 1.1733050807568874
+    },
+    {
+      "name": "opaque_disk_is_final_event_view_90.001",
+      "passed": true
+    },
+    {
+      "name": "independent_radial_quartic_capture_a0_q0",
+      "passed": true
+    },
+    {
+      "name": "independent_inverse_metric_photon_nullity_a0_q0",
+      "passed": true,
+      "normalized_null_residual_max": 4.949578676773908e-16
+    },
+    {
+      "name": "independent_radial_quartic_capture_a0_q0.4",
+      "passed": true
+    },
+    {
+      "name": "independent_inverse_metric_photon_nullity_a0_q0.4",
+      "passed": true,
+      "normalized_null_residual_max": 1.9695541037152042e-08
+    },
+    {
+      "name": "independent_radial_quartic_capture_a0.9_q0",
+      "passed": true
+    },
+    {
+      "name": "independent_inverse_metric_photon_nullity_a0.9_q0",
+      "passed": true,
+      "normalized_null_residual_max": 2.164584091021009e-13
+    },
+    {
+      "name": "independent_radial_quartic_capture_a0.9_q0.4",
+      "passed": true
+    },
+    {
+      "name": "independent_inverse_metric_photon_nullity_a0.9_q0.4",
+      "passed": true,
+      "normalized_null_residual_max": 2.9961155823009886e-14
+    },
+    {
+      "name": "spherical_critical_samples_naturally_produce_multiple_orders",
+      "passed": true,
+      "maximum_image_order": 9,
+      "maximum_events": 10,
+      "order_histogram": {
+        "0": 4224,
+        "1": 186,
+        "2": 172,
+        "3": 144,
+        "4": 115,
+        "5": 83,
+        "6": 53,
+        "7": 25,
+        "8": 9,
+        "9": 1
+      },
+      "samples": 4224
+    },
+    {
+      "name": "critical_sample_storage_capacity_16_to_24_converged",
+      "passed": true
+    },
+    {
+      "name": "event_storage_overflow_is_explicit",
+      "passed": true,
+      "overflow_count": 186
+    },
+    {
+      "name": "event_storage_overflow_raises_by_default",
+      "passed": true
+    },
+    {
+      "name": "near_critical_step_refinement_event_topology",
+      "passed": true
+    },
+    {
+      "name": "near_critical_step_refinement_positions_and_delays",
+      "passed": true,
+      "max_errors": {
+        "r": 9.5367431640625e-07,
+        "phi": 8.821487426757812e-06,
+        "delay_tg": 7.62939453125e-06
+      }
+    },
+    {
+      "name": "layered_antipodal_isometry_preserves_events_and_momenta",
+      "passed": true
+    },
+    {
+      "name": "independent_separated_quadrature_kind1_order0",
+      "passed": true,
+      "pixel": [
+        78,
+        46
+      ],
+      "kind": 1,
+      "image_order": 0,
+      "outgoing": true,
+      "delay_error_tg": 4.2714198755788857e-07,
+      "azimuth_error_rad": 1.832440930037121e-08,
+      "mino_arrival_error": 1.5620204241173496e-08
+    },
+    {
+      "name": "independent_separated_quadrature_kind1_order1",
+      "passed": true,
+      "pixel": [
+        179,
+        188
+      ],
+      "kind": 1,
+      "image_order": 1,
+      "outgoing": false,
+      "delay_error_tg": 1.1589674056011745e-05,
+      "azimuth_error_rad": 4.659262329287373e-07,
+      "mino_arrival_error": 3.249656321813177e-07
+    },
+    {
+      "name": "independent_separated_quadrature_kind1_order2",
+      "passed": true,
+      "pixel": [
+        88,
+        79
+      ],
+      "kind": 1,
+      "image_order": 2,
+      "outgoing": true,
+      "delay_error_tg": 1.3655603083861934e-06,
+      "azimuth_error_rad": 6.013468931970303e-08,
+      "mino_arrival_error": 7.377161992394576e-09
+    },
+    {
+      "name": "independent_separated_quadrature_kind2_order0",
+      "passed": true,
+      "pixel": [
+        63,
+        188
+      ],
+      "kind": 2,
+      "image_order": 0,
+      "outgoing": false,
+      "delay_error_tg": 5.066820492061197e-07,
+      "azimuth_error_rad": 1.3632203466291823e-06,
+      "mino_arrival_error": 2.1537582828301538e-10
+    },
+    {
+      "name": "independent_separated_quadrature_kind2_order1",
+      "passed": true,
+      "pixel": [
+        164,
+        160
+      ],
+      "kind": 2,
+      "image_order": 1,
+      "outgoing": false,
+      "delay_error_tg": 8.684052588137092e-07,
+      "azimuth_error_rad": 8.098136117240529e-08,
+      "mino_arrival_error": 1.474221855701785e-10
+    },
+    {
+      "name": "independent_separated_quadrature_kind2_order2",
+      "passed": true,
+      "pixel": [
+        81,
+        80
+      ],
+      "kind": 2,
+      "image_order": 2,
+      "outgoing": true,
+      "delay_error_tg": 1.326807236523564e-06,
+      "azimuth_error_rad": 1.924597005293338e-07,
+      "mino_arrival_error": 4.8874197577930545e-08
+    },
+    {
+      "name": "quadratures_include_plunge_and_multiple_images",
+      "passed": true
+    },
+    {
+      "name": "capture_cutoff_below_innermost_exterior_photon_turn",
+      "passed": true,
+      "innermost_scattering_turn_rg": 1.2147958843207904,
+      "capture_cutoff_rg": 1.1733050807568874
+    },
+    {
+      "name": "unsafe_capture_cutoff_above_photon_turn_is_rejected",
+      "passed": true
+    },
+    {
+      "name": "tenfold_horizon_cutoff_refinement_capture_and_common_events",
+      "passed": true,
+      "additional_near_horizon_events": 0
+    },
+    {
+      "name": "independent_sparse_pixel_sampling_matches_grid",
+      "passed": true
+    },
+    {
+      "name": "all_diagnostic_rays_finite_resolved",
+      "passed": true,
+      "max_constraint_residual": 4.0419937371160666e-10
+    }
+  ],
+  "separated_quadrature_samples": [
+    {
+      "pixel": [
+        78,
+        46
+      ],
+      "kind": 1,
+      "image_order": 0,
+      "outgoing": true,
+      "delay_error_tg": 4.2714198755788857e-07,
+      "azimuth_error_rad": 1.832440930037121e-08,
+      "mino_arrival_error": 1.5620204241173496e-08
+    },
+    {
+      "pixel": [
+        179,
+        188
+      ],
+      "kind": 1,
+      "image_order": 1,
+      "outgoing": false,
+      "delay_error_tg": 1.1589674056011745e-05,
+      "azimuth_error_rad": 4.659262329287373e-07,
+      "mino_arrival_error": 3.249656321813177e-07
+    },
+    {
+      "pixel": [
+        88,
+        79
+      ],
+      "kind": 1,
+      "image_order": 2,
+      "outgoing": true,
+      "delay_error_tg": 1.3655603083861934e-06,
+      "azimuth_error_rad": 6.013468931970303e-08,
+      "mino_arrival_error": 7.377161992394576e-09
+    },
+    {
+      "pixel": [
+        63,
+        188
+      ],
+      "kind": 2,
+      "image_order": 0,
+      "outgoing": false,
+      "delay_error_tg": 5.066820492061197e-07,
+      "azimuth_error_rad": 1.3632203466291823e-06,
+      "mino_arrival_error": 2.1537582828301538e-10
+    },
+    {
+      "pixel": [
+        164,
+        160
+      ],
+      "kind": 2,
+      "image_order": 1,
+      "outgoing": false,
+      "delay_error_tg": 8.684052588137092e-07,
+      "azimuth_error_rad": 8.098136117240529e-08,
+      "mino_arrival_error": 1.474221855701785e-10
+    },
+    {
+      "pixel": [
+        81,
+        80
+      ],
+      "kind": 2,
+      "image_order": 2,
+      "outgoing": true,
+      "delay_error_tg": 1.326807236523564e-06,
+      "azimuth_error_rad": 1.924597005293338e-07,
+      "mino_arrival_error": 4.8874197577930545e-08
+    }
+  ],
+  "source_sha256": {
+    "kn_accretion_trace.py": "d5ee4950d726c9b3b84d2d966c4309a2e47074e5ac1ffbeeb4bcfc2c9d4fb867",
+    "kn_accretion_trace.cpp": "deb2a0ec621ae42dea626ab43e1746c6d06f24267de3ecdf8a5dbebb0045f81f",
+    "kn_orbit_trace.py": "698460d50b266e3953973449e3ca78f4d3b088faa6d830ea8ca9fd624706dd74",
+    "kn_orbit_trace.cpp": "7b31b6904f004df42ba28ae0315fb1cbd07c037715981b1c36fceb323ea715a3",
+    "kn_orbits.py": "84c097f23ce6427c10466a57db53395105a47047dd10d53da4569158183d08cf",
+    "verify_kn_trace.py": "2e4417a7145fd20be878abc555ee0437f6e18e3bcd5e6a04bcd4c6ab08c8c26c",
+    "verify_kn_accretion_trace.py": "7aaa932e8afc4f0b239950ae15e24ae453226c44c2affe645786396b20b8d53a"
+  },
+  "elapsed_seconds": 7.758949958020821,
+  "passed": true
+}

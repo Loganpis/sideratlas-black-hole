@@ -1,25 +1,27 @@
-# @sideratlas — THE BLACK HOLE
+# @sideratlas — THE BLACK HOLE — v1.2.0
 
-The current release is the original **Kerr–Newman model with a* = +0.9 and q = +0.4**, with an aligned, prograde neutral test disk.
+The current release depicts **Kerr–Newman: a* = +0.9, q = +0.4**, with an aligned, prograde neutral test flow. It adds restrained accreting structure, calculated gas trajectories inside the ISCO and multiple lensed images through a thin inner emitting layer.
 
-- Main 32-second Reel: `output-sideratlas-kn/sideratlas-kerr-newman-reel.mp4`
-- Monochrome companion: `output-sideratlas-kn/sideratlas-kerr-newman-intensity.mp4`
-- Reusable eight-second cycles: the corresponding `-loop.mp4` files in the same folder
-- Instagram description and all credits: `caption-kerr-newman.text` (`.txt` also supplied for compatibility)
-- Equations, choices, limitations and reproduction: `README-KERR-NEWMAN.md`
-- Encoding and posting guidance: `INSTAGRAM-EXPORT.md`
-- Complete source and delivery bundle: `sideratlas-kerr-newman-source.zip`, available from the [v1.1.0 GitHub release](https://github.com/Loganpis/sideratlas-black-hole/releases/tag/v1.1.0) or generated with `python3 package_kn_release.py`
+- [Main 32-second Reel](output-sideratlas-kn-v120/sideratlas-kerr-newman-reel.mp4)
+- [Monochrome companion](output-sideratlas-kn-v120/sideratlas-kerr-newman-intensity.mp4)
+- Reusable eight-second cycles: the corresponding `-loop.mp4` files in `output-sideratlas-kn-v120/`
+- [Instagram description and all credits (.text)](caption-kerr-newman.text), with a `.txt` compatibility copy
+- [Equations, choices, limitations and study roles](README-V1.2.0.md)
+- [Encoding and posting guidance](INSTAGRAM-EXPORT.md)
+- [Complete v1.2.0 GitHub download](https://github.com/Loganpis/sideratlas-black-hole/releases/tag/v1.2.0)
 
-The final movies are 1080 × 1920, 30 fps and silent. Each repeats exactly the same eight-second cycle four times. The viewpoint completes a full revolution per cycle, passing above and below the disk. The source keeps evolving forward, with the traced photon delays applied separately at every disk intersection. The repetitions are copied from the encoded cycle without another lossy encode.
+The final movies are 1080 × 1920 at 30 fps and silent. Each repeats the same encoded eight-second cycle exactly four times. The viewpoint completes a full revolution per cycle, passing above and below the disk, while source time advances through 800 GM/c³. This is a repeating source/viewpoint presentation, not 32 seconds of distinct simulation evolution.
 
-This is a **hypothetical large-charge configuration**, not a model of the usual nearly neutral astrophysical black hole. Charge changes the spacetime, photon paths, circular orbits, ISCO and mean flux. The disk emitters are neutral test matter: the code does not simulate the electromagnetic response, discharge or fluid dynamics of accretion plasma. Orange is an illustrative brightness palette, not a visible thermal spectrum. Those distinctions are explained in the description file; post it with the video.
+The disk fills the portrait frame on a fixed diagonal behind **@sideratlas**, **NO.001** and **THE BLACK HOLE**. These are the only on-screen words. There is no lower text block. The black sky, mathematical typography, fixed exposure and restrained orange palette are retained. The close crop can exclude part of the outer disk near the poles, and Instagram controls can cover parts of the image.
 
-The enlarged disk now fills the portrait frame on a fixed diagonal, behind **@sideratlas**, **NO.001**, and **THE BLACK HOLE**. These are the only on-screen text. The account name begins 270 pixels from the top, the number at 277 pixels, and the title at 333 pixels. Latin Modern text has a subtle glyph shadow. There is no lower text block or reserved lower panel. The close crop can exclude the outer disk during some viewpoints, especially near the poles. Instagram overlays vary with viewing mode, caption expansion, and device.
+Post the supplied description with the video. It contains the explanations, parameter choices, scientific qualifications and all study credits, plus “The code for this simulation is to be found at github.com/loganpis/sideratlas-black-hole”. Orange is illustrative bolometric brightness, not a predicted thermal or visible spectrum.
 
-The description retains the feature explanations, including “Spin drags spacetime around the black hole” and “Electric charge changes spacetime and light paths”, plus the model choices and all source credits. It adds “The code for this simulation is to be found at github.com/loganpis/sideratlas-black-hole”. The earlier layout with the horizontal disk and lower text remains available in [v1.0.0](https://github.com/Loganpis/sideratlas-black-hole/releases/tag/v1.0.0).
+**What is physical:** the Kerr–Newman geometry, photon trajectories and image orders, neutral timelike plunge, relativistic frequency shifts including radial gas motion, capture and per-image propagation delays. The event horizon itself remains non-emitting.
 
-The physical model, assumptions and raw-radiance provenance are in `output-sideratlas-kn/render-metadata.json`. The final video checks are in `verification.json`; independent ray and emission reports are `kn-orbit-trace-diagnostics.json` and `kn-orbit-emission-diagnostics.json` in the source folder. `visual-review.json` records decoded-frame comparisons. These establish numerical consistency and export integrity for the stated model, not validation against a full charged-plasma simulation.
+**What is prescribed:** the small outer radial drift, smooth finite-lived brightness irregularities and spiral modes, weak inner heating, gray optical depth and repeating source births. The existing Page–Thorne mean profile is preserved outside the ISCO as a thin-disk background; the model does not solve a self-consistent viscous flow. Nested images emerge from the paths and transfer, with no artificially drawn stripes. Their visible width and brightness depend on opacity, emission and final pixel scale.
 
-Run `render_kn_orbit.py` to reproduce the current release and `verify_kn_orbit.py` to check the finished files. Python dependencies are listed in `requirements.txt`; the new supplied C++ kernel requires clang++ or g++, and the export requires FFmpeg with libx264 and libzimg/zscale plus FFprobe. Fonts and licenses are bundled. See the README for complete commands and independent physical checks.
+**The large charge is hypothetical.** Emitters are neutral test matter in a fixed charged spacetime. The code does not simulate electromagnetic gas forces, MHD/MRI, charge discharge, disk thickness or thermodynamics. The documents clearly distinguish these approximations from calculated relativistic effects.
 
-Earlier Schwarzschild, Kerr and optical experiments remain in the repository's historical output folders. Their source and completed media are included in the current release archive; duplicate historical archives are omitted. They are preserved historical work, not the current charged model. No NASA footage, textures, simulation data or source code is used.
+Run `render_kn_accretion.py` for the current model. After a native cache is complete, `assemble_kn_accretion.py` can verify its frames and rebuild the delivery without changing the radiance. Full setup and independent numerical checks are in [README.md](README.md). Current configuration and provenance are in `output-sideratlas-kn-v120/render-metadata.json`, with finished-video results in its `verification.json`. Numerical consistency checks do not validate an accreting charged plasma or the illustrative inner luminosity.
+
+The previous circular-emitter model remains in `output-sideratlas-kn/`, with `render_kn_orbit.py` and [v1.1.0](https://github.com/Loganpis/sideratlas-black-hole/releases/tag/v1.1.0). The [v1.0.0 release](https://github.com/Loganpis/sideratlas-black-hole/releases/tag/v1.0.0) retains the horizontal disk and lower text. Other Schwarzschild, Kerr and optical experiments remain in historical folders. No NASA footage, textures, simulation data or source code is used.

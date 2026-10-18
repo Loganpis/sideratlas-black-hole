@@ -1,0 +1,18 @@
+{
+  "file": "steady-reference.png",
+  "sha256": "f375665e7614ba4f159b77577aac9f2b05649f05052d2e0f15eb4a5b2b59580b",
+  "source_render_sha256": "f638dad36408167811a34e5929286e0051222b54879a928646d14a61f158b66f",
+  "generator": "generate_kn_steady_reference.py",
+  "generator_sha256": "edeaed0293e3b3512fd37d32cc0e38a7c4b47812a86dead8475d309d38ec2511",
+  "method": "phase 0 production Kerr-Newman renderer with structured=False; unchanged geodesics, transfer and compositor",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "renderer": {
+    "width": 1080,
+    "supersample": 2.5,
+    "refinement": 2,
+    "temporal_samples": 3
+  }
+}

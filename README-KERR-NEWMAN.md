@@ -1,4 +1,6 @@
-# @sideratlas — Kerr–Newman disk Reel
+# @sideratlas — Kerr–Newman disk Reel (historical v1.1)
+
+This document describes the circular-emitter model preserved in v1.1.0. The current accretion and plunging-flow model is documented in [README-V1.2.0.md](README-V1.2.0.md). The original description for this older model is retained in [caption-kerr-newman-v1.1.0.text](caption-kerr-newman-v1.1.0.text).
 
 This release depicts the requested **Kerr–Newman black hole with a* = +0.9 and q = +0.4**. The disk is equatorial and prograde: its angular momentum is parallel to the black hole's spin. Light paths, emitter positions, propagation delays, circular motion and the mean radial emission profile are recalculated for that geometry.
 
@@ -12,7 +14,7 @@ NASA Goddard / Jeremy Schnittman's [2019 visualization](https://svs.gsfc.nasa.go
 - `output-sideratlas-kn/sideratlas-kerr-newman-intensity.mp4`: the same calculated radiance in monochrome, 32 seconds
 - `output-sideratlas-kn/render-metadata.json`: numerical configuration, model assumptions and provenance
 - `output-sideratlas-kn/verification.json`: checks of the identified finished release
-- `caption-kerr-newman.text`: ready-to-copy Instagram description with the former lower text, assumptions, all source credits, and repository link (`.txt` is also supplied for compatibility)
+- `caption-kerr-newman-v1.1.0.text`: preserved Instagram description for this historical model, with its assumptions, source credits and repository link
 
 The delivery is **four identical repetitions of one eight-second loop**, not 32 seconds of newly simulated source evolution. Each loop contains one 360° virtual viewpoint scan, with source time advancing by 800 GM/c³. The movie remains 1080 × 1920 at 30 fps. In version 1.1.0, the enlarged diagonal simulation occupies the whole portrait frame behind **@sideratlas**, **NO.001**, and **THE BLACK HOLE**. Latin Modern/STIX fonts and the black sky are retained. There is no lower text block, model strip, or on-screen bibliography. See `INSTAGRAM-EXPORT.md` for encoding and upload guidance.
 

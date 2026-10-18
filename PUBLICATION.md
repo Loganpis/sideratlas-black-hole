@@ -1,10 +1,22 @@
 # Publication provenance
 
-Prepared for `Loganpis/sideratlas-black-hole` on 2026-10-12; updated for version 1.1.0 on 2026-10-13.
+Prepared for `Loganpis/sideratlas-black-hole` on 2026-10-12; updated for version 1.1.0 on 2026-10-13 and version 1.2.0 on 2026-10-18.
 
 The public project contains the current Kerr–Newman source, finished videos, stills, caption, scientific documentation, and validation reports, together with the earlier completed visualization versions. Fonts and color-matching data retain their upstream attribution and licenses.
 
 Temporary previews, compiled libraries, Python bytecode, process logs, duplicate historical archives, and several gigabytes of regenerable numerical caches are excluded. The current release archive bundles the published source and completed media. GitHub also provides a source snapshot for each release tag.
+
+## Version 1.2.0: accretion and geodesic plunge
+
+The new entry point `render_kn_accretion.py` and its new flow, emission and multiple-event tracing modules extend the model while preserving the previous renderer and completed media. Current outputs are in `output-sideratlas-kn-v120/`. The previous circular-emitter model remains in `output-sideratlas-kn/` and its tagged releases.
+
+New calculated quantities include the neutral timelike plunge, full radial emitter contribution to frequency shift, ordered plunging-layer intersections and selective independent subpixel photon paths. The outer radial drift, finite-lived spiral/irregular emission, weak inner heating, gray optical depth and periodic source forcing are explicitly prescribed. The exterior Page–Thorne mean profile is retained. No GRMHD, plasma thermodynamics or charge-discharge calculation is claimed.
+
+The [model document](README-V1.2.0.md), module reports, sampling convergence report and current delivery verification distinguish these choices from calculated effects. `assemble_kn_accretion.py` records every native-frame checksum and reuses the production compositor and encoder without altering radiance. Final media and public archive checksums are recorded in the current output folder's manifests. Runtime logs, compiled libraries, numerical caches and temporary previews remain excluded.
+
+The new flow, emission, multiple-event tracing, sampling, image-order and source-comparison reports pass 207 checks against their recorded source files. A separate `shared-physics-regression.json` report records 131 passing checks of the unchanged shared null tracing, neutral circular orbits and Page–Thorne emission. These counts describe consistency tests within the stated model; they do not validate the prescribed emissivity or a charged plasma.
+
+The first v1.2 emission experiment was excessively smooth because it replaced the original narrow patch supports with only three weak broad modes. Before publication it was replaced with positive, analytically normalized multiscale packets and a coherent spiral. The Page–Thorne azimuthal mean, flow, geodesics, opacity, sampling, shutter and display curve were retained. Source and image-order comparison reports document the distinction between emissivity texture and calculated multiple images; the comparison contact sheet uses identical current paths for all source prescriptions. Temporary superseded media and their radiance caches remain excluded from publication.
 
 ## Version 1.1.0: full-frame diagonal composition
 
@@ -36,4 +48,4 @@ The **v1.0.0 renderer's historical source SHA-256** is `3103914c35fa2e799ee5eaba
 
 The root GitHub guide, these publication notes, third-party notices, ignore rules, and release packaging were added or adapted for the initial publication. Those documentation and packaging changes did not alter the physical model or then-completed animation.
 
-Earlier reports are retained as historical records and may identify source revisions preceding later shared-module changes. Use the current release reports for the version 1.1.0 Kerr–Newman delivery and tagged historical reports for earlier compositions.
+Earlier reports are retained as historical records and may identify source revisions preceding later shared-module changes. Use `output-sideratlas-kn-v120/` reports for version 1.2.0, and the earlier output folders or tagged releases for historical models.

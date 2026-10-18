@@ -17,6 +17,13 @@ from PIL import Image,ImageDraw
 from instagram_export import BT709_TO_SRGB_FILTER
 from render_kn_orbit import KerrNewmanRenderer,OUTPUT_DIR,VIDEO_NAMES,source_hash
 
+SCRIPT=Path(__file__).resolve()
+ENTRYPOINT=SCRIPT
+
+
+def sha256(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
@@ -83,7 +90,13 @@ def main():
             'lit_disk_rgb_mae_255':float(difference[lit].mean()),
             'lit_disk_pixels_excluding_header':int(lit.sum())})
     sheet.save(out/'orbit-review.jpg',quality=95)
+    review_artifacts={name:hashlib.sha256((out/name).read_bytes()).hexdigest()
+        for name in ('orbit-review.jpg','decoded-review.png')}
     report={
+        'reviewer':SCRIPT.name,
+        'reviewer_sha256':sha256(SCRIPT),
+        'entrypoint':ENTRYPOINT.name,
+        'entrypoint_sha256':sha256(ENTRYPOINT),
         'video_file':str(Path(out.name)/VIDEO_NAMES['color']),
         'video_sha256':hashlib.sha256((out/VIDEO_NAMES['color']).read_bytes()).hexdigest(),
         'source_sha256':source_hash(),
@@ -95,6 +108,7 @@ def main():
         'full_portrait_review':True,
         'footer_overlay_absent':not overlay[round(500*renderer.scale):].any().item(),
         'lit_error_region':'Pixels above brightness 10 below the title band; no assumption of a black header',
+        'review_artifact_sha256':review_artifacts,
     }
     (out/'visual-review.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps(report,indent=2))

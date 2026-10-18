@@ -1,0 +1,361 @@
+{
+  "status": "passed",
+  "checks_passed": 35,
+  "checks": [
+    {
+      "name": "unchanged_Page_Thorne_exterior_radial_background",
+      "value": 0.0,
+      "passed": true
+    },
+    {
+      "name": "unchanged_Page_Thorne_peak_radius",
+      "value": 2.2008687199235943,
+      "passed": true
+    },
+    {
+      "name": "exact_emitted_azimuthal_mean_at_each_radius_and_time",
+      "value": 2.220446049250313e-15,
+      "passed": true
+    },
+    {
+      "name": "positive_finite_intensity",
+      "value": [
+        4.100832578748558e-06,
+        2.1382345478416953
+      ],
+      "passed": true
+    },
+    {
+      "name": "analytically_bounded_contrast",
+      "value": [
+        0.12431472148762862,
+        4.149038475485698
+      ],
+      "passed": true
+    },
+    {
+      "name": "per_ray_retarded_time_sign_and_broadcasting",
+      "value": 0.0,
+      "passed": true
+    },
+    {
+      "name": "exact_constructed_birth_periodicity",
+      "value": 2.9332092310596636e-13,
+      "passed": true
+    },
+    {
+      "name": "unstructured_mode_is_radial_background",
+      "value": 0.0,
+      "passed": true
+    },
+    {
+      "name": "zero_contrast_disables_perturbations",
+      "value": null,
+      "passed": true
+    },
+    {
+      "name": "multiscale_packet_widths_and_irregular_birth_centers",
+      "value": null,
+      "passed": true
+    },
+    {
+      "name": "independent_scalar_source_equation",
+      "value": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "exact_backward_material_birth_radius_including_ISCO_crossing",
+      "value": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "exact_backward_material_birth_azimuth_including_ISCO_crossing",
+      "value": 2.291500322826323e-13,
+      "passed": true
+    },
+    {
+      "name": "radial_advection_is_inward",
+      "value": [
+        1.580122911069651,
+        1.5772259992594053,
+        1.5741269902451849,
+        1.357947922192758,
+        1.9991824566572352,
+        4.997928835703185,
+        19.998334642007066
+      ],
+      "passed": true
+    },
+    {
+      "name": "whole_packet_modulation_is_materially_advected",
+      "value": 2.0272672429655358e-13,
+      "passed": true
+    },
+    {
+      "name": "radius_sorted_preparation_preserves_original_event_permutation",
+      "value": 0.0,
+      "passed": true
+    },
+    {
+      "name": "large_prepared_arrays_use_monotone_radius_order",
+      "value": null,
+      "passed": true
+    },
+    {
+      "name": "positive_kernel_blending_preserves_analytic_unit_angular_mean",
+      "value": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "positive_kernel_blending_never_introduces_negative_emission",
+      "value": 0.0,
+      "passed": true
+    },
+    {
+      "name": "finite_angular_bandwidth_respects_local_advection_guide",
+      "value": 1.2534637094543823e-16,
+      "passed": true
+    },
+    {
+      "name": "restored_resolved_inner_emission_richness",
+      "value": [
+        0.6859540666466101,
+        0.5665793013418138,
+        0.26592896229193025,
+        0.49495171279062855
+      ],
+      "passed": true
+    },
+    {
+      "name": "texture_survives_fixed_monotone_tone_mapping",
+      "value": [
+        17.685375950211007,
+        16.37909861381902,
+        5.375605103951534,
+        13.091505564913529
+      ],
+      "passed": true
+    },
+    {
+      "name": "resolved_nonaxisymmetric_radial_fine_structure",
+      "value": 0.3038147832579885,
+      "passed": true
+    },
+    {
+      "name": "gas_frequency_not_rounded_to_close_loop",
+      "value": 3.884334264362893,
+      "passed": true
+    },
+    {
+      "name": "C1_birth_and_loop_seam_refinement_ratio",
+      "value": 0.4999993626758014,
+      "passed": true
+    },
+    {
+      "name": "declared_weak_inner_heating_equation",
+      "value": 3.469446951953614e-18,
+      "passed": true
+    },
+    {
+      "name": "finite_nonzero_intrinsic_exterior_horizon_limit",
+      "value": 0.0799999604253812,
+      "passed": true
+    },
+    {
+      "name": "horizon_and_interior_source_black",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "name": "inner_zero_value_and_slope_at_ISCO",
+      "value": 0.25,
+      "passed": true
+    },
+    {
+      "name": "inner_heating_can_be_disabled",
+      "value": null,
+      "passed": true
+    },
+    {
+      "name": "invalid_and_nonemitting_source_radii_zero",
+      "value": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "name": "invalid_source_parameters_rejected",
+      "value": 5,
+      "passed": true
+    },
+    {
+      "name": "upstream_domain_clipping_not_silently_allowed",
+      "value": true,
+      "passed": true
+    },
+    {
+      "name": "nonfinite_observer_time_rejected",
+      "value": true,
+      "passed": true
+    },
+    {
+      "name": "phenomenological_physics_disclosed",
+      "value": null,
+      "passed": true
+    }
+  ],
+  "metadata": {
+    "spin_a_star": 0.9,
+    "charge_q": 0.4,
+    "outer_radius_rg": 28.0,
+    "loop_period_tg": 800.0,
+    "contrast": 3.0,
+    "plunge_peak_fraction": 0.08,
+    "births_per_loop": 32,
+    "seed": 13326,
+    "inner_radius_rg": 1.1732150807568875,
+    "isco_rg": 1.577504566512094,
+    "horizon_rg": 1.1732050807568875,
+    "radial_peak_rg": 2.2008687199235943,
+    "radial_profile": "zero-stress neutral Kerr-Newman Page-Thorne relative flux outside ISCO; exact azimuthal mean, peak=1",
+    "radial_quadrature_samples": 65537,
+    "flow": {
+      "spin_a_star": 0.9,
+      "charge_q": 0.4,
+      "alpha_viscosity": 0.1,
+      "aspect_ratio": 0.15,
+      "outer_radius_rg": 40.0,
+      "horizon_offset_rg": 1e-05,
+      "radial_samples": 65537,
+      "isco_rg": 1.577504566512094,
+      "horizon_rg": 1.1732050807568875,
+      "inner_radius_rg": 1.1732150807568875,
+      "neutral_emitter_specific_charge": 0.0,
+      "outer_motion": "normalized circular four-velocity plus comoving radial tetrad boost; prescribed alpha(H/r)^2 ZAMO circular-speed scaling",
+      "outer_drift_is_prescribed": true,
+      "launch_radial_speed_comoving_c": -0.0014129787739372655,
+      "launch_radial_lorentz_factor": 1.0000009982560025,
+      "plunge_energy_per_rest_mass": 0.7652802622604552,
+      "plunge_angular_momentum_per_rest_mass": 1.668154943505371,
+      "plunge_motion": "neutral equatorial timelike geodesic with E,L fixed by the finite-drift ISCO launch; Carter constant zero",
+      "plunge_radial_potential": "R=[E(r^2+a^2)-aL]^2-Delta[r^2+(L-aE)^2], u^r=-sqrt(R)/r^2",
+      "frequency_shift": "g=1/[u^t-lambda*u^phi-(k_r/E)*u^r]; forward covariant photon k_r retained with its radial sign",
+      "streamline_coordinate": "age and accumulated azimuth relative to ISCO; t-age(r) and phi-azimuth(r) advect along flow",
+      "streamline_quadrature": "cumulative trapezoid on separate exterior geometric and inner log(r-r+) grids; float64 linear lookup",
+      "event_horizon": "no emission or timelike emitter is defined on or inside r+",
+      "not_solved": [
+        "viscous hydrodynamics",
+        "magnetohydrodynamics",
+        "charged-particle forces",
+        "disk thickness",
+        "thermodynamics",
+        "plunge emissivity"
+      ],
+      "sources": [
+        {
+          "arxiv": "2208.11906",
+          "role": "Kerr-Newman metric and neutral timelike first integrals"
+        },
+        {
+          "arxiv": "2309.13832",
+          "role": "neutral Kerr-Newman inspiral/plunge equations and interpretation"
+        },
+        {
+          "doi": "10.1093/mnras/sts185",
+          "role": "motivation only for the prescribed alpha(H/r)^2 radial drift scaling"
+        }
+      ]
+    },
+    "perturbation": "positive, analytically mean-normalized localized angular packets on several radial scales, plus a coherent m2 logarithmic spiral; no axisymmetric rings",
+    "packet_count": 26,
+    "coarse_packets": 8,
+    "fine_packets": 18,
+    "radial_support_log_half_widths": {
+      "coarse": [
+        0.27,
+        0.41
+      ],
+      "fine": [
+        0.055,
+        0.125
+      ]
+    },
+    "packet_radial_weights": "C-infinity compact bumps exp(1-1/(1-x^2)) for |x|<1, x=(log(r_birth)-jittered_birth_center)/width",
+    "angular_kernel": "K_n(theta)=(1+cos(theta))^n/[binomial(2n,n)/2^n]; positive, unit mean, finite degree n",
+    "kernel_degrees": [
+      1,
+      2,
+      4,
+      8,
+      12
+    ],
+    "kernel_blending": "convex mixtures of degrees1,2,4,8,12; broad packets capped at4; highest active angular degree follows a birth-parcel angular-advection cadence guide",
+    "sampling_bandwidth": "0.99*pi/[1.02*max_future_abs(Omega)*dt_frame]; nine characteristic times per50t_g parcel lifetime; 240 unique frames/cycle; smooth positive-kernel blending, gas frequencies unchanged",
+    "sampling_limit": "angular guide only, not a bound on every temporal frequency; radial transport, birth crossfades, retardation and changing viewpoint require separate temporal convergence checks",
+    "packet_phase_rule": "phi_birth+k_j*(log(r_birth)-log(r_center,j))+seeded_birth_phase; coherent spiral 2*phi_birth-3*log(r_birth/rISCO)",
+    "normalization": "M=(1+C*sum_j w_j*K_j)/(1+C*sum_j w_j), with nonnegative radial weights and unit-mean positive kernels; current/previous fields crossfade convexly",
+    "advection": "r_birth=age^-1(age(r)-birth_age); backward along the same normalized outer drift and neutral geodesic plunge used in photon frequency shifts",
+    "coherence_lifetime_tg": 50.0,
+    "coherence_choice": "phenomenological finite lifetime, about a few bright inner orbits; not a calculated MRI correlation time",
+    "birth_blending": "current and previous births, complementary sin^2/cos^2 windows; continuous first time derivative",
+    "periodicity": "seeded field births repeat every loop_period_tg; gas orbital frequencies are not quantized",
+    "emission_time_rule": "t_em=t_obs-delay_tg separately at each photon/source event",
+    "azimuthal_mean": "exactly background profile at fixed radius and emitted time, since every perturbation has integer m>=1",
+    "emitted_intensity_bounds_relative_to_background": [
+      0.011918249254089562,
+      6.204233779412134
+    ],
+    "plunge_emissivity": "separate prescribed weak heating: plunge_peak_fraction*(1-x)^2, x=(r-rplus)/(rISCO-rplus); zero value/slope at ISCO, finite exterior limit at horizon; no source on/inside horizon",
+    "plunge_emissivity_is_calculated_from_thermodynamics": false,
+    "horizon": "no source on or inside rplus; no boundary glow; g^4, photon delays and capture applied by renderer",
+    "surface_emission": "identical isotropic thin equatorial source on both sides; optical-depth handling specified by tracer",
+    "dimensional_normalization": "none; mass, accretion rate, temperature and spectrum unspecified",
+    "illustrative_prescriptions": [
+      "alpha(H/r)^2 slow exterior radial drift",
+      "finite-lived multiscale emissivity packets and a logarithmic spiral",
+      "weak separate plunging-region heating",
+      "periodic births used to construct an eight-second loop"
+    ],
+    "not_modeled": [
+      "GRMHD turbulence or MRI",
+      "charged-particle Lorentz forces",
+      "plasma currents or charge evolution",
+      "thermodynamic spectrum",
+      "backreaction",
+      "finite disk thickness",
+      "returning-radiation heating"
+    ],
+    "sources": [
+      {
+        "doi": "10.1086/152990",
+        "role": "Page-Thorne stationary thin-disk conservation integral outside ISCO"
+      },
+      {
+        "arxiv": "astro-ph/0309458",
+        "role": "motivation for advected and shearing brightness structures; not that paper's specific source model"
+      },
+      {
+        "arxiv": "2211.07469",
+        "role": "methodology of time-dependent nonaxisymmetric equatorial sources with per-image retarded times; not the AART stochastic solver"
+      }
+    ]
+  },
+  "seconds_per_12000_hits": 0.013533069325300554,
+  "source_sha256": {
+    "kn_dynamic_emission.py": "4458d9eea4b82a92d0ebf9ae40fa52023118d4ee3fb9a46fc8310036842c316e",
+    "verify_kn_dynamic_emission.py": "8bbaeb26e25d208f13eefc2ec51be3d91cc701ffc909ceaf6b2f15f173acd2c6",
+    "kn_flow.py": "6c925008ef8eff7c570c4de793307a945b345202a24c88a3ab60a308e0eb2c40",
+    "kn_orbit_emission.py": "c1a8587a2b82380ab9c5abc8b87ffab08513ea8dea759569a723cf8925ec68cf",
+    "kn_orbits.py": "84c097f23ce6427c10466a57db53395105a47047dd10d53da4569158183d08cf"
+  },
+  "scope": "Declared bounded emission, exact exterior azimuthal mean, characteristic advection and retarded times; not GRMHD or plasma-heating validation"
+}

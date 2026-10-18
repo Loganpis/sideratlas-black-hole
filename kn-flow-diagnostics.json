@@ -1,0 +1,448 @@
+{
+  "passed": true,
+  "check_count": 70,
+  "checks": [
+    {
+      "name": "selected_model_subextremal",
+      "value": 0.9700000000000001,
+      "passed": true
+    },
+    {
+      "name": "nonzero_inward_launch_speed",
+      "value": -0.0014129787739372655,
+      "passed": true
+    },
+    {
+      "name": "finite_positive_ISCO_crossing_time",
+      "value": 401.52725826827077,
+      "passed": true
+    },
+    {
+      "name": "independent_metric_timelike_normalization_a0.9_q0.4",
+      "value": 1.9074242185723733e-10,
+      "passed": true
+    },
+    {
+      "name": "future_directed_inward_flow_a0.9_q0.4",
+      "value": [
+        1.0573221818875147,
+        -0.0004167561303635346
+      ],
+      "passed": true
+    },
+    {
+      "name": "independent_Killing_vector_energy_momentum_a0.9_q0.4",
+      "value": 4.121147867408581e-13,
+      "passed": true
+    },
+    {
+      "name": "conserved_geodesic_E_and_L_in_plunge_a0.9_q0.4",
+      "value": [
+        3.979039320256561e-13,
+        7.958078640513122e-13
+      ],
+      "passed": true
+    },
+    {
+      "name": "independent_metric_inverse_velocity_a0.9_q0.4",
+      "value": 3.1338643952108147e-12,
+      "passed": true
+    },
+    {
+      "name": "independent_timelike_radial_quartic_a0.9_q0.4",
+      "value": 3.267556905401881e-15,
+      "passed": true
+    },
+    {
+      "name": "plunge_has_no_radial_turning_point_a0.9_q0.4",
+      "value": 1.497612686527098e-06,
+      "passed": true
+    },
+    {
+      "name": "continuous_ISCO_four_velocity_a0.9_q0.4",
+      "value": 2.3602906296105175e-09,
+      "passed": true
+    },
+    {
+      "name": "frame_dragging_horizon_angular_velocity_a0.9_q0.4",
+      "value": 1.2659628401134881e-08,
+      "passed": true
+    },
+    {
+      "name": "independent_metric_timelike_normalization_a0.9_q0",
+      "value": 1.6147183590220493e-10,
+      "passed": true
+    },
+    {
+      "name": "future_directed_inward_flow_a0.9_q0",
+      "value": [
+        1.0575585536011352,
+        -0.000417944790729724
+      ],
+      "passed": true
+    },
+    {
+      "name": "independent_Killing_vector_energy_momentum_a0.9_q0",
+      "value": 4.1033842990145786e-13,
+      "passed": true
+    },
+    {
+      "name": "conserved_geodesic_E_and_L_in_plunge_a0.9_q0",
+      "value": [
+        1.9895196601282805e-13,
+        6.821210263296962e-13
+      ],
+      "passed": true
+    },
+    {
+      "name": "independent_metric_inverse_velocity_a0.9_q0",
+      "value": 7.854696394051574e-13,
+      "passed": true
+    },
+    {
+      "name": "independent_timelike_radial_quartic_a0.9_q0",
+      "value": 1.103172188278971e-14,
+      "passed": true
+    },
+    {
+      "name": "plunge_has_no_radial_turning_point_a0.9_q0",
+      "value": 1.6408141475717717e-05,
+      "passed": true
+    },
+    {
+      "name": "continuous_ISCO_four_velocity_a0.9_q0",
+      "value": 1.1727414594986385e-09,
+      "passed": true
+    },
+    {
+      "name": "frame_dragging_horizon_angular_velocity_a0.9_q0",
+      "value": 2.32792135013149e-08,
+      "passed": true
+    },
+    {
+      "name": "independent_metric_timelike_normalization_a0_q0",
+      "value": 7.257003886707025e-10,
+      "passed": true
+    },
+    {
+      "name": "future_directed_inward_flow_a0_q0",
+      "value": [
+        1.0583006274575129,
+        -0.00042521007353203645
+      ],
+      "passed": true
+    },
+    {
+      "name": "independent_Killing_vector_energy_momentum_a0_q0",
+      "value": 1.992850329202156e-13,
+      "passed": true
+    },
+    {
+      "name": "conserved_geodesic_E_and_L_in_plunge_a0_q0",
+      "value": [
+        3.7836400679225335e-13,
+        1.7763568394002505e-15
+      ],
+      "passed": true
+    },
+    {
+      "name": "independent_metric_inverse_velocity_a0_q0",
+      "value": 2.112511410979337e-13,
+      "passed": true
+    },
+    {
+      "name": "independent_timelike_radial_quartic_a0_q0",
+      "value": 3.74015119092445e-14,
+      "passed": true
+    },
+    {
+      "name": "plunge_has_no_radial_turning_point_a0_q0",
+      "value": 0.0010825053353645708,
+      "passed": true
+    },
+    {
+      "name": "continuous_ISCO_four_velocity_a0_q0",
+      "value": 3.333331388688521e-10,
+      "passed": true
+    },
+    {
+      "name": "frame_dragging_horizon_angular_velocity_a0_q0",
+      "value": 4.5927925712830713e-08,
+      "passed": true
+    },
+    {
+      "name": "independent_metric_timelike_normalization_a0_q0.4",
+      "value": 8.388795214031575e-10,
+      "passed": true
+    },
+    {
+      "name": "future_directed_inward_flow_a0_q0.4",
+      "value": [
+        1.0580588124647443,
+        -0.0004239934468349459
+      ],
+      "passed": true
+    },
+    {
+      "name": "independent_Killing_vector_energy_momentum_a0_q0.4",
+      "value": 2.0183854587685346e-13,
+      "passed": true
+    },
+    {
+      "name": "conserved_geodesic_E_and_L_in_plunge_a0_q0.4",
+      "value": [
+        2.112754415861673e-13,
+        1.7763568394002505e-15
+      ],
+      "passed": true
+    },
+    {
+      "name": "independent_metric_inverse_velocity_a0_q0.4",
+      "value": 2.1444873930126208e-13,
+      "passed": true
+    },
+    {
+      "name": "independent_timelike_radial_quartic_a0_q0.4",
+      "value": 5.2734620449331096e-14,
+      "passed": true
+    },
+    {
+      "name": "plunge_has_no_radial_turning_point_a0_q0.4",
+      "value": 0.0009275933854027854,
+      "passed": true
+    },
+    {
+      "name": "continuous_ISCO_four_velocity_a0_q0.4",
+      "value": 3.476579024663806e-10,
+      "passed": true
+    },
+    {
+      "name": "frame_dragging_horizon_angular_velocity_a0_q0.4",
+      "value": 4.889363257840305e-08,
+      "passed": true
+    },
+    {
+      "name": "independent_metric_timelike_normalization_a-0.5_q0.2",
+      "value": 1.9661245964641694e-09,
+      "passed": true
+    },
+    {
+      "name": "future_directed_inward_flow_a-0.5_q0.2",
+      "value": [
+        1.0586771728081454,
+        -0.00042935749569743183
+      ],
+      "passed": true
+    },
+    {
+      "name": "independent_Killing_vector_energy_momentum_a-0.5_q0.2",
+      "value": 6.012967901369848e-13,
+      "passed": true
+    },
+    {
+      "name": "conserved_geodesic_E_and_L_in_plunge_a-0.5_q0.2",
+      "value": [
+        4.263256414560601e-13,
+        9.094947017729282e-13
+      ],
+      "passed": true
+    },
+    {
+      "name": "independent_metric_inverse_velocity_a-0.5_q0.2",
+      "value": 1.7971544303591146e-13,
+      "passed": true
+    },
+    {
+      "name": "independent_timelike_radial_quartic_a-0.5_q0.2",
+      "value": 7.627352975409544e-14,
+      "passed": true
+    },
+    {
+      "name": "plunge_has_no_radial_turning_point_a-0.5_q0.2",
+      "value": 0.002449672560807351,
+      "passed": true
+    },
+    {
+      "name": "continuous_ISCO_four_velocity_a-0.5_q0.2",
+      "value": 2.562852152721007e-10,
+      "passed": true
+    },
+    {
+      "name": "frame_dragging_horizon_angular_velocity_a-0.5_q0.2",
+      "value": 4.843228060269489e-08,
+      "passed": true
+    },
+    {
+      "name": "Schwarzschild_analytic_ISCO_plunge_radial_velocity_limit",
+      "value": 6.645795025406187e-13,
+      "passed": true
+    },
+    {
+      "name": "Schwarzschild_analytic_ISCO_energy_limit",
+      "value": 0.9428090415820634,
+      "passed": true
+    },
+    {
+      "name": "Schwarzschild_analytic_ISCO_momentum_limit",
+      "value": 3.4641016151377544,
+      "passed": true
+    },
+    {
+      "name": "independent_radial_Christoffel_geodesic_equation",
+      "value": 5.271130754103126e-12,
+      "passed": true
+    },
+    {
+      "name": "independent_photon_contraction_radial_sign_-1",
+      "value": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "independent_photon_contraction_radial_sign_1",
+      "value": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "zero_drift_limit_recovers_existing_circular_redshift",
+      "value": 9.748426510469699e-10,
+      "passed": true
+    },
+    {
+      "name": "outgoing_near_horizon_photons_redshift_to_zero",
+      "value": [
+        0.006313934067691022,
+        0.000634093267382686,
+        6.343636527705275e-05,
+        6.343906953747785e-06
+      ],
+      "passed": true
+    },
+    {
+      "name": "near_horizon_outgoing_redshift_linear_gap_limit",
+      "value": 2.7042604250904212e-05,
+      "passed": true
+    },
+    {
+      "name": "no_emitter_on_inside_or_invalid_horizon",
+      "value": 3,
+      "passed": true
+    },
+    {
+      "name": "independent_gauss_legendre_streamline_age_tg",
+      "value": 0.00027478227369215347,
+      "passed": true
+    },
+    {
+      "name": "independent_gauss_legendre_streamline_azimuth_rad",
+      "value": 9.184097665126956e-05,
+      "passed": true
+    },
+    {
+      "name": "independent_gauss_legendre_streamline_proper_age_tg",
+      "value": 5.708063854825696e-05,
+      "passed": true
+    },
+    {
+      "name": "doubled_grid_streamline_age_tg",
+      "value": 0.00023337842196724523,
+      "passed": true
+    },
+    {
+      "name": "doubled_grid_streamline_azimuth_rad",
+      "value": 7.848234994156655e-05,
+      "passed": true
+    },
+    {
+      "name": "doubled_grid_streamline_proper_age_tg",
+      "value": 4.767942650829582e-05,
+      "passed": true
+    },
+    {
+      "name": "streamline_time_derivative_matches_physical_radial_velocity",
+      "value": 0.0003332769393735724,
+      "passed": true
+    },
+    {
+      "name": "streamline_azimuth_derivative_matches_physical_angular_velocity",
+      "value": 0.00011160832306650326,
+      "passed": true
+    },
+    {
+      "name": "streamline_age_inverse_radius",
+      "value": 1.7763568394002505e-15,
+      "passed": true
+    },
+    {
+      "name": "streamline_age_inverse_azimuth",
+      "value": 4.547473508864641e-13,
+      "passed": true
+    },
+    {
+      "name": "ISCO_flow_age_and_azimuth_origin",
+      "value": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "passed": true
+    },
+    {
+      "name": "source_discloses_prescribed_outer_flow_and_unsolved_emissivity",
+      "value": null,
+      "passed": true
+    }
+  ],
+  "flow": {
+    "spin_a_star": 0.9,
+    "charge_q": 0.4,
+    "alpha_viscosity": 0.1,
+    "aspect_ratio": 0.15,
+    "outer_radius_rg": 40.0,
+    "horizon_offset_rg": 1e-05,
+    "radial_samples": 65537,
+    "isco_rg": 1.577504566512094,
+    "horizon_rg": 1.1732050807568875,
+    "inner_radius_rg": 1.1732150807568875,
+    "neutral_emitter_specific_charge": 0.0,
+    "outer_motion": "normalized circular four-velocity plus comoving radial tetrad boost; prescribed alpha(H/r)^2 ZAMO circular-speed scaling",
+    "outer_drift_is_prescribed": true,
+    "launch_radial_speed_comoving_c": -0.0014129787739372655,
+    "launch_radial_lorentz_factor": 1.0000009982560025,
+    "plunge_energy_per_rest_mass": 0.7652802622604552,
+    "plunge_angular_momentum_per_rest_mass": 1.668154943505371,
+    "plunge_motion": "neutral equatorial timelike geodesic with E,L fixed by the finite-drift ISCO launch; Carter constant zero",
+    "plunge_radial_potential": "R=[E(r^2+a^2)-aL]^2-Delta[r^2+(L-aE)^2], u^r=-sqrt(R)/r^2",
+    "frequency_shift": "g=1/[u^t-lambda*u^phi-(k_r/E)*u^r]; forward covariant photon k_r retained with its radial sign",
+    "streamline_coordinate": "age and accumulated azimuth relative to ISCO; t-age(r) and phi-azimuth(r) advect along flow",
+    "streamline_quadrature": "cumulative trapezoid on separate exterior geometric and inner log(r-r+) grids; float64 linear lookup",
+    "event_horizon": "no emission or timelike emitter is defined on or inside r+",
+    "not_solved": [
+      "viscous hydrodynamics",
+      "magnetohydrodynamics",
+      "charged-particle forces",
+      "disk thickness",
+      "thermodynamics",
+      "plunge emissivity"
+    ],
+    "sources": [
+      {
+        "arxiv": "2208.11906",
+        "role": "Kerr-Newman metric and neutral timelike first integrals"
+      },
+      {
+        "arxiv": "2309.13832",
+        "role": "neutral Kerr-Newman inspiral/plunge equations and interpretation"
+      },
+      {
+        "doi": "10.1093/mnras/sts185",
+        "role": "motivation only for the prescribed alpha(H/r)^2 radial drift scaling"
+      }
+    ]
+  },
+  "scope": "numerical consistency of idealized neutral test-matter kinematics; not a viscous, MHD or thermodynamic accretion solution",
+  "source_sha256": {
+    "kn_flow.py": "6c925008ef8eff7c570c4de793307a945b345202a24c88a3ab60a308e0eb2c40",
+    "kn_orbits.py": "84c097f23ce6427c10466a57db53395105a47047dd10d53da4569158183d08cf",
+    "verify_kn_flow.py": "e771b30c6ce4d1e4c007e3de32cd0cb92a7fbef67053c5fc40a0c44429702264"
+  }
+}

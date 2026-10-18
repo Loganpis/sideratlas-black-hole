@@ -1,37 +1,43 @@
 # Sideratlas — The Black Hole
 
-Original relativistic black-hole visualizations for **@sideratlas**, with Python and C++ source, finished Instagram Reels, scientific references, and numerical checks.
+Original relativistic black-hole visualizations for **@sideratlas**, with Python and C++ source, finished Instagram Reels, scientific references and numerical checks.
 
-The current release follows light through a **Kerr–Newman spacetime with $a_*=0.9$ and $q=0.4$**. Its viewpoint completes a full revolution around an evolving, aligned, prograde disk. Each 32-second video repeats one eight-second cycle four times. The disk fills the portrait frame on a diagonal, behind the account name, number, and title; all explanatory text and source credits are supplied separately for the Instagram description.
+**Version 1.2.0** follows light through a **Kerr–Newman spacetime with $a_*=0.9$ and $q=0.4$** around an evolving, aligned, prograde neutral test disk. Restrained spiral structure now accretes inward, gas follows calculated plunging trajectories inside the ISCO, and multiple lensed images pass through the inner emitting layer. The diagonal simulation fills the portrait frame behind the account name, number and title. Each 32-second movie repeats one eight-second cycle four times.
 
-<a href="https://github.com/Loganpis/sideratlas-black-hole/releases/tag/v1.1.0"><img src="output-sideratlas-kn/sideratlas-kerr-newman-color-cover.png" width="360" alt="Sideratlas black-hole Reel cover, showing a large diagonal gravitationally distorted accretion disk behind the title"></a>
+<a href="https://github.com/Loganpis/sideratlas-black-hole/releases/tag/v1.2.0"><img src="output-sideratlas-kn-v120/sideratlas-kerr-newman-color-cover.png" width="360" alt="Sideratlas Kerr–Newman black-hole Reel cover with a large diagonal accretion disk behind the title"></a>
 
-**[Download the videos and complete project](https://github.com/Loganpis/sideratlas-black-hole/releases/tag/v1.1.0)** · **[Scientific model and sources](README-KERR-NEWMAN.md)** · **[Instagram description (.text)](caption-kerr-newman.text)**
+**[Download v1.2.0](https://github.com/Loganpis/sideratlas-black-hole/releases/tag/v1.2.0)** · **[Scientific model and sources](README-V1.2.0.md)** · **[Instagram description (.text)](caption-kerr-newman.text)**
 
 ## Current release
 
 | File | Contents |
 | --- | --- |
-| [Orange Reel](output-sideratlas-kn/sideratlas-kerr-newman-reel.mp4) | 32 seconds, illustrative brightness palette |
-| [Monochrome Reel](output-sideratlas-kn/sideratlas-kerr-newman-intensity.mp4) | The same calculated radiance in monochrome |
-| [Orange loop](output-sideratlas-kn/sideratlas-kerr-newman-reel-loop.mp4) / [monochrome loop](output-sideratlas-kn/sideratlas-kerr-newman-intensity-loop.mp4) | Original eight-second cycles |
-| [Orbit review](output-sideratlas-kn/orbit-review.jpg) | Twelve views sampled from the encoded video |
-| [Model metadata](output-sideratlas-kn/render-metadata.json) | Physical parameters, display choices, and source provenance |
-| [Delivery verification](output-sideratlas-kn/verification.json) | Numerical, provenance, and finished-video checks |
+| [Orange Reel](output-sideratlas-kn-v120/sideratlas-kerr-newman-reel.mp4) | 32 seconds, illustrative brightness palette |
+| [Monochrome Reel](output-sideratlas-kn-v120/sideratlas-kerr-newman-intensity.mp4) | The same calculated radiance in monochrome |
+| [Orange loop](output-sideratlas-kn-v120/sideratlas-kerr-newman-reel-loop.mp4) / [monochrome loop](output-sideratlas-kn-v120/sideratlas-kerr-newman-intensity-loop.mp4) | Original eight-second cycles |
+| [Model metadata](output-sideratlas-kn-v120/render-metadata.json) | Physical parameters, source, transfer and sampling choices |
+| [Delivery verification](output-sideratlas-kn-v120/verification.json) | Finished-video and numerical provenance checks |
+| [Description](caption-kerr-newman.text) | Explanations, assumptions, all study credits and repository link |
 
-Videos are **1080 × 1920, 30 fps**, silent H.264 MP4s, with Rec.709 color tagging and fast-start playback. The simulation occupies the entire frame, with a black sky, Latin Modern/STIX typography, and no lower text block. The fixed screen rotation aligns the edge-on disk with the portrait diagonal. The close crop can exclude the outer disk in some views, especially near the poles. See [export and posting notes](INSTAGRAM-EXPORT.md).
+The delivery remains **1080 × 1920, 30 fps**, silent H.264 MP4, Rec.709 tagged, with fast-start playback. The black sky, Latin Modern/STIX typography, fixed exposure and smooth full viewpoint revolution are retained. There is no lower text block. The close portrait crop can exclude the outer disk during some views, especially near the poles. See [export and posting notes](INSTAGRAM-EXPORT.md).
 
-## What is calculated
+## What changed in v1.2.0
 
-The code recalculates null-geodesic light paths, multiple disk images, propagation delays, gravitational and Doppler frequency shifts, neutral circular orbits, the ISCO, and the mean radial emission profile for the selected charged, rotating geometry. Emission is sampled at each ray's retarded source time. Frame dragging follows from the metric.
+- **Accretion and irregularity:** localized brightness packets at several scales and coherent spiral structure are transported along a small prescribed radial drift and calculated differential rotation. Their emitted azimuthal mean preserves the existing exterior Page–Thorne profile
+- **Luminous plunge:** a continuously matched ISCO launch initializes exact neutral timelike geodesics. Radial emitter motion enters the frequency shift, with per-ray retarded times and photon capture. The horizon itself never emits
+- **Multiple images:** actual photon trajectories record the thin inner layer's crossings until capture, escape or the first opaque outer disk. Gray-slab transfer combines the images. Extra independent subpixel rays resolve narrow structures where possible; no band count or stripe shape is imposed
 
-**This is a hypothetical large-charge configuration with a neutral test disk.** The infinitesimally thin, opaque disk has prescribed, finite-lived shearing brightness patches. It is not a fluid or magnetohydrodynamic simulation, and does not calculate plasma forces or charge discharge. Orange indicates illustrative bolometric brightness, not a predicted visible spectrum. The [description file](caption-kerr-newman.text) discloses these assumptions and includes the feature explanations, source credits, and repository link; post it with the video.
+**Calculated effects and emission choices are distinguished throughout the [model document](README-V1.2.0.md).** The metric, null paths, inner geodesic motion, frequency shifts and delays are calculated. The slow exterior drift, smooth emissivity fluctuations, weak inner heating and normal optical depth are illustrative prescriptions. The original circular-orbit Page–Thorne profile remains a thin-disk brightness background, not an exact viscous solution for the flowing matter.
 
-The detailed [model document](README-KERR-NEWMAN.md) gives equations, parameter conventions, omissions, and the role of every cited study. NASA Goddard / Jeremy Schnittman's [2019 visualization](https://svs.gsfc.nasa.gov/13326/) inspired the viewpoint motion and presentation. This project uses original calculations; no NASA footage, textures, simulation data, or code is bundled.
+The [controlled texture comparison](output-sideratlas-kn-v120/emission-comparison.jpg) uses identical photon paths for all three source prescriptions. Its [source statistics](kn-emission-comparison-diagnostics.json) and the separate [image-order checks](kn-image-order-diagnostics.json) distinguish restored disk detail from actual higher-order lensing.
 
-## Reproduce the current model
+**The large charge is hypothetical and all emitters are neutral test matter.** This code does not solve plasma forces, MHD/MRI, thermodynamics or charge discharge. Orange denotes illustrative bolometric brightness, not predicted visible color. Higher-order bands can be narrower than a final pixel, and their visibility depends on opacity and source structure. The description explains these limits; post it with the video.
 
-The project was run with Python 3.12. It requires NumPy, Pillow, a C++17 compiler (`clang++` or `g++`), and FFmpeg/FFprobe on your PATH. FFmpeg needs `libx264` and the `zscale` filter. The C++ kernel compiles automatically when needed. macOS was used for the delivered render; other platforms have not been verified for this release.
+NASA Goddard / Jeremy Schnittman's [2019 visualization](https://svs.gsfc.nasa.gov/13326/) inspired the viewpoint motion and presentation. This project uses original calculations; no NASA footage, textures, simulation data or code is bundled.
+
+## Reproduce v1.2.0
+
+The delivered project uses Python 3.12, NumPy, Pillow, a C++17 compiler (`clang++` or `g++`), and FFmpeg/FFprobe on your PATH. FFmpeg needs `libx264` and the `zscale` filter. The C++ kernel compiles automatically. The release was produced on macOS; other platforms have not been verified for this delivery.
 
 ```sh
 git clone https://github.com/Loganpis/sideratlas-black-hole.git
@@ -42,45 +48,44 @@ python3 -m pip install -r requirements.txt
 
 python3 verify_kn_trace.py
 python3 verify_kn_orbit_emission.py
-python3 render_kn_orbit.py
-python3 verify_kn_orbit.py
+python3 verify_kn_flow.py
+python3 verify_kn_dynamic_emission.py
+python3 verify_kn_accretion_trace.py
+python3 verify_kn_sampling.py
+python3 verify_kn_image_orders.py
+python3 compare_kn_emission.py
+python3 render_kn_accretion.py
+# Optional after a complete native cache: rebuild delivery media without retracing rays
+python3 assemble_kn_accretion.py
+python3 verify_kn_accretion.py
+python3 review_kn_accretion_video.py
+python3 package_kn_accretion_release.py
 ```
 
-For a small set of preview stills:
+The physical entry point for this release is **`render_kn_accretion.py`**. Resumable numerical caches are excluded from Git. Rendering regenerates the corresponding outputs; it can take substantial time. After the native cache is complete, `assemble_kn_accretion.py` verifies and hashes every float-radiance frame and rebuilds the media with the unchanged compositor and encoder, without retracing photons or changing radiance. The old `render_kn_orbit.py` remains the v1.1.0 renderer and does not produce the new accretion/plunge model.
 
-```sh
-python3 render_kn_orbit.py --preview --width 540 --supersample 1 --output output-sideratlas-kn/preview
-```
+`package_kn_accretion_release.py` produces `sideratlas-kerr-newman-v1.2.0-source.zip` after the completed delivery has passed verification. The decoded-frame review requires the radiance cache created by the render. A small still preview is available with `python3 render_kn_accretion.py --preview --width 540 --supersample 1.5 --output output-sideratlas-kn-v120/preview`.
 
-The full render uses a 2700 × 2250 unrolled physical detector covering 72 × 60 $r_g$. Its floating-point radiance is sampled into a 2× portrait viewport with a fixed −60.642° screen rotation and a horizontal field of view of 28 $r_g$, then averaged to 1080 × 1920 before tone mapping. This changes the presentation without changing the spacetime, orbits, or emission model. It calculates 120 independent geometric views and uses the exact antipodal symmetry of this model for the other 120, reevaluating emission at each view's own position and time. It generates several gigabytes of resumable caches, which are excluded from Git. Running the default commands replaces the corresponding generated outputs and reports.
-
-`review_kn_video.py` compares decoded frames against the cached physical radiance; regenerate that cache with a full render before running this optional review. Its recorded results and review images are already included.
-
-Version 1.1.0 passed **84 renderer, composition, provenance, and delivery checks**. The unchanged physical modules retain their source-matched reports with **62 ray-tracing checks** and **69 orbital/emission checks**. Both videos decode to 960 frames over exactly 32 seconds, with four pixel-identical cycles. Twelve decoded color frames were also checked against their floating-point radiance compositions. These tests establish numerical consistency and export integrity for the stated model; they do not validate the physics of charged accretion plasma.
-
-To rebuild the downloadable bundle after verification:
-
-```sh
-python3 package_kn_release.py
-```
+Independent checks cover orbit and flux limits, timelike normalization, conserved plunge energy and momentum, radial geodesic acceleration, redshift signs, streamline transport, preserved exterior mean, multi-hit paths, numerical refinement and event capacity. The report files identify the checked source hashes. Finished-video reports record the actual encoding, repeated cycles and delivery results. These establish consistency within the declared model, not validation of charged accretion plasma or of the illustrative heating prescription.
 
 ## Project files and earlier versions
 
 | Location | Role |
 | --- | --- |
-| `render_kn_orbit.py`, `kn_orbit_trace.py/.cpp`, `kn_orbits.py`, `kn_orbit_emission.py` | Current Kerr–Newman renderer, geodesics, orbits, and emission |
-| `verify_kn_*.py`, `*-diagnostics.json` | Independent numerical checks and recorded results |
-| `instagram_export.py`, `review_kn_video.py` | Video export and decoded-frame review |
-| `output-sideratlas-kn/` | Current Kerr–Newman media and reports |
+| `render_kn_accretion.py` | Current v1.2.0 render and export entry point |
+| `assemble_kn_accretion.py` | Verified cache-to-video assembly with unchanged radiance |
+| `kn_accretion_trace.py/.cpp` | Multiple-event Kerr–Newman null tracing and signed radial photon momentum |
+| `kn_flow.py` | Normalized exterior drift and exact neutral geodesic plunge |
+| `kn_dynamic_emission.py` | Advected restrained structure, exterior Page–Thorne background and declared inner heating |
+| `kn_orbits.py`, `kn_orbit_emission.py` | Shared neutral circular quantities, ISCO and Page–Thorne integral |
+| `verify_kn_*.py`, `*-diagnostics.json` | Independent checks and source-identified reports |
+| `output-sideratlas-kn-v120/` | Current v1.2.0 media and reports |
+| `render_kn_orbit.py`, `output-sideratlas-kn/` | Prior v1.1.0 Kerr–Newman model; [documentation](README-KERR-NEWMAN.md) |
 | `output-sideratlas/`, `output-schwarzschild/` | Earlier Schwarzschild viewpoint animations; [documentation](README-SCHWARZSCHILD.md) |
-| `output-kerr/` | Earlier Kerr optical experiments; [documentation](README-KERR.md) |
-| `render_kerr_orbit.py` | Intermediate rotating, uncharged model; [documentation](README-KERR-ORBIT.md) |
-| `output-optical/` | Earlier spectral/optical experiments; [documentation](README-OPTICAL.md) |
-| `output/` | Initial visualization; [historical README](README-LEGACY.md) |
-| `fonts/`, `data/` | Bundled fonts, color-matching data, licenses, and attribution |
+| `output-kerr/`, `render_kerr_orbit.py` | Earlier uncharged Kerr work; [optical](README-KERR.md) and [viewpoint](README-KERR-ORBIT.md) documentation |
+| `output-optical/`, `output/` | Earlier [spectral experiments](README-OPTICAL.md) and [initial visualization](README-LEGACY.md) |
+| `fonts/`, `data/` | Bundled fonts, color-matching data, licenses and attribution |
 
-Earlier versions retain their original filenames and branding. Their assumptions, captions, and test reports apply to those versions, not to the current charged model. Historical source ZIPs and disposable render caches are omitted; the repository and current release archive contain the source and completed media.
+Earlier source and completed media remain available with their historical assumptions and branding. Historical reports apply to their own identified models. The [v1.1.0 release](https://github.com/Loganpis/sideratlas-black-hole/releases/tag/v1.1.0) preserves the circular-emitter diagonal animation; [v1.0.0](https://github.com/Loganpis/sideratlas-black-hole/releases/tag/v1.0.0) preserves the smaller horizontal layout with explanatory text below it. Duplicate historical source ZIPs and disposable caches are omitted from the repository.
 
-The [v1.0.0 release](https://github.com/Loganpis/sideratlas-black-hole/releases/tag/v1.0.0) preserves the earlier Kerr–Newman layout with a smaller, horizontal disk and explanatory text below it. Version 1.1.0 changes the composition and caption delivery while retaining the same physical model.
-
-See [publication provenance](PUBLICATION.md) for the scope of the public copy and [third-party notices](THIRD-PARTY-NOTICES.md) for bundled asset licensing.
+The [v1.2.0 model document](README-V1.2.0.md) records every study's role, equations and limitations. See [publication provenance](PUBLICATION.md) and [third-party notices](THIRD-PARTY-NOTICES.md) for the public copy and bundled asset licensing.

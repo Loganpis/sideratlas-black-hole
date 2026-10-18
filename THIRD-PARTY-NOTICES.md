@@ -20,6 +20,6 @@ The unmodified CSV and official metadata in `data/` are distributed under [Creat
 
 ## Scientific references and visual inspiration
 
-The current model's complete bibliography and the role of each study are in [README-KERR-NEWMAN.md](README-KERR-NEWMAN.md). Earlier models have separate references in their respective READMEs. Papers are cited, not redistributed. The numerical implementation is original.
+The current model's complete bibliography and the role of each study are in [README-V1.2.0.md](README-V1.2.0.md). Earlier models have separate references in their respective READMEs. Papers are cited, not redistributed. The numerical implementation is original.
 
 NASA Goddard / Jeremy Schnittman's [2019 black-hole visualization](https://svs.gsfc.nasa.gov/13326/) is credited as a visual and viewpoint-motion reference. NASA footage, textures, simulation data, and source code are not included, and no NASA endorsement is claimed.

@@ -1,0 +1,382 @@
+{
+  "version": "1.2.0",
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "frames": 960,
+  "duration_seconds": 32,
+  "loop_duration_seconds": 8,
+  "repetitions": 4,
+  "unique_frames": 240,
+  "view_angle_degrees": [
+    -277.0,
+    83.0
+  ],
+  "camera_orbit": {
+    "law": "theta=83-360*phase; continuous oriented meridional scan",
+    "angular_span_deg": -360,
+    "observer": "sequence of static observers at infinity; no camera-velocity aberration"
+  },
+  "spin_configuration": {
+    "a_star": 0.9,
+    "charge_q": 0.4,
+    "alignment": "aligned, prograde equatorial neutral test matter",
+    "choice": "hypothetical large charge, not a fit to a typical astrophysical black hole"
+  },
+  "geometry": {
+    "model": "Kerr-Newman null geodesics; all thin-plunge intersections then first opaque outer disk",
+    "spin": 0.9,
+    "charge_q": 0.4,
+    "charge_definition": "q=Q/(M sqrt(4 pi epsilon_0 G)); geometrized Q/M",
+    "disk_matter": "neutral test matter; no Lorentz force or plasma response",
+    "spin_definition": "a*=cJ/(GM^2)",
+    "spin_alignment": "black-hole angular momentum and disk angular momentum both +z; prograde",
+    "width": 2700,
+    "height": 2250,
+    "fov_horizontal_rg": 72.0,
+    "fov_vertical_rg": 60.00000000000001,
+    "roll_deg": 0,
+    "rin_rg": 1.577504566512094,
+    "rout_rg": 28,
+    "outer_horizon_rg": 1.1732050807568875,
+    "scaled_mino_step": 0.012,
+    "maximum_scaled_mino_parameter": 62.832,
+    "integrator": "double-precision RK4; Hermite equatorial root followed by partial RK4 event step",
+    "observer": "static at infinity",
+    "threads": 8,
+    "camera_angle_convention": "signed degrees about disk x axis; n=(0,-sin(theta),cos(theta))",
+    "camera_screen_basis": "e_x=(1,0,0); e_y=(0,cos(theta),sin(theta)); continuous through both poles",
+    "disk_plane_crossing": "observer-at-infinity crossing excluded; coplanar rays first enter outer rim",
+    "delay_units": "t_g=GM/c^3",
+    "delay_definition": "elapsed coordinate propagation time minus one common observer Kerr-Newman r*; q-r*(hit)",
+    "invalid_delay_value": 0,
+    "emission_time_rule": "t_em=t_obs-delay_tg; one common additive origin",
+    "azimuth": "pole-regular angular vector plus backward Kerr-Newman radial frame-dragging integral",
+    "disk_surfaces": "same prescribed isotropic surface emission on both faces",
+    "kernel": "kn_accretion_trace.cpp; original kn_orbit_trace equations preserved",
+    "plunge_inner_cutoff_rg": 1.1733050807568874,
+    "horizon_cutoff_offset_rg": 0.0001,
+    "minimum_exterior_photon_turn_rg": 1.2147958843207904,
+    "capture_cutoff_safety": "cutoff strictly below prograde equatorial photon orbit; no exterior escaping radial turn is discarded",
+    "near_horizon_step_limit": "h <= 0.15 (1/r_plus-u)/(du/ds) on incoming approach",
+    "max_emitting_intersections_stored": 4,
+    "storage_limit_policy": "unresolved overflow raises; test convergence by increasing capacity",
+    "image_order": "number of finite equatorial crossings before the emitting event; no artificial bands",
+    "event_order": "near to far along a backward ray",
+    "disk_opacity": "outer disk opaque; inner plunging sheet transfer prescribed separately",
+    "photon_radial_momentum": "future-directed covariant k_r/E = sign(backward du/ds) sqrt(R)/Delta",
+    "emitter_redshift_rule": "g^-1=ut-lambda*uphi-(k_r/E)*ur; utheta=0",
+    "surface_normal_cosine": "mu=g*sqrt(eta)/r"
+  },
+  "flow": {
+    "spin_a_star": 0.9,
+    "charge_q": 0.4,
+    "alpha_viscosity": 0.1,
+    "aspect_ratio": 0.15,
+    "outer_radius_rg": 40.0,
+    "horizon_offset_rg": 1e-05,
+    "radial_samples": 65537,
+    "isco_rg": 1.577504566512094,
+    "horizon_rg": 1.1732050807568875,
+    "inner_radius_rg": 1.1732150807568875,
+    "neutral_emitter_specific_charge": 0.0,
+    "outer_motion": "normalized circular four-velocity plus comoving radial tetrad boost; prescribed alpha(H/r)^2 ZAMO circular-speed scaling",
+    "outer_drift_is_prescribed": true,
+    "launch_radial_speed_comoving_c": -0.0014129787739372655,
+    "launch_radial_lorentz_factor": 1.0000009982560025,
+    "plunge_energy_per_rest_mass": 0.7652802622604552,
+    "plunge_angular_momentum_per_rest_mass": 1.668154943505371,
+    "plunge_motion": "neutral equatorial timelike geodesic with E,L fixed by the finite-drift ISCO launch; Carter constant zero",
+    "plunge_radial_potential": "R=[E(r^2+a^2)-aL]^2-Delta[r^2+(L-aE)^2], u^r=-sqrt(R)/r^2",
+    "frequency_shift": "g=1/[u^t-lambda*u^phi-(k_r/E)*u^r]; forward covariant photon k_r retained with its radial sign",
+    "streamline_coordinate": "age and accumulated azimuth relative to ISCO; t-age(r) and phi-azimuth(r) advect along flow",
+    "streamline_quadrature": "cumulative trapezoid on separate exterior geometric and inner log(r-r+) grids; float64 linear lookup",
+    "event_horizon": "no emission or timelike emitter is defined on or inside r+",
+    "not_solved": [
+      "viscous hydrodynamics",
+      "magnetohydrodynamics",
+      "charged-particle forces",
+      "disk thickness",
+      "thermodynamics",
+      "plunge emissivity"
+    ],
+    "sources": [
+      {
+        "arxiv": "2208.11906",
+        "role": "Kerr-Newman metric and neutral timelike first integrals"
+      },
+      {
+        "arxiv": "2309.13832",
+        "role": "neutral Kerr-Newman inspiral/plunge equations and interpretation"
+      },
+      {
+        "doi": "10.1093/mnras/sts185",
+        "role": "motivation only for the prescribed alpha(H/r)^2 radial drift scaling"
+      }
+    ]
+  },
+  "emission": {
+    "spin_a_star": 0.9,
+    "charge_q": 0.4,
+    "outer_radius_rg": 28.0,
+    "loop_period_tg": 800.0,
+    "contrast": 3.0,
+    "plunge_peak_fraction": 0.08,
+    "births_per_loop": 32,
+    "seed": 13326,
+    "inner_radius_rg": 1.1732150807568875,
+    "isco_rg": 1.577504566512094,
+    "horizon_rg": 1.1732050807568875,
+    "radial_peak_rg": 2.2008687199235943,
+    "radial_profile": "zero-stress neutral Kerr-Newman Page-Thorne relative flux outside ISCO; exact azimuthal mean, peak=1",
+    "radial_quadrature_samples": 65537,
+    "flow": {
+      "spin_a_star": 0.9,
+      "charge_q": 0.4,
+      "alpha_viscosity": 0.1,
+      "aspect_ratio": 0.15,
+      "outer_radius_rg": 40.0,
+      "horizon_offset_rg": 1e-05,
+      "radial_samples": 65537,
+      "isco_rg": 1.577504566512094,
+      "horizon_rg": 1.1732050807568875,
+      "inner_radius_rg": 1.1732150807568875,
+      "neutral_emitter_specific_charge": 0.0,
+      "outer_motion": "normalized circular four-velocity plus comoving radial tetrad boost; prescribed alpha(H/r)^2 ZAMO circular-speed scaling",
+      "outer_drift_is_prescribed": true,
+      "launch_radial_speed_comoving_c": -0.0014129787739372655,
+      "launch_radial_lorentz_factor": 1.0000009982560025,
+      "plunge_energy_per_rest_mass": 0.7652802622604552,
+      "plunge_angular_momentum_per_rest_mass": 1.668154943505371,
+      "plunge_motion": "neutral equatorial timelike geodesic with E,L fixed by the finite-drift ISCO launch; Carter constant zero",
+      "plunge_radial_potential": "R=[E(r^2+a^2)-aL]^2-Delta[r^2+(L-aE)^2], u^r=-sqrt(R)/r^2",
+      "frequency_shift": "g=1/[u^t-lambda*u^phi-(k_r/E)*u^r]; forward covariant photon k_r retained with its radial sign",
+      "streamline_coordinate": "age and accumulated azimuth relative to ISCO; t-age(r) and phi-azimuth(r) advect along flow",
+      "streamline_quadrature": "cumulative trapezoid on separate exterior geometric and inner log(r-r+) grids; float64 linear lookup",
+      "event_horizon": "no emission or timelike emitter is defined on or inside r+",
+      "not_solved": [
+        "viscous hydrodynamics",
+        "magnetohydrodynamics",
+        "charged-particle forces",
+        "disk thickness",
+        "thermodynamics",
+        "plunge emissivity"
+      ],
+      "sources": [
+        {
+          "arxiv": "2208.11906",
+          "role": "Kerr-Newman metric and neutral timelike first integrals"
+        },
+        {
+          "arxiv": "2309.13832",
+          "role": "neutral Kerr-Newman inspiral/plunge equations and interpretation"
+        },
+        {
+          "doi": "10.1093/mnras/sts185",
+          "role": "motivation only for the prescribed alpha(H/r)^2 radial drift scaling"
+        }
+      ]
+    },
+    "perturbation": "positive, analytically mean-normalized localized angular packets on several radial scales, plus a coherent m2 logarithmic spiral; no axisymmetric rings",
+    "packet_count": 26,
+    "coarse_packets": 8,
+    "fine_packets": 18,
+    "radial_support_log_half_widths": {
+      "coarse": [
+        0.27,
+        0.41
+      ],
+      "fine": [
+        0.055,
+        0.125
+      ]
+    },
+    "packet_radial_weights": "C-infinity compact bumps exp(1-1/(1-x^2)) for |x|<1, x=(log(r_birth)-jittered_birth_center)/width",
+    "angular_kernel": "K_n(theta)=(1+cos(theta))^n/[binomial(2n,n)/2^n]; positive, unit mean, finite degree n",
+    "kernel_degrees": [
+      1,
+      2,
+      4,
+      8,
+      12
+    ],
+    "kernel_blending": "convex mixtures of degrees1,2,4,8,12; broad packets capped at4; highest active angular degree follows a birth-parcel angular-advection cadence guide",
+    "sampling_bandwidth": "0.99*pi/[1.02*max_future_abs(Omega)*dt_frame]; nine characteristic times per50t_g parcel lifetime; 240 unique frames/cycle; smooth positive-kernel blending, gas frequencies unchanged",
+    "sampling_limit": "angular guide only, not a bound on every temporal frequency; radial transport, birth crossfades, retardation and changing viewpoint require separate temporal convergence checks",
+    "packet_phase_rule": "phi_birth+k_j*(log(r_birth)-log(r_center,j))+seeded_birth_phase; coherent spiral 2*phi_birth-3*log(r_birth/rISCO)",
+    "normalization": "M=(1+C*sum_j w_j*K_j)/(1+C*sum_j w_j), with nonnegative radial weights and unit-mean positive kernels; current/previous fields crossfade convexly",
+    "advection": "r_birth=age^-1(age(r)-birth_age); backward along the same normalized outer drift and neutral geodesic plunge used in photon frequency shifts",
+    "coherence_lifetime_tg": 50.0,
+    "coherence_choice": "phenomenological finite lifetime, about a few bright inner orbits; not a calculated MRI correlation time",
+    "birth_blending": "current and previous births, complementary sin^2/cos^2 windows; continuous first time derivative",
+    "periodicity": "seeded field births repeat every loop_period_tg; gas orbital frequencies are not quantized",
+    "emission_time_rule": "t_em=t_obs-delay_tg separately at each photon/source event",
+    "azimuthal_mean": "exactly background profile at fixed radius and emitted time, since every perturbation has integer m>=1",
+    "emitted_intensity_bounds_relative_to_background": [
+      0.011918249254089562,
+      6.204233779412134
+    ],
+    "plunge_emissivity": "separate prescribed weak heating: plunge_peak_fraction*(1-x)^2, x=(r-rplus)/(rISCO-rplus); zero value/slope at ISCO, finite exterior limit at horizon; no source on/inside horizon",
+    "plunge_emissivity_is_calculated_from_thermodynamics": false,
+    "horizon": "no source on or inside rplus; no boundary glow; g^4, photon delays and capture applied by renderer",
+    "surface_emission": "identical isotropic thin equatorial source on both sides; optical-depth handling specified by tracer",
+    "dimensional_normalization": "none; mass, accretion rate, temperature and spectrum unspecified",
+    "illustrative_prescriptions": [
+      "alpha(H/r)^2 slow exterior radial drift",
+      "finite-lived multiscale emissivity packets and a logarithmic spiral",
+      "weak separate plunging-region heating",
+      "periodic births used to construct an eight-second loop"
+    ],
+    "not_modeled": [
+      "GRMHD turbulence or MRI",
+      "charged-particle Lorentz forces",
+      "plasma currents or charge evolution",
+      "thermodynamic spectrum",
+      "backreaction",
+      "finite disk thickness",
+      "returning-radiation heating"
+    ],
+    "sources": [
+      {
+        "doi": "10.1086/152990",
+        "role": "Page-Thorne stationary thin-disk conservation integral outside ISCO"
+      },
+      {
+        "arxiv": "astro-ph/0309458",
+        "role": "motivation for advected and shearing brightness structures; not that paper's specific source model"
+      },
+      {
+        "arxiv": "2211.07469",
+        "role": "methodology of time-dependent nonaxisymmetric equatorial sources with per-image retarded times; not the AART stochastic solver"
+      }
+    ]
+  },
+  "radiative_transfer": {
+    "bolometric": "g^4 I_em; g^-1=ut-lambda*uphi-(k_r/E)*ur",
+    "time": "t_emit=t_observer-delay independently at every intersection",
+    "outer_disk": "first opaque isotropic Page-Thorne surface",
+    "plunge_normal_optical_depth": 0.15,
+    "plunge_slab": "homogeneous thin slab; I_em(mu)=I_face*(1-exp(-tau/mu))/(1-exp(-tau)); foreground transmission exp(-tau/mu)",
+    "opacity_is_prescribed": true,
+    "horizon": "no source or surface on or inside r_plus; captured rays can see foreground gas"
+  },
+  "sampling": {
+    "refinement_grid": 2,
+    "refinement_selection": "spherical-null critical curve sampling band plus every higher-order or plunging-gas parent pixel",
+    "refinement": "independently traced subpixel null geodesics; equal-area average in radiance; no painted rings",
+    "overflow": "sparse retrace with16eventslots and half RK4 step; unresolved rays raise",
+    "temporal_samples": 3,
+    "shutter": "180-degree source-only exposure,3pointGauss quadrature; fixed central-view photon geometry"
+  },
+  "layout": {
+    "brand": "@sideratlas",
+    "full_frame": true,
+    "hero_x": 0,
+    "hero_y": 0,
+    "hero_width": 1080,
+    "hero_height": 1920,
+    "header_top": 270,
+    "display_roll_degrees": -60.64224645720873,
+    "viewport_fov_horizontal_rg": 28.0,
+    "lower_text_in_caption": true,
+    "caption_file": "caption-kerr-newman.text"
+  },
+  "display": {
+    "exposure": 0.02,
+    "curve": "x/(1+x), x=radiance/exposure",
+    "color": "illustrative orange bolometric brightness, not a visible spectrum",
+    "averaging": "native radiance plus selective independent subpixel rays; rotated viewport filtered before display curve"
+  },
+  "disk_faces": "identical equatorial source and transfer on both faces",
+  "geodesic_reuse": "120independent central views; exact antipodal geometry with new source evaluation at phi+pi and own retardedtime",
+  "time": "800t_g per8-second constructed source/camera loop, four identical encoded repeats",
+  "outputs": {
+    "color": "sideratlas-kerr-newman-reel.mp4",
+    "mono": "sideratlas-kerr-newman-intensity.mp4"
+  },
+  "loop_outputs": {
+    "color": "sideratlas-kerr-newman-reel-loop.mp4",
+    "mono": "sideratlas-kerr-newman-intensity-loop.mp4"
+  },
+  "encoding": {
+    "pipeline_version": 1,
+    "container": "MP4",
+    "codec": "H.264",
+    "encoder": "libx264",
+    "profile": "High",
+    "preset": "slow",
+    "crf": 14,
+    "maximum_rate_bps": 20000000,
+    "vbv_buffer_bits": 40000000,
+    "rate_control": "quality-targeted VBR with a VBV cap; CRF is not a platform requirement",
+    "pixel_format": "yuv420p",
+    "progressive": true,
+    "frame_rate_mode": "constant",
+    "gop_seconds": 2,
+    "closed_gop": true,
+    "b_frames": 0,
+    "scene_cut_keyframes": false,
+    "faststart": true,
+    "edit_lists": false,
+    "audio": "none",
+    "input": {
+      "pixel_format": "rgb24",
+      "primaries": "bt709",
+      "transfer": "iec61966-2-1",
+      "range": "full"
+    },
+    "output_color_tags": {
+      "color_space": "bt709",
+      "color_transfer": "bt709",
+      "color_primaries": "bt709",
+      "color_range": "tv",
+      "chroma_location": "left"
+    },
+    "color_conversion": "sRGB RGB to Rec.709 limited-range YCbCr via zscale; pixels transformed before tagging",
+    "conversion_reference": "display-referred: sRGB EOTF to linear light, then inverse BT.1886 (gamma 2.4) for Rec.709 display encoding",
+    "filter": "format=gbrp16le,zscale=primariesin=709:transferin=iec61966-2-1:matrixin=gbr:rangein=full:primaries=709:transfer=709:matrix=709:range=limited:chromal=left:filter=spline36:agamma=0:dither=none,format=yuv420p",
+    "resize": "none",
+    "added_sharpening": false,
+    "added_grain": false,
+    "instagram_processing": "Instagram generates its own delivery encodings; playback quality is not guaranteed by local export"
+  },
+  "source_sha256": "f638dad36408167811a34e5929286e0051222b54879a928646d14a61f158b66f",
+  "supersample": 2.5,
+  "radiance_signature": "af43803e4e58364866f863a7e5d0026016ed0037338905b26d4ea37d26539558",
+  "elapsed_seconds": 80.36058162500012,
+  "assembly": {
+    "script": "assemble_kn_accretion.py",
+    "script_sha256": "eaf2a2ac60f3c552d4bf93c2d5c3e1bedca69b79f8caa94dc56b61a12cec01cf",
+    "method": "producer-manifest-verified native radiance, unchanged compositor, single-generation loop encoding",
+    "radiance_unchanged": true,
+    "native_manifest": "native-radiance-manifest.json",
+    "native_manifest_sha256": "f77490d5bb8dd9f197e00ea49015536cd6ee670a72b4f704141c955d26a27fcd"
+  },
+  "steady_reference": {
+    "file": "steady-reference.png",
+    "sha256": "f375665e7614ba4f159b77577aac9f2b05649f05052d2e0f15eb4a5b2b59580b",
+    "source_render_sha256": "f638dad36408167811a34e5929286e0051222b54879a928646d14a61f158b66f",
+    "generator": "generate_kn_steady_reference.py",
+    "generator_sha256": "edeaed0293e3b3512fd37d32cc0e38a7c4b47812a86dead8475d309d38ec2511",
+    "method": "phase 0 production Kerr-Newman renderer with structured=False; unchanged geodesics, transfer and compositor",
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "renderer": {
+      "width": 1080,
+      "supersample": 2.5,
+      "refinement": 2,
+      "temporal_samples": 3
+    },
+    "manifest": "steady-reference-manifest.json",
+    "manifest_sha256": "3f11e3a6adc1b95e26df4a5e063387d02fc96586661d2c023680577e1c73e48f"
+  },
+  "repetition_encoding": {
+    "method": "four bitstream-identical repetitions of the encoded 8-second loop",
+    "stream_loop_count": 3,
+    "video_reencoded": false,
+    "audio": "none"
+  },
+  "elapsed_scope": "native-cache validation, composition and encoding only; excludes prior geodesic tracing and radiance synthesis"
+}

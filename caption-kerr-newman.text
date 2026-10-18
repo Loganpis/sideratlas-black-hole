@@ -1,45 +1,42 @@
 NO.001 — THE BLACK HOLE
 @sideratlas
+Kerr–Newman: a* = 0.9, q = 0.4
 
-Original relativistic model — Kerr–Newman: a* = 0.9, q = 0.4
-Hypothetical large charge · Neutral test disk · Illustrative color
-Monochrome version: total-light intensity
-
-Bends light into multiple images of its disk
+Light bends into multiple images of the disk
 Approaching gas appears brighter
 Gravity redshifts light and delays its arrival
-Inner orbits shear bright structures faster
-Spin drags spacetime around the black hole
-Electric charge changes spacetime and light paths
-
-I_obs = g⁴ I_em (bolometric intensity)
-Δ = r² − 2r + a² + q²; G = M = c = 1
-r_ISCO ≈ 1.58 r_g; r_g = GM/c²
-a* = Jc/(GM²); q = Q/[M√(4πε₀G)]
-Aligned, prograde disk: disk and hole spin in the same sense
+Differential rotation shears multiscale patches and spiral structures
+Gas drifts inward, then plunges and spirals below the ISCO
+Spin drags spacetime; electric charge changes its geometry
+The horizon emits no light
 
 CALCULATED
-Light paths, disk images, shifts and relative delays
-Neutral circular orbits, ISCO and Page–Thorne mean flux
-Emission evaluated at the retarded source time
+Kerr–Newman photon trajectories and naturally nested image orders
+Normalized neutral gas motion, geodesic ISCO plunge, frequency shifts including radial motion, capture and per-image propagation delays
+I_obs = g⁴ I_em; t_em = t_obs − delay
+Page–Thorne azimuthal mean outside ISCO
+r_ISCO ≈ 1.58 r_g; r_+ ≈ 1.17 r_g; r_g = GM/c²
+a* = Jc/(GM²); q = Q/[M√(4πε₀G)]
 
-ASSUMED
-Opaque razor-thin disk from ISCO to 28 r_g, zero inner stress, identical isotropic faces and prescribed shearing brightness patches
-360° virtual scan; 8-second/800 GM/c³ constructed loop repeated four times
+ILLUSTRATIVE CHOICES
+Aligned prograde neutral test disk; large q = 0.4 is hypothetical
+Page–Thorne sets the mean brightness, not a self-consistent flowing disk
+Slow radial drift, multiscale finite-lived emissivity fluctuations, inner heating and opacity are prescribed, not GRMHD
+Razor-thin outer disk is opaque; inner gas has finite optical depth
+No plasma forces, thermodynamic spectrum or charge evolution calculated
 No mass, accretion rate or temperature assigned
-Orange depicts brightness, not true visible color
-q = 0.4 is theoretical, not a typical astrophysical charge
-No fluid evolution, Lorentz forces, plasma response, plunging emission or returning-radiation heating
+Orange represents brightness, not true visible color
+32 seconds = four 8-second loops; 800 GM/c³ per cycle with periodic source forcing and a 360° viewpoint scan
 
-SOURCES
-Newman et al. 1965; Page & Thorne 1974; Pugliese et al. 2013
-Wang, Lee & Lin 2022; Ivanov & Prodanov 2005; Liu et al. 2017; Zajaček et al. 2018
-Kerr 1963; Bardeen, Press & Teukolsky 1972; Luminet 1979; Bozza 2002
-Müller & Frauendiener 2012; Schnittman & Bertschinger 2004
-James et al. 2015; Gralla & Lupsasca 2020; Cárdenas-Avendaño et al. 2023
-ICC — sRGB encoding
-Motion reference: NASA / Goddard / J. Schnittman 2019
-https://svs.gsfc.nasa.gov/13326/
+SOURCES AND CONTEXT
+Newman et al. 1965; Kerr 1963; Page & Thorne 1974
+Bardeen, Press & Teukolsky 1972; Luminet 1979; Bozza 2002
+Pugliese et al. 2013; Wang, Lee & Lin 2022; Ko et al. 2024
+Ivanov & Prodanov 2005; Liu et al. 2017; Zajaček et al. 2018
+Penna et al. 2013; Mummery & Stone 2024; Vincent et al. 2022
+Müller & Frauendiener 2012; Schnittman & Bertschinger 2004; James et al. 2015
+Gralla, Holz & Wald 2019; Gralla & Lupsasca 2020; Cárdenas-Avendaño et al. 2023
+ICC sRGB; motion reference NASA/Goddard/J. Schnittman 2019
 No NASA footage or code used
 Full citations, equations, assumptions and validation in the repository
 

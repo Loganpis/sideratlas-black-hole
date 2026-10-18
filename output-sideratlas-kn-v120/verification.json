@@ -1,0 +1,1732 @@
+{
+  "scope": "Verify the v1.2 accretion renderer, numerical provenance and delivery.\n\nThese checks validate numerical consistency of the declared relativistic\ngeometry, kinematic source and thin-slab transfer. They do not establish a\nGRMHD solution, plasma thermodynamics, or agreement with an observed disk.\n",
+  "preflight_only": false,
+  "verifier_sha256": "d936a83fe32070feea5300a549b425a84eac30984609c7fef6dd34a426dda13c",
+  "videos": {
+    "color": {
+      "file": "sideratlas-kerr-newman-reel.mp4",
+      "sha256": "09b24e039b879ee7de88d292947efe3fd12e411e8d841e0fcc3a8655a4841fa6",
+      "size_bytes": 45055624,
+      "stream": {
+        "codec_name": "h264",
+        "profile": "High",
+        "width": 1080,
+        "height": 1920,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "nb_frames": "960",
+        "duration": "32.000000",
+        "start_time": "0.000000",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "color_range": "tv",
+        "level": 50,
+        "bit_rate": "11262564",
+        "chroma_location": "left"
+      },
+      "checks": [
+        {
+          "name": "1080x1920_h264_high_420",
+          "passed": true
+        },
+        {
+          "name": "thirty_fps_960_frames_32_seconds",
+          "passed": true
+        },
+        {
+          "name": "zero_start_silent",
+          "passed": true
+        },
+        {
+          "name": "rec709_limited_range",
+          "passed": true
+        },
+        {
+          "name": "faststart",
+          "passed": true
+        },
+        {
+          "name": "all_960_frames_decode_cleanly",
+          "passed": true
+        },
+        {
+          "name": "seam_consistent_with_adjacent_motion",
+          "passed": true
+        },
+        {
+          "name": "four_pixel_identical_decoded_cycles",
+          "passed": true
+        }
+      ],
+      "atoms": {
+        "ftyp": 0,
+        "moov": 32,
+        "free": 5352,
+        "mdat": 5360
+      },
+      "decode": {
+        "decoded_frames": 960,
+        "decoder_errors": "",
+        "difference_units": "mean absolute difference, RGB code values on a 0\u2013255 scale",
+        "all_transition_mae": {
+          "minimum": 3.430065747170782,
+          "median": 5.003114551183128,
+          "maximum": 6.320693158436214
+        },
+        "first_three_transition_mae": [
+          5.6233646797839505,
+          5.74328800154321,
+          5.737495177469135
+        ],
+        "last_three_transition_mae": [
+          5.120382265946502,
+          5.072178819444445,
+          5.319188368055555
+        ],
+        "seam_mae": 5.480086644804527,
+        "hero_region_y": [
+          0,
+          1920
+        ],
+        "hero_first_three_transition_mae": [
+          5.6233646797839505,
+          5.74328800154321,
+          5.737495177469135
+        ],
+        "hero_last_three_transition_mae": [
+          5.120382265946502,
+          5.072178819444445,
+          5.319188368055555
+        ],
+        "hero_seam_mae": 5.480086644804527,
+        "codec_mae_allowance": 2.0,
+        "seam_limit_from_endpoint_transitions": 7.74328800154321,
+        "hero_seam_limit_from_endpoint_transitions": 7.74328800154321,
+        "seam_consistent_with_nearby_transitions": true,
+        "seam_check_scope": "A perceptual discontinuity screen with codec tolerance; exact periodicity is checked separately on uncompressed renderer frames."
+      },
+      "first_cycle_framemd5": [
+        "186e1326b77d6182271d29778ee00d73",
+        "8c6c66e4adb27838ef886a9a7a799af3",
+        "2bccf645e62eb53bfe3b5eb38e9fef67",
+        "e313325168561616e312e4bdfdda8d93",
+        "a0406b7fbf3d4c6bacfcb8704e47b32d",
+        "d74d45bf6231315db6c1a153183c793c",
+        "13e826db4b07872eda4e922f24118df8",
+        "c4c13a652d1f2f5b83a419af24209475",
+        "8e596e59d0725b18ae50d9909aa825df",
+        "6cd2de00def0e2263cd5ca73f0a53256",
+        "11b754905c8b604cf21782b23f5f53db",
+        "489917e0e6401f11d665e91912aad52f",
+        "592daa07b6e067d5535ddd633345e1d1",
+        "5e189921f2494b751a3e21dd833976bb",
+        "4742c329bd3d41add559de4aaaa78e0d",
+        "e38ba8322f88fc9e037fc6cadb3cdac8",
+        "bcf5aea9815cf2fbabfb912a9a3984a5",
+        "ade2f6f1f496f327af02498a47fb40ae",
+        "2f279624f50526cc8b5be62ea9e87a93",
+        "e86f0c637814ec3d73eb8879d4cec612",
+        "4daee7bc6ba5d3fe2fa19e13034cfb4c",
+        "67ab1e0ee3040a66985ebd16a9c436f7",
+        "30cbcd33054f1db1769caf30e44d330e",
+        "997904608ba1ed15fe1ac32526aef3fe",
+        "cedb713e15e9b0d9323386cf98d70220",
+        "53a874c6107fa374c7b6714460f0e286",
+        "4dca0025f4f2c8f07c7ffcf007c71776",
+        "05e3db1cdb3aaa718d016f9c0144b86f",
+        "c0445778aad94a48f24eb456a34f8426",
+        "404b5f1d637751c1c53fa1c273f450b6",
+        "7f5f2d8ab2c1bfcabae0c791ac4b0060",
+        "9405b9b325edcd16dc78df53e5864e5d",
+        "20f30a1108b93005654ab163d937479d",
+        "7a41317bcb96a6f06d2ff15a762d22d3",
+        "05bc490c597b1f3f4289247aecb4f429",
+        "eb9a600984c665c3a0000fb0646c6359",
+        "f3e1b4c32b336527e32caa09122c9651",
+        "0220ec55835749fb06df3dae1fdad487",
+        "7b4df17faf6af34552f84381b0356538",
+        "76cd3ebd7c3e0278491a28e8fd67fc5d",
+        "6288037b92eea60c1f577c880cdce3cc",
+        "3d11116541eea70d324670d1d54399dd",
+        "cb3ab636cf51fc42a76f0ecad5abafd3",
+        "72eafd948fabd918dd3e8c5da3ea4f85",
+        "270cdefa602fc122f3e095f505d00fdd",
+        "260cbddfafcca6cb32c520ac81bcfd0d",
+        "fce2ca8ad1393cd0237fe883e1cd718c",
+        "aea33aa1cf9e6159c31a27b1831b9a21",
+        "aff58e0d70a9629b41b11c7a5bc88494",
+        "dabc60c4c4721f6e2b896b49e72fab35",
+        "bcc54d01350ebb40c21520bf3cfd828f",
+        "637f3dcee7b159cec60556796d505f09",
+        "4db5ee60e5e5242ba23f8fd3fd8c98dd",
+        "7d33bd54c71355a7ad35f23de49073a5",
+        "c9ea4fad896e835047a3c261cdc8fc69",
+        "bf48047af4d653c7202104a57ec1a613",
+        "92228077bc3178c4de7637953a83ae3f",
+        "8a6bcb7c3d34f4345fc97558dc07cb1b",
+        "27380acd1346c14d40e118bf1d1b24a0",
+        "45e8302402850416d7d8782d24e129e2",
+        "a9e5a45337139f742137f08e5d830926",
+        "33503e9f8aa10ce249409ce7d14c378c",
+        "79042c8b13aeedbc34dbb0be4302aac6",
+        "c5563f0f30fd9657740dc41a7638d724",
+        "a1b79d89c3aafc78ed41810855ea7725",
+        "86b2779f57b50372649b9e4500e40514",
+        "2a0095c66f06e02fba0b40c6f01dd7fa",
+        "a1dfcc8098196630536452296b778142",
+        "fb29948490bf2b7fd4efdaf4937da399",
+        "5f1cb7270bb687f22beb583286125201",
+        "0d0e4acc0a34a5aadb9453135e5a24aa",
+        "278931e749d437425097657c9e874215",
+        "b39bbd368ba9a32e6eb2a5b068aee090",
+        "54af3f1cab9e4a13742178354c6823a5",
+        "7b221aa4cd41d9c76c2047492a8a94df",
+        "eef21837f0f54a6720e2774c31c17174",
+        "63a740d973c46ef7baae748ef346b6b1",
+        "928800f687f7f5d92181379f5f5f01e0",
+        "586301fb2fdfa8aff6ace5d51af4f1ad",
+        "ece0bc5a98fb8eca91cb18a57ec0bf22",
+        "48cc1c678be482d5ae3373d8198de15d",
+        "23796c27db5d82b0a083d737c34fcbf3",
+        "41057233b9237ff664422d7c8e82be62",
+        "bc286852899fe28b6a24581836bb5f26",
+        "667e7e13b6d9bfd8b2e2dab6cb3e3dc2",
+        "6ca60a8765021b52c2cf84e9eecb00b6",
+        "358effcb0b51825dc43b29fd21112a5f",
+        "36e8151ffca9a8b7f57ad6c944138cec",
+        "ef42bd9af4d5f580ae86594ea86ecd44",
+        "585c56fb31e8d9f06d49e5518db85e3d",
+        "846a5621ce00f236febd4ce026e1e582",
+        "18563a136f677718fb122118615fd24e",
+        "4e2d402776f9d3f494af424ef31b188d",
+        "f9a0b78f1e2d166bbe8029e1a8e609ca",
+        "1fd411d5a9ccdbbfd7c1d874e0e3c299",
+        "063c09f276a5165a01e6b2b0335b6bb8",
+        "8d239e14f2cd541146ebecd8ab4f5e89",
+        "c5273dfbcf186f86c971713609c62b5c",
+        "67175743b1403180c277748406b7fa0f",
+        "098d2e629360036825ace2bed194643d",
+        "cb6931ea37958b541fab5370cbd6eeda",
+        "5bccb1c78e1e9e0d3969dade85ae7238",
+        "4f567bb88422c22f91a94aabe54c02cb",
+        "949eda8f86ad84b1ff377c366ec6b70f",
+        "4e171bd6e991d21c1759a82e43dddc02",
+        "b5ba7e005c8d0e51b1dae0aa900d4040",
+        "5b5ff740ec30badc30089bf315407fee",
+        "cea516a67c2a18adf1a8a711138b7a67",
+        "d1d16ec7aa1233fa2750c48de9bff7b2",
+        "b9bc0ba85d94b4e66d61a5de42cc46fc",
+        "d0652e717f4c251cdadba226fcc9e66d",
+        "c8786ea57602b3c64ad860d5511bd374",
+        "07c30cbf1bbdc5f1bd3154e28316214f",
+        "929326a81174a306457683c5eb14c604",
+        "7e6272c172c28a8fd0176868d66c93c9",
+        "fb44832806007b6572cf38ba1fcb6573",
+        "731abb76af8a5651f78212e0ec36c9f8",
+        "4a65a89b41b06b4ce940f6f5fa1c730a",
+        "ee712b70f881b5fccd447b00709d7ed7",
+        "f8ca42cfd02d53306448f107af3fb912",
+        "bf44c3169a0a07746967ab97329ea306",
+        "66038da531527366d52a9748f5166cce",
+        "80ecf4bacd750547cea1fe92163b102f",
+        "0f67efc343430886eed179ff2dbb99a3",
+        "7adde20985f915f166717867948c067d",
+        "c3a8e05b6fc62a407e306c19d9aa287a",
+        "a0917f7c3d3f394eb526875508930568",
+        "e0c8bf7cb055e22d3954e2713aa5e202",
+        "923886710426eb44cb877a42f8da1295",
+        "d27f0c3e5da840a10cf2e2ce4fce3f95",
+        "b178b5fe404594485055e104b62a5201",
+        "8314c8fa29a8b60a92aaf701995f6cb8",
+        "886b3ed9ffaad693f33d86e3ea318408",
+        "0684ce4562774196b130fbada93c98c5",
+        "1d91abfa46fe3a4d53441425464f9f74",
+        "f8a227220a753a9cb95cb6e1b89a2a3b",
+        "51cd2eafee412c7b8ec26b55ebab0083",
+        "4a0819d4fde9dfc1e6044045468afbab",
+        "75104218d2347350df42e66f11eb1e87",
+        "01972a4ca148692b218714e312b31b68",
+        "3b9492ac4b29f8ce1114d5e047faf7d9",
+        "8435bd815b2ca546defdd209c2d3631c",
+        "8113ac455e56d0d346630f97b4033848",
+        "2a9c92cff89018cea8c51575bd4d4bae",
+        "d0e6f1e67fff810e2baccc9fbe301ba7",
+        "c8955447d139c6888f2fe10546c90303",
+        "439358746548ab8907aae6ca0f552863",
+        "29542693287eca1b388262975421eaba",
+        "2e3009237b3ee122c40a119955f41c35",
+        "3dfd85ae0063ce6fedf36976e24c661d",
+        "3c5578d7b4102377c6489ce4daf66e80",
+        "ef4061ef3334b2f63931f5d5248cb30b",
+        "1d409312547808f077a0d6eefa52608c",
+        "d4b78f778f27b0eb37e321fdc4290fb2",
+        "2eb02565a6beb811662e4d908d60974a",
+        "50813e2342dc9b6b72c486c5bbd51285",
+        "f1deec888451885bd962657d2f0340d3",
+        "769f225e8292179de18fb3308fc619fe",
+        "d56f3b6af0da04e0d07bf88f1bfaa892",
+        "651580a259e7c92eade306f3d8de7532",
+        "e46b39af14386128d41070d781a222e7",
+        "f07875d1bb3f9c208828b51a20f0cc82",
+        "f1b3bec71bb7dfd85242a749e4d93aff",
+        "2078e6f20b7bf2415f997e6c63b1769d",
+        "21876538825047d3be6f0b6ffabd2364",
+        "9d6d2c5b4964328a2895c0a0ce09a8d1",
+        "c34958f4e8bb5ef537560f611742aace",
+        "139f23d5358a8099d30619006e1ed98d",
+        "2787e2cedaa9b1317177e286dcefc374",
+        "95465e62c10c456478ac5cb1957b8d42",
+        "e1b1a47082f1e0163682ffebbd27ac42",
+        "6fa1fc449947c12ed33b2dae4274d02b",
+        "39da86cf61a5467b99156a3dde00ee03",
+        "dd4ad1cd64c7b67ce9530752b74ba546",
+        "8b4dfc1ef808e5778dde3fda52192ee1",
+        "5815eb9c21f031133ffcbadd1485d8e9",
+        "74be1255facc7304a1d66667ef9e8730",
+        "2a0e2b10f35f4ff7db9b860480e4a362",
+        "913d2b5ba510ee1c61295f9766f61406",
+        "09efc7f08b298357d42d6da91fdbea9e",
+        "8197f38f559f87731bdc3ab96624d21b",
+        "3a09fb9977cc138e8e4d31849317546b",
+        "dd62dcea2754ebffb983170e2aa4704e",
+        "55d2363eec60576f85745bcb9269208e",
+        "3d534519baae62fec63deb13947bf83e",
+        "a12c2390b95acf93e99b1a758082f252",
+        "27314cb52763fc46867ec3daf2ecaa05",
+        "01c790f96a281f7c7d97faaea35d1c3d",
+        "184f02552556ec204000129a3df95227",
+        "6f9c5556e35bc8a26583ab4304db0947",
+        "7a4d7518a6acc099875d9a8f43b5c6b2",
+        "4bfb9710d8d5fecddb5f968c4929d53b",
+        "7b710f265174610816e42a55a08b959e",
+        "cfe2a469d5af8c8b258498aff19167a3",
+        "3b24c2c5a4924f9aa9a47b39bad9f6d4",
+        "ef3baef2375f25e4aed21c912f4b78f3",
+        "2a6d97c2ac4e6e9d06f9f297c94a7942",
+        "24cdf38918ecf5939a6bb1c06cd0c03b",
+        "34afe8eade6ee076ac13386e9af7db69",
+        "1744ef99cc6ea34b176686f9efe25446",
+        "58e07ab83df588c7ee8c17d94834ef90",
+        "5202f0535a540913d6e2b28a69913525",
+        "f5803d0a99642640855891356d4e5786",
+        "fa72095f61041dda0ca5851bb1e6c18b",
+        "ea0a4faa3a790bd2df808d7173705e28",
+        "49a6d9a52b0cd5c7f3c2ec3ddbbf0d3e",
+        "b46c4f9ae0e93f81bfc61bebdd88a266",
+        "7a1b6de91b9d871fc6976ff39588805c",
+        "bfc6aa2969ed7297b1df785e3235c046",
+        "e91b8133f9999a9890972ba1ef66bedc",
+        "340cb48954038a293f17d676c37b2f08",
+        "4d56f1bbc80faf3b630fc941f6870b9d",
+        "b54fd8e25bd2115c1c89e515d3fd6ada",
+        "d69dbfd827dc958b3855f02ccf655f5e",
+        "58e454d19130a4e0de1c6bc0edf936c5",
+        "f76c1bf2e6cda95c1e380e38377a2c52",
+        "6d9f07bc8f8d8327309641e04024c94c",
+        "97ae88d8760a46518631fcfc1d6c97e5",
+        "d68c74cee3860f807c95d4274a2bb03a",
+        "cb0568b09646feda94638c0392a9a105",
+        "14bd63f437d55f404ce01bb78811d356",
+        "5c87ad43b89fbc40d529e79f4c3a292f",
+        "dbe38c21d922a64d715b7b864efa3b95",
+        "862f5d680f788f74695843b036494590",
+        "6ee3df5d70bb5dbd42265a33c2a87b3f",
+        "16f1fe1683a1c7dda9c0dc842a53610e",
+        "8553d3b59a0ac1a83f9d7572fc894616",
+        "c727110d0ce44973dd7d2630620001c1",
+        "7309407376fbd1e43b6252a41df5e041",
+        "9e10b804f1033de8de313ef77ef7b10c",
+        "fb49458a63c46aa0525f223ce8b3f31d",
+        "3ac58aaaa6146a5499ded0f3d83c13b2",
+        "62687ed093b4159018b3dd3e0c63129b",
+        "6be9b07192fc2d160f7f3ff34db12a3b",
+        "5da12da867cc437da85611574801e032",
+        "d7d3fae22ade59caccd631aff76e7db6",
+        "65b92d83734c505b05334f0437120ea1",
+        "a8a4e754157d71d60229519a0d1a59e2",
+        "39ae65df3bb2611d8162ea81db1eead8",
+        "6324ed8e71d807ce6bbbf56aa3f515e8"
+      ],
+      "passed": true
+    },
+    "mono": {
+      "file": "sideratlas-kerr-newman-intensity.mp4",
+      "sha256": "cc19e2f37f66146c7962c5735cbabf8548b61da5d49f54f66e91e640461e9a69",
+      "size_bytes": 30400288,
+      "stream": {
+        "codec_name": "h264",
+        "profile": "High",
+        "width": 1080,
+        "height": 1920,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "nb_frames": "960",
+        "duration": "32.000000",
+        "start_time": "0.000000",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "color_range": "tv",
+        "level": 50,
+        "bit_rate": "7598777",
+        "chroma_location": "left"
+      },
+      "checks": [
+        {
+          "name": "1080x1920_h264_high_420",
+          "passed": true
+        },
+        {
+          "name": "thirty_fps_960_frames_32_seconds",
+          "passed": true
+        },
+        {
+          "name": "zero_start_silent",
+          "passed": true
+        },
+        {
+          "name": "rec709_limited_range",
+          "passed": true
+        },
+        {
+          "name": "faststart",
+          "passed": true
+        },
+        {
+          "name": "all_960_frames_decode_cleanly",
+          "passed": true
+        },
+        {
+          "name": "seam_consistent_with_adjacent_motion",
+          "passed": true
+        },
+        {
+          "name": "four_pixel_identical_decoded_cycles",
+          "passed": true
+        }
+      ],
+      "atoms": {
+        "ftyp": 0,
+        "moov": 32,
+        "free": 5164,
+        "mdat": 5172
+      },
+      "decode": {
+        "decoded_frames": 960,
+        "decoder_errors": "",
+        "difference_units": "mean absolute difference, RGB code values on a 0\u2013255 scale",
+        "all_transition_mae": {
+          "minimum": 3.631917438271605,
+          "median": 6.702605613425926,
+          "maximum": 11.88016444830247
+        },
+        "first_three_transition_mae": [
+          10.128334297839507,
+          9.622019675925927,
+          9.43439525462963
+        ],
+        "last_three_transition_mae": [
+          10.852383777006173,
+          10.543802083333333,
+          10.598928915895062
+        ],
+        "seam_mae": 10.45897231867284,
+        "hero_region_y": [
+          0,
+          1920
+        ],
+        "hero_first_three_transition_mae": [
+          10.128334297839507,
+          9.622019675925927,
+          9.43439525462963
+        ],
+        "hero_last_three_transition_mae": [
+          10.852383777006173,
+          10.543802083333333,
+          10.598928915895062
+        ],
+        "hero_seam_mae": 10.45897231867284,
+        "codec_mae_allowance": 2.0,
+        "seam_limit_from_endpoint_transitions": 12.852383777006173,
+        "hero_seam_limit_from_endpoint_transitions": 12.852383777006173,
+        "seam_consistent_with_nearby_transitions": true,
+        "seam_check_scope": "A perceptual discontinuity screen with codec tolerance; exact periodicity is checked separately on uncompressed renderer frames."
+      },
+      "first_cycle_framemd5": [
+        "3d70648ca6215c7485ca1d1a32d2900f",
+        "6cb3ba825790c93c89ed9785b4e2ee56",
+        "ac5f747d8c42b8de17e1e90b5c3d35ea",
+        "1442e1b81bf2d2c2cbc070823b919960",
+        "84200795bb58ad49a3afe431d7cf3c68",
+        "6b02bda38df6b006ea825228bc423b30",
+        "3bdcce8ff5330767930cc9a4ab53f323",
+        "e3b7861eae43d25fa6ce58c82e9bf67a",
+        "9c7d15a984941c2050c56a10450432f8",
+        "e3cea7fe731f0324f6e2fecf0d50e3ab",
+        "33ef862f9849475b1aee7426537dfe4e",
+        "1ff8053965f63c7f4f6007c29b10abd3",
+        "3517aa97ac643cb20c4b20162c397f4f",
+        "c146810d742fa05d565ed39cf4ed223c",
+        "3aec660cb19afe20b454b4ec17edca4f",
+        "f4ef0e07589377f1fa57c7fb2a320545",
+        "7b01b8999ad8eb4ed21e230298a8d86f",
+        "2bc377bf65f1b8a95d6d51896bb62a84",
+        "7e66f9a08b367f6d047716ab5e0bf0fb",
+        "d199ca6a547f944eb3e0fee7decafa5d",
+        "0394531f08405baa73d9c254eda189be",
+        "2cd6cea451dbf1bf5ac509500488cd3e",
+        "4acebaeb5b2f398d0b3addbe8c5416e3",
+        "5e99de2b071f2aaf65ce3410bc8ce833",
+        "f78cc9efc4dc4875c9750b31ac8c7cc6",
+        "332d3821ef5e1d6e365c772ed51aad90",
+        "edf1d4bc3b78420093e5ecc8a4847eec",
+        "690ceafc9dbdfbbda9aec8c890237fd6",
+        "e40ab819cf3b4ca2c512e27ba1269efb",
+        "48f47959124a4c29eaac83577af14658",
+        "9e2f4f103ce50bad6ac652d531240212",
+        "9c7c65ac4b959c4f4e81f7a829a81357",
+        "36235ac0cc20f07a4aa97f52728dee4e",
+        "3b41110113800c3e1ac82b1098cd2d22",
+        "72a6f555f9d8314eca4f2fbbd24c6956",
+        "a438c47b105a8b01ea1706172188bd04",
+        "1f504402c8e1b3886b0d3ffe28808b92",
+        "c62785cf3f6b78c94b9b563f56ec35e7",
+        "c89b1081e43d903e4a8b6a39f166a202",
+        "ce933ca7367c72f154f3324ba09f00ed",
+        "fd0370a6a578396dfd10775cc3d1a76c",
+        "828a5ee09a9c0121bf0c49936dcf8390",
+        "254f2a27c364a531013a4986961381eb",
+        "2f3eb8d7ed78f7229ca0ccce46f48c48",
+        "dfad606ad9d8089f6d58130555b90040",
+        "1cbd2fd8c91d88d260a5a2ccdc04a6e0",
+        "80174a0a8cfabb1e8fabd95ebc25e4c9",
+        "ec09b92c054be01c68ead709f75205ef",
+        "29f2d967ffabc16308ccdc49b692327a",
+        "bb9077be000a20b4b2fa8255df2d5706",
+        "70333733c82002802f907998128674f4",
+        "2911fee94d1809c2c788195f56539d78",
+        "90abc7f2ec929c4eb9d3728bb7ca8b0b",
+        "9dfabed98668cccb79f32a381f7aef86",
+        "710d9c7a883229a6f356b0e8be6fbafe",
+        "e3eefcd87c7c7cdcac3905f2a03ba764",
+        "4efeaf74c15568a3d57992af64a8e272",
+        "25b5289db821b5a626ebb28433fadc83",
+        "d1e8cae0b2b4e3013f0fe3f29d99afa9",
+        "ca4bc823117ea14400f53f941abccb6a",
+        "ff19f67342b00f40d18b31046d015f15",
+        "c3d6f527172b559963afcb906fde9f90",
+        "dc5121c08fd3b6d7a0426a53fe97ecd3",
+        "b85cf636b8c5c82c893270a56266c2fa",
+        "87a2db81fb439d2a94c979e7257e2f12",
+        "bee284e82de38c29967c786b4645e805",
+        "8ae6c5b8f80837cf09a6c93981c9d2d5",
+        "d0c5f3c3275358679d059d827c8adee4",
+        "aacfc5b0fe715ddea06aad51aa452b78",
+        "9d2764ad2a187415851b20322ffd445b",
+        "1b2dba55448a50241e67dce05f09c212",
+        "95bdbabf8df08b1d54370f3351ae9a46",
+        "c29a5cd676c0a13002941a2b134ee200",
+        "cf7d27b9c59b00502f09eb3e8756da0b",
+        "920ffa3c172797853d456c2fe570a52c",
+        "b1b48b1abc94aa3a3a66bb666198bce6",
+        "b986738f64b76cd136363b23203a5085",
+        "ed68f14de102eb35a3b5b5564f32a313",
+        "f91bd145a9dc8d5100504f67dec16b36",
+        "dc5bad87ef2839a3889d1b6940347032",
+        "2f1615765cbdf342a1a2a57f37607bb7",
+        "aa4cb2156eda196bfe56bb0db078b017",
+        "f0441a7d2db1a7405e13b211458050f6",
+        "0bccbcfa00478bbcb9d66041628c1254",
+        "b1c3f22357fdc16f6409d88418678e87",
+        "937d8909f9e6a7d2d5ae2a85625fac63",
+        "04c29bc1be95dafcf133dd86c2f2e826",
+        "a824c061dd7c3f55189e78b5e17bad43",
+        "765214a5c52d69e0dd60dfbfa67a8b7f",
+        "f69919789494bfa26cd2efabb37a65aa",
+        "33364f53e679ea99f0894e39253d8eeb",
+        "4c605627ca56708434d80d22d372654f",
+        "d2a31c1ad058a35ad51347024a10087a",
+        "b0d078552f98d234effc5a4380b95459",
+        "07f199df3b60700c66db9a698d6f7fa5",
+        "e81f0ec6471108d878aaf1ad34c9af22",
+        "229061e5c9913830110b0db37da2a14f",
+        "eed0bbdb440cff224eb09a3c5536fa8b",
+        "dbba60cea8fec591231139d3da95b33d",
+        "5fd5182bfb047e46d27eeaac0955cde4",
+        "8157c8826b34df08c71e4d08cf91481b",
+        "519ce0641cd4ff0d8eaa3dc9ea1306b3",
+        "72d452effb7f23e1b96f8a2b94289df1",
+        "90eb42e7faf823971b9ec55a2d011ecb",
+        "e8d05a71175337733b8fb9ec0ee1a12f",
+        "a6f8f7cd85653101cba0ad2d823f7dd0",
+        "41d40a0e04294a9a751ec9bffd5b8662",
+        "6254b95f6fb391a53d2491727f455f24",
+        "993e39806b5c01abb4ef37d359914a28",
+        "651cab5939cfa68eddd3593b0725c85e",
+        "9838ec4db159fab89deab1154cdeb791",
+        "8f2b616a6b219424a134c20326e8a9a4",
+        "66ef4baa0699ad650989960a60de1b52",
+        "ab55512b19108a88ffa7f6f902c311ac",
+        "d8c57cee7c37187041fd8461e640e299",
+        "df24bb377573d66d3cc4622fc3774520",
+        "d94767f210af0e18c57830ea804cf3ae",
+        "9e0cb161abcab70112f41bd9468168b2",
+        "9fc5d8074bf5f20d1cb0e7a3cc333ff7",
+        "516b995d570bc7c9feac21be06699352",
+        "ce2c78703246bca13968072e1b8c5a27",
+        "b40fbbe8781101b71f59e10ac63ec30d",
+        "a8be12784816729a8ec57442c4fe0df6",
+        "41afc521db8ae691133a1f778179ec66",
+        "741cc572ef099ce6fc529a1d5d7a6192",
+        "2731bb7991b0df8f8da12ef6ef08ea6f",
+        "8b5671abc1e055826e38b9dcc2c86e48",
+        "f69b00e865f192172872325ed89c11e6",
+        "42ff0e84e7f1ba1b95ad8988e2bcdda6",
+        "9835cd7e181e0349ab49c4158e829f53",
+        "571fe7e23e66d72410e7cbdf865b926b",
+        "bc7b3ec191ab566b0f51f0cd13ef02b0",
+        "f50b425d24786fbfa3743e52890deffd",
+        "4a4391c4432488ac661aeafd630c0117",
+        "095b17963081b4e9146e8bfb27c4c12a",
+        "b2a066704279d57c4cca684e15b7bfa5",
+        "6a0f46ebf6e48b14d39972b9871d2361",
+        "87a1d9cd8bec6e76a8ad5f776baeaeaf",
+        "b3e70ed1e977d98fc9bafa9c0c1487bb",
+        "c151cfe0f03d30688fb3ea2f4fecf018",
+        "323a8bfb55ca4c22d461d4aa421cc9fa",
+        "e466ec09323fbf865133ffa1c6852718",
+        "c094a0d0241e9c86ee8156194d4091b3",
+        "e704f6c7bf837d2d865b8866f1e9f8f4",
+        "6dd610d62748a3cdd89c33177943cbb8",
+        "e4b1bdf511ef27f8f25f8198793563ed",
+        "fe4eb9e20e3ee51451e12f2333701ee6",
+        "54da9b48e0b24d1cf95e0d3667c36488",
+        "4c2b4ca487a9b8e8f20eb2653a458439",
+        "aab48fc4662550f3d5f0232ebc6a98a4",
+        "66102a0513dc7da456cd79a5cdacae8a",
+        "c8fde1de54886188649a27e45cb94f29",
+        "a02393dfa20f121ea850ec7b452b88ef",
+        "bf6fe1b24e4b91e5ebfea12321caa746",
+        "0b5c32b9a4272a1657a40a8b7d19c49b",
+        "be69eca9cb1173e3f6b48454c55561dd",
+        "fb1a5747d732d613a7ebec902d318b98",
+        "0b711f5c6ed37e5bca40564ada0e7d5d",
+        "a50e1f7c17161be102a2d67cf8ce4268",
+        "c2924b01e6c4fa748c034063a98c3cfe",
+        "5d5e4022d979529254e82890ba0d3dbe",
+        "01493bbaec0b97d195c5404e897eee48",
+        "7e23ae84a525d587b3b3cbe4e900f18e",
+        "51b06a4d5b0cca3b78d593779c36d9bb",
+        "3855074d9bc9caa48b50095484d15ab7",
+        "51065bd034704927f5914737de412702",
+        "6a7c33f1cf3408daff4d293834e5af2e",
+        "8b5b48fa99b4717a5d79297d743ccf23",
+        "56c557ca4b0308eea593b3868cb31e7f",
+        "378f4f03947c3b1e7239e9e12d79b881",
+        "83e46c7f857ae936322703c8e283f26a",
+        "ac8d5c8149df25f300f206762d4940d8",
+        "4cbe9b5ebff7bf469ed1bb11c7721efc",
+        "379ee2281936e3407e72f6ff94543410",
+        "581aa5624763b530cdc60bfb73a60184",
+        "22bb9b8f02da1580f1eae023d5f4a3cc",
+        "f166f7086ac7ab13e1f05b03935033ba",
+        "d757dc5cfc62c6a3bebff1b6f25ccc56",
+        "a01feab34189c68964ceb20d66ac096d",
+        "8ee5bc7f323cc2d9aacd07f7635e82cf",
+        "15a337a3344cbe1e43ccd50141975fd4",
+        "61acb1ce71d86d1ed01e4d140396d761",
+        "81b3895fd9757c2aa90c822174d38a4a",
+        "e92f483d9f8eec262201f39144664826",
+        "7443cc1b270d85abc40476f47fdb755a",
+        "b84a2ce5b189e328dacf4e255a20b24a",
+        "b0d516a17719d0c9cce0f8106f12c1ab",
+        "d665bb503b27d6b019b127087a229926",
+        "a815692fce84baebcd8146e84ac21e5c",
+        "2ebcfe28942c01cfa2ff27daeb93b88c",
+        "10d8d960c412798aa80bcef63a2eca9c",
+        "b9d32ea1da1ee687e3fcc9dc3dd3633e",
+        "279614cfa8c45beaaf95f7b9d72a09f7",
+        "aed54053de46c13ad95faf07c792f4a1",
+        "cce4bacc25cc5e8016e62963ea4f6e45",
+        "f36d1d07153909349386143aafa5b45a",
+        "5ee0dc9e24b43e08b1ad0de1095e2d5d",
+        "41f455433da809d3081b44e88211f0f2",
+        "3bc70468dca6d4a275462f8c86383431",
+        "0c1f0ab19f11b91aa1abbe62b434d1b1",
+        "3027530859359737a61b87d8b3884235",
+        "7e44bea235a3b5706e346e99a6f452eb",
+        "716e9bfe12b0af1e857caf9ff4d9e793",
+        "576b34fd5717199b51238deded6900d8",
+        "54f4368b32b4a22756eef91f3333d4d5",
+        "794d5f5cc45615fc1bd926b844d4bd4c",
+        "ffe003a957c238dee275f8f9a0df55fc",
+        "de477101268a315dfa51ccccdafd2326",
+        "18e10907cb5a27ae022a4542e2b63d13",
+        "a341dddd6eea3fc989783612316778ee",
+        "a7dfab2804486402607f6f6083749706",
+        "ddc8ba8a32d220a9d7ae8bdaa5c21a21",
+        "6136d9c4b19f6664bcd16da901854581",
+        "c02b5c617b676b79337161b463b6c27c",
+        "fdf723dac59b35b8323d6a20d41d2b7a",
+        "791f5e24cebaa56cc3f0884a25c1b0d9",
+        "daedc248e29348ec6bf3f9751a00ddc0",
+        "b66d77cfc1eb38cff6e554d485b932e5",
+        "8c198aafea8559ef327e8b578864accc",
+        "589b439bb64a6ec0c8438705c522582d",
+        "07e9dd975c5609c19ff2862dc192c72f",
+        "a4a909f7e317a1e1db42c6e5b19b3f02",
+        "e233e9e92e9d934a55f48a3ba13c5341",
+        "b6a11cbbee674872a22abd9367e964b8",
+        "25129602292d070beab6e4c3329ce5d0",
+        "2711c8185443840aa29de096ba9aff12",
+        "044b964994c1050570bb04e4161658a8",
+        "f31712793adf7e588fb365a2317e7663",
+        "aff60bc806bfa992107de84e51c66694",
+        "2b82a38a21d06c09c7e20b01860d0d77",
+        "6f3595c018b37ef68962b5a8f910accf",
+        "27afa96b468da865dd302596a6cc8ac4",
+        "edc19809d6b65240fbb599feec5bc7be",
+        "c7067e0d5733b6282c85241efecac2eb",
+        "b94e0f685c12c08aa4e040c8f5dc1325",
+        "f6521e3fd517b108bc7c52acf9efce4e",
+        "92a7ea664422dde0956942dfe481d42f",
+        "1a92d23fa43655473c22139215fc40d3",
+        "d9fa9f43e86ecf9f9e435b2e3549d48c",
+        "2c2388d08c58c1772ec84fd56876d855"
+      ],
+      "passed": true
+    }
+  },
+  "numerical_reports": {
+    "scope": "Saved numerical diagnostics; every recorded source checksum is checked",
+    "reports": {
+      "kn-flow-diagnostics.json": {
+        "sha256": "58828d62b652ead8532da96de445f11720b5a204e39d147050352a18fb25cada",
+        "checks": 70,
+        "source_matches": {
+          "kn_flow.py": true,
+          "kn_orbits.py": true,
+          "verify_kn_flow.py": true
+        }
+      },
+      "kn-accretion-trace-diagnostics.json": {
+        "sha256": "986a0eb2ceacc7cd3073e4412f1e861dba8aa342c198312d0e932888f186122c",
+        "checks": 51,
+        "source_matches": {
+          "kn_accretion_trace.py": true,
+          "kn_accretion_trace.cpp": true,
+          "kn_orbit_trace.py": true,
+          "kn_orbit_trace.cpp": true,
+          "kn_orbits.py": true,
+          "verify_kn_trace.py": true,
+          "verify_kn_accretion_trace.py": true
+        }
+      },
+      "kn-dynamic-emission-diagnostics.json": {
+        "sha256": "3f7b6347ca6f623f3dca5df53f30442e41c4e827ceeaec91785ab7ba0cf9ecf0",
+        "checks": 35,
+        "source_matches": {
+          "kn_dynamic_emission.py": true,
+          "verify_kn_dynamic_emission.py": true,
+          "kn_flow.py": true,
+          "kn_orbit_emission.py": true,
+          "kn_orbits.py": true
+        }
+      },
+      "kn-sampling-diagnostics.json": {
+        "sha256": "9fa6dc26bf97e466dccc32b08e11ab58ba6fbcd0c70518ae3d3ed9f11ce2ef25",
+        "checks": 27,
+        "source_matches": {
+          "verify_kn_sampling.py": true,
+          "render_kn_accretion.py": true,
+          "render_kn_orbit.py": true,
+          "kn_accretion_trace.py": true,
+          "kn_accretion_trace.cpp": true,
+          "kn_flow.py": true,
+          "kn_dynamic_emission.py": true,
+          "kn_orbit_emission.py": true,
+          "kn_orbits.py": true
+        }
+      },
+      "kn-image-order-diagnostics.json": {
+        "sha256": "71d5f8cf04769d024329756d1c9084654f4ccf3e23d198c0615ca7663236af6c",
+        "checks": 9,
+        "source_matches": {
+          "verify_kn_image_orders.py": true,
+          "kn_accretion_trace.py": true,
+          "kn_accretion_trace.cpp": true,
+          "kn_orbits.py": true,
+          "kn_flow.py": true,
+          "kn_dynamic_emission.py": true,
+          "render_kn_accretion.py": true
+        }
+      },
+      "kn-emission-comparison-diagnostics.json": {
+        "sha256": "6d2d0d4d55374fbf59a50208f2a19f9fa8c4e1991008ba15917e4638949f4cf1",
+        "checks": 15,
+        "source_matches": {
+          "compare_kn_emission.py": true,
+          "kn_dynamic_emission.py": true,
+          "kn_orbit_emission.py": true,
+          "nasa_emission.py": true,
+          "kn_flow.py": true,
+          "kn_orbits.py": true,
+          "emission.py": true,
+          "render_kn_accretion.py": true,
+          "render_kn_orbit.py": true
+        }
+      }
+    },
+    "checks": [
+      {
+        "name": "kn-flow-diagnostics.json_passed_with_current_sources",
+        "passed": true
+      },
+      {
+        "name": "kn-accretion-trace-diagnostics.json_passed_with_current_sources",
+        "passed": true
+      },
+      {
+        "name": "kn-dynamic-emission-diagnostics.json_passed_with_current_sources",
+        "passed": true
+      },
+      {
+        "name": "kn-sampling-diagnostics.json_passed_with_current_sources",
+        "passed": true
+      },
+      {
+        "name": "kn-image-order-diagnostics.json_passed_with_current_sources",
+        "passed": true
+      },
+      {
+        "name": "kn-emission-comparison-diagnostics.json_passed_with_current_sources",
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "transfer": {
+    "scope": "Closed-form foreground transfer and outgoing-photon horizon limit",
+    "checks": [
+      {
+        "name": "two_layer_slab_then_opaque_closed_form",
+        "passed": true,
+        "maximum_absolute_error": 2.7755575615628914e-17
+      },
+      {
+        "name": "each_emitter_has_own_g_to_fourth",
+        "passed": true
+      },
+      {
+        "name": "opaque_foreground_blocks_all_later_events",
+        "passed": true
+      },
+      {
+        "name": "no_image_order_brightness_boost",
+        "passed": true
+      },
+      {
+        "name": "grazing_thin_slab_saturates_finitely",
+        "passed": true
+      },
+      {
+        "name": "near_horizon_intrinsic_emission_is_finite_not_faded_by_hand",
+        "passed": true,
+        "relative_emission": [
+          0.07609147984640224,
+          0.07960474318540595,
+          0.07996043027054825
+        ]
+      },
+      {
+        "name": "outgoing_plunge_g4_drives_near_horizon_fade",
+        "passed": true,
+        "frequency_shifts": [
+          0.006314470041827735,
+          0.0006340989741114345,
+          6.343642270132279e-05
+        ],
+        "observed_relative_intensity": [
+          1.2097166524395792e-10,
+          1.2869662201054267e-14,
+          1.294881003731321e-18
+        ]
+      },
+      {
+        "name": "radial_momentum_term_materially_changes_plunging_g",
+        "passed": true,
+        "largest_relative_difference": 0.4996362812719817
+      }
+    ],
+    "passed": true
+  },
+  "display": {
+    "scope": "Current KN renderer display functions; color is illustrative brightness",
+    "checks": [
+      {
+        "name": "black_exact",
+        "passed": true
+      },
+      {
+        "name": "palette_luminance_monotonic",
+        "passed": true
+      },
+      {
+        "name": "fixed_display_curve_monotonic_bounded",
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "composition": {
+    "scope": "Actual compositor applied to synthetic native float-radiance fields; no ray tracing needed",
+    "checks": [
+      {
+        "name": "color_only_header_text_remains",
+        "passed": true,
+        "overlay_bbox": [
+          15,
+          66,
+          242,
+          98
+        ]
+      },
+      {
+        "name": "mono_only_header_text_remains",
+        "passed": true,
+        "overlay_bbox": [
+          15,
+          66,
+          242,
+          98
+        ]
+      },
+      {
+        "name": "color_and_intensity_have_same_header",
+        "passed": true
+      },
+      {
+        "name": "uniform_radiance_fills_entire_portrait",
+        "passed": true,
+        "maximum_channel_error": 0
+      },
+      {
+        "name": "centered_circular_source_is_not_stretched",
+        "passed": true,
+        "centroid_pixels": [
+          135.0,
+          240.0
+        ],
+        "variance_ratio": 1.0
+      },
+      {
+        "name": "edge_on_emission_spans_corner_diagonal",
+        "passed": true,
+        "measured_angle_degrees": 60.64220719580485,
+        "expected_angle_degrees": 60.64224645720873
+      }
+    ],
+    "passed": true
+  },
+  "actual_renderer": {
+    "scope": "Fresh 270x480 renderer with 1.5x detector, 2x2 selected subpixels and three source-shutter samples",
+    "geometry": {
+      "model": "Kerr-Newman null geodesics; all thin-plunge intersections then first opaque outer disk",
+      "spin": 0.9,
+      "charge_q": 0.4,
+      "charge_definition": "q=Q/(M sqrt(4 pi epsilon_0 G)); geometrized Q/M",
+      "disk_matter": "neutral test matter; no Lorentz force or plasma response",
+      "spin_definition": "a*=cJ/(GM^2)",
+      "spin_alignment": "black-hole angular momentum and disk angular momentum both +z; prograde",
+      "width": 405,
+      "height": 338,
+      "fov_horizontal_rg": 72.0,
+      "fov_vertical_rg": 60.08888888888889,
+      "roll_deg": 0,
+      "rin_rg": 1.577504566512094,
+      "rout_rg": 28,
+      "outer_horizon_rg": 1.1732050807568875,
+      "scaled_mino_step": 0.012,
+      "maximum_scaled_mino_parameter": 62.832,
+      "integrator": "double-precision RK4; Hermite equatorial root followed by partial RK4 event step",
+      "observer": "static at infinity",
+      "threads": 8,
+      "camera_angle_convention": "signed degrees about disk x axis; n=(0,-sin(theta),cos(theta))",
+      "camera_screen_basis": "e_x=(1,0,0); e_y=(0,cos(theta),sin(theta)); continuous through both poles",
+      "disk_plane_crossing": "observer-at-infinity crossing excluded; coplanar rays first enter outer rim",
+      "delay_units": "t_g=GM/c^3",
+      "delay_definition": "elapsed coordinate propagation time minus one common observer Kerr-Newman r*; q-r*(hit)",
+      "invalid_delay_value": 0,
+      "emission_time_rule": "t_em=t_obs-delay_tg; one common additive origin",
+      "azimuth": "pole-regular angular vector plus backward Kerr-Newman radial frame-dragging integral",
+      "disk_surfaces": "same prescribed isotropic surface emission on both faces",
+      "kernel": "kn_accretion_trace.cpp; original kn_orbit_trace equations preserved",
+      "plunge_inner_cutoff_rg": 1.1733050807568874,
+      "horizon_cutoff_offset_rg": 0.0001,
+      "minimum_exterior_photon_turn_rg": 1.2147958843207904,
+      "capture_cutoff_safety": "cutoff strictly below prograde equatorial photon orbit; no exterior escaping radial turn is discarded",
+      "near_horizon_step_limit": "h <= 0.15 (1/r_plus-u)/(du/ds) on incoming approach",
+      "max_emitting_intersections_stored": 4,
+      "storage_limit_policy": "unresolved overflow raises; test convergence by increasing capacity",
+      "image_order": "number of finite equatorial crossings before the emitting event; no artificial bands",
+      "event_order": "near to far along a backward ray",
+      "disk_opacity": "outer disk opaque; inner plunging sheet transfer prescribed separately",
+      "photon_radial_momentum": "future-directed covariant k_r/E = sign(backward du/ds) sqrt(R)/Delta",
+      "emitter_redshift_rule": "g^-1=ut-lambda*uphi-(k_r/E)*ur; utheta=0",
+      "surface_normal_cosine": "mu=g*sqrt(eta)/r"
+    },
+    "view_diagnostics": {
+      "0.0": {
+        "rays": 136890,
+        "retried_rays": 0,
+        "maximum_constraint_residual": 3.966612571466285e-09,
+        "captured_rays": 806,
+        "maximum_image_order": 3,
+        "image_order_hits": {
+          "0": 17616,
+          "1": 3187,
+          "2": 3,
+          "3": 1
+        },
+        "plunging_events": 202,
+        "refined": {
+          "rays": 16536,
+          "retried_rays": 0,
+          "maximum_constraint_residual": 2.665179737005643e-10,
+          "captured_rays": 783,
+          "maximum_image_order": 3,
+          "image_order_hits": {
+            "0": 3750,
+            "1": 12642,
+            "2": 12,
+            "3": 1
+          },
+          "plunging_events": 735
+        },
+        "refined_parent_pixels": 4134,
+        "refinement_grid": 2,
+        "base_observed_g_range": [
+          0.0008163704435033915,
+          1.458669781658227
+        ]
+      },
+      "0.1": {
+        "rays": 136890,
+        "retried_rays": 0,
+        "maximum_constraint_residual": 1.6662455699831894e-09,
+        "captured_rays": 662,
+        "maximum_image_order": 0,
+        "image_order_hits": {
+          "0": 59961
+        },
+        "plunging_events": 188,
+        "refined": {
+          "rays": 5288,
+          "retried_rays": 0,
+          "maximum_constraint_residual": 1.1632025730356049e-10,
+          "captured_rays": 699,
+          "maximum_image_order": 0,
+          "image_order_hits": {
+            "0": 5239
+          },
+          "plunging_events": 650
+        },
+        "refined_parent_pixels": 1322,
+        "refinement_grid": 2,
+        "base_observed_g_range": [
+          0.0017067417569008958,
+          1.1221293410285615
+        ]
+      },
+      "0.25": {
+        "rays": 136890,
+        "retried_rays": 0,
+        "maximum_constraint_residual": 9.547112027343264e-11,
+        "captured_rays": 635,
+        "maximum_image_order": 0,
+        "image_order_hits": {
+          "0": 82577
+        },
+        "plunging_events": 184,
+        "refined": {
+          "rays": 5072,
+          "retried_rays": 0,
+          "maximum_constraint_residual": 7.040259792330142e-12,
+          "captured_rays": 709,
+          "maximum_image_order": 0,
+          "image_order_hits": {
+            "0": 5041
+          },
+          "plunging_events": 678
+        },
+        "refined_parent_pixels": 1268,
+        "refinement_grid": 2,
+        "base_observed_g_range": [
+          0.000719068244066549,
+          0.9686410951041056
+        ]
+      },
+      "0.375": {
+        "rays": 136890,
+        "retried_rays": 0,
+        "maximum_constraint_residual": 2.144867819613496e-09,
+        "captured_rays": 661,
+        "maximum_image_order": 0,
+        "image_order_hits": {
+          "0": 55101
+        },
+        "plunging_events": 173,
+        "refined": {
+          "rays": 5148,
+          "retried_rays": 0,
+          "maximum_constraint_residual": 1.4720661569603226e-10,
+          "captured_rays": 654,
+          "maximum_image_order": 0,
+          "image_order_hits": {
+            "0": 5119
+          },
+          "plunging_events": 625
+        },
+        "refined_parent_pixels": 1287,
+        "refinement_grid": 2,
+        "base_observed_g_range": [
+          0.0001022788732764638,
+          1.1522546672543392
+        ]
+      },
+      "0.5": {
+        "rays": 136890,
+        "retried_rays": 0,
+        "maximum_constraint_residual": 3.966612571466285e-09,
+        "captured_rays": 806,
+        "maximum_image_order": 3,
+        "image_order_hits": {
+          "0": 17616,
+          "1": 3187,
+          "2": 3,
+          "3": 1
+        },
+        "plunging_events": 202,
+        "refined": {
+          "rays": 16536,
+          "retried_rays": 0,
+          "maximum_constraint_residual": 2.665180678090491e-10,
+          "captured_rays": 783,
+          "maximum_image_order": 3,
+          "image_order_hits": {
+            "0": 3750,
+            "1": 12642,
+            "2": 12,
+            "3": 1
+          },
+          "plunging_events": 735
+        },
+        "refined_parent_pixels": 4134,
+        "refinement_grid": 2,
+        "base_observed_g_range": [
+          0.000816370443503392,
+          1.4586697816582275
+        ]
+      },
+      "0.75": {
+        "rays": 136890,
+        "retried_rays": 0,
+        "maximum_constraint_residual": 9.547112027343264e-11,
+        "captured_rays": 635,
+        "maximum_image_order": 0,
+        "image_order_hits": {
+          "0": 82577
+        },
+        "plunging_events": 184,
+        "refined": {
+          "rays": 5072,
+          "retried_rays": 0,
+          "maximum_constraint_residual": 7.040259792330142e-12,
+          "captured_rays": 709,
+          "maximum_image_order": 0,
+          "image_order_hits": {
+            "0": 5041
+          },
+          "plunging_events": 678
+        },
+        "refined_parent_pixels": 1268,
+        "refinement_grid": 2,
+        "base_observed_g_range": [
+          0.000719068244066549,
+          0.9686410951041056
+        ]
+      },
+      "0.23055555555555557": {
+        "rays": 136890,
+        "retried_rays": 0,
+        "maximum_constraint_residual": 8.679216840359246e-11,
+        "captured_rays": 640,
+        "maximum_image_order": 0,
+        "image_order_hits": {
+          "0": 83126
+        },
+        "plunging_events": 188,
+        "refined": {
+          "rays": 6520,
+          "retried_rays": 0,
+          "maximum_constraint_residual": 6.352128534548903e-12,
+          "captured_rays": 720,
+          "maximum_image_order": 0,
+          "image_order_hits": {
+            "0": 6488
+          },
+          "plunging_events": 688
+        },
+        "refined_parent_pixels": 1630,
+        "refinement_grid": 2,
+        "base_observed_g_range": [
+          0.003358698598106154,
+          0.9457569942854057
+        ]
+      },
+      "0.7305555555555555": {
+        "rays": 136890,
+        "retried_rays": 0,
+        "maximum_constraint_residual": 8.679216840359246e-11,
+        "captured_rays": 640,
+        "maximum_image_order": 0,
+        "image_order_hits": {
+          "0": 83126
+        },
+        "plunging_events": 188,
+        "refined": {
+          "rays": 6520,
+          "retried_rays": 0,
+          "maximum_constraint_residual": 6.352128534548903e-12,
+          "captured_rays": 720,
+          "maximum_image_order": 0,
+          "image_order_hits": {
+            "0": 6488
+          },
+          "plunging_events": 688
+        },
+        "refined_parent_pixels": 1630,
+        "refinement_grid": 2,
+        "base_observed_g_range": [
+          0.003358698598106154,
+          0.9457569942854057
+        ]
+      },
+      "0.48055555555555557": {
+        "rays": 136890,
+        "retried_rays": 0,
+        "maximum_constraint_residual": 2.6534876383505145e-09,
+        "captured_rays": 1566,
+        "maximum_image_order": 2,
+        "image_order_hits": {
+          "0": 13142,
+          "1": 26,
+          "2": 4
+        },
+        "plunging_events": 286,
+        "refined": {
+          "rays": 5368,
+          "retried_rays": 0,
+          "maximum_constraint_residual": 1.7822675623255901e-10,
+          "captured_rays": 1154,
+          "maximum_image_order": 2,
+          "image_order_hits": {
+            "0": 5130,
+            "1": 98,
+            "2": 8
+          },
+          "plunging_events": 1050
+        },
+        "refined_parent_pixels": 1342,
+        "refinement_grid": 2,
+        "base_observed_g_range": [
+          0.0024663766159027174,
+          1.6297483552765264
+        ]
+      }
+    },
+    "checks": [
+      {
+        "name": "chosen_spin_charge_and_continuous_inner_flow",
+        "passed": true
+      },
+      {
+        "name": "raw_radiance_loop_endpoints_equal",
+        "passed": true
+      },
+      {
+        "name": "color_uncompressed_loop_endpoints_equal",
+        "passed": true
+      },
+      {
+        "name": "mono_uncompressed_loop_endpoints_equal",
+        "passed": true
+      },
+      {
+        "name": "per_ray_retarded_source_is_periodic",
+        "passed": true,
+        "maximum_error": 0.0
+      },
+      {
+        "name": "per_image_delays_change_variable_emission",
+        "passed": true,
+        "rms_emitted_intensity_difference": 0.14927936869859734
+      },
+      {
+        "name": "three_point_finite_source_exposure_uses_correct_times",
+        "passed": true,
+        "sampled_times_tg": [
+          -0.6454972243679029,
+          0.0,
+          0.6454972243679029
+        ]
+      },
+      {
+        "name": "shutter_averages_linear_radiance_before_display",
+        "passed": true
+      },
+      {
+        "name": "phase_0_finite_radiance_and_exterior_emission",
+        "passed": true
+      },
+      {
+        "name": "phase_0_resolved_independent_subpixel_rays",
+        "passed": true
+      },
+      {
+        "name": "phase_0_three_to_nine_point_source_shutter_convergence",
+        "passed": true,
+        "radiance_l1_relative_to_total": 1.5728849410379281e-07,
+        "rgb_mae_255": 2.57201646090535e-06,
+        "scope": "Source-only exposure at fixed central photon geometry; excludes camera-motion blur"
+      },
+      {
+        "name": "phase_0.1_finite_radiance_and_exterior_emission",
+        "passed": true
+      },
+      {
+        "name": "phase_0.1_resolved_independent_subpixel_rays",
+        "passed": true
+      },
+      {
+        "name": "phase_0.1_three_to_nine_point_source_shutter_convergence",
+        "passed": true,
+        "radiance_l1_relative_to_total": 5.781847383513728e-07,
+        "rgb_mae_255": 2.05761316872428e-05,
+        "scope": "Source-only exposure at fixed central photon geometry; excludes camera-motion blur"
+      },
+      {
+        "name": "phase_0.25_finite_radiance_and_exterior_emission",
+        "passed": true
+      },
+      {
+        "name": "phase_0.25_resolved_independent_subpixel_rays",
+        "passed": true
+      },
+      {
+        "name": "phase_0.25_three_to_nine_point_source_shutter_convergence",
+        "passed": true,
+        "radiance_l1_relative_to_total": 1.3949543907077864e-06,
+        "rgb_mae_255": 2.8292181069958848e-05,
+        "scope": "Source-only exposure at fixed central photon geometry; excludes camera-motion blur"
+      },
+      {
+        "name": "phase_0.375_finite_radiance_and_exterior_emission",
+        "passed": true
+      },
+      {
+        "name": "phase_0.375_resolved_independent_subpixel_rays",
+        "passed": true
+      },
+      {
+        "name": "phase_0.5_finite_radiance_and_exterior_emission",
+        "passed": true
+      },
+      {
+        "name": "phase_0.5_resolved_independent_subpixel_rays",
+        "passed": true
+      },
+      {
+        "name": "phase_0.75_finite_radiance_and_exterior_emission",
+        "passed": true
+      },
+      {
+        "name": "phase_0.75_resolved_independent_subpixel_rays",
+        "passed": true
+      },
+      {
+        "name": "phase_0.230556_finite_radiance_and_exterior_emission",
+        "passed": true
+      },
+      {
+        "name": "phase_0.230556_resolved_independent_subpixel_rays",
+        "passed": true
+      },
+      {
+        "name": "phase_0.730556_finite_radiance_and_exterior_emission",
+        "passed": true
+      },
+      {
+        "name": "phase_0.730556_resolved_independent_subpixel_rays",
+        "passed": true
+      },
+      {
+        "name": "phase_0.480556_finite_radiance_and_exterior_emission",
+        "passed": true
+      },
+      {
+        "name": "phase_0.480556_resolved_independent_subpixel_rays",
+        "passed": true
+      },
+      {
+        "name": "natural_image_orders_at_least_second_order",
+        "passed": true,
+        "maximum_order": 3
+      },
+      {
+        "name": "geodesic_plunge_source_is_actually_intersected",
+        "passed": true,
+        "sampled_plunging_intersections": 1795
+      },
+      {
+        "name": "antipodal_new_retarded_emission_matches_fresh_0",
+        "passed": true,
+        "maximum_absolute_error": 9.5367431640625e-07
+      },
+      {
+        "name": "antipodal_new_retarded_emission_matches_fresh_0.1",
+        "passed": true,
+        "maximum_absolute_error": 5.960464477539063e-08
+      },
+      {
+        "name": "captured_rays_retain_luminous_foreground_gas",
+        "passed": true,
+        "captured_foreground_pixels": 189,
+        "luminous_captured_pixels": 189
+      },
+      {
+        "name": "central_polar_horizon_ray_black_without_emissive_surface",
+        "passed": true
+      },
+      {
+        "name": "overflow_retraces_without_dropping_emitting_events",
+        "passed": true,
+        "recovered_events": 2,
+        "retry_stats": {
+          "rays": 1,
+          "retried_rays": 1,
+          "maximum_constraint_residual": 6.727942666752824e-11,
+          "captured_rays": 1,
+          "maximum_image_order": 1,
+          "image_order_hits": {
+            "0": 1,
+            "1": 1
+          },
+          "plunging_events": 2
+        }
+      }
+    ],
+    "passed": true
+  },
+  "metadata": {
+    "scope": "Current renderer metadata and public scientific disclosures",
+    "checks": [
+      {
+        "name": "recorded_source_matches_current_code",
+        "passed": true
+      },
+      {
+        "name": "v120_delivery_dimensions_and_four_cycles",
+        "passed": true
+      },
+      {
+        "name": "kerr_newman_spin_charge_and_exterior_plunge_boundary",
+        "passed": true
+      },
+      {
+        "name": "full_orbit_static_observer_assumption",
+        "passed": true
+      },
+      {
+        "name": "saved_emission_matches_current_model",
+        "passed": true
+      },
+      {
+        "name": "saved_flow_matches_current_model",
+        "passed": true
+      },
+      {
+        "name": "illustrative_source_opacity_charge_and_palette_disclosed",
+        "passed": true
+      },
+      {
+        "name": "independent_subpixels_and_source_only_exposure_recorded",
+        "passed": true
+      },
+      {
+        "name": "export_contract_unchanged",
+        "passed": true
+      },
+      {
+        "name": "title_only_full_frame_portrait_identity",
+        "passed": true
+      },
+      {
+        "name": "rigid_diagonal_viewport_covered_by_traced_domain",
+        "passed": true
+      },
+      {
+        "name": "native_radiance_density_near_output_and_extra_critical_sampling",
+        "passed": true,
+        "native_samples_per_output_pixel": 0.9722222222222223
+      },
+      {
+        "name": "complete_render_and_no_partial_video_files",
+        "passed": true
+      },
+      {
+        "name": "cached_assembly_provenance_matches_current_utility",
+        "passed": true
+      },
+      {
+        "name": "caption_within_instagram_limit_and_matching_txt",
+        "passed": true,
+        "characters": 2137
+      },
+      {
+        "name": "caption_includes_requested_code_sentence_and_model_disclosure",
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "view_diagnostics": {
+    "scope": "Recorded independent production central views and critical-zone subrays",
+    "checks": [
+      {
+        "name": "all_120_independent_views_recorded_once",
+        "passed": true
+      },
+      {
+        "name": "production_constraints_within_verified_kernel_tolerance",
+        "passed": true,
+        "maximum_residual": 6.264232267146996e-09
+      },
+      {
+        "name": "multiple_image_orders_recorded_from_actual_events",
+        "passed": true,
+        "maximum_image_order": 5
+      },
+      {
+        "name": "critical_and_plunging_pixels_have_independent_four_ray_refinement",
+        "passed": true,
+        "total_refined_parent_pixels": 4597525
+      },
+      {
+        "name": "every_view_intersects_luminous_plunging_region",
+        "passed": true,
+        "total_plunging_events": 4796584
+      }
+    ],
+    "retried_rays": 15,
+    "passed": true
+  },
+  "assets": {
+    "files": {
+      "sideratlas-kerr-newman-reel.mp4": {
+        "sha256": "09b24e039b879ee7de88d292947efe3fd12e411e8d841e0fcc3a8655a4841fa6",
+        "size_bytes": 45055624
+      },
+      "sideratlas-kerr-newman-intensity.mp4": {
+        "sha256": "cc19e2f37f66146c7962c5735cbabf8548b61da5d49f54f66e91e640461e9a69",
+        "size_bytes": 30400288
+      },
+      "sideratlas-kerr-newman-reel-loop.mp4": {
+        "sha256": "9d770ed14c941ebb789328ec8f8fca8db374471d7e1e7b6076c3eb973e025f5c",
+        "size_bytes": 11264512
+      },
+      "sideratlas-kerr-newman-intensity-loop.mp4": {
+        "sha256": "acc64b77c70a5c0c9d0149aeada127469e09610733df2cc6864efb138f923828",
+        "size_bytes": 7600689
+      },
+      "render-metadata.json": {
+        "sha256": "160fb31b9c0f259ca507baed4191fe8b095343508e4af727352ccb9c89fc7dec",
+        "size_bytes": 18135
+      },
+      "sideratlas-kerr-newman-color-cover.png": {
+        "sha256": "86dc870ac829b18f424195c45dba007f1d34305bb9830833d219d4665eaaa25d",
+        "size_bytes": 570370
+      },
+      "sideratlas-kerr-newman-mono-cover.png": {
+        "sha256": "798212a6c722bfaf32da1a0a444004b310b56102b235a1c1f0a869581740ef48",
+        "size_bytes": 397507
+      },
+      "steady-reference.png": {
+        "sha256": "f375665e7614ba4f159b77577aac9f2b05649f05052d2e0f15eb4a5b2b59580b",
+        "size_bytes": 333920
+      },
+      "contact-sheet.jpg": {
+        "sha256": "58b701a9535b6e39eb46f5065ea4578b5fcb676188efea23871766aad0efb3b6",
+        "size_bytes": 260659
+      }
+    },
+    "checks": [
+      {
+        "name": "sideratlas-kerr-newman-reel.mp4_exists",
+        "passed": true
+      },
+      {
+        "name": "sideratlas-kerr-newman-intensity.mp4_exists",
+        "passed": true
+      },
+      {
+        "name": "sideratlas-kerr-newman-reel-loop.mp4_exists",
+        "passed": true
+      },
+      {
+        "name": "sideratlas-kerr-newman-intensity-loop.mp4_exists",
+        "passed": true
+      },
+      {
+        "name": "render-metadata.json_exists",
+        "passed": true
+      },
+      {
+        "name": "sideratlas-kerr-newman-color-cover.png_exists",
+        "passed": true
+      },
+      {
+        "name": "sideratlas-kerr-newman-color-cover.png_image_decodes",
+        "passed": true
+      },
+      {
+        "name": "sideratlas-kerr-newman-mono-cover.png_exists",
+        "passed": true
+      },
+      {
+        "name": "sideratlas-kerr-newman-mono-cover.png_image_decodes",
+        "passed": true
+      },
+      {
+        "name": "steady-reference.png_exists",
+        "passed": true
+      },
+      {
+        "name": "steady-reference.png_image_decodes",
+        "passed": true
+      },
+      {
+        "name": "contact-sheet.jpg_exists",
+        "passed": true
+      },
+      {
+        "name": "contact-sheet.jpg_image_decodes",
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "assembly_artifacts": {
+    "scope": "Complete transactional assembly artifact set",
+    "files": {
+      "sideratlas-kerr-newman-reel.mp4": {
+        "sha256": "09b24e039b879ee7de88d292947efe3fd12e411e8d841e0fcc3a8655a4841fa6",
+        "size_bytes": 45055624
+      },
+      "sideratlas-kerr-newman-intensity.mp4": {
+        "sha256": "cc19e2f37f66146c7962c5735cbabf8548b61da5d49f54f66e91e640461e9a69",
+        "size_bytes": 30400288
+      },
+      "sideratlas-kerr-newman-reel-loop.mp4": {
+        "sha256": "9d770ed14c941ebb789328ec8f8fca8db374471d7e1e7b6076c3eb973e025f5c",
+        "size_bytes": 11264512
+      },
+      "sideratlas-kerr-newman-intensity-loop.mp4": {
+        "sha256": "acc64b77c70a5c0c9d0149aeada127469e09610733df2cc6864efb138f923828",
+        "size_bytes": 7600689
+      },
+      "sideratlas-kerr-newman-color-cover.png": {
+        "sha256": "86dc870ac829b18f424195c45dba007f1d34305bb9830833d219d4665eaaa25d",
+        "size_bytes": 570370
+      },
+      "sideratlas-kerr-newman-mono-cover.png": {
+        "sha256": "798212a6c722bfaf32da1a0a444004b310b56102b235a1c1f0a869581740ef48",
+        "size_bytes": 397507
+      },
+      "contact-sheet.jpg": {
+        "sha256": "58b701a9535b6e39eb46f5065ea4578b5fcb676188efea23871766aad0efb3b6",
+        "size_bytes": 260659
+      },
+      "steady-reference.png": {
+        "sha256": "f375665e7614ba4f159b77577aac9f2b05649f05052d2e0f15eb4a5b2b59580b",
+        "size_bytes": 333920
+      },
+      "steady-reference-manifest.json": {
+        "sha256": "3f11e3a6adc1b95e26df4a5e063387d02fc96586661d2c023680577e1c73e48f",
+        "size_bytes": 627
+      },
+      "native-radiance-manifest.json": {
+        "sha256": "f77490d5bb8dd9f197e00ea49015536cd6ee670a72b4f704141c955d26a27fcd",
+        "size_bytes": 20668
+      },
+      "view-diagnostics.json": {
+        "sha256": "8bf4ff3e5f0047552338314debf8771fafca7be2c9168c55fb671f77f84e887d",
+        "size_bytes": 87684
+      },
+      "render-metadata.json": {
+        "sha256": "160fb31b9c0f259ca507baed4191fe8b095343508e4af727352ccb9c89fc7dec",
+        "size_bytes": 18135
+      }
+    },
+    "checks": [
+      {
+        "name": "all_assembly_artifacts_present",
+        "passed": true,
+        "missing": []
+      },
+      {
+        "name": "published_native_manifest_matches_assembly_metadata",
+        "passed": true
+      },
+      {
+        "name": "steady_reference_bound_to_current_source_file_and_generator",
+        "passed": true
+      },
+      {
+        "name": "no_partial_delivery_files",
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "passed": true,
+  "checks_passed": 113,
+  "asset_sha256": {
+    "sideratlas-kerr-newman-reel.mp4": "09b24e039b879ee7de88d292947efe3fd12e411e8d841e0fcc3a8655a4841fa6",
+    "sideratlas-kerr-newman-intensity.mp4": "cc19e2f37f66146c7962c5735cbabf8548b61da5d49f54f66e91e640461e9a69",
+    "sideratlas-kerr-newman-reel-loop.mp4": "9d770ed14c941ebb789328ec8f8fca8db374471d7e1e7b6076c3eb973e025f5c",
+    "sideratlas-kerr-newman-intensity-loop.mp4": "acc64b77c70a5c0c9d0149aeada127469e09610733df2cc6864efb138f923828",
+    "sideratlas-kerr-newman-color-cover.png": "86dc870ac829b18f424195c45dba007f1d34305bb9830833d219d4665eaaa25d",
+    "sideratlas-kerr-newman-mono-cover.png": "798212a6c722bfaf32da1a0a444004b310b56102b235a1c1f0a869581740ef48",
+    "contact-sheet.jpg": "58b701a9535b6e39eb46f5065ea4578b5fcb676188efea23871766aad0efb3b6",
+    "steady-reference.png": "f375665e7614ba4f159b77577aac9f2b05649f05052d2e0f15eb4a5b2b59580b",
+    "steady-reference-manifest.json": "3f11e3a6adc1b95e26df4a5e063387d02fc96586661d2c023680577e1c73e48f",
+    "native-radiance-manifest.json": "f77490d5bb8dd9f197e00ea49015536cd6ee670a72b4f704141c955d26a27fcd",
+    "view-diagnostics.json": "8bf4ff3e5f0047552338314debf8771fafca7be2c9168c55fb671f77f84e887d",
+    "render-metadata.json": "160fb31b9c0f259ca507baed4191fe8b095343508e4af727352ccb9c89fc7dec"
+  },
+  "release_input_sha256": {
+    "caption-kerr-newman.text": "f4b5f1b995e86cbce0928e86e4390a6f1b4f538b6cf367fa8c8963804c10086f",
+    "caption-kerr-newman.txt": "f4b5f1b995e86cbce0928e86e4390a6f1b4f538b6cf367fa8c8963804c10086f",
+    "kn-flow-diagnostics.json": "58828d62b652ead8532da96de445f11720b5a204e39d147050352a18fb25cada",
+    "kn-accretion-trace-diagnostics.json": "986a0eb2ceacc7cd3073e4412f1e861dba8aa342c198312d0e932888f186122c",
+    "kn-dynamic-emission-diagnostics.json": "3f7b6347ca6f623f3dca5df53f30442e41c4e827ceeaec91785ab7ba0cf9ecf0",
+    "kn-sampling-diagnostics.json": "9fa6dc26bf97e466dccc32b08e11ab58ba6fbcd0c70518ae3d3ed9f11ce2ef25",
+    "kn-image-order-diagnostics.json": "71d5f8cf04769d024329756d1c9084654f4ccf3e23d198c0615ca7663236af6c",
+    "kn-emission-comparison-diagnostics.json": "6d2d0d4d55374fbf59a50208f2a19f9fa8c4e1991008ba15917e4638949f4cf1"
+  },
+  "elapsed_seconds": 47.24546716700024
+}

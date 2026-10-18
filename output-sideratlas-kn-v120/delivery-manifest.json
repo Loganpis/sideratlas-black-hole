@@ -1,0 +1,37 @@
+{
+  "version": "1.2.0",
+  "archive": {
+    "path": "sideratlas-kerr-newman-v1.2.0-source.zip",
+    "sha256": "204d3eba6f4548b4b71eaefaa950f1131a899bede04d4a3cb087e023ee786420",
+    "size_bytes": 237839883,
+    "members": 196
+  },
+  "videos": {
+    "sideratlas-kerr-newman-reel.mp4": {
+      "path": "sideratlas-kerr-newman-reel.mp4",
+      "sha256": "09b24e039b879ee7de88d292947efe3fd12e411e8d841e0fcc3a8655a4841fa6",
+      "size_bytes": 45055624
+    },
+    "sideratlas-kerr-newman-intensity.mp4": {
+      "path": "sideratlas-kerr-newman-intensity.mp4",
+      "sha256": "cc19e2f37f66146c7962c5735cbabf8548b61da5d49f54f66e91e640461e9a69",
+      "size_bytes": 30400288
+    },
+    "sideratlas-kerr-newman-reel-loop.mp4": {
+      "path": "sideratlas-kerr-newman-reel-loop.mp4",
+      "sha256": "9d770ed14c941ebb789328ec8f8fca8db374471d7e1e7b6076c3eb973e025f5c",
+      "size_bytes": 11264512
+    },
+    "sideratlas-kerr-newman-intensity-loop.mp4": {
+      "path": "sideratlas-kerr-newman-intensity-loop.mp4",
+      "sha256": "acc64b77c70a5c0c9d0149aeada127469e09610733df2cc6864efb138f923828",
+      "size_bytes": 7600689
+    }
+  },
+  "description": {
+    "path": "caption-kerr-newman.text",
+    "sha256": "f4b5f1b995e86cbce0928e86e4390a6f1b4f538b6cf367fa8c8963804c10086f"
+  },
+  "verification_sha256": "8081e42e2397c8f9c7f540539089e081dd5eb580a1cb74bdcaac43fd980d1317",
+  "metadata_sha256": "160fb31b9c0f259ca507baed4191fe8b095343508e4af727352ccb9c89fc7dec"
+}
