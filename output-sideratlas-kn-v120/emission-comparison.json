@@ -1,0 +1,79 @@
+{
+  "scope": "Compare emissivity prescriptions on identical v1.2 photon paths.\n\nThis is a source-isolation diagnostic, not a comparison of complete historical\nmodels: all columns share the current flow, opacity, sampling and compositor.\nThe smooth experiment is reconstructed by default; an optional saved original\nsource file can replace that reference.\n",
+  "source_sha256": "f638dad36408167811a34e5929286e0051222b54879a928646d14a61f158b66f",
+  "comparison_script_sha256": "9671951e945585c2bcd89099852e14a5854266e4f91f0c4d1d8f1d88cb2597db",
+  "original_emissivity_sha256": "c1a8587a2b82380ab9c5abc8b87ffab08513ea8dea759569a723cf8925ec68cf",
+  "optional_smooth_reference_sha256": null,
+  "smooth_reference_reconstruction_sha256": "e2ebbcd4d098e440a950cd0826b77797447a0a398f28e64f1c353af266833938",
+  "width": 540,
+  "height": 960,
+  "supersample": 2.5,
+  "fixed_across_columns": [
+    "null paths",
+    "emitter four-velocity",
+    "per-event delays",
+    "gray opacity",
+    "independent selected subpixel rays",
+    "source shutter",
+    "exposure",
+    "tone curve",
+    "portrait composition"
+  ],
+  "caveat": "v1.1 emissivity has no inner source; this column is not the complete historical v1.1 renderer",
+  "frames": [
+    {
+      "source": "v1.1 emissivity",
+      "phase": 0.0,
+      "file": "phase-0.00-source-0.png",
+      "total_native_radiance": 8446.8125
+    },
+    {
+      "source": "Superseded smooth",
+      "phase": 0.0,
+      "file": "phase-0.00-source-1.png",
+      "total_native_radiance": 8923.5986328125
+    },
+    {
+      "source": "Restored multiscale",
+      "phase": 0.0,
+      "file": "phase-0.00-source-2.png",
+      "total_native_radiance": 8835.921875
+    },
+    {
+      "source": "v1.1 emissivity",
+      "phase": 0.2,
+      "file": "phase-0.20-source-0.png",
+      "total_native_radiance": 9380.37890625
+    },
+    {
+      "source": "Superseded smooth",
+      "phase": 0.2,
+      "file": "phase-0.20-source-1.png",
+      "total_native_radiance": 9361.6669921875
+    },
+    {
+      "source": "Restored multiscale",
+      "phase": 0.2,
+      "file": "phase-0.20-source-2.png",
+      "total_native_radiance": 9035.23828125
+    },
+    {
+      "source": "v1.1 emissivity",
+      "phase": 0.4,
+      "file": "phase-0.40-source-0.png",
+      "total_native_radiance": 11172.5517578125
+    },
+    {
+      "source": "Superseded smooth",
+      "phase": 0.4,
+      "file": "phase-0.40-source-1.png",
+      "total_native_radiance": 11443.73046875
+    },
+    {
+      "source": "Restored multiscale",
+      "phase": 0.4,
+      "file": "phase-0.40-source-2.png",
+      "total_native_radiance": 11382.0615234375
+    }
+  ]
+}

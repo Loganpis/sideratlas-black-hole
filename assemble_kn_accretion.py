@@ -21,6 +21,7 @@ import numpy as np
 from PIL import Image
 
 from instagram_export import encoder
+from title_overlay import apply_title_layout, provenance as title_provenance
 from render_kn_accretion import OUTPUT_DIR, source_hash
 from render_kn_orbit import (KerrNewmanRenderer, FPS, REPEATS, VIDEO_NAMES,
                              LOOP_VIDEO_NAMES)
@@ -39,7 +40,7 @@ def sha256_file(path: Path) -> str:
 
 
 def compositor(metadata: dict) -> KerrNewmanRenderer:
-    """Construct only the unchanged v1.1/v1.2 display compositor."""
+    """Construct the display compositor with the current centered header."""
     renderer = KerrNewmanRenderer.__new__(KerrNewmanRenderer)
     renderer.width = int(metadata['width'])
     renderer.height = int(metadata['height'])
@@ -49,7 +50,7 @@ def compositor(metadata: dict) -> KerrNewmanRenderer:
     renderer.fov = float(metadata['geometry']['fov_horizontal_rg'])
     renderer._configure_layout()
     renderer.overlays = {mode: renderer._overlay(mode) for mode in VIDEO_NAMES}
-    return renderer
+    return apply_title_layout(renderer)
 
 
 def load_native(path: Path, expected_shape: tuple[int, int]) -> tuple[np.ndarray, str]:
@@ -106,6 +107,8 @@ def transactional_commit(staging: Path, output: Path, names: list[str]) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, default=OUTPUT_DIR)
+    parser.add_argument('--radiance-cache', type=Path,
+                        help='read a verified native-frame cache without recalculating the simulation')
     parser.add_argument('--steady-reference', type=Path,
                         default=OUTPUT_DIR / 'steady-reference.png')
     parser.add_argument('--steady-reference-manifest', type=Path,
@@ -128,7 +131,8 @@ def main() -> None:
     if (metadata.get('unique_frames'), metadata.get('fps'), metadata.get('repetitions')) != (240, FPS, REPEATS):
         raise RuntimeError('assembly requires the 240-frame, 30 fps, four-repeat production contract')
 
-    cache = output / '.render-cache' / signature[:20]
+    cache = (args.radiance_cache.resolve() if args.radiance_cache else
+             output / '.render-cache' / signature[:20])
     diagnostic_path = cache / 'view-diagnostics.json'
     diagnostics = json.loads(diagnostic_path.read_text())
     if (not isinstance(diagnostics, list) or len(diagnostics) != 120 or
@@ -260,11 +264,16 @@ def main() -> None:
         metadata['assembly'] = {
             'script': Path(__file__).name,
             'script_sha256': script_sha,
-            'method': 'producer-manifest-verified native radiance, unchanged compositor, single-generation loop encoding',
+            'method': 'producer-manifest-verified native radiance, centered title, single-generation loop encoding',
             'radiance_unchanged': True,
             'native_manifest': 'native-radiance-manifest.json',
             'native_manifest_sha256': sha256_bytes(trusted_manifest_bytes),
         }
+        metadata['release_version'] = title_provenance()['version']
+        metadata['presentation'] = title_provenance()
+        metadata['layout']['title_alignment'] = 'horizontal center'
+        metadata['layout']['title_center_x'] = renderer.width/2
+        metadata['layout']['title_top'] = 333
         metadata['steady_reference'] = dict(reference_manifest)
         metadata['steady_reference'].update({
             'file': 'steady-reference.png',

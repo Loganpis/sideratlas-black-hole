@@ -1,107 +1,39 @@
 {
-  "version": "1.2.0",
-  "release": "Sideratlas dynamic neutral Kerr-Newman accretion",
-  "scope": "All published source and completed media; illustrative source choices disclosed; caches excluded",
+  "version": "1.2.1",
+  "release": "Sideratlas NO.001 \u2014 centered-title Kerr-Newman accretion",
+  "scope": "Current simulation, required shared sources, numerical validation, and completed media; caches excluded",
   "files": {
     "INSTAGRAM-EXPORT.md": {
-      "sha256": "1d3639131cfa05982e3fbd60dd49443fa6899da9ea4a85822e7e069a1979cd66",
-      "size_bytes": 7426
+      "sha256": "1689b26757b54752f210b4a0d4c8839d596103aa8c154664377acceb7cea7aea",
+      "size_bytes": 7549
     },
-    "OPTICS-NOTES.md": {
-      "sha256": "3970b6593f24e9b22551a6c8acf648fb4b5813ea42eddd403cb735984b79a250",
-      "size_bytes": 5022
-    },
-    "PHYSICS-AUDIT.md": {
-      "sha256": "0a8ceb27b878313015a79c300847c70d9f74a79626c3375ec989f6028d83085b",
-      "size_bytes": 4476
+    "MODEL.md": {
+      "sha256": "03849147a5b2f0b094338d40351ab9d44d2e477619d5eceb308dd2c381b9bb53",
+      "size_bytes": 26652
     },
     "PUBLICATION.md": {
-      "sha256": "00664a6a6a7a49f7f812216339261173975b4fd3333948fe3a362860823a9a43",
-      "size_bytes": 7520
-    },
-    "README-KERR-NEWMAN.md": {
-      "sha256": "62b654eb34ec47538bcf5f8038fd6e80d782545d8e9d9695023949b5655bb564",
-      "size_bytes": 17950
-    },
-    "README-KERR-ORBIT.md": {
-      "sha256": "2da9a25e2b164a1588e585fc8020000f11c25e794967dd6c34085199122a9859",
-      "size_bytes": 12264
-    },
-    "README-KERR.md": {
-      "sha256": "6657fd638c07696689ceeb4142b7e024b710b11f1934c04db06f04e892b2b339",
-      "size_bytes": 15656
-    },
-    "README-LEGACY.md": {
-      "sha256": "769c569e8c9fc2899af0e83f6a41cef6f687073f86994f9c3ff303000d87046f",
-      "size_bytes": 14226
-    },
-    "README-OPTICAL.md": {
-      "sha256": "d81fc3b4d1f39156159e4032c4b47c27108545b07cea4b34de99db8ea8e76acc",
-      "size_bytes": 17230
-    },
-    "README-SCHWARZSCHILD.md": {
-      "sha256": "8eb9c1742daab0417f3f114088e7c46e4ee22c5c243b037352c8c53df11b9927",
-      "size_bytes": 16817
-    },
-    "README-V1.2.0.md": {
-      "sha256": "e64b1f860ce4580292081394978213317619798a8864945a0c744f3360f3c50f",
-      "size_bytes": 27125
+      "sha256": "866c7cd7a107ea530dbfa14581aa5702855c4ae117bbc49f1b2eb78d45cc1b86",
+      "size_bytes": 2313
     },
     "README.md": {
-      "sha256": "39240de6b3d4a2491dedb9682f179fae8db38d7995fc89a4382ce45c31c82c16",
-      "size_bytes": 9556
-    },
-    "START-HERE.md": {
-      "sha256": "50b4d377c6ce70f4fe3708a79566204d347f66a1509da7ea5cf102cab8576eb9",
-      "size_bytes": 4097
+      "sha256": "249e20db1eb459230b1bc09fa6f7c708028b30f403126e09a046759ead87e9b6",
+      "size_bytes": 4080
     },
     "THIRD-PARTY-NOTICES.md": {
-      "sha256": "ebde3b454165e97017ad6837a341a435c753f48d66857af4bdfb52cd1120bf85",
-      "size_bytes": 2430
+      "sha256": "cc91e433c844f89fec4c95cfa8f818106e6570ba16a2f1c3854c78939257ce4b",
+      "size_bytes": 1646
     },
     "assemble_kn_accretion.py": {
-      "sha256": "eaf2a2ac60f3c552d4bf93c2d5c3e1bedca69b79f8caa94dc56b61a12cec01cf",
-      "size_bytes": 14690
-    },
-    "caption-kerr-newman-v1.1.0.text": {
-      "sha256": "c306cf29e5da6ca8b4e9c213f3f578fdef2982e35e12f273e4ceae572d312212",
-      "size_bytes": 2011
+      "sha256": "1cef84cd9d80f66f7eabb339d0eaabe9018e746071b21cbffe68e673e228f2b9",
+      "size_bytes": 15321
     },
     "caption-kerr-newman.text": {
-      "sha256": "f4b5f1b995e86cbce0928e86e4390a6f1b4f538b6cf367fa8c8963804c10086f",
-      "size_bytes": 2169
+      "sha256": "0db545c93339267f4414b4fd19dd05add4e131c839c553940fa16e80cbdb5563",
+      "size_bytes": 2148
     },
     "caption-kerr-newman.txt": {
-      "sha256": "f4b5f1b995e86cbce0928e86e4390a6f1b4f538b6cf367fa8c8963804c10086f",
-      "size_bytes": 2169
-    },
-    "caption-kerr-orbit.txt": {
-      "sha256": "5307a5ff82a9ecf21fcf3e80057acce227d9a1b1033acd5e02b07808e4f628e3",
-      "size_bytes": 1997
-    },
-    "caption-kerr.txt": {
-      "sha256": "0a73d98f8410df1e7b938cf81f5f8785c2b2581ba1a8e384cae4fb51d3acbf87",
-      "size_bytes": 2038
-    },
-    "caption-optical.txt": {
-      "sha256": "36c9f9a70236d43a3fe7c4240b9ee5a9efd1e9c9a18d60d6f6458a45d0e27b60",
-      "size_bytes": 1957
-    },
-    "caption-schwarzschild.txt": {
-      "sha256": "011ccaa8d2685f93d701a2028c27fd3ec65144297fd87d0e78afeb206b6bcbdb",
-      "size_bytes": 2030
-    },
-    "caption.txt": {
-      "sha256": "439a7c78d4dadf4e1fa802392250033b5fdf40845eaaff18736fbbf63911a078",
-      "size_bytes": 2063
-    },
-    "check_optical_geometry.py": {
-      "sha256": "efcb5f2e93ab603e673ac5529da83cf9545af4a620b79f21d2264f423afb48ab",
-      "size_bytes": 5039
-    },
-    "check_optical_steps.py": {
-      "sha256": "b1137fc06ce2ad2355561ffaf7c454aefd228ddc73c0576e99e837b2ee244b3d",
-      "size_bytes": 4150
+      "sha256": "0db545c93339267f4414b4fd19dd05add4e131c839c553940fa16e80cbdb5563",
+      "size_bytes": 2148
     },
     "compare_kn_accretion.py": {
       "sha256": "9671951e945585c2bcd89099852e14a5854266e4f91f0c4d1d8f1d88cb2597db",
@@ -111,45 +43,17 @@
       "sha256": "e2ebbcd4d098e440a950cd0826b77797447a0a398f28e64f1c353af266833938",
       "size_bytes": 33613
     },
-    "emission-diagnostics.json": {
-      "sha256": "137527f4e7b024db5f87703ed6858b7873b1f47d0fc60b5ac5bf4631222df38e",
-      "size_bytes": 1701
-    },
     "emission.py": {
       "sha256": "b250a41640e0461ef3d5b8c6bb85e728f465096177935a866ef9a9d76ac8f532",
       "size_bytes": 16029
     },
-    "framing_study.py": {
-      "sha256": "a2f7699e97e2b726e760fdb60d990a218feef3ed6111c1c672ebdbc3f154d507",
-      "size_bytes": 2154
-    },
-    "full-orbit-geometry-diagnostics.json": {
-      "sha256": "c0690c33d97d86b4331b0bbecd6c6911150172b242899f13cb2ef05c694c45f5",
-      "size_bytes": 9392
-    },
     "generate_kn_steady_reference.py": {
-      "sha256": "edeaed0293e3b3512fd37d32cc0e38a7c4b47812a86dead8475d309d38ec2511",
-      "size_bytes": 2550
-    },
-    "instagram-export-audit.json": {
-      "sha256": "aa07af7e8d1526490b8156304a2815f3a89354d7c3b4a2cec494d702c3123232",
-      "size_bytes": 7412
+      "sha256": "69851c4d04c19c6ce9c6ea22b5075017f021492d7d666ad1b57f9807c9df00fd",
+      "size_bytes": 2704
     },
     "instagram_export.py": {
       "sha256": "ac92e7c87543a3deea101ee051efa8204422fdb9e76c2b4ae01e099eb413a930",
       "size_bytes": 4744
-    },
-    "kerr-emission-diagnostics.json": {
-      "sha256": "39797b1c0c88c872b3ebf276ed17d438455fb3d3edc400f59a541f63c6923471",
-      "size_bytes": 1714
-    },
-    "kerr-orbit-emission-diagnostics.json": {
-      "sha256": "fa750df56b0be0747c85c8395ea6e256515911db43f12d8fc1c12e0612b32f77",
-      "size_bytes": 6800
-    },
-    "kerr-raytrace-diagnostics.json": {
-      "sha256": "58f419c8542f9e420e8fb48a9d512fde1cc720b12d20a7f764c66b1470f69202",
-      "size_bytes": 2160
     },
     "kerr_emission.py": {
       "sha256": "960e8fdc132ab2167f9df7bd406430e6431f92c38ee6e9c724eb17048577f986",
@@ -158,14 +62,6 @@
     "kerr_orbit_emission.py": {
       "sha256": "378afecf40b3ad60f2912a78b066e254ca53395dfa061756caf12cf9550605bd",
       "size_bytes": 11176
-    },
-    "kerr_orbit_trace.cpp": {
-      "sha256": "2207bfbba4be9967e656a89841417b94cf2dfda5958ac7b01671a1c70a8f4be3",
-      "size_bytes": 6098
-    },
-    "kerr_orbit_trace.py": {
-      "sha256": "6ceaf62a9e35cbf772e7af7951e015df966abd3ffb8421513ef641a44d40a064",
-      "size_bytes": 8420
     },
     "kerr_raytrace.cpp": {
       "sha256": "a2442095b9a259eecb4baea14f8d255e0b167ee06c32e5122dd51aac40ca8c45",
@@ -239,14 +135,6 @@
       "sha256": "84c097f23ce6427c10466a57db53395105a47047dd10d53da4569158183d08cf",
       "size_bytes": 4988
     },
-    "nasa-emission-diagnostics.json": {
-      "sha256": "790abc67b3241915e84001a3099f6ff7214c3727f6127e0d1c04c96f61074c7a",
-      "size_bytes": 3348
-    },
-    "nasa-raytrace-diagnostics.json": {
-      "sha256": "a876577f9a6d278220ea68e63dfb7df1c7097f9e51071d59c1ae7f810d09ac35",
-      "size_bytes": 4773
-    },
     "nasa_emission.py": {
       "sha256": "98acbba4cca4311e6d3edd0620ea0f60e32f9191929163113153b9db8cb010b4",
       "size_bytes": 18981
@@ -255,29 +143,9 @@
       "sha256": "136960b3d0038a4762a585844fa9e39c2bb9cb942a7df550812d3fe6c8604390",
       "size_bytes": 23400
     },
-    "optics-diagnostics.json": {
-      "sha256": "56be95a3bb32f93088306d8a915b4ed3561242b859663219503912183ffeac8e",
-      "size_bytes": 1068
-    },
-    "optics.py": {
-      "sha256": "3b6bc8582e35eade5d4308b9f3949fd5878e929f06509fc985651b5441256ec1",
-      "size_bytes": 12623
-    },
     "package_kn_accretion_release.py": {
-      "sha256": "1f17cb7c804201215c38cfe45bc23253e0db2058ecd1495a842cd15eaafadcfd",
-      "size_bytes": 6974
-    },
-    "package_kn_release.py": {
-      "sha256": "e6f3e424e6dafea02e6174da3074812b3e59af172c061d15282fccf2d9fc5509",
-      "size_bytes": 3115
-    },
-    "physics-audit.json": {
-      "sha256": "d873b35ca890e237b35d44c39b7e1e5a8db60a2fcf3e73e9a34c7bdf753daff7",
-      "size_bytes": 5752
-    },
-    "raytrace-diagnostics.json": {
-      "sha256": "6c85667046ac0404928177f1fffada39bd6b1d3a9490de7b3c89a3c1d5d1045d",
-      "size_bytes": 1096
+      "sha256": "7ca3ad12c14bee948a134a23d1b9bc5c6f8fe96b73ea04edc975dc3615212e4d",
+      "size_bytes": 7332
     },
     "raytrace.py": {
       "sha256": "653c187d66dbe3694e716e7b663e172dd559ebbf7817f8d6cc4c33806f4615eb",
@@ -287,14 +155,6 @@
       "sha256": "578cfac73c98475e860beb8958d533f0698c76adb57161f9a9e28aacba15b71a",
       "size_bytes": 12527
     },
-    "render_kerr.py": {
-      "sha256": "bbc43952651d8ea84b9a39bb053a0959ca08f845a6061edaa85182a5aff37173",
-      "size_bytes": 10345
-    },
-    "render_kerr_orbit.py": {
-      "sha256": "d8dc01b7db96ccdb2984eca489fe790d1d971d0b5261029c92e4419a78de3eee",
-      "size_bytes": 16939
-    },
     "render_kn_accretion.py": {
       "sha256": "8a4d530517aa6fbae9a62d966feb344c045a1630ebc87fb536b7c3de3440e645",
       "size_bytes": 22207
@@ -303,65 +163,21 @@
       "sha256": "94b393f626a837edf1b91bd6ce00b7db89aa753a2fa572a79ffbb472b63f4fc4",
       "size_bytes": 20575
     },
-    "render_nasa.py": {
-      "sha256": "6366fa6245ee9b2ffbc265c32d4c1ad076bd4152f45ea44b5d55baf3e6b43499",
-      "size_bytes": 15862
-    },
-    "render_optical.py": {
-      "sha256": "42f96683cd78c347b99b6afb53d269c2fe6d36279a1bd6830a835027b22d830d",
-      "size_bytes": 15657
-    },
     "requirements.txt": {
       "sha256": "78a8f118233202d0d9aee600bc35e442581000c5b42b709db3b540dfbd2c4535",
       "size_bytes": 29
     },
     "review_kn_accretion_video.py": {
-      "sha256": "2c6d29cb60d239dfeec3052b772bd6efed567f436f8f50042148ce593e66265e",
-      "size_bytes": 532
+      "sha256": "fce9057d5195e0c8af3830b049a447dd3b132a2989ae2909a34cd43226bb0573",
+      "size_bytes": 5243
     },
-    "review_kn_video.py": {
-      "sha256": "53dfdb2062e35cf7c61b45d4212e457269ba1f7cf4bce3dfeb362a41e3c294d4",
-      "size_bytes": 5602
-    },
-    "spectral-optics-diagnostics.json": {
-      "sha256": "bf8aa82e0c1e1a34cbc7fa33bd0649bd2bb6794851df590776b1abfa6f0e15f2",
-      "size_bytes": 1180
-    },
-    "spectral-optics-fast-diagnostics.json": {
-      "sha256": "86c30a4563d7497ac7c1c6992ab789e49a171b48157d5732801f59180c947f72",
-      "size_bytes": 8472
-    },
-    "spectral_optics.py": {
-      "sha256": "85574449620eb479eb4333d020125754267b1a84cd3e10f19019882562d2c83b",
-      "size_bytes": 34513
-    },
-    "verify.py": {
-      "sha256": "44effd3ce93528767555d41276183916d4ef888dd14bf30ff0e116d96fe88cbe",
-      "size_bytes": 13117
-    },
-    "verify_full_orbit_geometry.py": {
-      "sha256": "a7c4477b82509e3eb63060dde80cecaa98698bee65d4b86072140e4610f6386c",
-      "size_bytes": 7184
-    },
-    "verify_instagram_export.py": {
-      "sha256": "cdc06f89f749f5b04569c8862348f0197eb8224f734821c7889fbcc5ec5181fd",
-      "size_bytes": 5597
-    },
-    "verify_kerr.py": {
-      "sha256": "290a63e617ba2418728c2b273f1f6bbf262cb218145dd1a5246aaebe6e3c0e87",
-      "size_bytes": 11706
-    },
-    "verify_kerr_orbit.py": {
-      "sha256": "d28c3ddc77a1747699f20d21352f305a228775f594e61485c0d47260d050542d",
-      "size_bytes": 9303
-    },
-    "verify_kerr_orbit_emission.py": {
-      "sha256": "736af6156248a97cb227656a36827d012f02beeaed8549eedc10090dc1d47c24",
-      "size_bytes": 9692
+    "title_overlay.py": {
+      "sha256": "e7c356e58bea9e54213914946c9edef2884f4744ef74b794b99d8b01c855bd85",
+      "size_bytes": 1757
     },
     "verify_kn_accretion.py": {
-      "sha256": "d936a83fe32070feea5300a549b425a84eac30984609c7fef6dd34a426dda13c",
-      "size_bytes": 25721
+      "sha256": "c6dd93b309a55c948de21284621b3daa0cc7de73f6c6e731818de65ff835a2dd",
+      "size_bytes": 26532
     },
     "verify_kn_accretion_trace.py": {
       "sha256": "7aaa932e8afc4f0b239950ae15e24ae453226c44c2affe645786396b20b8d53a",
@@ -379,10 +195,6 @@
       "sha256": "acaa2119a8b68a05224a80dedf4023d446e7c7a80ba6598b27d810e0142f4c5f",
       "size_bytes": 9570
     },
-    "verify_kn_orbit.py": {
-      "sha256": "f42027868eb5a73aebbb11ccfe21bd1a1fc5e6fdde745c70a8a8dc0faf791d43",
-      "size_bytes": 18274
-    },
     "verify_kn_orbit_emission.py": {
       "sha256": "d201ad55bb26ae61116822cc5d89fad6c3c5667d787c7241913b9063b06ccfdc",
       "size_bytes": 12781
@@ -395,329 +207,93 @@
       "sha256": "2e4417a7145fd20be878abc555ee0437f6e18e3bcd5e6a04bcd4c6ab08c8c26c",
       "size_bytes": 13205
     },
-    "verify_nasa.py": {
-      "sha256": "7fa7fb3485660fc361de2015cca4fd9c034770f2893829b0b914fefe5bd39eaf",
-      "size_bytes": 22156
+    "video_io.py": {
+      "sha256": "d1e5552163c1b26df0b39a8d253c58e2503e51fa080928be57e0952223ea0c4b",
+      "size_bytes": 5695
     },
-    "verify_optical.py": {
-      "sha256": "2c0284bf1d432fb2ceb929596ef1fa18f9dce7ff729e0dcdc5af2423fe0b28be",
-      "size_bytes": 20395
+    "video_validation.py": {
+      "sha256": "81b8e53dbfaa3229e7f86f4c0db7d6c30427e53705ac99643b26b7bd93287a10",
+      "size_bytes": 7632
     },
     ".gitignore": {
       "sha256": "a1e83297fff7d0c5279cd8dd5e139bcf2726aa12513811552a03f2bf1d4c0a19",
       "size_bytes": 164
     },
-    "output/atlastro-black-hole-reel.mp4": {
-      "sha256": "584365ab09fce29472b637799e7785ad72ca2a6ee17dcd5e5266bc0f1018f79c",
-      "size_bytes": 1147149
-    },
-    "output/atlastro-bolometric-cover.png": {
-      "sha256": "bc41b1da408ba58fe6d34d9ea632008d7197503f07ad929589cfa45a3de96ca4",
-      "size_bytes": 203259
-    },
-    "output/atlastro-contact-sheet.jpg": {
-      "sha256": "3db5e01b53ed04a0483b138c238c40eba8726620d363387186cce32b6b39b2bf",
-      "size_bytes": 284424
-    },
-    "output/atlastro-thermal-cover.png": {
-      "sha256": "f99f7521b864a3d28b17a0eda210dfc27c3dcecb95d1190b96c0cef0d50d1bb0",
-      "size_bytes": 299564
-    },
-    "output/atlastro-visible-thermal-reel.mp4": {
-      "sha256": "5a401fc8496e0dc15becc68672b27be1352ae63d0243f1843929052387a3dc44",
-      "size_bytes": 1477985
-    },
-    "output/render-metadata.json": {
-      "sha256": "e873dfae2feed38d55c920ac67e233467b220ed05e14a4eec8d191de1ab6fa6e",
-      "size_bytes": 2642
-    },
-    "output/verification.json": {
-      "sha256": "8a44707f69337dc979df8cdd54b497869a9cf45f0916d258f0f5312df2bd727a",
-      "size_bytes": 10506
-    },
-    "output-kerr/atlastro-kerr-camera-cover.png": {
-      "sha256": "48abcd6f30bdd312e10ffb9afca215cd2dc6a2b9d1716d51fe77efead9c42e1f",
-      "size_bytes": 307201
-    },
-    "output-kerr/atlastro-kerr-contact-sheet.jpg": {
-      "sha256": "1b7d397fccc70cc0982ecbfc0ff3f5512bcb6d5388eb214a1a812f15ea196892",
-      "size_bytes": 259910
-    },
-    "output-kerr/atlastro-kerr-ideal-cover.png": {
-      "sha256": "e90a8bc2eba35b19ac1901f08d73ef9ad4d9e70fe0c6db2463996779495599b1",
-      "size_bytes": 295158
-    },
-    "output-kerr/atlastro-kerr-ideal-optics-reel.mp4": {
-      "sha256": "ddfae5f6a28071459ad14064cd4e83b5218c09a216a3ea26da4e372f4274e7db",
-      "size_bytes": 1006529
-    },
-    "output-kerr/atlastro-kerr-truecolor-reel.mp4": {
-      "sha256": "4736bdd9834e6fdc0ea0daa4530de757ba7d0ec92dcd5dd2775e8727c5144d4e",
-      "size_bytes": 990847
-    },
-    "output-kerr/render-metadata.json": {
-      "sha256": "20df84cc23925e191e60e08398726d73994a4f3f76c0ecfd88004e6244d90577",
-      "size_bytes": 52232
-    },
-    "output-kerr/verification.json": {
-      "sha256": "1786fb4e8b7ff365e8ec34f1a3a24123d2f3e7a1229be872c56c5db6668be838",
-      "size_bytes": 19176
-    },
-    "output-optical/atlastro-optical-camera-cover.png": {
-      "sha256": "56368b2530e70f2ebe2040fcad417a295711235fc3cac1b831388eff941d329f",
-      "size_bytes": 292076
-    },
-    "output-optical/atlastro-optical-contact-sheet.jpg": {
-      "sha256": "45f7dbb7264312fc628e044a8c688794265507aa825fba1148cfe57189574561",
-      "size_bytes": 262263
-    },
-    "output-optical/atlastro-optical-ideal-cover.png": {
-      "sha256": "9e3ed8934f0dd7d59b1ec9fd7600e53d513fa92d953240f0fe1edd1e39afc9fe",
-      "size_bytes": 291220
-    },
-    "output-optical/atlastro-truecolor-ideal-reel.mp4": {
-      "sha256": "fc81a00d0934f42c6cfe66d51b04b6ea69c96cc1212aefeee76f67322be8b1ec",
-      "size_bytes": 859516
-    },
-    "output-optical/atlastro-truecolor-optics-reel.mp4": {
-      "sha256": "d3674e8c35792689d0efede2ea458b47aee53c01832c409f889f80c609a0f7e2",
-      "size_bytes": 839924
-    },
-    "output-optical/decoded-review-frame.png": {
-      "sha256": "f4d0ee04ba796ac0c9b096597d93e206f6435d6a5fdf63d404d342c014007894",
-      "size_bytes": 361454
-    },
-    "output-optical/geometry-checks.json": {
-      "sha256": "009a86c9ad428379b8766f7b6c21bcb89ab925e3349f17a019b00fe4e03c36c8",
-      "size_bytes": 6743
-    },
-    "output-optical/render-metadata.json": {
-      "sha256": "37ae0dbfff8c85aa83e6cc6c316f08893e88f656fce1e25ca2b2c828d862edb3",
-      "size_bytes": 87348
-    },
-    "output-optical/step-speed-study.json": {
-      "sha256": "4d6fa3b525f94f95c3cf3d87ff4d3d8fba2ba6cd5a07150be603f1792f9d6c9a",
-      "size_bytes": 8086
-    },
-    "output-optical/verification.json": {
-      "sha256": "2e73bb3829c8578822fda391346d53b60f06fdf9fc4e67bfe55f48975022e7d9",
-      "size_bytes": 29276
-    },
-    "output-schwarzschild/atlastro-schwarzschild-color-cover.png": {
-      "sha256": "3c00412526f690a5439dbd97c95eb7679f3aa094ec3f4398ae230891bc553d6a",
-      "size_bytes": 259946
-    },
-    "output-schwarzschild/atlastro-schwarzschild-intensity.mp4": {
-      "sha256": "208e7bcd48b1036eaf80f7de959481d335bc781710885aad895d31375dbdf21f",
-      "size_bytes": 2778564
-    },
-    "output-schwarzschild/atlastro-schwarzschild-mono-cover.png": {
-      "sha256": "cc6fd4e0a5d9189fcbe58f6c2e07d0043a1042d548ea557eaa7d8e2a055b1f0d",
-      "size_bytes": 215719
-    },
-    "output-schwarzschild/atlastro-schwarzschild-reel.mp4": {
-      "sha256": "87732ff71819ed67c7383ea6037746f7ab06eb5300f2a438dc857c03f546c941",
-      "size_bytes": 2992536
-    },
-    "output-schwarzschild/contact-sheet.jpg": {
-      "sha256": "9c8aeabb5d8b46a71ec19aa57669d8f8ac59066270dd165041f4d0b3815750e2",
-      "size_bytes": 326826
-    },
-    "output-schwarzschild/decoded-review.png": {
-      "sha256": "ff41c3ac539cd97ef64d83af28f2b12ae0622e629b652eda6eb1d85563a0646a",
-      "size_bytes": 374305
-    },
-    "output-schwarzschild/orbit-decoded-review.jpg": {
-      "sha256": "2918dc0a207fe0aea20a897d3809d5b43d5602c01c665f4b8bc37b93cbcf625a",
-      "size_bytes": 157186
-    },
-    "output-schwarzschild/pole-render-review.png": {
-      "sha256": "89f954597bb9412a6ebe7910e7f843bbfae6a506145599dc7c4fc15f12c93f54",
-      "size_bytes": 520167
-    },
-    "output-schwarzschild/render-metadata.json": {
-      "sha256": "74f548c2b45409e0291093febb79b8daa41f27815074e93e47963a70f10dcb0a",
-      "size_bytes": 4980
-    },
-    "output-schwarzschild/steady-reference.png": {
-      "sha256": "4fb8dec3112faa9d4201de2eacea1403131e4a4313bae184349f19fe0627cd6e",
-      "size_bytes": 161096
-    },
-    "output-schwarzschild/verification.json": {
-      "sha256": "43aa7f46065b1259800cc03de39dd5264d4e9ddba7c4242b1a189a44a8ea085a",
-      "size_bytes": 38050
-    },
-    "output-sideratlas/contact-sheet.jpg": {
-      "sha256": "c23a215b9fe324237157e85868c902a5c3043d5ae83d4069571beb532250e6a6",
-      "size_bytes": 266029
-    },
-    "output-sideratlas/decoded-review.png": {
-      "sha256": "cc2165a403a6b459974b06f1021465d085eeb86dda1d72f7288f5b514b75ce8c",
-      "size_bytes": 493011
-    },
-    "output-sideratlas/encoding-review.json": {
-      "sha256": "093c576b582da64d114385d01b26ab72b001be5f9eae1ea23ddda6fa3c2c48e4",
-      "size_bytes": 1162
-    },
-    "output-sideratlas/orbit-decoded-review.jpg": {
-      "sha256": "874152b0712a373fdc8db66e52964ab5b80765a62d6b448002ae8a08fbb2d888",
-      "size_bytes": 158687
-    },
-    "output-sideratlas/render-metadata.json": {
-      "sha256": "73d0e3b7c7979e3ef5abfa944892451f2f8aec3079a72dc582b0995268cf8955",
-      "size_bytes": 7442
-    },
-    "output-sideratlas/sideratlas-black-hole-color-cover.png": {
-      "sha256": "29b7772216c2382412cf894170bb919f8c043486e5611ef24fca68d9fa71a64c",
-      "size_bytes": 207909
-    },
-    "output-sideratlas/sideratlas-black-hole-intensity.mp4": {
-      "sha256": "285d4b659b4ccebfde144c590f4db5a7f7dfb5df4d5e5abdf721ae0cf7fdab5c",
-      "size_bytes": 3035883
-    },
-    "output-sideratlas/sideratlas-black-hole-mono-cover.png": {
-      "sha256": "563092033d26cb0b2e3c7eee4b0bf84eea967baae0f9059f392e0f57d1371197",
-      "size_bytes": 178080
-    },
-    "output-sideratlas/sideratlas-black-hole-reel.mp4": {
-      "sha256": "f9ce66a40f30afbeda2c4bef7423595f90220516a02c98fecf444eb6bcf3d5a6",
-      "size_bytes": 3331019
-    },
-    "output-sideratlas/steady-reference.png": {
-      "sha256": "456f554dd810ad6e0382d88e6cfa2ed338be67ff6f2dadde37016610a5fae550",
-      "size_bytes": 138082
-    },
-    "output-sideratlas/verification.json": {
-      "sha256": "f19ee39606d6ebb88a7ef079d773ffed7d9bb3f94d95365bf70edbcd54f29d35",
-      "size_bytes": 39325
-    },
-    "output-sideratlas/provenance/prior-render-metadata.json": {
-      "sha256": "74f548c2b45409e0291093febb79b8daa41f27815074e93e47963a70f10dcb0a",
-      "size_bytes": 4980
-    },
-    "output-sideratlas/provenance/prior-verification.json": {
-      "sha256": "43aa7f46065b1259800cc03de39dd5264d4e9ddba7c4242b1a189a44a8ea085a",
-      "size_bytes": 38050
-    },
-    "output-sideratlas/provenance/radiance-cache-manifest.json": {
-      "sha256": "7c6027b8febaa59cfa57e372c24c6cccf2fd2498acef25a2cce258a876518f13",
-      "size_bytes": 24276
-    },
-    "output-sideratlas-kn/contact-sheet.jpg": {
-      "sha256": "20e294339ddeaedcb8c1f42e0740c7478e4c4691551f358383caa03f8a4189f5",
-      "size_bytes": 355287
-    },
-    "output-sideratlas-kn/decoded-review.png": {
-      "sha256": "0b1c812219b5863415089851e061eff980de6b47b5ce7ac7559a8a154135c077",
-      "size_bytes": 1437590
-    },
-    "output-sideratlas-kn/orbit-review.jpg": {
-      "sha256": "9e6942ddf32fcfcbce78c6d0599a8e85f521c3ee3a28432d3375bec55829e2a3",
-      "size_bytes": 536154
-    },
-    "output-sideratlas-kn/render-metadata.json": {
-      "sha256": "ed2dd4c6ebbdf465c41334d0fe9ba2b8d02787e3ae2f2d7bf52a6127e4929856",
-      "size_bytes": 10589
-    },
-    "output-sideratlas-kn/sideratlas-kerr-newman-color-cover.png": {
-      "sha256": "17ade64ba3a29d504751a5f33239f8d9a468cb886542bfcd7e871ccf63eb6bcb",
-      "size_bytes": 799987
-    },
-    "output-sideratlas-kn/sideratlas-kerr-newman-intensity-loop.mp4": {
-      "sha256": "902f156b6a3f96021282a97e780fa453593eeb50a5deb22c3763ebce38aec409",
-      "size_bytes": 8949981
-    },
-    "output-sideratlas-kn/sideratlas-kerr-newman-intensity.mp4": {
-      "sha256": "7d9c2ba4e574fd04fc1f75b0b601e9b0fd4ac3a3ac310d954f72acd324a11b39",
-      "size_bytes": 35797484
-    },
-    "output-sideratlas-kn/sideratlas-kerr-newman-mono-cover.png": {
-      "sha256": "40fd474d7c61219ada8d560b7ec3be211c2d9c8b395e4f695666ea27da4652a1",
-      "size_bytes": 527922
-    },
-    "output-sideratlas-kn/sideratlas-kerr-newman-reel-loop.mp4": {
-      "sha256": "d5dd925908bd6b2220de0946b79750c66bf78736c24a1cbbf0896009b1432a05",
-      "size_bytes": 13152782
-    },
-    "output-sideratlas-kn/sideratlas-kerr-newman-reel.mp4": {
-      "sha256": "643b8ded603559fb422cc4649d600982b4434b1834e03a758dd7eaf976175c67",
-      "size_bytes": 52608752
-    },
-    "output-sideratlas-kn/steady-reference.png": {
-      "sha256": "61e1bc5c6a318b39904fec07e5a36b390c0c8742a996ffe1d79430478c969885",
-      "size_bytes": 332233
-    },
-    "output-sideratlas-kn/verification.json": {
-      "sha256": "16632b31618a581cdb74864a3850e01fd65692351f30f4e775d01f8a62a39b41",
-      "size_bytes": 45461
-    },
-    "output-sideratlas-kn/visual-review.json": {
-      "sha256": "8193b984df638af020c819708b2542e8879592c0a14114f25de8cca1083231f3",
-      "size_bytes": 4573
+    ".gitattributes": {
+      "sha256": "d364807288fbbe10c73eef1dffbb4574fd1c93cf6763e2e9f09be491330b0a4e",
+      "size_bytes": 65
     },
     "output-sideratlas-kn-v120/contact-sheet.jpg": {
-      "sha256": "58b701a9535b6e39eb46f5065ea4578b5fcb676188efea23871766aad0efb3b6",
-      "size_bytes": 260659
+      "sha256": "0125c137ed0a161a0ca40eaf2b576e180eb911e5ffeaa7c67d9fd649af4dd6d9",
+      "size_bytes": 261571
     },
     "output-sideratlas-kn-v120/decoded-review.png": {
-      "sha256": "2497bf321f84b27795b9b2b1197ed61ebd658247554549a050dd6ff6406c2cec",
-      "size_bytes": 1051381
+      "sha256": "faf878758980320e5560e1546ac1ffc27e960e32a433a1a8e35268c153b078d6",
+      "size_bytes": 1051017
+    },
+    "output-sideratlas-kn-v120/emission-comparison.jpg": {
+      "sha256": "f224a548eafe80df6f772ca09f8948e1297f1f9a45db49156dbded5142c0c855",
+      "size_bytes": 490150
+    },
+    "output-sideratlas-kn-v120/emission-comparison.json": {
+      "sha256": "6dade9898d10852d65a5b614d1e443ce4f5412744a72d16aa385705140e7be7f",
+      "size_bytes": 2646
     },
     "output-sideratlas-kn-v120/native-radiance-manifest.json": {
       "sha256": "f77490d5bb8dd9f197e00ea49015536cd6ee670a72b4f704141c955d26a27fcd",
       "size_bytes": 20668
     },
     "output-sideratlas-kn-v120/orbit-review.jpg": {
-      "sha256": "ebf740dc358b013cff54f57fb4d4955c9753aa8d10da2c7b3dd64407d1793257",
-      "size_bytes": 402143
+      "sha256": "5b4345323cabc17d23ae2a153f57fd34a8bdb6fce6cbdf79ae1d3859a2ef0d7e",
+      "size_bytes": 402119
     },
     "output-sideratlas-kn-v120/render-metadata.json": {
-      "sha256": "160fb31b9c0f259ca507baed4191fe8b095343508e4af727352ccb9c89fc7dec",
-      "size_bytes": 18135
+      "sha256": "881f1afac6ef8e036a16034cc2e57027d370f84608abca66e8d7d35420f01ef2",
+      "size_bytes": 18897
     },
     "output-sideratlas-kn-v120/sideratlas-kerr-newman-color-cover.png": {
-      "sha256": "86dc870ac829b18f424195c45dba007f1d34305bb9830833d219d4665eaaa25d",
-      "size_bytes": 570370
+      "sha256": "639eedf518b74f18d451b911767c0d9fc7783ef368825515fe60d5dfacecd232",
+      "size_bytes": 570803
     },
     "output-sideratlas-kn-v120/sideratlas-kerr-newman-intensity-loop.mp4": {
-      "sha256": "acc64b77c70a5c0c9d0149aeada127469e09610733df2cc6864efb138f923828",
-      "size_bytes": 7600689
+      "sha256": "037fd71ce330fa2e4d20396b2b585a60d2d124c7057b178843faada6947e7b13",
+      "size_bytes": 7598672
     },
     "output-sideratlas-kn-v120/sideratlas-kerr-newman-intensity.mp4": {
-      "sha256": "cc19e2f37f66146c7962c5735cbabf8548b61da5d49f54f66e91e640461e9a69",
-      "size_bytes": 30400288
+      "sha256": "21f296d90d626d5f1215cf3509f459078af310a8f0f38bebf6619a49b755a79e",
+      "size_bytes": 30392220
     },
     "output-sideratlas-kn-v120/sideratlas-kerr-newman-mono-cover.png": {
-      "sha256": "798212a6c722bfaf32da1a0a444004b310b56102b235a1c1f0a869581740ef48",
-      "size_bytes": 397507
+      "sha256": "2debc475922fe4796942249b599062552efb8b46f49707ad98c74bd4c7e99dc8",
+      "size_bytes": 397751
     },
     "output-sideratlas-kn-v120/sideratlas-kerr-newman-reel-loop.mp4": {
-      "sha256": "9d770ed14c941ebb789328ec8f8fca8db374471d7e1e7b6076c3eb973e025f5c",
-      "size_bytes": 11264512
+      "sha256": "177edc83341178a0b2cefbb9831e9097798d6b8c7e0c2c03498b718eb089aea1",
+      "size_bytes": 11257734
     },
     "output-sideratlas-kn-v120/sideratlas-kerr-newman-reel.mp4": {
-      "sha256": "09b24e039b879ee7de88d292947efe3fd12e411e8d841e0fcc3a8655a4841fa6",
-      "size_bytes": 45055624
+      "sha256": "582a11becc92758149c37a38ad45c8962be70ba0863947352e2686ec0840256e",
+      "size_bytes": 45028512
     },
     "output-sideratlas-kn-v120/steady-reference-manifest.json": {
-      "sha256": "3f11e3a6adc1b95e26df4a5e063387d02fc96586661d2c023680577e1c73e48f",
-      "size_bytes": 627
+      "sha256": "e001836a0d8fc272520b539ccfbfc8833f016b8fc583e966459e27c98d17332a",
+      "size_bytes": 940
     },
     "output-sideratlas-kn-v120/steady-reference.png": {
-      "sha256": "f375665e7614ba4f159b77577aac9f2b05649f05052d2e0f15eb4a5b2b59580b",
-      "size_bytes": 333920
+      "sha256": "a47818d38078b5329a45a6c14d3a3d264bb888df227a9b7ada365825e61f2cff",
+      "size_bytes": 334308
     },
     "output-sideratlas-kn-v120/verification.json": {
-      "sha256": "8081e42e2397c8f9c7f540539089e081dd5eb580a1cb74bdcaac43fd980d1317",
-      "size_bytes": 60837
+      "sha256": "6fcb3ac548362cda08205c0e8e4b72d8465f7074bc498de4054a4eca5a7b0506",
+      "size_bytes": 61179
     },
     "output-sideratlas-kn-v120/view-diagnostics.json": {
       "sha256": "8bf4ff3e5f0047552338314debf8771fafca7be2c9168c55fb671f77f84e887d",
       "size_bytes": 87684
     },
     "output-sideratlas-kn-v120/visual-review.json": {
-      "sha256": "b2ec415339caa0a3e049524423b18f49f1217aa4111091d3a8e78c99ba338e73",
-      "size_bytes": 5069
+      "sha256": "ea8a940f7a10e04f6232dada899a7db3f905fdf7a36a632f5ff0f37c2d4f1e44",
+      "size_bytes": 5390
     },
     "fonts/FONT-SOURCES.md": {
       "sha256": "3bc651ac08053c4325eafe801881adc448c96565ee3c701cc982eddb39b33f7a",
@@ -770,18 +346,6 @@
     "fonts/lmroman12-regular.otf": {
       "sha256": "e6be218ae83e61aa8a29990d3cdc401c678c1962188cb9a4a8b6359e4f5e5870",
       "size_bytes": 110400
-    },
-    "data/CIE_xyz_1931_2deg.csv": {
-      "sha256": "fa663e3535a7e0763a745993a1f0a192eb0275ac46ad2d1befd7626841e713c1",
-      "size_bytes": 24021
-    },
-    "data/CIE_xyz_1931_2deg.csv_metadata.json": {
-      "sha256": "03abcaecf4e63d77045ef57c4514b52c8bb1a46dd18e1f93a50044a0f4f481c8",
-      "size_bytes": 3787
-    },
-    "data/SOURCES.md": {
-      "sha256": "d29eebd6b4c3bbe0a0d629f9cf832a7a87115b6a9fc213a9bac317c287673e43",
-      "size_bytes": 1516
     }
   }
 }

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bundle the verified v1.2 release and historical sources without caches."""
+"""Bundle only the verified current simulation, its sources and its results."""
 from pathlib import Path
 import hashlib
 import json
@@ -64,41 +64,46 @@ def main():
         any(recorded_steady.get(key)!=value for key,value in steady.items())):
         raise RuntimeError('Steady reference must match its current source and generator')
     review=json.loads((OUT/'visual-review.json').read_text())
+    from title_overlay import provenance as title_provenance
+    if (meta.get('presentation') != title_provenance() or
+        review.get('presentation') != title_provenance()):
+        raise RuntimeError('Presentation provenance must match the current centered title')
     if (review['source_sha256']!=meta['source_sha256'] or
         review['radiance_signature']!=meta['radiance_signature'] or
         review['video_sha256']!=sha(OUT/assembly_required[0]) or
-        review.get('reviewer')!='review_kn_video.py' or
-        review.get('reviewer_sha256')!=sha(ROOT/'review_kn_video.py') or
+        review.get('reviewer')!='review_kn_accretion_video.py' or
+        review.get('reviewer_sha256')!=sha(ROOT/'review_kn_accretion_video.py') or
         review.get('entrypoint')!='review_kn_accretion_video.py' or
         review.get('entrypoint_sha256')!=sha(ROOT/'review_kn_accretion_video.py') or
         any(review.get('review_artifact_sha256',{}).get(name)!=sha(OUT/name)
             for name in ('orbit-review.jpg','decoded-review.png'))):
         raise RuntimeError('Decoded-frame review must match the current render and video')
     files=sorted(p for p in ROOT.iterdir() if p.is_file() and p.suffix in ('.py','.cpp','.md','.txt','.text','.json'))
-    files.append(ROOT/'.gitignore')
+    files.extend([ROOT/'.gitignore',ROOT/'.gitattributes'])
     excluded={'render-process.json','checks-process.json','verification-preflight.json',
               'delivery-manifest.json','release-files.json'}
-    for folder in sorted(ROOT.glob('output*')):
+    for folder in (OUT,):
         if not folder.is_dir():continue
         files+=sorted(p for p in folder.iterdir() if p.is_file() and
-            p.suffix in ('.mp4','.png','.jpg','.json') and p.name not in excluded and '.partial' not in p.name)
+            p.suffix in ('.mp4','.png','.jpg','.json') and p.name not in excluded
+            and not p.name.endswith('-process.json') and '.partial' not in p.name)
         provenance=folder/'provenance'
         if provenance.is_dir():files+=sorted(p for p in provenance.iterdir() if p.is_file() and p.suffix in ('.json','.md','.txt'))
-    for folder in ('fonts','data'):
+    for folder in ('fonts',):
         files+=sorted(p for p in (ROOT/folder).iterdir() if p.is_file())
-    manifest={'version':'1.2.0','release':'Sideratlas dynamic neutral Kerr-Newman accretion',
-        'scope':'All published source and completed media; illustrative source choices disclosed; caches excluded',
+    manifest={'version':'1.2.1','release':'Sideratlas NO.001 — centered-title Kerr-Newman accretion',
+        'scope':'Current simulation, required shared sources, numerical validation, and completed media; caches excluded',
         'files':{str(p.relative_to(ROOT)):{'sha256':sha(p),'size_bytes':p.stat().st_size} for p in files}}
     (OUT/'release-files.json').write_text(json.dumps(manifest,indent=2)+'\n')
     files.append(OUT/'release-files.json')
-    archive=ROOT/'sideratlas-kerr-newman-v1.2.0-source.zip'
+    archive=ROOT/'sideratlas-kerr-newman-v1.2.1-source.zip'
     with zipfile.ZipFile(archive,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as bundle:
         for path in files:bundle.write(path,'sideratlas-black-hole/'+str(path.relative_to(ROOT)))
     with zipfile.ZipFile(archive) as bundle:
         bad=bundle.testzip()
         if bad:raise RuntimeError('Archive CRC failure:'+bad)
         members=len(bundle.namelist())
-    delivery={'version':'1.2.0','archive':{'path':archive.name,'sha256':sha(archive),
+    delivery={'version':'1.2.1','archive':{'path':archive.name,'sha256':sha(archive),
         'size_bytes':archive.stat().st_size,'members':members},
         'videos':{name:{'path':name,'sha256':sha(OUT/name),'size_bytes':(OUT/name).stat().st_size} for name in assembly_required[:4]},
         'description':{'path':'caption-kerr-newman.text','sha256':sha(ROOT/'caption-kerr-newman.text')},

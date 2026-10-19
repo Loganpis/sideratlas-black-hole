@@ -23,8 +23,9 @@ from kn_accretion_trace import KerrNewmanAccretionTracer
 from kn_flow import NeutralAccretionFlow
 from kn_dynamic_emission import DynamicDiskEmission
 from instagram_export import metadata as export_metadata
-from verify import check
-from verify_kn_orbit import (sha256, finish, display_checks, composition_checks,
+from title_overlay import provenance as title_provenance
+from video_io import check
+from video_validation import (sha256, finish, display_checks, composition_checks,
                              output_assets, video_checks)
 
 ASSEMBLY_ASSETS = (list(VIDEO_NAMES.values()) +
@@ -293,6 +294,15 @@ def metadata_checks(output):
           layout["brand"] == "@sideratlas" and layout["lower_text_in_caption"]
           and layout["full_frame"] and (layout["hero_x"], layout["hero_y"],
               layout["hero_width"], layout["hero_height"]) == (0, 0, 1080, 1920))
+    from assemble_kn_accretion import compositor
+    renderer = compositor(d)
+    title_box = renderer.overlays['color'].crop((0,320,1080,450)).getbbox()
+    check(result, "title_is_centered_on_the_portrait",
+          title_box is not None and abs((title_box[0]+title_box[2])/2-540) <= 1
+          and layout.get('title_alignment') == 'horizontal center'
+          and layout.get('title_center_x') == 540
+          and d.get('presentation') == title_provenance(),
+          title_bounds_in_band=list(title_box) if title_box else None)
     roll = math.radians(layout["display_roll_degrees"])
     fov = layout["viewport_fov_horizontal_rg"]
     half_w, half_h = fov/2, fov/2*d["height"]/d["width"]
@@ -320,6 +330,9 @@ def metadata_checks(output):
     check(result, "caption_includes_requested_code_sentence_and_model_disclosure",
           "The code for this simulation is to be found at https://github.com/loganpis/sideratlas-black-hole" in caption
           and "not GRMHD" in caption and "hypothetical" in caption)
+    check(result, "caption_uses_requested_headings",
+          '\nASSUMPTIONS\n' in caption and '\nSOURCES\n' in caption
+          and 'ILLUSTRATIVE CHOICES' not in caption and 'SOURCES AND CONTEXT' not in caption)
     return finish(result)
 
 

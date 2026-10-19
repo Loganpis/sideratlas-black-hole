@@ -18,7 +18,7 @@ Page–Thorne azimuthal mean outside ISCO
 r_ISCO ≈ 1.58 r_g; r_+ ≈ 1.17 r_g; r_g = GM/c²
 a* = Jc/(GM²); q = Q/[M√(4πε₀G)]
 
-ILLUSTRATIVE CHOICES
+ASSUMPTIONS
 Aligned prograde neutral test disk; large q = 0.4 is hypothetical
 Page–Thorne sets the mean brightness, not a self-consistent flowing disk
 Slow radial drift, multiscale finite-lived emissivity fluctuations, inner heating and opacity are prescribed, not GRMHD
@@ -28,7 +28,7 @@ No mass, accretion rate or temperature assigned
 Orange represents brightness, not true visible color
 32 seconds = four 8-second loops; 800 GM/c³ per cycle with periodic source forcing and a 360° viewpoint scan
 
-SOURCES AND CONTEXT
+SOURCES
 Newman et al. 1965; Kerr 1963; Page & Thorne 1974
 Bardeen, Press & Teukolsky 1972; Luminet 1979; Bozza 2002
 Pugliese et al. 2013; Wang, Lee & Lin 2022; Ko et al. 2024

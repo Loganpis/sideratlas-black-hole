@@ -1,113 +1,122 @@
 {
-  "reviewer": "review_kn_video.py",
-  "reviewer_sha256": "53dfdb2062e35cf7c61b45d4212e457269ba1f7cf4bce3dfeb362a41e3c294d4",
+  "reviewer": "review_kn_accretion_video.py",
+  "reviewer_sha256": "fce9057d5195e0c8af3830b049a447dd3b132a2989ae2909a34cd43226bb0573",
   "entrypoint": "review_kn_accretion_video.py",
-  "entrypoint_sha256": "2c6d29cb60d239dfeec3052b772bd6efed567f436f8f50042148ce593e66265e",
+  "entrypoint_sha256": "fce9057d5195e0c8af3830b049a447dd3b132a2989ae2909a34cd43226bb0573",
   "video_file": "output-sideratlas-kn-v120/sideratlas-kerr-newman-reel.mp4",
-  "video_sha256": "09b24e039b879ee7de88d292947efe3fd12e411e8d841e0fcc3a8655a4841fa6",
+  "video_sha256": "582a11becc92758149c37a38ad45c8962be70ba0863947352e2686ec0840256e",
   "source_sha256": "f638dad36408167811a34e5929286e0051222b54879a928646d14a61f158b66f",
   "radiance_signature": "af43803e4e58364866f863a7e5d0026016ed0037338905b26d4ea37d26539558",
   "scope": "Color-managed decoded-frame review of the delivered Kerr-Newman video.\n\nCompare full-portrait decoded samples to their native float-radiance\ncompositions; this measures the local export, not Instagram transcoding.\n",
+  "presentation": {
+    "version": "1.2.1",
+    "module": "title_overlay.py",
+    "sha256": "e7c356e58bea9e54213914946c9edef2884f4744ef74b794b99d8b01c855bd85",
+    "title": "THE BLACK HOLE",
+    "alignment": "horizontal center",
+    "title_y_at_1080": 333,
+    "account_and_number_positions_unchanged": true
+  },
   "frames": [
     {
       "frame": 0,
       "seconds": 0.0,
       "native_radiance_sha256": "10ab941031ff771deda52784e37ee9233d8155f14894b4a30214cff125efbfb7",
-      "full_rgb_mae_255": 0.34230516975308645,
-      "lit_disk_rgb_mae_255": 0.7134355148987196,
+      "full_rgb_mae_255": 0.3408760931069959,
+      "lit_disk_rgb_mae_255": 0.7107716502351419,
       "lit_disk_pixels_excluding_header": 815607
     },
     {
       "frame": 20,
       "seconds": 0.6666666666666666,
       "native_radiance_sha256": "b7f2c02d73caa3e28504aa4d3a571c9952e3eeb1303f40c913312e531e2c12de",
-      "full_rgb_mae_255": 0.4644044174382716,
-      "lit_disk_rgb_mae_255": 0.5119648788688798,
+      "full_rgb_mae_255": 0.46195505401234566,
+      "lit_disk_rgb_mae_255": 0.5127214664402658,
       "lit_disk_pixels_excluding_header": 1448169
     },
     {
       "frame": 40,
       "seconds": 1.3333333333333333,
       "native_radiance_sha256": "010f4181d0aa8494a00415be137812bf4c0b4ec20c56fdecfb87abb836f40c76",
-      "full_rgb_mae_255": 0.5520410558127572,
-      "lit_disk_rgb_mae_255": 0.5295455973064989,
+      "full_rgb_mae_255": 0.5502639531893004,
+      "lit_disk_rgb_mae_255": 0.5281190718476363,
       "lit_disk_pixels_excluding_header": 1591980
     },
     {
       "frame": 60,
       "seconds": 2.0,
       "native_radiance_sha256": "b46fcb25409ce015e68dfe86e70defb6207a88115cc5d062a4555529ac856774",
-      "full_rgb_mae_255": 0.4224760480967078,
-      "lit_disk_rgb_mae_255": 0.4578896454333092,
+      "full_rgb_mae_255": 0.4218479938271605,
+      "lit_disk_rgb_mae_255": 0.4570902451390552,
       "lit_disk_pixels_excluding_header": 1607455
     },
     {
       "frame": 80,
       "seconds": 2.6666666666666665,
       "native_radiance_sha256": "250017697e10948919f6170ca3faff84c07f0a2288917bc3234bbc322e11405e",
-      "full_rgb_mae_255": 0.4804984889403292,
-      "lit_disk_rgb_mae_255": 0.5098208034733869,
+      "full_rgb_mae_255": 0.4793454218106996,
+      "lit_disk_rgb_mae_255": 0.5089055020208433,
       "lit_disk_pixels_excluding_header": 1583085
     },
     {
       "frame": 100,
       "seconds": 3.3333333333333335,
       "native_radiance_sha256": "a95eff2ce7c7aeb801c100151ca7933b6a72cb36aaf86ad23cd48bfe445ca91e",
-      "full_rgb_mae_255": 0.3962943672839506,
-      "lit_disk_rgb_mae_255": 0.5599815873804547,
+      "full_rgb_mae_255": 0.3973167438271605,
+      "lit_disk_rgb_mae_255": 0.5611046447136306,
       "lit_disk_pixels_excluding_header": 1304178
     },
     {
       "frame": 120,
       "seconds": 4.0,
       "native_radiance_sha256": "75df95fe3adaf7f51cff3f035769246c6c7bd7d7af52bd8e9a4d4c5a5e8cdfb3",
-      "full_rgb_mae_255": 0.28358731995884773,
-      "lit_disk_rgb_mae_255": 0.6304528068473172,
+      "full_rgb_mae_255": 0.28394611625514404,
+      "lit_disk_rgb_mae_255": 0.6318944858470193,
       "lit_disk_pixels_excluding_header": 835831
     },
     {
       "frame": 140,
       "seconds": 4.666666666666667,
       "native_radiance_sha256": "64bbc14eb76f737a2996225a550af2c51316b0bf172deb324bb9b0cb97dfcba2",
-      "full_rgb_mae_255": 0.4391142618312757,
-      "lit_disk_rgb_mae_255": 0.5166202833627335,
+      "full_rgb_mae_255": 0.4391534850823045,
+      "lit_disk_rgb_mae_255": 0.5178644957495132,
       "lit_disk_pixels_excluding_header": 1456343
     },
     {
       "frame": 160,
       "seconds": 5.333333333333333,
       "native_radiance_sha256": "be5727d80afdd8253b4905de5d143513564d1bc395631a237b7ce7a4cd971730",
-      "full_rgb_mae_255": 0.4964454732510288,
-      "lit_disk_rgb_mae_255": 0.5266178006288127,
+      "full_rgb_mae_255": 0.49503102494855966,
+      "lit_disk_rgb_mae_255": 0.5265903361095385,
       "lit_disk_pixels_excluding_header": 1602067
     },
     {
       "frame": 180,
       "seconds": 6.0,
       "native_radiance_sha256": "5158136675ff2e9cd45b242826d39e5617efa670687c1f7f9865abb15542bd29",
-      "full_rgb_mae_255": 0.45294383359053497,
-      "lit_disk_rgb_mae_255": 0.44939948943539315,
+      "full_rgb_mae_255": 0.451539191100823,
+      "lit_disk_rgb_mae_255": 0.4496559743357518,
       "lit_disk_pixels_excluding_header": 1607632
     },
     {
       "frame": 200,
       "seconds": 6.666666666666667,
       "native_radiance_sha256": "4e073d4575f685893fec5adc0292677e82c30f096b3caa856665ca0c0f88ab61",
-      "full_rgb_mae_255": 0.5101052919238683,
-      "lit_disk_rgb_mae_255": 0.4865445819860315,
+      "full_rgb_mae_255": 0.5078661908436214,
+      "lit_disk_rgb_mae_255": 0.48679946402675034,
       "lit_disk_pixels_excluding_header": 1571969
     },
     {
       "frame": 220,
       "seconds": 7.333333333333333,
       "native_radiance_sha256": "1464743af3283b4befebd49759213427798fb9085c7f503bebc0a6b3b827a375",
-      "full_rgb_mae_255": 0.4204332240226337,
-      "lit_disk_rgb_mae_255": 0.5396983140895599,
+      "full_rgb_mae_255": 0.414047550154321,
+      "lit_disk_rgb_mae_255": 0.5356834014817811,
       "lit_disk_pixels_excluding_header": 1265864
     }
   ],
   "overlay_bbox": [
-    65,
+    71,
     268,
     965,
     393
@@ -117,7 +126,7 @@
   "footer_overlay_absent": true,
   "lit_error_region": "Pixels above brightness 10 below the title band; no assumption of a black header",
   "review_artifact_sha256": {
-    "orbit-review.jpg": "ebf740dc358b013cff54f57fb4d4955c9753aa8d10da2c7b3dd64407d1793257",
-    "decoded-review.png": "2497bf321f84b27795b9b2b1197ed61ebd658247554549a050dd6ff6406c2cec"
+    "orbit-review.jpg": "5b4345323cabc17d23ae2a153f57fd34a8bdb6fce6cbdf79ae1d3859a2ef0d7e",
+    "decoded-review.png": "faf878758980320e5560e1546ac1ffc27e960e32a433a1a8e35268c153b078d6"
   }
 }

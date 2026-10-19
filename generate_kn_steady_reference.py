@@ -9,6 +9,7 @@ from pathlib import Path
 
 from render_kn_accretion import (KerrNewmanAccretionRenderer, OUTPUT_DIR,
                                   source_hash)
+from title_overlay import apply_title_layout, provenance as title_provenance
 
 
 def sha256(path: Path) -> str:
@@ -37,6 +38,7 @@ def main() -> None:
     generator_sha = sha256(script)
     renderer = KerrNewmanAccretionRenderer(
         1080, 2.5, refinement=2, temporal_samples=3)
+    apply_title_layout(renderer)
     image = renderer.frames(0, structured=False)['color']
     image.save(destination)
     if source_hash() != source_render_sha or sha256(script) != generator_sha:
@@ -56,6 +58,7 @@ def main() -> None:
             'refinement': 2,
             'temporal_samples': 3,
         },
+        'presentation': title_provenance(),
     }
     temporary = manifest_path.with_suffix(manifest_path.suffix + '.partial')
     temporary.write_text(json.dumps(manifest, indent=2) + '\n')

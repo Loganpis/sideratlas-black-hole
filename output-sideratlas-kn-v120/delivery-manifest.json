@@ -1,37 +1,37 @@
 {
-  "version": "1.2.0",
+  "version": "1.2.1",
   "archive": {
-    "path": "sideratlas-kerr-newman-v1.2.0-source.zip",
-    "sha256": "204d3eba6f4548b4b71eaefaa950f1131a899bede04d4a3cb087e023ee786420",
-    "size_bytes": 237839883,
-    "members": 196
+    "path": "sideratlas-kerr-newman-v1.2.1-source.zip",
+    "sha256": "cbdd15e9568bfc302e38780039f51ed8385d950f2911b6fc95653f15a973db41",
+    "size_bytes": 99107847,
+    "members": 87
   },
   "videos": {
     "sideratlas-kerr-newman-reel.mp4": {
       "path": "sideratlas-kerr-newman-reel.mp4",
-      "sha256": "09b24e039b879ee7de88d292947efe3fd12e411e8d841e0fcc3a8655a4841fa6",
-      "size_bytes": 45055624
+      "sha256": "582a11becc92758149c37a38ad45c8962be70ba0863947352e2686ec0840256e",
+      "size_bytes": 45028512
     },
     "sideratlas-kerr-newman-intensity.mp4": {
       "path": "sideratlas-kerr-newman-intensity.mp4",
-      "sha256": "cc19e2f37f66146c7962c5735cbabf8548b61da5d49f54f66e91e640461e9a69",
-      "size_bytes": 30400288
+      "sha256": "21f296d90d626d5f1215cf3509f459078af310a8f0f38bebf6619a49b755a79e",
+      "size_bytes": 30392220
     },
     "sideratlas-kerr-newman-reel-loop.mp4": {
       "path": "sideratlas-kerr-newman-reel-loop.mp4",
-      "sha256": "9d770ed14c941ebb789328ec8f8fca8db374471d7e1e7b6076c3eb973e025f5c",
-      "size_bytes": 11264512
+      "sha256": "177edc83341178a0b2cefbb9831e9097798d6b8c7e0c2c03498b718eb089aea1",
+      "size_bytes": 11257734
     },
     "sideratlas-kerr-newman-intensity-loop.mp4": {
       "path": "sideratlas-kerr-newman-intensity-loop.mp4",
-      "sha256": "acc64b77c70a5c0c9d0149aeada127469e09610733df2cc6864efb138f923828",
-      "size_bytes": 7600689
+      "sha256": "037fd71ce330fa2e4d20396b2b585a60d2d124c7057b178843faada6947e7b13",
+      "size_bytes": 7598672
     }
   },
   "description": {
     "path": "caption-kerr-newman.text",
-    "sha256": "f4b5f1b995e86cbce0928e86e4390a6f1b4f538b6cf367fa8c8963804c10086f"
+    "sha256": "0db545c93339267f4414b4fd19dd05add4e131c839c553940fa16e80cbdb5563"
   },
-  "verification_sha256": "8081e42e2397c8f9c7f540539089e081dd5eb580a1cb74bdcaac43fd980d1317",
-  "metadata_sha256": "160fb31b9c0f259ca507baed4191fe8b095343508e4af727352ccb9c89fc7dec"
+  "verification_sha256": "6fcb3ac548362cda08205c0e8e4b72d8465f7074bc498de4054a4eca5a7b0506",
+  "metadata_sha256": "881f1afac6ef8e036a16034cc2e57027d370f84608abca66e8d7d35420f01ef2"
 }

@@ -1,16 +1,14 @@
-# Sideratlas v1.2.0 — accretion, plunge and multiple images
+# Scientific model — accretion, plunge and multiple images
 
 Version 1.2.0 extends the original **Kerr–Newman visualization with $a_*=+0.9$ and $q=+0.4$**. It adds restrained evolving disk structure, slow radial inflow, luminous neutral gas plunging inside the ISCO, and radiative transfer through multiple images of that inner gas. The full-frame diagonal composition, typography, fixed exposure, black sky and smooth viewpoint revolution are retained.
 
 **The spacetime, photon paths, timelike plunge, frequency shifts and delays are calculated. Brightness fluctuations, outer drift, inner heating and optical depth are declared prescriptions.** This remains an idealized neutral test-matter visualization in a hypothetical large-charge geometry. It is not a general relativistic magnetohydrodynamic (GRMHD) or thermodynamic accretion simulation.
 
-## Delivery and version history
+## Delivery
 
-The [v1.2.0 release](https://github.com/Loganpis/sideratlas-black-hole/releases/tag/v1.2.0) supplies the 32-second orange Reel, its monochrome companion, eight-second originals, description and complete project archive. Current media and reports are in `output-sideratlas-kn-v120/`. The video names remain `sideratlas-kerr-newman-reel.mp4`, `sideratlas-kerr-newman-intensity.mp4`, and their corresponding `-loop.mp4` files.
+The [current release](https://github.com/Loganpis/sideratlas-black-hole/releases/tag/v1.2.1) supplies the 32-second orange Reel, its monochrome companion, eight-second originals, description and complete project archive. Current media and reports are in `output-sideratlas-kn-v120/`. The video names remain `sideratlas-kerr-newman-reel.mp4`, `sideratlas-kerr-newman-intensity.mp4`, and their corresponding `-loop.mp4` files.
 
-Each 32-second movie repeats the same encoded eight-second cycle four times. A cycle contains a full virtual viewpoint revolution and 800 $t_g$ of periodically driven source evolution. It is not 32 seconds of distinct physical evolution. The only on-screen words are **@sideratlas**, **NO.001**, and **THE BLACK HOLE**, over the simulation. Explanations, caveats, source credits and the repository link are supplied in [caption-kerr-newman.text](caption-kerr-newman.text); post that description with the video.
-
-The [v1.1.0 release](https://github.com/Loganpis/sideratlas-black-hole/releases/tag/v1.1.0) preserves the earlier circular-emitter model and diagonal layout in `output-sideratlas-kn/`. Its entry point remains `render_kn_orbit.py`, documented in [README-KERR-NEWMAN.md](README-KERR-NEWMAN.md). The [v1.0.0 release](https://github.com/Loganpis/sideratlas-black-hole/releases/tag/v1.0.0) retains the original smaller horizontal composition and lower text. Their reports apply to those historical versions.
+Each 32-second movie repeats the same encoded eight-second cycle four times. A cycle contains a full virtual viewpoint revolution and 800 $t_g$ of periodically driven source evolution. It is not 32 seconds of distinct physical evolution. The final assembly centers the title horizontally. The only on-screen words are **@sideratlas**, **NO.001**, and **THE BLACK HOLE**, over the simulation. Explanations, caveats, source credits and the repository link are supplied in [caption-kerr-newman.text](caption-kerr-newman.text); post that description with the video.
 
 ## Geometry and declared choices
 
